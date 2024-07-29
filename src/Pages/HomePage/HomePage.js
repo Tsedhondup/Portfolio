@@ -1,7 +1,8 @@
+import LandingDisplay from "../../Components/LandingDisplay/LandingDisplay";
 const HomePage = () => {
   return (
     <>
-      <h1>Home page</h1>
+      <LandingDisplay />
     </>
   );
 };
