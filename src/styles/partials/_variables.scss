@@ -1,0 +1,22 @@
+@use "./fonts" as *;
+
+// Colors
+
+// breakpoints and margins
+$mobile-margin: 16px;
+
+$mobile-width: 320px;
+
+$tablet-width: 767px;
+$tablet-margin: 32px;
+$tablet-gutter: 24px;
+
+$desktop-width: 1280px;
+$desktop-gutter: 24px;
+
+// fonts
+$font-regular: "TitilliumWeb";
+$font-regular-italics: "TitilliumWeb";
+
+$font-bold: "TitilliumWeb-SemiBold";
+$font-bold-italics: "TitilliumWeb-SemiBoldItalics";
