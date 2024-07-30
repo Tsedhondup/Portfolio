@@ -1,7 +1,8 @@
+import AboutFirst from "../../Components/AboutFirst/AboutFirst";
 const AboutPage = () => {
   return (
     <>
-      <h1>About page</h1>
+      <AboutFirst />
     </>
   );
 };
