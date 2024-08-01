@@ -4,9 +4,11 @@ const Header = () => {
   return (
     <section>
       <nav className="navigation">
+        {/* Brand name */}
         <Link to="/" className="navigation__brand-name">
           TD
         </Link>
+        {/* Pages links */}
         <div className="navigation-pages">
           <Link to="/" className="navigation-pages__home">
             Home
@@ -16,6 +18,7 @@ const Header = () => {
           </Link>
           <span className="navigations-pages__resume">Resume</span>
         </div>
+        {/* Toggle buttons */}
         <div className="nav-button-container">
           <button className="nav-button-container__open">open</button>
           <button className="nav-button-container__close">close</button>
