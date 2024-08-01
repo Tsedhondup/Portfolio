@@ -7,7 +7,7 @@ const Header = () => {
         <Link to="/" className="navigation__brand-name">
           TD
         </Link>
-        <div className="navigtion-pages">
+        <div className="navigation-pages">
           <Link to="/" className="navigation-pages__home">
             Home
           </Link>
