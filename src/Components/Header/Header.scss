@@ -34,8 +34,11 @@
 }
 // Navigation buttons
 .nav-button-container {
-  // Buttons
-  &__close {
-    display: none;
+  display: flex;
+  justify-content: flex-end;
+  // Button
+  &__open {
+    width: 40px;
+    text-align: center;
   }
 }
