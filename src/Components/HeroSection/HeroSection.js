@@ -2,8 +2,16 @@ import "./HeroSection.scss";
 const HeroSection = () => {
   return (
     <section className="hero-container">
-      <h1 className="hero-container__nameF">Tsering Dhondup</h1>
-      <h3 className="hero-container__title">Web developer</h3>
+      <section className="hero-content">
+        <h1 className="hero-content__name">
+          <span className="hero-content__name--first"> Hi, I'm Tsering</span>
+          <span className="hero-content__name--last">Dhondup</span>
+        </h1>
+        <h3 className="hero-content__title">
+          A Front-End Developer from
+          <span className="hero-content__title--city">Toronto</span>
+        </h3>
+      </section>
     </section>
   );
 };
