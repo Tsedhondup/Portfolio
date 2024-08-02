@@ -1,4 +1,4 @@
-import LandingDisplay from "../../Components/LandingDisplay/LandingDisplay";
+import HeroSection from "../../Components/HeroSection/HeroSection";
 import AboutSecond from "../../Components/AboutSecond/AboutSecond";
 import TechStacks from "../../Components/TechStacks/TechStacks";
 import Works from "../../Components/Works/Works";
@@ -7,7 +7,7 @@ import Footers from "../../Components/Footers/Footers";
 const HomePage = () => {
   return (
     <>
-      <LandingDisplay />
+      <HeroSection />
       <AboutSecond />
       <TechStacks />
       <Works />
