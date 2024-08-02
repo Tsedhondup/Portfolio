@@ -3,6 +3,19 @@ import { useState } from "react";
 import "./Header.scss";
 const Header = () => {
   const [navPageClass, setNavPageClass] = useState("");
+  const [isNavPageShow, setIsNavPageShow] = useState(false);
+  // event handlers
+  const handleNavButton = () => {
+    // setNavPageClass("navigation-pages-show");
+    setIsNavPageShow(true);
+    toggleNavPageClass();
+  };
+  const toggleNavPageClass = () => {
+    isNavPageShow
+      ? setNavPageClass("navigation-pages-show")
+      : setNavPageClass("");
+  };
+
   return (
     <section className="header">
       <nav className="navigation">
