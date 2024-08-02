@@ -31,6 +31,12 @@ const Header = () => {
             About
           </Link>
           <span className="navigations-pages__resume">Resume</span>
+          <button
+            className="navigations-pages__hide-button"
+            onClick={handleNavButton}
+          >
+            close
+          </button>
         </div>
         {/* Toggle buttons */}
         <div className="nav-button-container">
@@ -39,12 +45,6 @@ const Header = () => {
             onClick={handleNavButton}
           >
             open
-          </button>
-          <button
-            className="nav-button-container__close"
-            onClick={handleNavButton}
-          >
-            close
           </button>
         </div>
       </nav>
