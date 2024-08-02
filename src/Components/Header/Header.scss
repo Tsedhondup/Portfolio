@@ -15,7 +15,6 @@
     color: $pewter;
     text-decoration: none;
   }
-  // Buttons
 }
 // Pages
 .navigation-pages {
@@ -25,4 +24,12 @@
   background-color: $gray;
   position: absolute;
   left: -100%;
+}
+
+// Navigation buttons
+.nav-button-container {
+  // Buttons
+  &__close {
+    display: none;
+  }
 }

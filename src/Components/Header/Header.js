@@ -9,7 +9,7 @@ const Header = () => {
           TD
         </Link>
         {/* Pages links */}
-        <div className="navigation-pages">
+        <div className={`navigation-pages`}>
           <Link to="/" className="navigation-pages__home">
             Home
           </Link>
