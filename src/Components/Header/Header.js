@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./Header.scss";
 const Header = () => {
+  const [navPageClass, setNavPageClass] = useState("");
   return (
     <section className="header">
       <nav className="navigation">
@@ -9,7 +11,7 @@ const Header = () => {
           TD
         </Link>
         {/* Pages links */}
-        <div className={`navigation-pages`}>
+        <div className={`navigation-pages ${navPageClass}`}>
           <Link to="/" className="navigation-pages__home">
             Home
           </Link>
