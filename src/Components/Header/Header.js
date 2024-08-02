@@ -35,8 +35,18 @@ const Header = () => {
         </div>
         {/* Toggle buttons */}
         <div className="nav-button-container">
-          <button className="nav-button-container__open">open</button>
-          <button className="nav-button-container__close">close</button>
+          <button
+            className="nav-button-container__open"
+            onClick={handleNavButton}
+          >
+            open
+          </button>
+          <button
+            className="nav-button-container__close"
+            onClick={handleNavButton}
+          >
+            close
+          </button>
         </div>
       </nav>
     </section>
