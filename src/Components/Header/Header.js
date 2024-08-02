@@ -6,16 +6,15 @@ const Header = () => {
   const [isNavPageShow, setIsNavPageShow] = useState(false);
   // event handlers
   const handleNavButton = () => {
-    // setNavPageClass("navigation-pages-show");
-    setIsNavPageShow(true);
-    toggleNavPageClass();
+    if (!isNavPageShow) {
+      setNavPageClass("navigation-pages-show");
+      setIsNavPageShow(true);
+    }
+    if (isNavPageShow) {
+      setNavPageClass("");
+      setIsNavPageShow(false);
+    }
   };
-  const toggleNavPageClass = () => {
-    isNavPageShow
-      ? setNavPageClass("navigation-pages-show")
-      : setNavPageClass("");
-  };
-
   return (
     <section className="header">
       <nav className="navigation">
