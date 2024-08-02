@@ -1,9 +1,20 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
 
+.header {
+  padding: 0px $mobile-margin;
+  background-color: $black;
+}
 .navigation {
   height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   // Brand Name
+  &__brand-name {
+    color: $pewter;
+    text-decoration: none;
+  }
   // Buttons
 }
 // Pages

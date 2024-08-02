@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 const Header = () => {
   return (
-    <section>
+    <section className="header">
       <nav className="navigation">
         {/* Brand name */}
         <Link to="/" className="navigation__brand-name">
