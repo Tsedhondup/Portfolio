@@ -15,7 +15,7 @@ const AboutSecond = () => {
         full-fledged passion, driving me to pursue a career transition into the
         tech industry where I can play a part in shaping the digital landscape
         <Link to="/About" className="about-second__link">
-          read more
+          Read more
         </Link>
       </p>
     </section>
