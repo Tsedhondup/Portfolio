@@ -11,6 +11,8 @@ const TechStacks = () => {
         <li className="tech-stacks__tools--tech">React.js</li>
         <li className="tech-stacks__tools--tech">Node.js</li>
         <li className="tech-stacks__tools--tech">Express.js</li>
+        <li className="tech-stacks__tools--tech">SQL</li>
+        <li className="tech-stacks__tools--tech">Knex.js</li>
       </ul>
     </section>
   );

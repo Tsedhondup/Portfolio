@@ -1,2 +1,26 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
+
+.tech-stacks {
+  background-color: $gray;
+  padding: 0px $mobile-margin;
+  margin-top: $mobile-margin;
+  &__header {
+    padding-top: $mobile-margin;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: normal;
+  }
+  &__tools {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    padding-left: 0px;
+    padding-top: $mobile-margin;
+    padding-bottom: $mobile-margin;
+    &--tech {
+      text-align: center;
+    }
+  }
+}
