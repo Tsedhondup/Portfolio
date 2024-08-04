@@ -10,8 +10,10 @@
   }
   &__texts {
     padding-top: $mobile-margin;
-    text-align: justify;
-    word-spacing: -1.5px;
+    text-align: center;
+    // text-align: justify;
+    // word-spacing: -1.5px;
+    font-size: 15px;
   }
   &__link {
     padding-left: 8px;
