@@ -1,1 +1,11 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/_variables";
 
+.about-second {
+  padding: 0 $mobile-margin;
+  padding-top: $mobile-margin;
+  &__img {
+    border: 1px solid $pewter;
+    border-bottom-width: 0px;
+  }
+}

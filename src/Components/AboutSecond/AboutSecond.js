@@ -1,4 +1,4 @@
-import profileImage from "../../assets/image/profile.png";
+import profileImage from "../../assets/image/tsering.png";
 import "./AboutSecond.scss";
 const AboutSecond = () => {
   return (
