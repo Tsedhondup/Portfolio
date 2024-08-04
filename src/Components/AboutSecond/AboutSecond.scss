@@ -8,4 +8,9 @@
     border: 1px solid $pewter;
     border-bottom-width: 0px;
   }
+  &__texts {
+    padding-top: $mobile-margin;
+    text-align: justify;
+    word-spacing: -1.5px;
+  }
 }
