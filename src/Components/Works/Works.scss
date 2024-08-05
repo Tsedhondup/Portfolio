@@ -12,9 +12,10 @@
   }
 }
 .projects {
-  // border-bottom: 1px solid $gray;
+  border: 1px solid $gray;
   padding: 16px 0px;
-  margin: 32px 0px;
+  padding-top: 32px;
+  margin: 16px 0px;
   &__icons {
     text-align: center;
   }
@@ -28,5 +29,7 @@
     padding-bottom: $mobile-margin;
     text-align: center;
     font-size: 15px;
+    font-weight: 200;
+    color: $black;
   }
 }
