@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  faTwitter,
   faInstagram,
   faFacebook,
   faXTwitter,
@@ -53,7 +53,10 @@ const Footers = () => {
           />
           <span> 2024</span>
         </h3>
-        <h3 className="location-copyright__location">Toronto</h3>
+        <h3 className="location-copyright__location">
+          <span className="location-copyright__location--name"> Toronto</span>
+          <FontAwesomeIcon icon={faGlobeAmericas} />
+        </h3>
       </div>
     </footer>
   );

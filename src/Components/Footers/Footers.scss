@@ -63,8 +63,13 @@
     }
   }
   &__location {
+    display: flex;
+    align-items: center;
     font-weight: normal;
-    width: auto;
     font-size: 15px;
+    width: auto;
+    &--name {
+      padding-right: 3px;
+    }
   }
 }
