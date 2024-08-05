@@ -8,7 +8,7 @@ import "./Contacts.scss";
 const Contacts = () => {
   return (
     <section className="contacts">
-      <h2 className="contacts__header">Say hello to me!</h2>
+      <h2 className="contacts__header">Contact me</h2>
       <div className="phone-email">
         <FontAwesomeIcon
           icon={faMobileScreenButton}

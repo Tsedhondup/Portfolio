@@ -10,30 +10,36 @@
   z-index: 5;
   padding: $mobile-margin;
   min-height: 270px;
+
   &__translucent-background {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
   }
   &__header {
-    color: #fff;
-    text-align: center;
+    color: $pewter;
     text-transform: capitalize;
+    text-align: center;
     font-weight: normal;
-    border: 1px solid $pewter;
     padding: $mobile-margin;
+    position: relative;
+    z-index: 15;
+    border-bottom: 1px solid $pewter;
   }
 }
 .phone-email {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: $mobile-margin;
   margin: auto;
   margin-top: $mobile-margin;
+  position: relative;
+  z-index: 15;
   &__phone,
   &__email {
     color: $pewter;
