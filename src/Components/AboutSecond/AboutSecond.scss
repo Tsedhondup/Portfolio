@@ -7,13 +7,22 @@
   &__img {
     border: 1px solid $pewter;
     border-bottom-width: 0px;
+    object-fit: contain;
+    max-width: 360px;
+    display: block;
+    margin: auto;
+  }
+  &__star-of-life {
+    padding-top: 16px;
+    color: $gray;
   }
   &__texts {
     padding-top: $mobile-margin;
     text-align: center;
-    // text-align: justify;
-    // word-spacing: -1.5px;
+    padding-bottom: 16px;
     font-size: 15px;
+    border-bottom: 1px solid $gray;
+    line-height: 1.5em;
   }
   &__link {
     padding-left: 8px;
