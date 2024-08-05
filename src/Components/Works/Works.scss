@@ -14,16 +14,14 @@
 .projects {
   border-bottom: 1px solid $gray;
   margin-bottom: $mobile-margin;
-  &__thumbnail {
+  &__icons {
     text-align: center;
-    font-style: italic;
-    font-size: 11px;
+    
   }
   &__header {
     padding-top: $mobile-margin;
     font-weight: normal;
     text-align: center;
-    // font-size: 22px;
   }
   &__description {
     padding-top: $mobile-margin;
