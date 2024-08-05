@@ -1,0 +1,9 @@
+@import url("../../styles/partials/_mixins.scss");
+@import url("../../styles/partials//_variables.scss");
+
+.contacts {
+  background-image: url("../../assets/image/contact_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
