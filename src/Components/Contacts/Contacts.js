@@ -3,13 +3,7 @@ import {
   faMobileScreenButton,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
-  faInstagram,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+
 import "./Contacts.scss";
 const Contacts = () => {
   return (
@@ -27,13 +21,7 @@ const Contacts = () => {
           className="phone-email__email"
         />
       </div>
-      <div className="socials">
-        <FontAwesomeIcon icon={faLinkedin} className="socials__linkedIn" />
-        <FontAwesomeIcon icon={faGithub} className="socials__github" />
-        <FontAwesomeIcon icon={faTwitter} className="socials__x-twitter" />
-        <FontAwesomeIcon icon={faFacebook} className="socials__facebook" />
-        <FontAwesomeIcon icon={faInstagram} className="socials__instagram" />
-      </div>
+
       <div className="contacts__translucent-background"></div>
     </section>
   );
