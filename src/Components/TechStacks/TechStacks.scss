@@ -6,6 +6,7 @@
   margin-top: $mobile-margin;
   &__header {
     padding-top: $mobile-margin;
+    margin-bottom: $mobile-margin;
     text-transform: capitalize;
     text-align: center;
     font-weight: normal;
@@ -14,12 +15,12 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 16px;
-    padding-left: 0px;
+    grid-template-rows: auto;
     padding-top: $mobile-margin;
     padding-bottom: $mobile-margin;
     &--tech {
       text-align: center;
+      padding-bottom: 32px;
     }
     &--tech:nth-child(1) {
       color: $html;
@@ -38,6 +39,14 @@
     }
     &--tech:nth-child(6) {
       color: $node;
+    }
+    &--tech:nth-child(7),
+    &--tech:nth-child(8),
+    &--tech:nth-child(9) {
+      object-fit: contain;
+      width: 40px;
+      display: block;
+      margin: auto;
     }
   }
 }

@@ -17,16 +17,51 @@ const TechStacks = () => {
     <section className="tech-stacks">
       <h2 className="tech-stacks__header">Primary Tech stacks</h2>
       <div className="tech-stacks__tools">
-        <FontAwesomeIcon icon={faHtml5} transform="grow-12" className="tech-stacks__tools--tech" />
-        <FontAwesomeIcon icon={faCss3} transform="grow-12" className="tech-stacks__tools--tech" />
-        <FontAwesomeIcon icon={faSass} transform="grow-12" className="tech-stacks__tools--tech" />
-        <FontAwesomeIcon icon={faJs} transform="grow-12" className="tech-stacks__tools--tech" />
-        <FontAwesomeIcon icon={faReact} transform="grow-12" className="tech-stacks__tools--tech" />
-        <FontAwesomeIcon icon={faNodeJs} transform="grow-12" className="tech-stacks__tools--tech" />
-        <img src={expressLogo} />
-        <img src={mysqlLogo} />
-        <img src={knexLogo} />
-
+        <FontAwesomeIcon
+          icon={faHtml5}
+          transform="grow-15"
+          className="tech-stacks__tools--tech"
+        />
+        <FontAwesomeIcon
+          icon={faCss3}
+          transform="grow-15"
+          className="tech-stacks__tools--tech"
+        />
+        <FontAwesomeIcon
+          icon={faSass}
+          transform="grow-15"
+          className="tech-stacks__tools--tech"
+        />
+        <FontAwesomeIcon
+          icon={faJs}
+          transform="grow-15"
+          className="tech-stacks__tools--tech"
+        />
+        <FontAwesomeIcon
+          icon={faReact}
+          transform="grow-15"
+          className="tech-stacks__tools--tech"
+        />
+        <FontAwesomeIcon
+          icon={faNodeJs}
+          transform="grow-15"
+          className="tech-stacks__tools--tech"
+        />
+        <img
+          src={expressLogo}
+          alt="express-logo"
+          className="tech-stacks__tools--tech"
+        />
+        <img
+          src={mysqlLogo}
+          alt="mysql-logo"
+          className="tech-stacks__tools--tech"
+        />
+        <img
+          src={knexLogo}
+          alt="knex-logo"
+          className="tech-stacks__tools--tech"
+        />
       </div>
     </section>
   );
