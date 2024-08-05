@@ -1,5 +1,5 @@
-@import url("../../styles/partials/_mixins.scss");
-@import url("../../styles/partials/_variables.scss");
+@import "../../styles/partials/_mixins.scss";
+@import "../../styles/partials/_variables";
 
 .contacts {
   background-image: url("../../assets/image/contact_background.jpg");
@@ -14,7 +14,19 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 10;
+  }
+  &__header {
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: normal;
+  }
+}
+.phone-email {
+  &__phone,
+  &__email {
+    color: $pewter;
   }
 }
