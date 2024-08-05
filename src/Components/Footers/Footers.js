@@ -6,17 +6,38 @@ import {
   faTwitter,
   faInstagram,
   faFacebook,
+  faXTwitter
 } from "@fortawesome/free-brands-svg-icons";
 import "./Footers.scss";
 const Footers = () => {
   return (
     <footer className="footer">
       <div className="socials">
-        <FontAwesomeIcon icon={faLinkedin} transform="grow-6" className="socials__linkedIn" />
-        <FontAwesomeIcon icon={faGithub} transform="grow-6" className="socials__github" />
-        <FontAwesomeIcon icon={faTwitter} transform="grow-6" className="socials__x-twitter" />
-        <FontAwesomeIcon icon={faFacebook} transform="grow-6" className="socials__facebook" />
-        <FontAwesomeIcon icon={faInstagram} transform="grow-6" className="socials__instagram" />
+        <FontAwesomeIcon
+          icon={faLinkedin}
+          transform="grow-6"
+          className="socials__icon"
+        />
+        <FontAwesomeIcon
+          icon={faGithub}
+          transform="grow-6"
+          className="socials__icon"
+        />
+        <FontAwesomeIcon
+          icon={faXTwitter}
+          transform="grow-6"
+          className="socials__icon"
+        />
+        <FontAwesomeIcon
+          icon={faFacebook}
+          transform="grow-6"
+          className="socials__icon"
+        />
+        <FontAwesomeIcon
+          icon={faInstagram}
+          transform="grow-6"
+          className="socials__icon"
+        />
       </div>
       <div className="author">
         <h3 className="author__designer">Designed and built by </h3>
