@@ -10,7 +10,7 @@ import {
 import "./Footers.scss";
 const Footers = () => {
   return (
-    <footer>
+    <footer className="footer">
       <h3>TseringDhondup</h3>
       <h3>Toronto</h3>
       <h3>
