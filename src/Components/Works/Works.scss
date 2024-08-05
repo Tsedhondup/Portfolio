@@ -6,20 +6,20 @@
   padding-left: $mobile-margin;
   padding-right: $mobile-margin;
   &__title {
-    padding-bottom: $mobile-margin;
+    padding-bottom: 16px;
     text-align: center;
     text-transform: uppercase;
   }
 }
 .projects {
   border-bottom: 1px solid $gray;
-  margin-bottom: $mobile-margin;
+  padding: 16px 0px;
+  margin: 32px 0px;
   &__icons {
     text-align: center;
-    
   }
   &__header {
-    padding-top: $mobile-margin;
+    padding-top: 16px;
     font-weight: normal;
     text-align: center;
   }
