@@ -2,7 +2,6 @@
 @import "../../styles/partials/_variables";
 
 .tech-stacks {
-  background-color: $gray;
   padding: 0px $mobile-margin;
   margin-top: $mobile-margin;
   &__header {
@@ -21,6 +20,24 @@
     padding-bottom: $mobile-margin;
     &--tech {
       text-align: center;
+    }
+    &--tech:nth-child(1) {
+      color: $html;
+    }
+    &--tech:nth-child(2) {
+      color: $css;
+    }
+    &--tech:nth-child(3) {
+      color: $sass;
+    }
+    &--tech:nth-child(4) {
+      color: $js;
+    }
+    &--tech:nth-child(5) {
+      color: $react;
+    }
+    &--tech:nth-child(6) {
+      color: $node;
     }
   }
 }
