@@ -8,6 +8,7 @@
   background-position: center;
   position: relative;
   z-index: 5;
+  padding: $mobile-margin;
   &__translucent-background {
     position: absolute;
     top: 0;
@@ -22,9 +23,16 @@
     text-align: center;
     text-transform: capitalize;
     font-weight: normal;
+    border: 1px solid $pewter;
+    padding: $mobile-margin;
   }
 }
 .phone-email {
+  display: flex;
+  justify-content: center;
+  padding: $mobile-margin;
+  margin: auto;
+  margin-top: $mobile-margin;
   &__phone,
   &__email {
     color: $pewter;

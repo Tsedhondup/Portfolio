@@ -18,9 +18,14 @@ const Contacts = () => {
       <div className="phone-email">
         <FontAwesomeIcon
           icon={faMobileScreenButton}
+          transform="grow-10"
           className="phone-email__phone"
         />
-        <FontAwesomeIcon icon={faEnvelope} className="phone-email__email" />
+        <FontAwesomeIcon
+          icon={faEnvelope}
+          transform="grow-10"
+          className="phone-email__email"
+        />
       </div>
       <div className="socials">
         <FontAwesomeIcon icon={faLinkedin} className="socials__linkedIn" />
