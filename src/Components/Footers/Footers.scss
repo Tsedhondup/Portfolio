@@ -30,7 +30,8 @@
 }
 .author {
   padding: $mobile-margin;
-  margin-top: $mobile-margin;
+  margin-top: 32px;
+  margin-bottom: 32px;
   text-align: center;
   &__statement {
     font-weight: 300;
