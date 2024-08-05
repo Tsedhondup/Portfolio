@@ -28,3 +28,20 @@
     color: $instagram;
   }
 }
+.author {
+  padding: $mobile-margin;
+  margin-top: $mobile-margin;
+  text-align: center;
+  &__statement {
+    font-weight: 300;
+    border-bottom: 1px solid $ebony;
+    padding-bottom: $mobile-margin;
+  }
+
+  &__name {
+    padding: $mobile-margin;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}

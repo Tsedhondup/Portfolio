@@ -6,7 +6,7 @@ import {
   faTwitter,
   faInstagram,
   faFacebook,
-  faXTwitter
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Footers.scss";
 const Footers = () => {
@@ -40,8 +40,8 @@ const Footers = () => {
         />
       </div>
       <div className="author">
-        <h3 className="author__designer">Designed and built by </h3>
-        <h3 className="author__name">TseringDhondup</h3>
+        <h3 className="author__statement">Designed and Built by </h3>
+        <h3 className="author__name">Tsering Dhondup</h3>
       </div>
 
       <div className="location-copyright">
