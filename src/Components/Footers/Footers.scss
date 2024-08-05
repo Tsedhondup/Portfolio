@@ -45,3 +45,26 @@
     text-transform: uppercase;
   }
 }
+
+.location-copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  &__copyright {
+    font-weight: normal;
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    &--icon {
+      display: inline;
+      color: $ebony;
+      padding-right: 3px;
+    }
+  }
+  &__location {
+    font-weight: normal;
+    width: auto;
+    font-size: 15px;
+  }
+}

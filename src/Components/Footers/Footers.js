@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import {
   faGithub,
   faLinkedin,
@@ -46,7 +46,12 @@ const Footers = () => {
 
       <div className="location-copyright">
         <h3 className="location-copyright__copyright">
-          copyright2024 <FontAwesomeIcon icon={faCopyright} />
+          <FontAwesomeIcon
+            icon={faCopyright}
+            transform="shrink-1"
+            className="location-copyright__copyright--icon"
+          />
+          <span> 2024</span>
         </h3>
         <h3 className="location-copyright__location">Toronto</h3>
       </div>
