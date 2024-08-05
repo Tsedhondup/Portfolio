@@ -12,11 +12,11 @@ const Footers = () => {
   return (
     <footer className="footer">
       <div className="socials">
-        <FontAwesomeIcon icon={faLinkedin} className="socials__linkedIn" />
-        <FontAwesomeIcon icon={faGithub} className="socials__github" />
-        <FontAwesomeIcon icon={faTwitter} className="socials__x-twitter" />
-        <FontAwesomeIcon icon={faFacebook} className="socials__facebook" />
-        <FontAwesomeIcon icon={faInstagram} className="socials__instagram" />
+        <FontAwesomeIcon icon={faLinkedin} transform="grow-6" className="socials__linkedIn" />
+        <FontAwesomeIcon icon={faGithub} transform="grow-6" className="socials__github" />
+        <FontAwesomeIcon icon={faTwitter} transform="grow-6" className="socials__x-twitter" />
+        <FontAwesomeIcon icon={faFacebook} transform="grow-6" className="socials__facebook" />
+        <FontAwesomeIcon icon={faInstagram} transform="grow-6" className="socials__instagram" />
       </div>
       <div className="author">
         <h3 className="author__designer">Designed and built by </h3>

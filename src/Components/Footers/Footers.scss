@@ -1,2 +1,9 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
+.footer {
+  min-height: 250px;
+  padding: $mobile-margin;
+}
+.socials {
+  display: flex;
+}
