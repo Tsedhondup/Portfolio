@@ -1,3 +1,13 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMobileScreenButton,
+  faEnvelope,
+  faGithub,
+  facLinkedin,
+  faXTwitter,
+  faInstagram,
+  faFacebookF,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Contacts.scss";
 const Contacts = () => {
   return (
