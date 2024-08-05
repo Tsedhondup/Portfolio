@@ -6,7 +6,8 @@
 }
 .socials {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 32px;
   padding: $mobile-margin 0px;
   &__icon {
     display: block;
