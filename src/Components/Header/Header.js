@@ -31,12 +31,17 @@ const Header = () => {
             <h2 className="navigation-pages__link-container--author-name">
               Tsering Dhondup
             </h2>
-            <Link to="/" className="navigation-pages__link-container--home">
+            <Link
+              to="/"
+              className="navigation-pages__link-container--home"
+              onClick={handleNavButton}
+            >
               Home
             </Link>
             <Link
               to="/About"
               className="navigation-pages__link-container--about"
+              onClick={handleNavButton}
             >
               About
             </Link>
