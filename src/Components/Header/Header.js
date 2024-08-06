@@ -27,25 +27,34 @@ const Header = () => {
         {/* Pages links */}
 
         <div className={`navigation-pages ${navPageClass}`}>
-          <Link to="/" className="navigation-pages__home">
-            Home
-          </Link>
-          <Link to="/About" className="navigation-pages__about">
-            About
-          </Link>
-          <a
-            href="https://www.linkedin.com/in/tsering-dhondup-078084161/"
-            className="navigation-pages__resume"
-          >
-            Resume
-          </a>
+          <div className="navigation-pages__link-container">
+            <Link to="/" className="navigation-pages__link-container--home">
+              Home
+            </Link>
+            <Link
+              to="/About"
+              className="navigation-pages__link-container--about"
+            >
+              About
+            </Link>
+            <a
+              href="https://www.linkedin.com/in/tsering-dhondup-078084161/"
+              className="navigation-pages__link-container--resume"
+            >
+              Resume
+            </a>
+          </div>
+
           <FontAwesomeIcon
             className="navigation-pages__hide-button"
             icon={faTimes}
             transform="grow-10"
             onClick={handleNavButton}
           />
-          <div className="navigation-pages__shadow-element"></div>
+          <div
+            className="navigation-pages__shadow-element"
+            onClick={handleNavButton}
+          ></div>
         </div>
         {/* Toggle buttons */}
         <div className="nav-button-container">
