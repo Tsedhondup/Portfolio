@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 const Header = () => {
   const [navPageClass, setNavPageClass] = useState("");
@@ -33,12 +33,11 @@ const Header = () => {
             About
           </Link>
           <span className="navigations-pages__resume">Resume</span>
-          <button
+          <FontAwesomeIcon
             className="navigations-pages__hide-button"
+            icon={faTimes}
             onClick={handleNavButton}
-          >
-            close
-          </button>
+          />
         </div>
         {/* Toggle buttons */}
         <div className="nav-button-container">
@@ -46,6 +45,7 @@ const Header = () => {
             icon={faBars}
             transform="grow-5"
             className="nav-button-container__open"
+            onClick={handleNavButton}
           />
         </div>
       </nav>

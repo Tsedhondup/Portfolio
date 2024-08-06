@@ -10,7 +10,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // Brand Name
   &__brand-name {
     color: $pewter;
     text-decoration: none;
@@ -18,7 +17,6 @@
     font-size: 20px;
   }
 }
-// Pages
 .navigation-pages {
   width: 100%;
   display: grid;
@@ -34,7 +32,6 @@
   top: 0%;
   left: 0%;
 }
-// Navigation buttons
 .nav-button-container {
   text-align: right;
   &__open {
