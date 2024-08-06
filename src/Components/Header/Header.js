@@ -28,6 +28,9 @@ const Header = () => {
 
         <div className={`navigation-pages ${navPageClass}`}>
           <div className="navigation-pages__link-container">
+            <h2 className="navigation-pages__link-container--author-name">
+              Tsering Dhondup
+            </h2>
             <Link to="/" className="navigation-pages__link-container--home">
               Home
             </Link>
