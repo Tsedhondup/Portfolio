@@ -32,10 +32,16 @@ const Header = () => {
           <Link to="/About" className="navigation-pages__about">
             About
           </Link>
-          <span className="navigations-pages__resume">Resume</span>
+          <a
+            href="https://www.linkedin.com/in/tsering-dhondup-078084161/"
+            className="navigation-pages__resume"
+          >
+            Resume
+          </a>
           <FontAwesomeIcon
             className="navigations-pages__hide-button"
             icon={faTimes}
+            transform="grow-10"
             onClick={handleNavButton}
           />
         </div>

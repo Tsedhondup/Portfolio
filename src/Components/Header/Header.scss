@@ -19,13 +19,30 @@
 }
 .navigation-pages {
   width: 100%;
+  height: 180px;
+  padding: $mobile-margin;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   background-color: $gray;
   position: absolute;
-  top: -100%;
-  left: -100%;
+  top: 0%;
+  left: 0%;
   transition: 0.3s;
+  background-color: #ffffff;
+  &__home,
+  &__about {
+    text-decoration: none;
+    color: $ebony;
+  }
+  &__resume {
+    color: $ebony;
+    text-decoration: none;
+  }
+  &__hide-button {
+    color: $ebony;
+    text-align: right;
+    width: 100%;
+  }
 }
 // Dynamic class
 .navigation-pages-show {
