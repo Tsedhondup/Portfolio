@@ -39,7 +39,7 @@ const Header = () => {
             Resume
           </a>
           <FontAwesomeIcon
-            className="navigations-pages__hide-button"
+            className="navigation-pages__hide-button"
             icon={faTimes}
             transform="grow-10"
             onClick={handleNavButton}

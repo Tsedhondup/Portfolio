@@ -19,29 +19,32 @@
 }
 .navigation-pages {
   width: 100%;
-  height: 180px;
+  // height: 180px;
   padding: $mobile-margin;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
   background-color: $gray;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: -100%;
+  left: -100%;
   transition: 0.3s;
   background-color: #ffffff;
   &__home,
   &__about {
     text-decoration: none;
     color: $ebony;
+    border-bottom: 1px solid $gray;
+    display: block;
+    padding: 10px 0px;
   }
   &__resume {
     color: $ebony;
     text-decoration: none;
+    border-bottom: 1px solid $gray;
+    display: block;
+    padding: 10px 0px;
   }
   &__hide-button {
     color: $ebony;
-    text-align: right;
-    width: 100%;
+    padding-top: 16px;
   }
 }
 // Dynamic class
@@ -49,6 +52,7 @@
   top: 0%;
   left: 0%;
 }
+
 .nav-button-container {
   text-align: right;
   &__open {
