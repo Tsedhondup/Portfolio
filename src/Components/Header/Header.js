@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 const Header = () => {
   const [navPageClass, setNavPageClass] = useState("");
@@ -40,12 +42,11 @@ const Header = () => {
         </div>
         {/* Toggle buttons */}
         <div className="nav-button-container">
-          <button
+          <FontAwesomeIcon
+            icon={faBars}
+            transform="grow-5"
             className="nav-button-container__open"
-            onClick={handleNavButton}
-          >
-            open
-          </button>
+          />
         </div>
       </nav>
     </section>

@@ -14,6 +14,8 @@
   &__brand-name {
     color: $pewter;
     text-decoration: none;
+    letter-spacing: 0.2em;
+    font-size: 20px;
   }
 }
 // Pages
@@ -34,11 +36,10 @@
 }
 // Navigation buttons
 .nav-button-container {
-  display: flex;
-  justify-content: flex-end;
-  // Button
+  text-align: right;
   &__open {
-    width: 40px;
-    text-align: center;
+    padding: 0;
+    color: $pewter;
+    width: auto;
   }
 }
