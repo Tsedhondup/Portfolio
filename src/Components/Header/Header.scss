@@ -19,10 +19,10 @@
 }
 .navigation-pages {
   width: 100%;
-  // height: 180px;
+  height: 100vh;
   padding: $mobile-margin;
   background-color: $gray;
-  position: absolute;
+  position: fixed;
   top: -100%;
   left: -100%;
   transition: 0.3s;
@@ -45,6 +45,10 @@
   &__hide-button {
     color: $ebony;
     padding-top: 16px;
+  }
+  &__shadow-element {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
   }
 }
 // Dynamic class

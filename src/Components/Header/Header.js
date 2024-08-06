@@ -25,6 +25,7 @@ const Header = () => {
           TD
         </Link>
         {/* Pages links */}
+
         <div className={`navigation-pages ${navPageClass}`}>
           <Link to="/" className="navigation-pages__home">
             Home
@@ -44,6 +45,7 @@ const Header = () => {
             transform="grow-10"
             onClick={handleNavButton}
           />
+          <div className="navigation-pages__shadow-element"></div>
         </div>
         {/* Toggle buttons */}
         <div className="nav-button-container">
