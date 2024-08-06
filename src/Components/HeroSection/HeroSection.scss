@@ -11,19 +11,20 @@
 
 .hero-content {
   margin-top: calc((100vh - 50px) / 3);
-  //   text-align: center;
+  text-align: center;
   // Name
   &__name {
     margin: 0;
+    margin-bottom: 32px;
     width: 100%;
     font-size: 36px;
-    font-weight: normal;
     &--first {
       display: block;
+      font-weight: 200;
     }
     &--last {
       display: block;
-      font-weight: bold;
+      // font-weight: normal;
       text-transform: uppercase;
     }
   }
@@ -32,8 +33,7 @@
     margin: 0;
     margin-top: 16px;
     width: 100%;
-    font-weight: normal;
-    font-style: italic;
+    font-weight: 200;
     &--city {
       display: block;
     }
