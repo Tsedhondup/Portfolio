@@ -1,16 +1,22 @@
 @import "../../styles/partials/_variables";
 
 .hero-container {
-  height: calc(100vh - 50px);
+  // height: calc(100vh - 50px);
   background-color: $black;
   color: $pewter;
   display: flex;
   justify-content: center;
-  padding: 0px $mobile-margin;
+  background-image: url("../../assets/image/hero-back.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
-  margin-top: calc((100vh - 50px) / 3);
+  height: calc(100vh - 50px);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0px $mobile-margin;
+  padding-top: calc((100vh - 50px) / 3);
   text-align: center;
   // Name
   &__name {
