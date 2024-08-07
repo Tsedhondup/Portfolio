@@ -11,7 +11,7 @@ const AboutFirst = () => {
   return (
     <section className="about-second">
       <h1 className="about-second__header">About me </h1>
-      <div>
+      <div className="about-second__image">
         <img src={profilePic} alt="author-photo" />
       </div>
       <section className="about-text-container">
