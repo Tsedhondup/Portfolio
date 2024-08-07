@@ -1,7 +1,14 @@
+import {
+  faHistory,
+  faCode,
+  faGraduationCap,
+  faFlagCheckered,
+} from "@fortawesome/free-solid-svg-icons";
+import "./AboutFirst.scss";
 const AboutFirst = () => {
   return (
     <section>
-      <h1>Tsering Dhondup</h1>
+      <h1>Tsering Dhondup tale </h1>
       <section>
         {/* Untold story */}
         <section>
