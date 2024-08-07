@@ -4,14 +4,14 @@ import {
   faGraduationCap,
   faFlagCheckered,
 } from "@fortawesome/free-solid-svg-icons";
-import profilePic from "../../assets/image/tsering2.jpg";
+import profilePic from "../../assets/image/tsering3.jpg";
 import "./AboutFirst.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AboutFirst = () => {
   return (
     <section className="about-second">
+      <h1>About me </h1>
       <div>
-        <h1>About me </h1>
         <img src={profilePic} alt="author-photo" />
       </div>
       <section>
