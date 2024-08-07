@@ -1,15 +1,38 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/_variables";
 .about-second {
   padding-top: 50px;
   &__header {
-    font-weight: 200;
+    font-weight: normal;
     font-size: 24px;
     padding-bottom: 16px;
+    color: $ebony;
   }
   &__image-container {
     &--img {
       object-fit: cover;
       display: block;
       height: 300px;
+    }
+  }
+}
+.about-text-container {
+  margin-top: 16px;
+}
+.about-text {
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $mobile-margin;
+    &--text {
+      font-weight: normal;
+      width: auto;
+      padding-right: 5px;
+      color: $ebony;
+    }
+    &--icon {
+      width: auto;
+      color: $ebony;
     }
   }
 }

@@ -22,7 +22,7 @@ const AboutFirst = () => {
         {/* Untold story */}
         <section className="about-text">
           <div className="about-text__title">
-            <h2 className="about-text__title--text">Untold Story</h2>
+            <h3 className="about-text__title--text">Untold Story</h3>
             <FontAwesomeIcon
               icon={faHistory}
               className="about-text__title--icon"
@@ -39,7 +39,7 @@ const AboutFirst = () => {
         {/* Earliest coding journey */}
         <section className="about-text">
           <div className="about-text__title">
-            <h2 className="about-text__title--text">Earliest coding journey</h2>
+            <h3 className="about-text__title--text">Earliest coding journey</h3>
             <FontAwesomeIcon
               icon={faCode}
               className="about-text__title--icon"
@@ -55,9 +55,9 @@ const AboutFirst = () => {
         {/* Becoming a certified developer! */}
         <section className="about-text">
           <div className="about-text__title">
-            <h2 className="about-text__title--text">
+            <h3 className="about-text__title--text">
               Becoming a certified developer!
-            </h2>
+            </h3>
             <FontAwesomeIcon
               icon={faGraduationCap}
               className="about-text__title--icon"
@@ -75,7 +75,7 @@ const AboutFirst = () => {
         {/* What next */}
         <section className="about-text">
           <div className="about-text__title">
-            <h2 className="about-text__title--text">What next</h2>
+            <h3 className="about-text__title--text">What next</h3>
             <FontAwesomeIcon
               icon={faFlagCheckered}
               className="about-text__title--icon"
