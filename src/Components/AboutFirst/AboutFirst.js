@@ -28,7 +28,7 @@ const AboutFirst = () => {
               className="about-text__title--icon"
             />
           </div>
-          <p>
+          <p className="about-text__para">
             'My earliest quest for a career began at the University of Delhi,
             where I studied plant biology, ecology, and genetics. Their
             education includes rigorous coursework, laboratory work, and field
@@ -45,7 +45,7 @@ const AboutFirst = () => {
               className="about-text__title--icon"
             />
           </div>
-          <p>
+          <p className="about-text__para">
             'I came across a video on YouTube about a young and successful
             self-taught software developer. As influential and inspiring as the
             video was, I was rather excited to learn coding as a hobby and feed
@@ -63,7 +63,7 @@ const AboutFirst = () => {
               className="about-text__title--icon"
             />
           </div>
-          <p>
+          <p className="about-text__para">
             'eaching myself to code was of great success, and it continues to be
             my greatest strength in keeping up with ever-changing technologies
             that are paramount. However, the need for a proper mentor to assist
@@ -81,7 +81,7 @@ const AboutFirst = () => {
               className="about-text__title--icon"
             />
           </div>
-          <p>
+          <p className="about-text__para">
             As a full-stack developer, I aim to secure a role in a dynamic tech
             company to enhance my skills in modern frameworks. I plan to
             continuously improve my knowledge through advanced courses,
