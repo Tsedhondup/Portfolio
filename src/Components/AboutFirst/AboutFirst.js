@@ -4,18 +4,19 @@ import {
   faGraduationCap,
   faFlagCheckered,
 } from "@fortawesome/free-solid-svg-icons";
-import profilePic from "../../assets/image/tsering3.jpg";
+import profilePic from "../../assets/image/tsering.png";
 import "./AboutFirst.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AboutFirst = () => {
   return (
-    <section className="about-second">
-      <h2 className="about-second__header">About me </h2>
-      <div className="about-second__image-container">
+    <section className="about-first">
+      <div className="about-first__image-container">
+        <h2 className="about-first__header-1">About </h2>
+        <h2 className="about-first__header-2">me</h2>
         <img
           src={profilePic}
           alt="author-photo"
-          className="about-second__image-container--img"
+          className="about-first__image-container--img"
         />
       </div>
       <section className="about-text-container">
