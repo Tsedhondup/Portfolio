@@ -22,7 +22,7 @@ const AboutFirst = () => {
         {/* Untold story */}
         <section className="about-text">
           <div className="about-text__title">
-            <h3 className="about-text__title--text">Untold Story</h3>
+            <h3 className="about-text__title--text">Background</h3>
             <FontAwesomeIcon
               icon={faHistory}
               className="about-text__title--icon"

@@ -3,7 +3,6 @@ import AboutSecond from "../../Components/AboutSecond/AboutSecond";
 import TechStacks from "../../Components/TechStacks/TechStacks";
 import Works from "../../Components/Works/Works";
 import Contacts from "../../Components/Contacts/Contacts";
-import Footers from "../../Components/Footers/Footers";
 const HomePage = () => {
   return (
     <>
@@ -12,7 +11,6 @@ const HomePage = () => {
       <TechStacks />
       <Works />
       <Contacts />
-      <Footers />
     </>
   );
 };
