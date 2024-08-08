@@ -1,12 +1,13 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
 .about-first {
+  padding: 0px $mobile-margin;
   padding-top: 50px;
   background-color: $black;
   &__header-1 {
     font-size: 24px;
     padding-bottom: 16px;
-    color: $ebony;
+    color: $pewter;
     text-align: center;
     text-transform: uppercase;
     position: absolute;
@@ -16,7 +17,7 @@
   &__header-2 {
     font-size: 24px;
     padding-bottom: 16px;
-    color: $ebony;
+    color: $pewter;
     text-align: center;
     text-transform: uppercase;
     position: absolute;
@@ -45,16 +46,17 @@
       font-weight: normal;
       width: auto;
       padding-right: 5px;
-      color: $black;
+      color: $pewter;
     }
     &--icon {
       width: auto;
-      color: $black;
+    color: $pewter;
     }
   }
   &__para {
-    color: $ebony;
+    color: $pewter;
     font-size: 15px;
+    font-weight: 200;
     text-align: center;
     margin-bottom: $mobile-margin;
   }
