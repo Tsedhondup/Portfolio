@@ -62,29 +62,31 @@
   padding-top: 16px;
 }
 .about-text {
-  &__title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: $mobile-margin 0px;
-
-    &--text {
-      font-weight: normal;
-      width: auto;
-      padding-right: 5px;
-      color: $ebony;
-      color: $ebony;
-    }
-    &--icon {
-      width: auto;
-      color: $ebony;
-      color: $ebony;
-    }
-  }
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid $ebony;
+  border-radius: 10px;
   &__para {
     color: $ebony;
     font-size: 15px;
     font-weight: 200;
     text-align: justify;
+    padding-bottom: 16px;
+  }
+  &__icon-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 200px;
+    &--icons {
+      width: auto;
+      padding-right: 10px;
+    }
+  }
+  &__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: normal;
   }
 }
