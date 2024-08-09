@@ -36,7 +36,7 @@ const AboutFirst = () => {
           <h2 className="about-text__title">Education</h2>
 
           <p className="about-text__para">
-            Botany graduate from the University of Delhi
+            First division botany graduates from University of Delhi
           </p>
           {/* Icons */}
           <div className="about-text__icon-container">
