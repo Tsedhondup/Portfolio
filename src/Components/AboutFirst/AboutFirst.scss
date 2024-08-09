@@ -1,40 +1,35 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
 .about-first {
-  padding: 0px $mobile-margin;
   padding-top: 50px;
   background-color: $black;
-  &__header-1 {
-    font-size: 24px;
-    padding-bottom: 16px;
-    color: $pewter;
-    text-align: center;
-    text-transform: uppercase;
-    position: absolute;
-    left: -30%;
-    top: 50%;
-  }
-  &__header-2 {
-    font-size: 24px;
-    padding-bottom: 16px;
-    color: $pewter;
-    text-align: center;
-    text-transform: uppercase;
-    position: absolute;
-    right: -30%;
-    top: 50%;
-  }
+  box-sizing: border-box;
+  border: 1px solid $pewter;
+
   &__image-container {
     position: relative;
+    display: flex;
+    justify-content: flex-end;
     &--img {
       object-fit: contain;
       display: block;
-      height: 300px;
+      width: 300px;
+    }
+    &--header {
+      width: auto;
+      font-size: 24px;
+      color: $pewter;
+      text-align: left;
+      text-transform: capitalize;
+      position: absolute;
+      left: 10%;
+      top: 50%;
     }
   }
 }
 .about-text-container {
-  margin-top: 16px;
+  background-color: #ffffff;
+  padding: 0px $mobile-margin;
 }
 .about-text {
   &__title {
@@ -46,15 +41,15 @@
       font-weight: normal;
       width: auto;
       padding-right: 5px;
-      color: $pewter;
+      color: $ebony;
     }
     &--icon {
       width: auto;
-    color: $pewter;
+      color: $ebony;
     }
   }
   &__para {
-    color: $pewter;
+    color: $ebony;
     font-size: 15px;
     font-weight: 200;
     text-align: center;
