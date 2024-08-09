@@ -4,14 +4,34 @@
 .about-second {
   padding: 0 $mobile-margin;
   padding-top: $mobile-margin;
-  &__img {
-    border: 1px solid #a70000;
-    border-bottom-width: 0px;
-    object-fit: contain;
-    max-width: 360px;
-    display: block;
-    margin: auto;
+  &__image-container {
+    position: relative;
+    &--shadow-element {
+      height: 100%;
+      position: absolute;
+      z-index: 10;
+      // background-image: linear-gradient(to right, #ffffff, #fff, $gray);
+      // background-image: linear-gradient(
+      //   to bottom right,
+      //   rgba(0, 0, 0, 1),
+      //   rgba(0, 0, 0, 0.9),
+      //   rgba(0, 0, 0, 0.6)
+      // );
+
+      // opacity: 0.6;
+    }
+    &--img {
+      border: 1px solid #a70000;
+      border-bottom-width: 0px;
+      object-fit: contain;
+      // max-width: 360px;/
+      display: block;
+      margin: auto;
+      position: relative;
+      z-index: 5;
+    }
   }
+
   &__star-of-life {
     padding-top: 16px;
     color: $gray;
@@ -28,5 +48,6 @@
     padding-left: 8px;
     font-style: italic;
     text-decoration: none;
+    color: $css;
   }
 }

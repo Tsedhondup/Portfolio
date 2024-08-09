@@ -6,11 +6,15 @@ import "./AboutSecond.scss";
 const AboutSecond = () => {
   return (
     <section className="about-second">
-      <img
-        src={profileImage}
-        alt="profile-image"
-        className="about-second__img"
-      />
+      <div className="about-second__image-container">
+        <div className="about-second__image-container--shadow-element"></div>
+        <img
+          src={profileImage}
+          alt="profile-image"
+          className="about-second__image-container--img"
+        />
+      </div>
+
       <FontAwesomeIcon
         icon={faStarOfLife}
         className="about-second__star-of-life"
