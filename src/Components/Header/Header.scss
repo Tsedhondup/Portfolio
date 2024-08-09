@@ -35,6 +35,8 @@
     &--author-name {
       font-weight: 200;
       color: $gray;
+      color: #a70000;
+
       padding: 16px 0px;
       font-size: 14px;
       text-align: right;
@@ -45,7 +47,7 @@
     &--about {
       text-decoration: none;
       color: $ebony;
-      border-bottom: 1px solid $gray;
+      border-bottom: 1px solid #a70000;
       display: block;
       padding: 10px 0px;
     }
@@ -53,6 +55,8 @@
       color: $ebony;
       text-decoration: none;
       border-bottom: 1px solid $gray;
+      border-bottom: 1px solid #a70000;
+
       display: block;
       padding: 10px 0px;
     }
