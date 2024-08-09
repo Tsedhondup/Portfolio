@@ -33,13 +33,13 @@
     // Header Two
     &--mobile-header-2 {
       display: none;
+      color: $pewter;
     }
     @include mobile2 {
       &--mobile-header-2 {
         display: block;
         width: auto;
         font-size: 24px;
-        color: $pewter;
         text-align: left;
         text-transform: capitalize;
         position: absolute;
@@ -66,6 +66,7 @@
   // background-image: linear-gradient(to bottom right, $black, $pewter);
   &__title {
     display: flex;
+    color: $ebony;
     justify-content: flex-start;
     align-items: center;
     font-size: 24px;
@@ -77,7 +78,7 @@
     color: $ebony;
     font-size: 15px;
     font-weight: 200;
-    text-align: justify;
+    // text-align: justify;
     padding-bottom: 16px;
   }
   &__icon-container {
@@ -87,16 +88,17 @@
     &--icons {
       width: auto;
       padding-right: 10px;
+      color: #a70000;
     }
-    &--icon-dna {
-      color: $dna;
-    }
-    &--icon-leaf {
-      color: $leaf;
-    }
-    &--icon-scope {
-      color: $microScope;
-    }
+    // &--icon-dna {
+    //   color: $dna;
+    // }
+    // &--icon-leaf {
+    //   color: $leaf;
+    // }
+    // &--icon-scope {
+    //   color: $microScope;
+    // }
   }
 }
 
@@ -104,47 +106,47 @@
   border-right: 1px solid $pewter;
   border-bottom: 1px solid $pewter;
   // border-bottom-right-radius: 10px;
-  background-image: linear-gradient(
-    to bottom right,
+  // background-image: linear-gradient(
+  //   to bottom right,
 
-    #ffffff,
-    #ffffff,
-    $pewter
-  );
+  //   $black,
+  //   $ebony,
+  //   $black
+  // );
 }
 .about-text:nth-child(2) {
   border-left: 1px solid $pewter;
   border-bottom: 1px solid $pewter;
   // border-bottom-left-radius: 10px;
-  background-image: linear-gradient(
-    to bottom left,
+  // background-image: linear-gradient(
+  //   to bottom left,
 
-    #ffffff,
-    #ffffff,
-    $pewter
-  );
+  //   $black,
+  //   $ebony,
+  //   $black
+  // );
 }
 .about-text:nth-child(3) {
   border-right: 1px solid $pewter;
   border-bottom: 1px solid $pewter;
   // border-bottom-right-radius: 10px;
-  background-image: linear-gradient(
-    to bottom right,
+  // background-image: linear-gradient(
+  //   to bottom right,
 
-    #ffffff,
-    #ffffff,
-    $pewter
-  );
+  //   $black,
+  //   $ebony,
+  //   $black
+  // );
 }
 .about-text:nth-child(4) {
   border-left: 1px solid $pewter;
-  border-bottom: 1px solid $pewter;
+  // border-bottom: 1px solid $pewter;
   // border-bottom-left-radius: 10px;
-  background-image: linear-gradient(
-    to bottom left,
+  // background-image: linear-gradient(
+  //   to bottom left,
 
-    #ffffff,
-    #ffffff,
-    $pewter
-  );
+  //   $black,
+  //   $ebony,
+  //   $black
+  // );
 }
