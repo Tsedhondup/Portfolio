@@ -1,12 +1,24 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHistory,
   faCode,
+  faLaptop,
+  faMugHot,
+  faDna,
+  faSeedling,
+  faMicroscope,
+  faVial,
+  faBook,
+  faHeadset,
   faGraduationCap,
+  faCheckSquare,
   faFlagCheckered,
+  faHandPointRight,
+  faLaptopHouse,
+  faGlobeAmericas,
 } from "@fortawesome/free-solid-svg-icons";
 import profilePic from "../../assets/image/tsering.png";
 import "./AboutFirst.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AboutFirst = () => {
   return (
     <section className="about-first">
@@ -25,18 +37,14 @@ const AboutFirst = () => {
         {/* Untold story */}
         <section className="about-text">
           <div className="about-text__title">
-            <h3 className="about-text__title--text">Background</h3>
+            <h3 className="about-text__title--text">Educational background</h3>
             <FontAwesomeIcon
               icon={faHistory}
               className="about-text__title--icon"
             />
           </div>
           <p className="about-text__para">
-            'My earliest quest for a career began at the University of Delhi,
-            where I studied plant biology, ecology, and genetics. Their
-            education includes rigorous coursework, laboratory work, and field
-            research, developing a strong foundation in scientific analysis and
-            research methodologies'
+            'Botany graduate from the University of Delhi'
           </p>
         </section>
         {/* Earliest coding journey */}
