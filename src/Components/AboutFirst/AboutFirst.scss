@@ -8,25 +8,37 @@
 
   &__image-container {
     position: relative;
-    display: flex;
-    justify-content: flex-end;
+
     &--img {
       object-fit: contain;
       display: block;
       width: 300px;
     }
     &--header {
-      width: auto;
-      font-size: 24px;
-      color: $pewter;
-      text-align: left;
-      text-transform: capitalize;
-      position: absolute;
-      left: 10%;
-      top: 50%;
+      display: none;
+    }
+    @include mobile2 {
+      &--header {
+        display: block;
+        width: auto;
+        font-size: 24px;
+        color: $pewter;
+        text-align: left;
+        text-transform: capitalize;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+      }
+    }
+  }
+  @include mobile2 {
+    &__image-container {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
+
 .about-text-container {
   background-color: #ffffff;
   padding: 0px $mobile-margin;
