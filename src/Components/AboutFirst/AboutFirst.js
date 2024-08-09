@@ -1,24 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHistory,
   faCode,
   faLaptop,
-  faMugHot,
   faDna,
   faSeedling,
-  faMicroscope,
   faVial,
   faBook,
   faHeadset,
-  faGraduationCap,
   faCheckSquare,
-  faFlagCheckered,
   faHandPointRight,
   faLaptopHouse,
   faGlobeAmericas,
+  faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
 import profilePic from "../../assets/image/tsering.png";
 import "./AboutFirst.scss";
+import { faVuejs } from "@fortawesome/free-brands-svg-icons";
 const AboutFirst = () => {
   return (
     <section className="about-first">
@@ -54,7 +51,7 @@ const AboutFirst = () => {
               className="about-text__icon-container--icons about-text__icon-container--icon-leaf"
             />
             <FontAwesomeIcon
-              icon={faMicroscope}
+              icon={faVial}
               transform="grow-2"
               className="about-text__icon-container--icons about-text__icon-container--icon-scope"
             />
@@ -62,31 +59,37 @@ const AboutFirst = () => {
         </section>
         {/* Earliest coding journey */}
         <section className="about-text">
-          <div className="about-text__title">
-            <h3 className="about-text__title--text">Earliest coding journey</h3>
-            <FontAwesomeIcon
-              icon={faCode}
-              className="about-text__title--icon"
-            />
-          </div>
+          <h3 className="about-text__title">Earliest coding journey</h3>
+
           <p className="about-text__para">
             'I came across a video on YouTube about a young and successful
             self-taught software developer. As influential and inspiring as the
             video was, I was rather excited to learn coding as a hobby and feed
             my curiosities.'
           </p>
+          {/* Icons */}
+          <div className="about-text__icon-container">
+            <FontAwesomeIcon
+              icon={faLaptop}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-scope"
+            />
+            <FontAwesomeIcon
+              icon={faCode}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-dna"
+            />
+            <FontAwesomeIcon
+              icon={faCoffee}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-leaf"
+            />
+          </div>
         </section>
         {/* Becoming a certified developer! */}
         <section className="about-text">
-          <div className="about-text__title">
-            <h3 className="about-text__title--text">
-              Becoming a certified developer!
-            </h3>
-            <FontAwesomeIcon
-              icon={faGraduationCap}
-              className="about-text__title--icon"
-            />
-          </div>
+          <h3 className="about-text__title">Becoming a certified developer!</h3>
+
           <p className="about-text__para">
             'eaching myself to code was of great success, and it continues to be
             my greatest strength in keeping up with ever-changing technologies
@@ -95,16 +98,29 @@ const AboutFirst = () => {
             I take pride in investing time and resources in joining the Software
             Engineering Boot Camp at BrainStation, Toronto'
           </p>
+          {/* Icons */}
+          <div className="about-text__icon-container">
+            <FontAwesomeIcon
+              icon={faBook}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-dna"
+            />
+            <FontAwesomeIcon
+              icon={faHeadset}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-leaf"
+            />
+            <FontAwesomeIcon
+              icon={faCheckSquare}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-scope"
+            />
+          </div>
         </section>
         {/* What next */}
         <section className="about-text">
-          <div className="about-text__title">
-            <h3 className="about-text__title--text">What next</h3>
-            <FontAwesomeIcon
-              icon={faFlagCheckered}
-              className="about-text__title--icon"
-            />
-          </div>
+          <h3 className="about-text__title">What next</h3>
+
           <p className="about-text__para">
             As a full-stack developer, I aim to secure a role in a dynamic tech
             company to enhance my skills in modern frameworks. I plan to
@@ -112,6 +128,24 @@ const AboutFirst = () => {
             certifications, and hands-on projects. My long-term goal is to grow
             into a senior developer role and mentor others.
           </p>
+          {/* Icons */}
+          <div className="about-text__icon-container">
+            <FontAwesomeIcon
+              icon={faHandPointRight}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-dna"
+            />
+            <FontAwesomeIcon
+              icon={faLaptopHouse}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-leaf"
+            />
+            <FontAwesomeIcon
+              icon={faGlobeAmericas}
+              transform="grow-2"
+              className="about-text__icon-container--icons about-text__icon-container--icon-scope"
+            />
+          </div>
         </section>
       </section>
     </section>
