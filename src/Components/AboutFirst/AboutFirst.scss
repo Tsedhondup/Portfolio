@@ -5,7 +5,17 @@
   background-color: $black;
   box-sizing: border-box;
   border: 1px solid $pewter;
-
+  // Header One
+  &__mobile-header-1 {
+    color: $pewter;
+    text-align: center;
+    padding-top: 16px;
+  }
+  @include mobile2 {
+    &__mobile-header-1 {
+      display: none;
+    }
+  }
   &__image-container {
     position: relative;
 
@@ -18,17 +28,6 @@
       &--img {
         width: 300px;
         height: auto;
-      }
-    }
-    // Header One
-    &--mobile-header-1 {
-      color: $pewter;
-      text-align: center;
-      padding-top: 16px;
-    }
-    @include mobile2 {
-      &--mobile-header-1 {
-        display: none;
       }
     }
 
