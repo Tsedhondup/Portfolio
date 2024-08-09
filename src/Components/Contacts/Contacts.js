@@ -11,6 +11,12 @@ const Contacts = () => {
       <h2 className="contacts__header">Contact me</h2>
       <div className="phone-email">
         <div className="phone-email__phone-container">
+          <a
+            href="tel:+1437245778"
+            className="phone-email__phone-container--text"
+          >
+            call
+          </a>
           <a href="tel:+1437245778">
             <FontAwesomeIcon
               icon={faMobileScreenButton}
@@ -18,26 +24,20 @@ const Contacts = () => {
               className="phone-email__phone-container--icon"
             />
           </a>
-          <a
-            href="tel:+1437245778"
-            className="phone-email__phone-container--text"
-          >
-            call
-          </a>
         </div>
         <div className="phone-email__email-container">
+          <a
+            href="mailto:tyddhondup88@gmail.com"
+            className="phone-email__email-container--text"
+          >
+            email
+          </a>
           <a href="mailto:tyddhondup88@gmail.com">
             <FontAwesomeIcon
               icon={faEnvelope}
               transform="grow-10"
-              className="phone-email__email-container--text"
+              className="phone-email__email-container--icon"
             />
-          </a>
-          <a
-            href="mailto:tyddhondup88@gmail.com"
-            className="phone-email__email-container--icon"
-          >
-            email
           </a>
         </div>
       </div>

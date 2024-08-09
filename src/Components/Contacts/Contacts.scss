@@ -22,7 +22,7 @@
     z-index: 10;
   }
   &__header {
-    color: #a70000;
+    color: $pewter;
     text-transform: capitalize;
     text-align: center;
     font-weight: normal;
@@ -33,16 +33,42 @@
   }
 }
 .phone-email {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: $mobile-margin;
-  margin: auto;
-  margin-top: $mobile-margin;
   position: relative;
   z-index: 15;
-  &__phone,
-  &__email {
-    color: #a70000;
+  max-width: 200px;
+  margin: auto;
+  margin-top: 32px;
+  &__phone-container {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    &--text {
+      color: $pewter;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: 200;
+    }
+
+    &--icon {
+      color: #a70000;
+      text-decoration: none;
+    }
+  }
+  &__email-container {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    &--text {
+      color: $pewter;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: 200;
+    }
+    &--icon {
+      color: #a70000;
+      text-decoration: none;
+    }
   }
 }
