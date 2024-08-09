@@ -4,7 +4,7 @@
 .header {
   padding: 0px $mobile-margin;
   background-color: $black;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   &__brand-name {
-    color: $pewter;
+    color: #a70000;
     text-decoration: none;
     letter-spacing: 0.2em;
     font-size: 20px;
@@ -59,7 +59,7 @@
   }
 
   &__hide-button {
-    color: $ebony;
+    color: #a70000;
     padding: 16px 0px;
     background-color: #ffffff;
   }
@@ -78,7 +78,7 @@
   text-align: right;
   &__open {
     padding: 0;
-    color: $pewter;
+    color: #a70000;
     width: auto;
   }
 }
