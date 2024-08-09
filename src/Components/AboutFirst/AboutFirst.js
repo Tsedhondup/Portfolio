@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AboutFirst = () => {
   return (
     <section className="about-first">
-      <h2 className="about-first__mobile-header-1">About Me</h2>
+      {/* <h2 className="about-first__mobile-header-1">About Me</h2> */}
       <div className="about-first__image-container">
         <h2 className="about-first__image-container--mobile-header-2">
           About <br /> me
