@@ -36,7 +36,8 @@
     &--mobile-header-2 {
       display: none;
       text-transform: uppercase;
-      color: $pewter;
+      font-weight: normal;
+      color: #a70000;
     }
     @include mobile2 {
       &--mobile-header-2 {
