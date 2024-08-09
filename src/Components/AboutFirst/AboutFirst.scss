@@ -12,7 +12,13 @@
     &--img {
       object-fit: contain;
       display: block;
-      width: 300px;
+      height: 300px;
+    }
+    @include mobile2 {
+      &--img {
+        width: 300px;
+        height: auto;
+      }
     }
     // Header One
     &--mobile-header-1 {
