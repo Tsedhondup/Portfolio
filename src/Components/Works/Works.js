@@ -13,7 +13,7 @@ const Works = () => {
       <section className="projects">
         <FontAwesomeIcon
           icon={faCloudSunRain}
-          transform="grow-25"
+          transform="grow-15"
           className="projects__icon"
         />
         <h3 className="projects__header">Weather App</h3>
@@ -24,7 +24,7 @@ const Works = () => {
       <section className="projects">
         <FontAwesomeIcon
           icon={faCirclePlay}
-          transform="grow-25"
+          transform="grow-15"
           className="projects__icon"
         />
         <h3 className="projects__header">BrainFlix</h3>
@@ -35,7 +35,7 @@ const Works = () => {
       <section className="projects">
         <FontAwesomeIcon
           icon={faEnvelopeCircleCheck}
-          transform="grow-25"
+          transform="grow-15"
           className="projects__icon"
         />
 
@@ -47,7 +47,7 @@ const Works = () => {
       <section className="projects">
         <FontAwesomeIcon
           icon={faCartFlatbed}
-          transform="grow-25"
+          transform="grow-15"
           className="projects__icon"
         />
 
