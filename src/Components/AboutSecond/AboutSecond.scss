@@ -5,7 +5,7 @@
   padding: 0 $mobile-margin;
   padding-top: $mobile-margin;
   &__img {
-    border: 1px solid $pewter;
+    border: 1px solid #a70000;
     border-bottom-width: 0px;
     object-fit: contain;
     max-width: 360px;
@@ -21,7 +21,7 @@
     text-align: center;
     padding-bottom: 16px;
     font-size: 15px;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid #a70000;
     line-height: 1.5em;
   }
   &__link {
