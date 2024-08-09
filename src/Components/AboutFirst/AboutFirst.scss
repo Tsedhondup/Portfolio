@@ -63,9 +63,14 @@
 }
 .about-text {
   padding: 16px;
-  margin-bottom: 16px;
-  border: 1px solid $ebony;
-  border-radius: 10px;
+  // background-image: linear-gradient(to bottom right, $black, $pewter);
+  &__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: normal;
+    padding-bottom: 16px;
+  }
   &__para {
     color: $ebony;
     font-size: 15px;
@@ -75,18 +80,70 @@
   }
   &__icon-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
-    max-width: 200px;
     &--icons {
       width: auto;
       padding-right: 10px;
+      padding-bottom: 10px;
+    }
+    &--icon-dna {
+      color: $dna;
+    }
+    &--icon-leaf {
+      color: $leaf;
+    }
+    &--icon-scope {
+      color: $microScope;
     }
   }
-  &__title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: normal;
-  }
+}
+
+.about-text:nth-child(1) {
+  border-right: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
+  // border-bottom-right-radius: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+
+    #ffffff,
+    #ffffff,
+    $pewter
+  );
+}
+.about-text:nth-child(2) {
+  border-left: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
+  // border-bottom-left-radius: 10px;
+  background-image: linear-gradient(
+    to bottom left,
+
+    #ffffff,
+    #ffffff,
+    $pewter
+  );
+}
+.about-text:nth-child(3) {
+  border-right: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
+  // border-bottom-right-radius: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+
+    #ffffff,
+    #ffffff,
+    $pewter
+  );
+}
+.about-text:nth-child(4) {
+  border-left: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
+  // border-bottom-left-radius: 10px;
+  background-image: linear-gradient(
+    to bottom left,
+
+    #ffffff,
+    #ffffff,
+    $pewter
+  );
 }

@@ -36,6 +36,8 @@ const AboutFirst = () => {
       <section className="about-text-container">
         {/* Untold story */}
         <section className="about-text">
+          <h2 className="about-text__title">Education</h2>
+
           <p className="about-text__para">
             Botany graduate from the University of Delhi
           </p>
@@ -44,20 +46,19 @@ const AboutFirst = () => {
             <FontAwesomeIcon
               icon={faDna}
               transform="grow-2"
-              className="about-text__icon-container--icons"
+              className="about-text__icon-container--icons about-text__icon-container--icon-dna"
             />
             <FontAwesomeIcon
               icon={faSeedling}
               transform="grow-2"
-              className="about-text__icon-container--icons"
+              className="about-text__icon-container--icons about-text__icon-container--icon-leaf"
             />
             <FontAwesomeIcon
               icon={faMicroscope}
               transform="grow-2"
-              className="about-text__icon-container--icons"
+              className="about-text__icon-container--icons about-text__icon-container--icon-scope"
             />
           </div>
-          <h2 className="about-text__title">Education</h2>
         </section>
         {/* Earliest coding journey */}
         <section className="about-text">
