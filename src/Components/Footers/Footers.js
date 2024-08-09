@@ -12,6 +12,10 @@ import "./Footers.scss";
 const Footers = () => {
   return (
     <footer className="footer">
+      <div className="author">
+        <h3 className="author__statement">Designed and Built by </h3>
+        <h3 className="author__name">Tsering Dhondup</h3>
+      </div>
       <div className="socials">
         <FontAwesomeIcon
           icon={faLinkedin}
@@ -38,10 +42,6 @@ const Footers = () => {
           transform="grow-6"
           className="socials__icon"
         />
-      </div>
-      <div className="author">
-        <h3 className="author__statement">Designed and Built by </h3>
-        <h3 className="author__name">Tsering Dhondup</h3>
       </div>
 
       <div className="location-copyright">
