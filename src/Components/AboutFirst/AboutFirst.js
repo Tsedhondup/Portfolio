@@ -11,7 +11,10 @@ const AboutFirst = () => {
   return (
     <section className="about-first">
       <div className="about-first__image-container">
-        <h2 className="about-first__image-container--header">
+        <h2 className="about-first__image-container--mobile-header-1">
+          About Me
+        </h2>
+        <h2 className="about-first__image-container--mobile-header-2">
           About <br /> me
         </h2>
         <img

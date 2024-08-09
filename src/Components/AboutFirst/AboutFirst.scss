@@ -14,11 +14,24 @@
       display: block;
       width: 300px;
     }
-    &--header {
+    // Header One
+    &--mobile-header-1 {
+      color: $pewter;
+      text-align: center;
+      padding-top: 16px;
+    }
+    @include mobile2 {
+      &--mobile-header-1 {
+        display: none;
+      }
+    }
+
+    // Header Two
+    &--mobile-header-2 {
       display: none;
     }
     @include mobile2 {
-      &--header {
+      &--mobile-header-2 {
         display: block;
         width: auto;
         font-size: 24px;
