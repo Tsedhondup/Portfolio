@@ -28,6 +28,7 @@ const AboutFirst = () => {
           alt="author-photo"
           className="about-first__image-container--img"
         />
+        <div className="about-first__image-container--shadow-el"></div>
       </div>
       <h2 className="about-first__mobile-header-1">About Me</h2>
 
