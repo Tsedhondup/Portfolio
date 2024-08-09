@@ -6,9 +6,11 @@
   box-sizing: border-box;
   // Header One
   &__mobile-header-1 {
-    color: $pewter;
-    text-align: center;
-    padding-top: 16px;
+    color: $ebony;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
   }
   @include mobile2 {
     &__mobile-header-1 {
@@ -33,6 +35,7 @@
     // Header Two
     &--mobile-header-2 {
       display: none;
+      text-transform: uppercase;
       color: $pewter;
     }
     @include mobile2 {
@@ -41,7 +44,6 @@
         width: auto;
         font-size: 24px;
         text-align: left;
-        text-transform: capitalize;
         position: absolute;
         left: 10%;
         top: 50%;
@@ -103,8 +105,9 @@
 }
 
 .about-text:nth-child(1) {
-  border-right: 1px solid $pewter;
-  border-bottom: 1px solid $pewter;
+  border-top: 1px solid #a70000;
+  border-right: 1px solid #a70000;
+  border-bottom: 1px solid #a70000;
   // border-bottom-right-radius: 10px;
   // background-image: linear-gradient(
   //   to bottom right,
@@ -115,8 +118,8 @@
   // );
 }
 .about-text:nth-child(2) {
-  border-left: 1px solid $pewter;
-  border-bottom: 1px solid $pewter;
+  border-left: 1px solid #a70000;
+  border-bottom: 1px solid #a70000;
   // border-bottom-left-radius: 10px;
   // background-image: linear-gradient(
   //   to bottom left,
@@ -127,8 +130,8 @@
   // );
 }
 .about-text:nth-child(3) {
-  border-right: 1px solid $pewter;
-  border-bottom: 1px solid $pewter;
+  border-right: 1px solid #a70000;
+  border-bottom: 1px solid #a70000;
   // border-bottom-right-radius: 10px;
   // background-image: linear-gradient(
   //   to bottom right,
@@ -139,8 +142,8 @@
   // );
 }
 .about-text:nth-child(4) {
-  border-left: 1px solid $pewter;
-  // border-bottom: 1px solid $pewter;
+  border-left: 1px solid #a70000;
+  border-bottom: 1px solid #a70000;
   // border-bottom-left-radius: 10px;
   // background-image: linear-gradient(
   //   to bottom left,
