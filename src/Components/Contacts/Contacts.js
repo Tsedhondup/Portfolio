@@ -24,6 +24,17 @@ const Contacts = () => {
               className="phone-email__phone-container--icon"
             />
           </a>
+          {/* Icons for tablet */}
+          <a
+            href="tel:+1437245778"
+            className="phone-email__phone-container--tablet-icon"
+          >
+            <FontAwesomeIcon
+              icon={faMobileScreenButton}
+              transform="grow-15"
+              className="phone-email__phone-container---tablet-icon"
+            />
+          </a>
         </div>
         <div className="phone-email__email-container">
           <a
@@ -37,6 +48,16 @@ const Contacts = () => {
               icon={faEnvelope}
               transform="grow-10"
               className="phone-email__email-container--icon"
+            />
+          </a>
+          <a
+            href="mailto:tyddhondup88@gmail.com"
+            className="phone-email__email-container--tablet-icon"
+          >
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              transform="grow-15"
+              className="phone-email__email-container---tablet-icon"
             />
           </a>
         </div>

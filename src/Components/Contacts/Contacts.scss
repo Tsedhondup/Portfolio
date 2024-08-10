@@ -10,6 +10,10 @@
   z-index: 5;
   padding: $mobile-margin;
   min-height: 270px;
+  @include tablet {
+    padding: $tablet-margin;
+    height: 400px;
+  }
   &__translucent-background {
     position: absolute;
     top: 0;
@@ -29,7 +33,7 @@
     padding: $mobile-margin;
     position: relative;
     z-index: 15;
-    border-bottom: 1px solid #a70000;
+    border-bottom: 1px solid $pewter;
   }
 }
 .phone-email {
@@ -42,6 +46,9 @@
     margin-bottom: 16px;
     display: flex;
     align-items: center;
+    @include tablet {
+      margin-bottom: 32px;
+    }
     &--text {
       color: $pewter;
       text-decoration: none;
@@ -53,6 +60,17 @@
     &--icon {
       color: #a70000;
       text-decoration: none;
+      @include tablet {
+        display: none;
+      }
+    }
+    &--tablet-icon {
+      display: none;
+      @include tablet {
+        display: block;
+        color: #a70000;
+        text-decoration: none;
+      }
     }
   }
   &__email-container {
@@ -69,6 +87,17 @@
     &--icon {
       color: #a70000;
       text-decoration: none;
+      @include tablet {
+        display: none;
+      }
+    }
+    &--tablet-icon {
+      display: none;
+      @include tablet {
+        display: block;
+        color: #a70000;
+        text-decoration: none;
+      }
     }
   }
 }
