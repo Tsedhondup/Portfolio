@@ -17,6 +17,11 @@ const Works = () => {
             transform="grow-15"
             className="projects__icon"
           />
+          <FontAwesomeIcon
+            icon={faCloudSunRain}
+            transform="grow-30"
+            className="projects__icon-tablet"
+          />
           <h3 className="projects__header">Weather App</h3>
           <p className="projects__description">
             BrainStation Projects built on Reacts.js
@@ -27,6 +32,11 @@ const Works = () => {
             icon={faCirclePlay}
             transform="grow-15"
             className="projects__icon"
+          />
+          <FontAwesomeIcon
+            icon={faCirclePlay}
+            transform="grow-30"
+            className="projects__icon-tablet"
           />
           <h3 className="projects__header">BrainFlix</h3>
           <p className="projects__description">
@@ -39,7 +49,11 @@ const Works = () => {
             transform="grow-15"
             className="projects__icon"
           />
-
+          <FontAwesomeIcon
+            icon={faEnvelopeCircleCheck}
+            transform="grow-30"
+            className="projects__icon-tablet"
+          />
           <h3 className="projects__header">Job Application Tracker</h3>
           <p className="projects__description">
             BrainStation Projects built on Reacts.js
@@ -51,7 +65,11 @@ const Works = () => {
             transform="grow-15"
             className="projects__icon"
           />
-
+          <FontAwesomeIcon
+            icon={faCartFlatbed}
+            transform="grow-30"
+            className="projects__icon-tablet"
+          />
           <h3 className="projects__header">InStock</h3>
           <p className="projects__description">
             BrainStation Projects built on Reacts.js
