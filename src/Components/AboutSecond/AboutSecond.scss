@@ -4,6 +4,10 @@
 .about-second {
   padding: 0 $mobile-margin;
   padding-top: $mobile-margin;
+  @include tablet {
+    padding: 0 $tablet-margin;
+    padding-top: $tablet-margin;
+  }
 }
 .about-second-content {
   &__image-container {
@@ -12,14 +16,17 @@
       height: 100%;
       position: absolute;
       z-index: 10;
-      // background-image: linear-gradient(to right, #ffffff, #fff, $gray);
-      // background-image: linear-gradient(
-      //   to bottom right,
-      //   rgba(0, 0, 0, 1),
-      //   rgba(0, 0, 0, 0.9),
-      //   rgba(0, 0, 0, 0.6)
-      // );
-      // opacity: 0.6;
+
+      @include tablet {
+        background-image: linear-gradient(to right, #ffffff, #fff, $gray);
+        background-image: linear-gradient(
+          to right,
+          // rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0.9),
+          rgba(255, 255, 255, 0.2)
+        );
+      }
+      opacity: 0.6;
     }
     &--img {
       border: 1px solid #a70000;
@@ -33,6 +40,7 @@
       @include tablet {
         max-width: 360px;
         border: unset;
+        // border-top: 1px solid #a70000;
       }
     }
   }
@@ -72,5 +80,7 @@
     align-items: center;
     border-left: 1px solid #a70000;
     border-bottom: 1px solid #a70000;
+    width: 100%;
+    margin: auto;
   }
 }
