@@ -40,6 +40,19 @@
     text-align: center;
     color: $ebony;
     color: #a70000;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__icon-tablet {
+    display: none;
+    @include tablet {
+      display: block;
+      text-align: center;
+      color: $ebony;
+      color: #a70000;
+      padding-bottom: 16px;
+    }
   }
   &__header {
     padding-top: 16px;
