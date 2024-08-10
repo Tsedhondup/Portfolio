@@ -47,6 +47,37 @@ const TechStacks = () => {
           transform="grow-15"
           className="tech-stacks__tools--tech"
         />
+        {/* Icons for tablet  */}
+        <FontAwesomeIcon
+          icon={faHtml5}
+          transform="grow-30"
+          className="tech-stacks__tools--tech-tablet"
+        />
+        <FontAwesomeIcon
+          icon={faCss3}
+          transform="grow-15"
+          className="tech-stacks__tools--tech-tablet"
+        />
+        <FontAwesomeIcon
+          icon={faSass}
+          transform="grow-30"
+          className="tech-stacks__tools--tech-tablet"
+        />
+        <FontAwesomeIcon
+          icon={faJs}
+          transform="grow-30"
+          className="tech-stacks__tools--tech-tablet"
+        />
+        <FontAwesomeIcon
+          icon={faReact}
+          transform="grow-30"
+          className="tech-stacks__tools--tech-tablet"
+        />
+        <FontAwesomeIcon
+          icon={faNodeJs}
+          transform="grow-30"
+          className="tech-stacks__tools--tech-tablet"
+        />
         <img
           src={expressLogo}
           alt="express-logo"

@@ -4,6 +4,12 @@
 .tech-stacks {
   padding: 0px $mobile-margin;
   margin-top: $mobile-margin;
+  @include tablet {
+    width: 100%;
+    margin: auto;
+    padding: 0px $tablet-margin;
+    margin-top: $tablet-margin;
+  }
   &__header {
     padding-top: $mobile-margin;
     margin-bottom: $mobile-margin;
