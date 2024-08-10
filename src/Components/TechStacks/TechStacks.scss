@@ -16,6 +16,9 @@
     text-transform: capitalize;
     text-align: center;
     font-weight: normal;
+    @include tablet {
+      margin-bottom: $tablet-margin;
+    }
   }
   &__tools {
     list-style: none;
@@ -27,6 +30,9 @@
     &--tech {
       text-align: center;
       padding-bottom: 32px;
+      @include tablet {
+        display: none;
+      }
     }
     &--tech:nth-child(1) {
       color: $html;
@@ -46,13 +52,43 @@
     &--tech:nth-child(6) {
       color: $node;
     }
-    &--tech:nth-child(7),
-    &--tech:nth-child(8),
-    &--tech:nth-child(9) {
+    &--tech:nth-child(13),
+    &--tech:nth-child(14),
+    &--tech:nth-child(15) {
       object-fit: contain;
       width: 40px;
       display: block;
       margin: auto;
+      @include tablet {
+        width: 55px;
+      }
+    }
+
+    // Font awesome icons for tablet version
+    &--tech-tablet {
+      display: none;
+      @include tablet {
+        display: block;
+        padding-bottom: 64px;
+      }
+    }
+    &--tech-tablet:nth-child(7) {
+      color: $html;
+    }
+    &--tech-tablet:nth-child(8) {
+      color: $css;
+    }
+    &--tech-tablet:nth-child(9) {
+      color: $sass;
+    }
+    &--tech-tablet:nth-child(10) {
+      color: $js;
+    }
+    &--tech-tablet:nth-child(11) {
+      color: $react;
+    }
+    &--tech-tablet:nth-child(12) {
+      color: $node;
     }
   }
 }
