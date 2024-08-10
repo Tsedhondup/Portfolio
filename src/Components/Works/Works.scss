@@ -5,19 +5,36 @@
   padding-top: $mobile-margin;
   padding-left: $mobile-margin;
   padding-right: $mobile-margin;
+  @include tablet {
+    padding-top: $tablet-margin;
+    padding-left: $tablet-margin;
+    padding-right: $tablet-margin;
+  }
   &__title {
     padding-bottom: 16px;
     text-align: center;
     text-transform: capitalize;
     font-weight: normal;
   }
+  &__project-content {
+    @include tablet {
+      width: 100%;
+      margin: $tablet-margin auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: $tablet-gutter;
+    }
+  }
 }
 .projects {
   padding: 16px 0px;
   padding-top: 32px;
   margin: 16px 0px;
-  // border: 1px solid #a70000;
+  border: 1px solid #a70000;
   border-radius: 5px;
+  @include tablet {
+    margin: 0px;
+  }
 
   &__icon {
     text-align: center;
