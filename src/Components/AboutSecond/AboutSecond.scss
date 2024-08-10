@@ -4,6 +4,8 @@
 .about-second {
   padding: 0 $mobile-margin;
   padding-top: $mobile-margin;
+}
+.about-second-content {
   &__image-container {
     position: relative;
     &--shadow-element {
@@ -17,24 +19,31 @@
       //   rgba(0, 0, 0, 0.9),
       //   rgba(0, 0, 0, 0.6)
       // );
-
       // opacity: 0.6;
     }
     &--img {
       border: 1px solid #a70000;
       border-bottom-width: 0px;
       object-fit: contain;
-      // max-width: 360px;/
       display: block;
       margin: auto;
       position: relative;
       z-index: 5;
+
+      @include tablet {
+        max-width: 360px;
+        border: unset;
+      }
     }
   }
 
   &__star-of-life {
     padding-top: 16px;
     color: $gray;
+
+    @include tablet {
+      display: none;
+    }
   }
   &__texts {
     padding-top: $mobile-margin;
@@ -43,11 +52,25 @@
     font-size: 15px;
     border-bottom: 1px solid #a70000;
     line-height: 1.5em;
+    border: unset;
+
+    // Media queries[][]
+    @include tablet {
+      text-align: left;
+    }
   }
   &__link {
     padding-left: 8px;
     font-style: italic;
     text-decoration: none;
     color: $css;
+  }
+
+  // Media queries[][]
+  @include tablet {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #a70000;
+    border-bottom: 1px solid #a70000;
   }
 }
