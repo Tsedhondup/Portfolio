@@ -22,6 +22,8 @@
     font-size: 20px;
   }
 }
+
+// Nav Links
 .navigation-pages {
   width: 100%;
   height: 100vh;
@@ -114,11 +116,17 @@
   left: 0%;
 }
 
+// Nav show button
 .nav-button-container {
   text-align: right;
   &__open {
     padding: 0;
     color: #a70000;
     width: auto;
+  }
+
+  // Media queries [][]
+  @include tablet {
+    display: none;
   }
 }
