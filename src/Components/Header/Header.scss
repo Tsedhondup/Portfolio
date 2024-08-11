@@ -25,6 +25,9 @@
     letter-spacing: 0.2em;
     font-size: 20px;
     width: auto;
+    @include desktop {
+      font-size: 24px;
+    }
   }
   &__brand-name:hover {
     color: $pewter;
@@ -83,6 +86,9 @@
         text-align: right;
         width: auto;
       }
+      @include desktop {
+        font-size: 16px;
+      }
     }
     &--home:hover,
     &--about:hover {
@@ -107,6 +113,9 @@
         width: auto;
         padding: 10px 16px;
         border-radius: 5px;
+      }
+      @include desktop {
+        font-size: 16px;
       }
     }
     &--resume:hover {
