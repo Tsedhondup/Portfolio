@@ -53,6 +53,7 @@ const Footers = () => {
           />
           <span> 2024</span>
         </h3>
+
         <h3 className="location-copyright__location">
           <span className="location-copyright__location--name"> Toronto</span>
           <FontAwesomeIcon icon={faGlobeAmericas} />
