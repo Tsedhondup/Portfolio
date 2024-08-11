@@ -131,6 +131,11 @@
     //   color: $microScope;
     // }
   }
+  &__icon-container-2,
+  &__icon-container-4 {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .about-text:nth-child(1) {

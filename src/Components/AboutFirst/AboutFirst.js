@@ -100,7 +100,7 @@ const AboutFirst = () => {
             Engineering Boot Camp at BrainStation, Toronto'
           </p>
           {/* Icons */}
-          <div className="about-text__icon-container about-text__icon-container-4">
+          <div className="about-text__icon-container ">
             <FontAwesomeIcon
               icon={faBook}
               transform="grow-2"
@@ -130,7 +130,7 @@ const AboutFirst = () => {
             into a senior developer role and mentor others.
           </p>
           {/* Icons */}
-          <div className="about-text__icon-container">
+          <div className="about-text__icon-container about-text__icon-container-4">
             <FontAwesomeIcon
               icon={faHandPointRight}
               transform="grow-2"
