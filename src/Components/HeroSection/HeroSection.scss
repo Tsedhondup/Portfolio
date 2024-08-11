@@ -1,5 +1,5 @@
+@import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
-
 .hero-container {
   // height: calc(100vh - 50px);
   // margin-top: 50px;
@@ -26,6 +26,9 @@
   padding: 0px $mobile-margin;
   padding-top: calc((100vh - 50px) / 3);
   text-align: center;
+  @include hero-min-heigt {
+    height: 400px;
+  }
   // Name
   &__name {
     margin: 0;
