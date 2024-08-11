@@ -4,12 +4,12 @@ import Contacts from "../../Components/Contacts/Contacts";
 import { useState } from "react";
 const AboutPage = () => {
   const [isScroll, setIsScroll] = useState(false);
-  const validateScrolling = () => {};
+  const pageScrollHandler = () => {};
   return (
     <>
       <Header isScroll={isScroll} />
-      <AboutFirst />
-      <Contacts />
+      <AboutFirst pageScrollHandler={pageScrollHandler} />
+      <Contacts pageScrollHandler={pageScrollHandler} />
     </>
   );
 };
