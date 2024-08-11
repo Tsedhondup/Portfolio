@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCode,
@@ -15,10 +16,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import profilePic from "../../assets/image/tsering.png";
 import "./AboutFirst.scss";
-const AboutFirst = () => {
+const AboutFirst = (props) => {
+  // Element reference
+  const refElement = useRef(null);
   return (
     <section className="about-first">
-      <div className="about-first__image-container">
+      <div className="about-first__image-container" ref={refElement}>
         <h2 className="about-first__image-container--mobile-header-2">
           About <br /> me
         </h2>
