@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  transition: 1.5s;
   z-index: 15;
   @include tablet {
     padding: 0px $tablet-margin;
