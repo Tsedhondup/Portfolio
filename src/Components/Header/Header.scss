@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  transition: 1.5s;
+  transition: 1.3s;
   z-index: 15;
   @include tablet {
     padding: 0px $tablet-margin;
@@ -18,6 +18,9 @@
 // JS Dynamic class
 .header-opaque {
   background-color: #ffffff;
+  @include tablet {
+    padding: 10px $tablet-margin;
+  }
 }
 .navigation {
   height: 50px;
