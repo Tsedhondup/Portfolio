@@ -80,8 +80,10 @@
 
 .about-text-container {
   background-color: #ffffff;
-  padding: 0px $mobile-margin;
-  padding-top: 16px;
+  padding: $mobile-margin;
+  @include tablet {
+    padding: $tablet-margin;
+  }
 }
 .about-text {
   padding: 32px 16px;
