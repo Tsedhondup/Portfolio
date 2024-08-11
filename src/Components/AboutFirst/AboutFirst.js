@@ -19,10 +19,13 @@ import "./AboutFirst.scss";
 const AboutFirst = (props) => {
   // Element reference
   const refElement = useRef(null);
+  const handleScroll = () => {
+    const currentElement = refElement.current; // current ref element stored
+    const rect = currentElement.getBoundingClientRect(); // get ref element position
+    rect.top <= -100 ? props.setIsScroll(true) : props.setIsScroll(false);
+  };
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      
-    });
+    window.addEventListener("scroll", handleScroll);
   }, []);
   return (
     <section className="about-first">
