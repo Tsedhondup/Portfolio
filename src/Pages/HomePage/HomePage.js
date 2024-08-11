@@ -10,8 +10,8 @@ const HomePage = () => {
 
   return (
     <>
-      <Header />
-      <HeroSection />
+      <Header isScroll={isScroll} />
+      <HeroSection setIsScroll={setIsScroll} />
       <AboutSecond />
       <TechStacks />
       <Works />
