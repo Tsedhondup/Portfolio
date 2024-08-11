@@ -4,6 +4,7 @@
   padding-top: 50px;
   background-color: $black;
   box-sizing: border-box;
+
   // Header One
   &__mobile-header-1 {
     color: $ebony;
@@ -21,7 +22,6 @@
   }
   &__image-container {
     position: relative;
-
     &--img {
       object-fit: contain;
       display: block;
