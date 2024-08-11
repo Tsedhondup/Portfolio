@@ -22,3 +22,8 @@
     @content;
   }
 }
+@mixin hero-min-heigt {
+  @media (hero-min-heigt: $hero-min-height) {
+    @content;
+  }
+}
