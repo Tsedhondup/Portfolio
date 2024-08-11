@@ -15,7 +15,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import profilePic from "../../assets/image/tsering.png";
 import "./AboutFirst.scss";
-import { faVuejs } from "@fortawesome/free-brands-svg-icons";
 const AboutFirst = () => {
   return (
     <section className="about-first">
@@ -70,7 +69,7 @@ const AboutFirst = () => {
             my curiosities.'
           </p>
           {/* Icons */}
-          <div className="about-text__icon-container">
+          <div className="about-text__icon-container about-text__icon-container-2">
             <FontAwesomeIcon
               icon={faLaptop}
               transform="grow-2"
@@ -101,7 +100,7 @@ const AboutFirst = () => {
             Engineering Boot Camp at BrainStation, Toronto'
           </p>
           {/* Icons */}
-          <div className="about-text__icon-container">
+          <div className="about-text__icon-container about-text__icon-container-4">
             <FontAwesomeIcon
               icon={faBook}
               transform="grow-2"
