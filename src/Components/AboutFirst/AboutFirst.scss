@@ -113,7 +113,7 @@
   }
   &__icon-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     &--icons {
       width: auto;
@@ -133,7 +133,7 @@
   &__icon-container-2,
   &__icon-container-4 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 }
 
