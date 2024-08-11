@@ -35,6 +35,11 @@
         height: auto;
       }
     }
+    @include tablet {
+      &--img {
+        width: 400px;
+      }
+    }
     &--shadow-el {
       position: absolute;
       top: 0;
@@ -74,6 +79,8 @@
     &__image-container {
       display: flex;
       justify-content: flex-end;
+      align-items: flex-end;
+      height: 40vh;
     }
   }
 }
