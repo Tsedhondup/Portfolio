@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
-const Header = () => {
+const Header = (props) => {
   const [navPageClass, setNavPageClass] = useState("");
   const [isNavPageShow, setIsNavPageShow] = useState(false);
   // event handlers
@@ -18,7 +18,7 @@ const Header = () => {
     }
   };
   return (
-    <section className="header">
+    <section className={`header ${props.isScroll ? "header-opaque" : ""}`}>
       <nav className="navigation">
         {/* Brand name */}
         <Link to="/" className="navigation__brand-name">
