@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCode,
@@ -19,6 +19,11 @@ import "./AboutFirst.scss";
 const AboutFirst = (props) => {
   // Element reference
   const refElement = useRef(null);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      
+    });
+  }, []);
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>
