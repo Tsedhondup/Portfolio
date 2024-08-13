@@ -19,9 +19,15 @@
   }
 }
 // JS Dynamic class
-.header-opaque {
+.header-opaque-home-page {
   background-color: #ffffff;
   top: 0;
+  @include tablet {
+    padding: 10px $tablet-margin;
+  }
+}
+.header-opaque-about-page {
+  background-color: #ffffff;
   @include tablet {
     padding: 10px $tablet-margin;
   }
