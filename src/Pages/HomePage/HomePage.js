@@ -7,10 +7,11 @@ import Contacts from "../../Components/Contacts/Contacts";
 import { useState } from "react";
 const HomePage = () => {
   const [isScroll, setIsScroll] = useState(false);
+  const [headerClass, setHeaderClass] = useState("header-opaque-home-page");
 
   return (
     <>
-      <Header isScroll={isScroll} />
+      <Header isScroll={isScroll} headerClass={headerClass} />
       <HeroSection setIsScroll={setIsScroll} />
       <AboutSecond />
       <TechStacks />
