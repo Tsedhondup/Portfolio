@@ -14,10 +14,14 @@
     padding: 0px $tablet-margin;
     padding-top: 16px;
   }
+  @include desktop {
+    top: -150px;
+  }
 }
 // JS Dynamic class
 .header-opaque {
   background-color: #ffffff;
+  top: 0;
   @include tablet {
     padding: 10px $tablet-margin;
   }
