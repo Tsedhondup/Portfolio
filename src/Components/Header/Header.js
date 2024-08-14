@@ -18,7 +18,11 @@ const Header = (props) => {
     }
   };
   return (
-    <section className={`header ${props.isScroll ? props.headerClass : ""}`}>
+    <section
+      className={`header ${props.isScroll ? props.headerClass : ""} ${
+        props.windowWitdh
+      }`}
+    >
       <nav className="navigation">
         {/* Brand name */}
         <Link to="/" className="navigation__brand-name">

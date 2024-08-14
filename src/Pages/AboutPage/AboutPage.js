@@ -5,10 +5,17 @@ import { useState } from "react";
 const AboutPage = () => {
   const [isScroll, setIsScroll] = useState(false);
   const [headerClass, setHeaderClass] = useState("header-opaque-about-page");
+  const [headerClass2, setHeaderClass2] = useState(
+    "header-opaque-about-2-page"
+  );
   const [windowWitdh, setWindowWitdh] = useState(window.innerWidth);
   return (
     <>
-      <Header isScroll={isScroll} headerClass={headerClass} />
+      <Header
+        isScroll={isScroll}
+        headerClass={headerClass}
+        windowWitdh={`${windowWitdh > 1280 ? headerClass2 : ""}`}
+      />
       <AboutFirst setIsScroll={setIsScroll} />
       <Contacts />
     </>

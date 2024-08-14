@@ -14,11 +14,13 @@
     padding: 0px $tablet-margin;
     padding-top: 16px;
   }
+  // Header is hidden for desktop view when page home page gets renderded for the first time
   @include desktop {
     top: -150px;
   }
 }
 // JS Dynamic class
+// Header is only shown when page is being scrolled
 .header-opaque-home-page {
   background-color: #ffffff;
   top: 0;
@@ -26,12 +28,22 @@
     padding: 10px $tablet-margin;
   }
 }
+// Header is shown when page gets rendered for the firs time only in about page
+.header-opaque-about-2-page {
+  @include tablet {
+    padding: 10px $tablet-margin;
+    top: 0;
+  }
+}
+
+// Heder gets white background when page is being scrolled
 .header-opaque-about-page {
   background-color: #ffffff;
   @include tablet {
     padding: 10px $tablet-margin;
   }
 }
+
 .navigation {
   height: 50px;
   display: flex;
