@@ -16,60 +16,60 @@ const Works = () => {
       <h2 className="project-container__title">Projects</h2>
       <section className="projects">
         <h2 className="projects__personal">Personal works</h2>
-        <div className="project__content">
+        <div className="projects__content">
           <img
             src={jobTracker}
             alt="job-application-tracker-image"
-            className="project__content--img"
+            className="projects__content--img"
           />
-          <div className="project__content--text">
-            <h2 className="project__content--project-name">Email Reader</h2>
-            <p className="project__content--project-description">
+          <div className="projects__content--text">
+            <h2 className="projects__content--project-name">Email Reader</h2>
+            <p className="projects__content--project-description">
               App for fetching reading email from mail server
             </p>
           </div>
         </div>
 
-        <div className="project__content">
+        <div className="projects__content">
           <img
             src={brainflix}
             alt="brainflix-app-image"
-            className="project__content--img"
+            className="projects__content--img"
           />
-          <div className="project__content--text">
-            <h2 className="project__content--project-name">BrainFlix</h2>
-            <p className="project__content--project-description">
+          <div className="projects__content--text">
+            <h2 className="projects__content--project-name">BrainFlix</h2>
+            <p className="projects__content--project-description">
               Video streaming website built on React and Node
             </p>
           </div>
         </div>
-        <h2 className="project__collaboration">Collaboration</h2>
-        <div className="project__content">
+        <h2 className="projects__collaboration">Collaboration</h2>
+        <div className="projects__content">
           <div>
             <img
               src={fiserv}
               alt="fiserv-app-image"
-              className="project__content--img"
+              className="projects__content--img"
             />
-            <div className="project__content--text">
-              <h2 className="project__content--project-name">
+            <div className="projects__content--text">
+              <h2 className="projects__content--project-name">
                 Restaurent App UI
               </h2>
-              <p className="project__content--project-description">
+              <p className="projects__content--project-description">
                 Restaurent App UI built on React, Node and MySQL
               </p>
             </div>
           </div>
 
-          <div className="project__content">
+          <div className="projects__content">
             <img
               src={weatherApp}
               alt="weather-app-image"
-              className="project__content--img"
+              className="projects__content--img"
             />
-            <div className="project__content--text">
-              <h2 className="project__content--project-name">Weather App</h2>
-              <p className="project__content--project-description">
+            <div className="projects__content--text">
+              <h2 className="projects__content--project-name">Weather App</h2>
+              <p className="projects__content--project-description">
                 Weather App built on React using free weather API
               </p>
             </div>
