@@ -30,41 +30,49 @@
   padding: 16px 0px;
   padding-top: 32px;
   margin: 16px 0px;
-  border: 1px solid #a70000;
+  // border: 1px solid #a70000;
   border-radius: 5px;
   @include tablet {
     margin: 0px;
   }
-
-  &__icon {
-    text-align: center;
-    color: $ebony;
-    color: #a70000;
-    @include tablet {
-      display: none;
-    }
-  }
-  &__icon-tablet {
-    display: none;
-    @include tablet {
-      display: block;
-      text-align: center;
-      color: $ebony;
-      color: #a70000;
-      padding-bottom: 16px;
-    }
-  }
-  &__header {
-    padding-top: 16px;
+  &__personal,
+  &__collaboration {
+    font-size: 24px;
     font-weight: normal;
+    color: $ebony;
+    padding: 16px 0px;
     text-align: center;
   }
-  &__description {
-    padding-top: $mobile-margin;
-    padding-bottom: $mobile-margin;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 200;
-    color: $black;
-  }
+
+  // &__icon {
+  //   text-align: center;
+  //   color: $ebony;
+  //   color: #a70000;
+  //   @include tablet {
+  //     display: none;
+  //   }
+  // }
+  // &__icon-tablet {
+  //   display: none;
+  //   @include tablet {
+  //     display: block;
+  //     text-align: center;
+  //     color: $ebony;
+  //     color: #a70000;
+  //     padding-bottom: 16px;
+  //   }
+  // }
+  // &__header {
+  //   padding-top: 16px;
+  //   font-weight: normal;
+  //   text-align: center;
+  // }
+  // &__description {
+  //   padding-top: $mobile-margin;
+  //   padding-bottom: $mobile-margin;
+  //   text-align: center;
+  //   font-size: 15px;
+  //   font-weight: 200;
+  //   color: $black;
+  // }
 }
