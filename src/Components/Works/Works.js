@@ -34,7 +34,7 @@ const Works = () => {
         <h2>Collaboration</h2>
         <div>
           <div>
-            <img src={fiserv} about="fiserv-app-image"/>
+            <img src={fiserv} alt="fiserv-app-image"/>
             <div>
               <h2>Restaurent App UI</h2>
               <p>Restaurent App UI built on React, Node and MySQL</p>
