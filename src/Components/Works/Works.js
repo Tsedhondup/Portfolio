@@ -5,12 +5,52 @@ import {
   faEnvelopeCircleCheck,
   faCartFlatbed,
 } from "@fortawesome/free-solid-svg-icons";
+import brainflix from "../../assets/image/brainflix.jpg";
+import jobTracker from "../../assets/image/job-tracker.jpg";
+import weatherApp from "../../assets/image/weather-app.jpg";
+import fiserv from "../../assets/image/fiserv.jpg";
 import "./Works.scss";
 const Works = () => {
   return (
     <section className="project-container">
       <h2 className="project-container__title">Projects</h2>
-      <section className="project-container__project-content">
+      <section>
+        <h2>Personal works</h2>
+        <div>
+          <img src={jobTracker} alt="job-application-tracker-image" />
+          <div>
+            <h2>Email Reader</h2>
+            <p>App for fetching reading email from mail server</p>
+          </div>
+        </div>
+
+        <div>
+          <img src={brainflix} alt="brainflix-app-image" />
+          <div>
+            <h2>BrainFlix</h2>
+            <p>Video streaming website built on React and Node</p>
+          </div>
+        </div>
+        <h2>Collaboration</h2>
+        <div>
+          <div>
+            <img src={fiserv} about="fiserv-app-image"/>
+            <div>
+              <h2>Restaurent App UI</h2>
+              <p>Restaurent App UI built on React, Node and MySQL</p>
+            </div>
+          </div>
+
+          <div>
+            <img src={weatherApp} alt="weather-app-image"/>
+            <div>
+              <h2>Weather App</h2>
+              <p>Weather App built on React using free weather API</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section className="project-container__project-content">
         <section className="projects">
           <FontAwesomeIcon
             icon={faCloudSunRain}
@@ -75,7 +115,7 @@ const Works = () => {
             BrainStation Projects built on Reacts.js
           </p>
         </section>
-      </section>
+      </section> */}
     </section>
   );
 };
