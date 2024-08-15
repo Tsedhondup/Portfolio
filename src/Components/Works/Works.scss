@@ -50,9 +50,19 @@
     margin-bottom: 16px;
     &--img {
       max-width: 200px;
+      height: 300px;
       display: block;
       margin: auto;
       object-fit: cover;
+      transform: rotate3d(1, 1, 2, 7deg);
+      border: 1px solid $pewter;
+      border-radius: 10px;
+      box-shadow: 20px 20px 10px 1px $ebony;
+      transform: 1s;
+    }
+    &--img:hover {
+      transform: rotate3d(1, 1, 1, 1deg);
+      box-shadow: 5px 5px 2px 1px $ebony;
     }
 
     &--text {
