@@ -14,38 +14,64 @@ const Works = () => {
   return (
     <section className="project-container">
       <h2 className="project-container__title">Projects</h2>
-      <section>
-        <h2>Personal works</h2>
-        <div>
-          <img src={jobTracker} alt="job-application-tracker-image" />
-          <div>
-            <h2>Email Reader</h2>
-            <p>App for fetching reading email from mail server</p>
+      <section className="projects">
+        <h2 className="projects__personal">Personal works</h2>
+        <div className="project__content">
+          <img
+            src={jobTracker}
+            alt="job-application-tracker-image"
+            className="project__content--img"
+          />
+          <div className="project__content--text">
+            <h2 className="project__content--project-name">Email Reader</h2>
+            <p className="project__content--project-description">
+              App for fetching reading email from mail server
+            </p>
           </div>
         </div>
 
-        <div>
-          <img src={brainflix} alt="brainflix-app-image" />
-          <div>
-            <h2>BrainFlix</h2>
-            <p>Video streaming website built on React and Node</p>
+        <div className="project__content">
+          <img
+            src={brainflix}
+            alt="brainflix-app-image"
+            className="project__content--img"
+          />
+          <div className="project__content--text">
+            <h2 className="project__content--project-name">BrainFlix</h2>
+            <p className="project__content--project-description">
+              Video streaming website built on React and Node
+            </p>
           </div>
         </div>
-        <h2>Collaboration</h2>
-        <div>
+        <h2 className="project__collaboration">Collaboration</h2>
+        <div className="project__content">
           <div>
-            <img src={fiserv} alt="fiserv-app-image"/>
-            <div>
-              <h2>Restaurent App UI</h2>
-              <p>Restaurent App UI built on React, Node and MySQL</p>
+            <img
+              src={fiserv}
+              alt="fiserv-app-image"
+              className="project__content--img"
+            />
+            <div className="project__content--text">
+              <h2 className="project__content--project-name">
+                Restaurent App UI
+              </h2>
+              <p className="project__content--project-description">
+                Restaurent App UI built on React, Node and MySQL
+              </p>
             </div>
           </div>
 
-          <div>
-            <img src={weatherApp} alt="weather-app-image"/>
-            <div>
-              <h2>Weather App</h2>
-              <p>Weather App built on React using free weather API</p>
+          <div className="project__content">
+            <img
+              src={weatherApp}
+              alt="weather-app-image"
+              className="project__content--img"
+            />
+            <div className="project__content--text">
+              <h2 className="project__content--project-name">Weather App</h2>
+              <p className="project__content--project-description">
+                Weather App built on React using free weather API
+              </p>
             </div>
           </div>
         </div>
