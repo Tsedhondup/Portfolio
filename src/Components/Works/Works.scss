@@ -11,10 +11,11 @@
     padding-right: $tablet-margin;
   }
   &__title {
-    padding: 16px 0px;
+    color: $black;
     text-align: center;
-    text-transform: capitalize;
-    font-weight: normal;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-top: 16px;
     border-top: 1px solid $gray;
   }
   &__project-content {
@@ -29,20 +30,18 @@
 }
 .projects {
   padding: 16px 0px;
-  padding-top: 32px;
-  // margin: 16px 0px;
-  // border: 1px solid #a70000;
   border-radius: 5px;
   @include tablet {
     margin: 0px;
   }
   &__personal,
   &__collaboration {
-    font-size: 24px;
-    font-weight: normal;
     color: $ebony;
-    padding: 16px 0px;
+    font-size: 18px;
+    font-weight: normal;
     text-align: center;
+    padding: 16px 0px;
+    margin-bottom: 16px;
   }
 
   &__content {
@@ -76,8 +75,8 @@
     }
     &--project-name {
       font-size: 16px;
+      font-weight: normal;
       padding-top: 32px;
-      font-weight: no;
     }
     &--project-description {
       font-size: 15px;
