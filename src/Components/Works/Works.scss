@@ -38,6 +38,9 @@
     max-width: 1000px;
     margin: auto;
   }
+  @include desktop {
+    max-width: unset;
+  }
   &__personal,
   &__collaboration {
     color: $ebony;
@@ -62,6 +65,9 @@
       align-items: center;
       margin-bottom: 100px;
     }
+    @include desktop {
+      margin-bottom: 150px;
+    }
 
     &--img {
       max-width: 200px;
@@ -78,6 +84,11 @@
         margin: unset;
         max-width: 350px;
         height: 450px;
+        box-shadow: 16px 16px 16px 2px $ebony;
+      }
+      @include desktop {
+        max-width: 500px;
+        height: 600px;
         box-shadow: 16px 16px 16px 2px $ebony;
       }
     }
