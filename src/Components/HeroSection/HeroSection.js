@@ -1,5 +1,6 @@
 import "./HeroSection.scss";
 import { useRef, useEffect } from "react";
+import profileImage from "../../assets/image/tsering.png";
 const HeroSection = (props) => {
   // Element reference
   const refElement = useRef(null);
@@ -32,7 +33,13 @@ const HeroSection = (props) => {
           </h3>
         </div>
 
-        <div></div>
+        <div className="image-container">
+          <img
+            src={profileImage}
+            alt="profile-image"
+            className="image-container__image"
+          />
+        </div>
       </section>
     </section>
   );
