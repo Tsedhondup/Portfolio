@@ -10,11 +10,22 @@
   }
 }
 .about-second-content {
+  // Media queries[][]
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: $tablet-gutter;
+    width: 100%;
+    margin: auto;
+  }
   &__image-container {
     position: relative;
     &--shadow-element {
       height: 100%;
+      width: 100%f;
       position: absolute;
+      top: 0;
+      left: 0;
       z-index: 10;
       @include tablet {
         background-image: linear-gradient(to right, #ffffff, #fff, $gray);
@@ -28,18 +39,19 @@
       opacity: 0.6;
     }
     &--img {
-      border: 1px solid #a70000;
-      border-bottom-width: 0px;
       object-fit: contain;
       display: block;
-      margin: auto;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
       position: relative;
       z-index: 5;
-
+      margin: auto;
+      border-radius: 5px;
       @include tablet {
         max-width: 360px;
         border: unset;
-        // border-top: 1px solid #a70000;
       }
     }
   }
@@ -57,7 +69,6 @@
     text-align: center;
     padding-bottom: 16px;
     font-size: 15px;
-    border-bottom: 1px solid #a70000;
     line-height: 1.5em;
     border: unset;
 
@@ -71,14 +82,5 @@
     font-style: italic;
     text-decoration: none;
     color: $css;
-  }
-
-  // Media queries[][]
-  @include tablet {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #a70000;
-    width: 100%;
-    margin: auto;
   }
 }

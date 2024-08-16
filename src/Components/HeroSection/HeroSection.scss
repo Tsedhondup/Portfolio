@@ -47,7 +47,7 @@
     font-weight: normal;
     &--first {
       display: block;
-      font-size: 60px;
+      font-size: 30px;
       @include desktop {
         font-weight: 200;
         font-size: 36px;
@@ -58,7 +58,10 @@
       text-transform: uppercase;
       // color: #a70000;
       font-weight: bold;
-      font-size: 60px;
+      font-size: 48px;
+      @include tablet {
+        font-size: 60px;
+      }
     }
   }
   // Title

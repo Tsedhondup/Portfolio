@@ -8,7 +8,7 @@ const AboutSecond = () => {
     <section className="about-second">
       <section className="about-second-content">
         <div className="about-second-content__image-container">
-          <div className="about-second-content__image-container--shadow-element"></div>
+          {/* <div className="about-second-content__image-container--shadow-element"></div> */}
           <img
             src={profileImage}
             alt="profile-image"
