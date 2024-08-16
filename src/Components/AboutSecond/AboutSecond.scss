@@ -20,6 +20,9 @@
   }
   &__image-container {
     position: relative;
+    @include desktop {
+      display: none;
+    }
     &--shadow-element {
       height: 100%;
       width: 100%f;
@@ -27,16 +30,18 @@
       top: 0;
       left: 0;
       z-index: 10;
-      @include tablet {
-        background-image: linear-gradient(to right, #ffffff, #fff, $gray);
-        background-image: linear-gradient(
-          to right,
-          // rgba(0, 0, 0, 1),
-          rgba(0, 0, 0, 0.9),
-          rgba(255, 255, 255, 0.2)
-        );
-      }
+      background-image: linear-gradient(to right, #ffffff, #fff, $gray);
+      background-image: linear-gradient(
+        to top,
+        // rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.9),
+        rgba(255, 255, 255, 0.2)
+      );
       opacity: 0.6;
+      border-radius: 5px;
+      @include tablet {
+        display: none;
+      }
     }
     &--img {
       object-fit: contain;

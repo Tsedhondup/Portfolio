@@ -8,17 +8,17 @@ const AboutSecond = () => {
     <section className="about-second">
       <section className="about-second-content">
         <div className="about-second-content__image-container">
-          {/* <div className="about-second-content__image-container--shadow-element"></div> */}
+          <div className="about-second-content__image-container--shadow-element"></div>
           <img
             src={profileImage}
             alt="profile-image"
             className="about-second-content__image-container--img"
           />
         </div>
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           icon={faStarOfLife}
           className="about-second-content__star-of-life"
-        />
+        /> */}
         <p className="about-second-content__texts">
           I've always been fascinated by the power of the web to connect,
           inform, and inspire. What started as a curiosity and hobby has evolved
