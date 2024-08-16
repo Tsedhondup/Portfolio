@@ -12,13 +12,16 @@
     margin-top: $tablet-margin;
   }
   @include desktop {
-    max-width: 1280px;
-    margin: auto;
+    max-width: 1000px;
     padding: 0px $tablet-margin;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   &__header {
     padding-top: $mobile-margin;
-    margin-bottom: $mobile-margin;
+    margin-bottom: $tablet-margin;
     text-transform: capitalize;
     text-align: center;
     font-weight: normal;
@@ -32,14 +35,23 @@
   }
   &__tools {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    padding-top: $mobile-margin;
-    padding-bottom: $mobile-margin;
+    display: flex;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(3, 100px);
+    // padding-top: $mobile-margin;
+    // padding-bottom: $mobile-margin;
+    border-radius: 5px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+    border: 1px solid #000;
+
     &--tech {
-      text-align: center;
-      padding-bottom: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       @include tablet {
         display: none;
       }
@@ -67,10 +79,10 @@
     &--tech:nth-child(15) {
       object-fit: contain;
       width: 40px;
-      display: block;
       margin: auto;
       @include tablet {
         width: 55px;
+        display: block;
       }
     }
 
@@ -79,7 +91,7 @@
       display: none;
       @include tablet {
         display: block;
-        padding-bottom: 64px;
+        // padding-bottom: 64px;
       }
     }
     &--tech-tablet:nth-child(7) {
