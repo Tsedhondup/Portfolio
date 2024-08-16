@@ -33,6 +33,10 @@
   }
   @include desktop {
     text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: unset;
   }
   // Name
   &__name {
@@ -72,8 +76,9 @@
 }
 
 // Image Container
-// .image-container{
-//   &__image{
-
-//   }
-// }
+.image-container {
+  &__image {
+    width: 400px;
+    object-fit: contain;
+  }
+}
