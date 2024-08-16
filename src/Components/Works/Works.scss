@@ -81,6 +81,9 @@
     &--text {
       text-align: center;
       color: $ebony;
+      @include tablet {
+        text-align: left;
+      }
     }
     &--project-name {
       font-size: 16px;
