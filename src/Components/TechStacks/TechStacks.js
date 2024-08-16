@@ -15,7 +15,7 @@ import "./TechStacks.scss";
 const TechStacks = () => {
   return (
     <section className="tech-stacks">
-      <h2 className="tech-stacks__header">Primary Tech stacks</h2>
+      <h2 className="tech-stacks__header">Primary skill sets</h2>
       <div className="tech-stacks__tools">
         <FontAwesomeIcon
           icon={faHtml5}

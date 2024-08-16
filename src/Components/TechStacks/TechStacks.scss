@@ -4,11 +4,17 @@
 .tech-stacks {
   padding: 0px $mobile-margin;
   margin-top: $mobile-margin;
+
   @include tablet {
     width: 100%;
     margin: auto;
     padding: 0px $tablet-margin;
     margin-top: $tablet-margin;
+  }
+  @include desktop {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0px $tablet-margin;
   }
   &__header {
     padding-top: $mobile-margin;
@@ -18,6 +24,10 @@
     font-weight: normal;
     @include tablet {
       margin-bottom: $tablet-margin;
+    }
+    @include desktop {
+      font-size: 30px;
+      text-align: left;
     }
   }
   &__tools {
