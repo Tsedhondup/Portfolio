@@ -23,7 +23,9 @@ const Works = () => {
             className="projects__content--img"
           />
           <div className="projects__content--text">
-            <h2 className="projects__content--project-name">Email Reader</h2>
+            <h2 className="projects__content--project-name">
+              Personal Email Reader
+            </h2>
             <p className="projects__content--project-description">
               App for fetching reading email from mail server
             </p>
@@ -60,19 +62,18 @@ const Works = () => {
               </p>
             </div>
           </div>
-
-          <div className="projects__content">
-            <img
-              src={weatherApp}
-              alt="weather-app-image"
-              className="projects__content--img"
-            />
-            <div className="projects__content--text">
-              <h2 className="projects__content--project-name">Weather App</h2>
-              <p className="projects__content--project-description">
-                Weather App built on React using free weather API
-              </p>
-            </div>
+        </div>
+        <div className="projects__content">
+          <img
+            src={weatherApp}
+            alt="weather-app-image"
+            className="projects__content--img"
+          />
+          <div className="projects__content--text">
+            <h2 className="projects__content--project-name">Weather App</h2>
+            <p className="projects__content--project-description">
+              Weather App built on React using free weather API
+            </p>
           </div>
         </div>
       </section>
