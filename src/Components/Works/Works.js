@@ -20,7 +20,7 @@ const Works = () => {
           <img
             src={jobTracker}
             alt="job-application-tracker-image"
-            className="projects__content--img projects__content-email-image"
+            className="projects__content--img projects__content--email-image"
           />
           <div className="projects__content--text projects__content--text-email">
             <h2 className="projects__content--project-name">
@@ -36,7 +36,7 @@ const Works = () => {
           <img
             src={brainflix}
             alt="brainflix-app-image"
-            className="projects__content--img projects__content-brainflix-image"
+            className="projects__content--img projects__content--brainflix-image"
           />
           <div className="projects__content--text projects__content--text-brainflix">
             <h2 className="projects__content--project-name">BrainFlix</h2>

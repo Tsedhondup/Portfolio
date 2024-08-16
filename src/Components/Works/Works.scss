@@ -87,8 +87,8 @@
         box-shadow: 16px 16px 16px 2px $ebony;
       }
       @include desktop {
-        max-width: 500px;
-        height: 600px;
+        max-width: 450px;
+        height: 700px;
         box-shadow: 16px 16px 16px 2px $ebony;
       }
     }
@@ -96,7 +96,17 @@
       transform: rotate3d(1, 1, 1, 1deg);
       box-shadow: 5px 5px 2px 1px $pewter;
     }
-
+    &--email-image,
+    &--brainflix-image {
+      @include tablet {
+        max-width: 550px;
+        height: 400px;
+      }
+      @include desktop {
+        max-width: 650px;
+        height: 600px;
+      }
+    }
     &--text {
       text-align: center;
       color: $ebony;
