@@ -39,6 +39,7 @@ const HeroSection = (props) => {
             alt="profile-image"
             className="image-container__image"
           />
+          <div className="image-container__shadow-element"></div>
         </div>
       </section>
     </section>

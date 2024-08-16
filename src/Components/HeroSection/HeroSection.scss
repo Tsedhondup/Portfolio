@@ -3,14 +3,14 @@
 .hero-container {
   // height: calc(100vh - 50px);
   // margin-top: 50px;
-  background-color: $black;
-  color: $pewter;
+  // background-color: $black;
+  color: $ebony;
   display: flex;
   justify-content: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../../assets/image/city.jpg");
+  // background-image: url("../../assets/image/city.jpg");
   background-attachment: fixed;
   position: relative;
   // z-index: 15;
@@ -18,13 +18,13 @@
 
 .hero-content {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.9)
-  );
+  // background-color: rgba(0, 0, 0, 0.8);
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   rgba(255, 255, 255, 0.1),
+  //   rgba(0, 0, 0, 0.1),
+  //   rgba(0, 0, 0, 0.9)
+  // );
   padding: 0px $mobile-margin;
   padding-top: calc((100vh - 50px) / 3);
   text-align: center;
@@ -37,6 +37,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: unset;
+    max-width: 1280px;
   }
   // Name
   &__name {
@@ -77,8 +78,29 @@
 
 // Image Container
 .image-container {
+  display: none;
+  position: relative;
+  @include desktop {
+    display: block;
+    text-align: right;
+  }
   &__image {
-    width: 400px;
+    height: 450px;
     object-fit: contain;
+    // filter: drop-shadow(2px 2px 20px $black);
+    box-shadow: 16px 16px 16px 4px $ebony;
+    // border: 1px solid $pewter;
+  }
+  &__shadow-element {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.9)
+    );
   }
 }
