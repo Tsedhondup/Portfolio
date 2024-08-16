@@ -22,7 +22,7 @@ const Works = () => {
             alt="job-application-tracker-image"
             className="projects__content--img"
           />
-          <div className="projects__content--text">
+          <div className="projects__content--text projects__content--text-email">
             <h2 className="projects__content--project-name">
               Personal Email Reader
             </h2>
@@ -38,7 +38,7 @@ const Works = () => {
             alt="brainflix-app-image"
             className="projects__content--img"
           />
-          <div className="projects__content--text">
+          <div className="projects__content--text projects__content--text-brainflix">
             <h2 className="projects__content--project-name">BrainFlix</h2>
             <p className="projects__content--project-description">
               Video streaming website built on React and Node
@@ -52,7 +52,7 @@ const Works = () => {
             alt="fiserv-app-image"
             className="projects__content--img"
           />
-          <div className="projects__content--text">
+          <div className="projects__content--text projects__content--text-fiserv">
             <h2 className="projects__content--project-name">
               Restaurent App UI
             </h2>
@@ -67,7 +67,7 @@ const Works = () => {
             alt="weather-app-image"
             className="projects__content--img"
           />
-          <div className="projects__content--text">
+          <div className="projects__content--text projects__content--text-weather">
             <h2 className="projects__content--project-name">Weather App</h2>
             <p className="projects__content--project-description">
               Weather App built on React using free weather API
