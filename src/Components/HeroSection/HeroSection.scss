@@ -31,6 +31,9 @@
   @include hero-min-heigt {
     height: 400px;
   }
+  @include desktop {
+    text-align: left;
+  }
   // Name
   &__name {
     margin: 0;
@@ -39,13 +42,18 @@
     font-size: 36px;
     &--first {
       display: block;
-      font-weight: 200;
+      font-size: 60px;
+      @include desktop {
+        font-weight: 200;
+      }
     }
     &--last {
       display: block;
-      // font-weight: normal;
       text-transform: uppercase;
-      color: #a70000;
+      // color: #a70000;
+      @include desktop {
+        font-size: 60px;
+      }
     }
   }
   // Title
@@ -54,6 +62,9 @@
     margin-top: 16px;
     width: 100%;
     font-weight: 200;
+    @include desktop {
+      font-size: 30px;
+    }
     &--city {
       display: block;
     }
