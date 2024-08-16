@@ -21,42 +21,42 @@ const TechStacks = () => {
           <FontAwesomeIcon
             icon={faHtml5}
             transform="grow-15"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faCss3}
             transform="grow-15"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faSass}
             transform="grow-15"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faJs}
             transform="grow-15"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faReact}
             transform="grow-15"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faNodeJs}
             transform="grow-15"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         {/* Icons for tablet  */}
@@ -64,56 +64,56 @@ const TechStacks = () => {
           <FontAwesomeIcon
             icon={faHtml5}
             transform="grow-30"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faCss3}
             transform="grow-15"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faSass}
             transform="grow-30"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faJs}
             transform="grow-30"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faReact}
             transform="grow-30"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faNodeJs}
             transform="grow-30"
-            className="teck-stacks__tools--icon"
+            className="tech-stacks__tools--icon"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <img
             src={expressLogo}
             alt="express-logo"
-            className="teck-stacks__tools--img"
+            className="tech-stacks__tools--img"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <img
             src={mysqlLogo}
             alt="mysql-logo"
-            className="teck-stacks__tools--img"
+            className="tech-stacks__tools--img"
           />
         </span>
         <span className="tech-stacks__tools--tech">
