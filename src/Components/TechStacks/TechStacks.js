@@ -18,41 +18,89 @@ const TechStacks = () => {
       <h2 className="tech-stacks__header">Primary skill sets</h2>
       <div className="tech-stacks__tools">
         <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon icon={faHtml5} transform="grow-15" />
+          <FontAwesomeIcon
+            icon={faHtml5}
+            transform="grow-15"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon icon={faCss3} transform="grow-15" />
+          <FontAwesomeIcon
+            icon={faCss3}
+            transform="grow-15"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon icon={faSass} transform="grow-15" />
+          <FontAwesomeIcon
+            icon={faSass}
+            transform="grow-15"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon icon={faJs} transform="grow-15" />
+          <FontAwesomeIcon
+            icon={faJs}
+            transform="grow-15"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon icon={faReact} transform="grow-15" />
+          <FontAwesomeIcon
+            icon={faReact}
+            transform="grow-15"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon icon={faNodeJs} transform="grow-15" />
+          <FontAwesomeIcon
+            icon={faNodeJs}
+            transform="grow-15"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         {/* Icons for tablet  */}
         <span className="tech-stacks__tools--tech-tablet">
-          <FontAwesomeIcon icon={faHtml5} transform="grow-30" />
+          <FontAwesomeIcon
+            icon={faHtml5}
+            transform="grow-30"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
-          <FontAwesomeIcon icon={faCss3} transform="grow-15" />
+          <FontAwesomeIcon
+            icon={faCss3}
+            transform="grow-15"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
-          <FontAwesomeIcon icon={faSass} transform="grow-30" />
+          <FontAwesomeIcon
+            icon={faSass}
+            transform="grow-30"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
-          <FontAwesomeIcon icon={faJs} transform="grow-30" />
+          <FontAwesomeIcon
+            icon={faJs}
+            transform="grow-30"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
-          <FontAwesomeIcon icon={faReact} transform="grow-30" />
+          <FontAwesomeIcon
+            icon={faReact}
+            transform="grow-30"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
-          <FontAwesomeIcon icon={faNodeJs} transform="grow-30" />
+          <FontAwesomeIcon
+            icon={faNodeJs}
+            transform="grow-30"
+            className="teck-stacks__tools--icon"
+          />
         </span>
         <span className="tech-stacks__tools--tech">
           <img
@@ -72,7 +120,7 @@ const TechStacks = () => {
           <img
             src={knexLogo}
             alt="knex-logo"
-            className="teck-stacks__tools--img"
+            className="tech-stacks__tools--img"
           />
         </span>
       </div>

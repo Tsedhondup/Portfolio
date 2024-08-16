@@ -77,6 +77,13 @@
     &--tech:nth-child(13),
     &--tech:nth-child(14),
     &--tech:nth-child(15) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--img {
+      display: block;
       object-fit: contain;
       width: 40px;
       margin: auto;
