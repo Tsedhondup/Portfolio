@@ -13,8 +13,8 @@
   &__title {
     color: $black;
     text-align: center;
-    text-transform: uppercase;
-    // font-weight: 400;
+    text-transform: capitalize;
+    font-weight: normal;
     padding-top: 16px;
     border-top: 1px solid $gray;
   }

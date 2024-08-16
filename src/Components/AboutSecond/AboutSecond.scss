@@ -16,7 +16,6 @@
       height: 100%;
       position: absolute;
       z-index: 10;
-
       @include tablet {
         background-image: linear-gradient(to right, #ffffff, #fff, $gray);
         background-image: linear-gradient(
