@@ -17,6 +17,9 @@
     font-weight: normal;
     padding-top: 16px;
     border-top: 1px solid $gray;
+    @include tablet {
+      padding-top: 32px;
+    }
   }
   &__project-content {
     @include tablet {
@@ -32,7 +35,8 @@
   padding: 16px 0px;
   border-radius: 5px;
   @include tablet {
-    margin: 0px;
+    max-width: 1000px;
+    margin: auto;
   }
   &__personal,
   &__collaboration {
@@ -55,7 +59,8 @@
     @include tablet {
       display: flex;
       justify-content: space-around;
-      margin-bottom: 32px;
+      align-items: center;
+      margin-bottom: 100px;
     }
 
     &--img {
@@ -71,6 +76,9 @@
 
       @include tablet {
         margin: unset;
+        max-width: 350px;
+        height: 450px;
+        box-shadow: 16px 16px 16px 2px $ebony;
       }
     }
     &--img:hover {
@@ -83,19 +91,30 @@
       color: $ebony;
       @include tablet {
         text-align: left;
+        align-items: center;
+        height: fit-content;
       }
+    }
+    &--text-email,
+    &--text-fiserv {
+      padding-left: 10%;
     }
     &--project-name {
       font-size: 16px;
       font-weight: normal;
       padding-top: 32px;
+      @include tablet {
+        padding-top: 0px;
+      }
     }
     &--project-description {
       font-size: 15px;
       padding: 16px 0px;
       display: none;
+
       @include tablet {
         display: block;
+        padding-top: 0px;
       }
     }
   }
