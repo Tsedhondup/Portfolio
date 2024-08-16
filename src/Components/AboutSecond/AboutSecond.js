@@ -20,11 +20,11 @@ const AboutSecond = () => {
           className="about-second-content__star-of-life"
         /> */}
         <p className="about-second-content__texts">
-          I've always been fascinated by the power of the web to connect,
+          "I've always been fascinated by the power of the web to connect,
           inform, and inspire. What started as a curiosity and hobby has evolved
           into a full-fledged passion, driving me to pursue a career transition
           into the tech industry where I can play a part in shaping the digital
-          landscape.
+          landscape."
           <Link to="/About" className="about-second-content__link">
             Read more
           </Link>
