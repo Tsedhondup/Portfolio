@@ -105,6 +105,11 @@
         height: 600px;
       }
     }
+    &--fiserv-image,
+    &--weather-app-image {
+      max-width: 300px;
+      height: 500px;
+    }
     &--text {
       text-align: center;
       color: $ebony;
