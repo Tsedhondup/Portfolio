@@ -2,7 +2,7 @@
 @import "../../styles/partials/_variables";
 
 .project-container {
-  padding-top: $mobile-margin;
+  margin-top: 32px;
   padding-left: $mobile-margin;
   padding-right: $mobile-margin;
   @include tablet {
@@ -16,7 +16,6 @@
     text-transform: capitalize;
     font-weight: normal;
     padding-top: 16px;
-    border-top: 1px solid $gray;
     @include tablet {
       padding-top: 32px;
     }
@@ -70,14 +69,12 @@
     }
 
     &--img {
-      max-width: 200px;
-      height: 300px;
       display: block;
       margin: auto;
       object-fit: cover;
       border: 1px solid $pewter;
       border-radius: 10px;
-      box-shadow: 12px 12px 12px 1px $ebony;
+      // box-shadow: 12px 12px 12px 1px $ebony;
       transform: 1s;
 
       @include tablet {
@@ -98,6 +95,7 @@
     }
     &--email-image,
     &--brainflix-image {
+      max-width: 400px;
       @include tablet {
         max-width: 550px;
         height: 400px;

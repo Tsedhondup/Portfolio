@@ -50,7 +50,7 @@ const Works = () => {
           <img
             src={fiserv}
             alt="fiserv-app-image"
-            className="projects__content--img"
+            className="projects__content--img projects__content--fiserv-image"
           />
           <div className="projects__content--text projects__content--text-fiserv">
             <h2 className="projects__content--project-name">
@@ -65,7 +65,7 @@ const Works = () => {
           <img
             src={weatherApp}
             alt="weather-app-image"
-            className="projects__content--img"
+            className="projects__content--img projects__content--weather-app-image"
           />
           <div className="projects__content--text projects__content--text-weather">
             <h2 className="projects__content--project-name">Weather App</h2>
