@@ -163,7 +163,13 @@
     }
   }
   &__shadow-element {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 1)
+    );
     height: 100%;
   }
 
@@ -187,7 +193,7 @@
   text-align: right;
   &__open {
     padding: 0;
-    color: #a70000;
+    color: $ebony;
     width: auto;
   }
 
