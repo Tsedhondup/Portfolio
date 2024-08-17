@@ -21,42 +21,42 @@ const TechStacks = () => {
           <FontAwesomeIcon
             icon={faHtml5}
             // transform="grow-15"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools-html"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faCss3}
             // transform="grow-15"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--css"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faSass}
             // transform="grow-15"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--sass"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faJs}
             // transform="grow-15"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--js"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faReact}
             // transform="grow-15"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--react"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faNodeJs}
             // transform="grow-15"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--node"
           />
         </span>
         {/* Icons for tablet  */}
@@ -64,63 +64,63 @@ const TechStacks = () => {
           <FontAwesomeIcon
             icon={faHtml5}
             // transform="grow-30"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--html"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faCss3}
             // transform="grow-15"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--css"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faSass}
             // transform="grow-30"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--sass"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faJs}
             // transform="grow-30"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--js"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faReact}
             // transform="grow-30"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--react"
           />
         </span>
         <span className="tech-stacks__tools--tech-tablet">
           <FontAwesomeIcon
             icon={faNodeJs}
             // transform="grow-30"
-            className="tech-stacks__tools--icon"
+            className="tech-stacks__tools--icon tech-stacks__tools--node"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <img
             src={expressLogo}
             alt="express-logo"
-            className="tech-stacks__tools--img"
+            className="tech-stacks__tools--img tech-stacks__tools--express"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <img
             src={mysqlLogo}
             alt="mysql-logo"
-            className="tech-stacks__tools--img"
+            className="tech-stacks__tools--img tech-stacks__tools--mysql"
           />
         </span>
         <span className="tech-stacks__tools--tech">
           <img
             src={knexLogo}
             alt="knex-logo"
-            className="tech-stacks__tools--img"
+            className="tech-stacks__tools--img tech-stacks__tools--knex"
           />
         </span>
       </div>
