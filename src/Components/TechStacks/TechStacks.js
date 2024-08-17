@@ -21,87 +21,45 @@ const TechStacks = () => {
           <FontAwesomeIcon
             icon={faHtml5}
             // transform="grow-15"
-            className="tech-stacks__tools--icon tech-stacks__tools-html"
-          />
-        </span>
-        <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon
-            icon={faCss3}
-            // transform="grow-15"
-            className="tech-stacks__tools--icon tech-stacks__tools--css"
-          />
-        </span>
-        <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon
-            icon={faSass}
-            // transform="grow-15"
-            className="tech-stacks__tools--icon tech-stacks__tools--sass"
-          />
-        </span>
-        <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon
-            icon={faJs}
-            // transform="grow-15"
-            className="tech-stacks__tools--icon tech-stacks__tools--js"
-          />
-        </span>
-        <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon
-            icon={faReact}
-            // transform="grow-15"
-            className="tech-stacks__tools--icon tech-stacks__tools--react"
-          />
-        </span>
-        <span className="tech-stacks__tools--tech">
-          <FontAwesomeIcon
-            icon={faNodeJs}
-            // transform="grow-15"
-            className="tech-stacks__tools--icon tech-stacks__tools--node"
-          />
-        </span>
-        {/* Icons for tablet  */}
-        <span className="tech-stacks__tools--tech-tablet">
-          <FontAwesomeIcon
-            icon={faHtml5}
-            // transform="grow-30"
             className="tech-stacks__tools--icon tech-stacks__tools--html"
           />
         </span>
-        <span className="tech-stacks__tools--tech-tablet">
+        <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faCss3}
             // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--css"
           />
         </span>
-        <span className="tech-stacks__tools--tech-tablet">
+        <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faSass}
-            // transform="grow-30"
+            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--sass"
           />
         </span>
-        <span className="tech-stacks__tools--tech-tablet">
+        <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faJs}
-            // transform="grow-30"
+            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--js"
           />
         </span>
-        <span className="tech-stacks__tools--tech-tablet">
+        <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faReact}
-            // transform="grow-30"
+            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--react"
           />
         </span>
-        <span className="tech-stacks__tools--tech-tablet">
+        <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faNodeJs}
-            // transform="grow-30"
+            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--node"
           />
         </span>
+
         <span className="tech-stacks__tools--tech">
           <img
             src={expressLogo}

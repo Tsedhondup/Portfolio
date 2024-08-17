@@ -48,35 +48,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
 
-      @include tablet {
-        display: none;
-      }
-    }
-    &--tech:nth-child(1) {
-      color: $html;
-    }
-    &--tech:nth-child(2) {
-      color: $css;
-    }
-    &--tech:nth-child(3) {
-      color: $sass;
-    }
-    &--tech:nth-child(4) {
-      color: $js;
-    }
-    &--tech:nth-child(5) {
-      color: $react;
-    }
-    &--tech:nth-child(6) {
-      color: $node;
-    }
-    &--tech:nth-child(13),
-    &--tech:nth-child(14),
-    &--tech:nth-child(15) {
-      display: flex;
-      justify-content: center;
-    }
     &--icon {
       display: block;
       width: 40px;
@@ -97,60 +70,41 @@
         display: block;
       }
     }
-    // &--html {
-    //   filter: drop-shadow(2px 2px 15px $html);
-    // }
-    // &--css {
-    //   filter: drop-shadow(2px 2px 15px $css);
-    // }
-    // &--sass {
-    //   filter: drop-shadow(2px 2px 10px $sass);
-    // }
-    // &--js {
-    //   filter: drop-shadow(2px 2px 15px $js);
-    // }
-    // &--react {
-    //   filter: drop-shadow(2px 2px 15px $react);
-    // }
-    // &--node {
-    //   filter: drop-shadow(2px 2px 15px $node);
-    // }
-    // &--express {
-    //   filter: drop-shadow(2px 2px 10px $express);
-    // }
-    // &--mysql {
-    //   filter: drop-shadow(2px 2px 10px $mysql);
-    // }
-    // &--knex {
-    //   filter: drop-shadow(2px 2px 15px $knex);
-    // }
-
-    // Font awesome icons for tablet version
-    &--tech-tablet {
-      display: none;
-      @include tablet {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    &--tech-tablet:nth-child(7) {
+    &--html {
+      // filter: drop-shadow(2px 2px 15px $html);
       color: $html;
     }
-    &--tech-tablet:nth-child(8) {
+    &--css {
+      // filter: drop-shadow(2px 2px 15px $css);
       color: $css;
     }
-    &--tech-tablet:nth-child(9) {
+    &--sass {
+      // filter: drop-shadow(2px 2px 10px $sass);
       color: $sass;
     }
-    &--tech-tablet:nth-child(10) {
+    &--js {
+      // filter: drop-shadow(2px 2px 15px $js);
       color: $js;
     }
-    &--tech-tablet:nth-child(11) {
+    &--react {
+      // filter: drop-shadow(2px 2px 15px $react);
       color: $react;
     }
-    &--tech-tablet:nth-child(12) {
+    &--node {
+      // filter: drop-shadow(2px 2px 15px $node);
       color: $node;
+    }
+    &--express {
+      // filter: drop-shadow(2px 2px 10px $express);
+      color: $express;
+    }
+    &--mysql {
+      // filter: drop-shadow(2px 2px 10px $mysql);
+      color: $mysql;
+    }
+    &--knex {
+      // filter: drop-shadow(2px 2px 15px $knex);
+      color: $knex;
     }
   }
 }
