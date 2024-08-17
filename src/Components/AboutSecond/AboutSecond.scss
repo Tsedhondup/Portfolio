@@ -30,7 +30,7 @@
     }
     &--shadow-element {
       height: 100%;
-      width: 100%f;
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
@@ -39,14 +39,14 @@
       background-image: linear-gradient(
         to top,
         // rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.7),
         rgba(255, 255, 255, 0.2)
       );
       opacity: 0.6;
       border-radius: 5px;
-      @include tablet {
-        display: none;
-      }
+      // @include tablet {
+      //   display: none;
+      // }
     }
     &--img {
       object-fit: contain;
@@ -60,20 +60,12 @@
       margin: auto;
       border-radius: 5px;
       @include tablet {
-        max-width: 360px;
+        // max-width: 360px;
         border: unset;
       }
     }
   }
 
-  &__star-of-life {
-    padding-top: 16px;
-    color: $gray;
-
-    @include tablet {
-      display: none;
-    }
-  }
   &__texts {
     padding-top: $mobile-margin;
     text-align: center;
