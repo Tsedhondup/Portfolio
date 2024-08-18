@@ -70,7 +70,7 @@ const AboutFirst = (props) => {
             <FontAwesomeIcon
               icon={faVial}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-scope"
+              className="about-text__icon-container--icons about-text__icon-container--icon-vial"
             />
           </div>
         </section>
@@ -79,27 +79,27 @@ const AboutFirst = (props) => {
           <h3 className="about-text__title">Earliest coding journey</h3>
 
           <p className="about-text__para">
-            'I came across a video on YouTube about a young and successful
+            I came across a video on YouTube about a young and successful
             self-taught software developer. As influential and inspiring as the
             video was, I was rather excited to learn coding as a hobby and feed
-            my curiosities.'
+            my curiosities.
           </p>
           {/* Icons */}
           <div className="about-text__icon-container about-text__icon-container-2">
             <FontAwesomeIcon
               icon={faLaptop}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-scope"
+              className="about-text__icon-container--icons about-text__icon-container--icon-laptop"
             />
             <FontAwesomeIcon
               icon={faCode}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-dna"
+              className="about-text__icon-container--icons about-text__icon-container--icon-code"
             />
             <FontAwesomeIcon
               icon={faCoffee}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-leaf"
+              className="about-text__icon-container--icons about-text__icon-container--icon-coffee"
             />
           </div>
         </section>
@@ -108,7 +108,7 @@ const AboutFirst = (props) => {
           <h3 className="about-text__title">Becoming a certified developer!</h3>
 
           <p className="about-text__para">
-            'eaching myself to code was of great success, and it continues to be
+            Teaching myself to code was of great success, and it continues to be
             my greatest strength in keeping up with ever-changing technologies
             that are paramount. However, the need for a proper mentor to assist
             in honing my skills tailored to professional requirements was vital.
@@ -120,17 +120,17 @@ const AboutFirst = (props) => {
             <FontAwesomeIcon
               icon={faBook}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-dna"
+              className="about-text__icon-container--icons about-text__icon-container--icon-book"
             />
             <FontAwesomeIcon
               icon={faHeadset}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-leaf"
+              className="about-text__icon-container--icons about-text__icon-container--icon-head-set"
             />
             <FontAwesomeIcon
               icon={faCheckSquare}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-scope"
+              className="about-text__icon-container--icons about-text__icon-container--icon-check-square"
             />
           </div>
         </section>
@@ -150,17 +150,17 @@ const AboutFirst = (props) => {
             <FontAwesomeIcon
               icon={faHandPointRight}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-dna"
+              className="about-text__icon-container--icons about-text__icon-container--icon-point-right"
             />
             <FontAwesomeIcon
               icon={faLaptopHouse}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-leaf"
+              className="about-text__icon-container--icons about-text__icon-container--icon-house"
             />
             <FontAwesomeIcon
               icon={faGlobeAmericas}
               transform="grow-2"
-              className="about-text__icon-container--icons about-text__icon-container--icon-scope"
+              className="about-text__icon-container--icons about-text__icon-container--icon-globe"
             />
           </div>
         </section>
