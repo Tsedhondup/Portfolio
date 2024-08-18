@@ -7,7 +7,7 @@ const HeroSection = (props) => {
   const handleScroll = () => {
     const currentElement = refElement.current; // current ref element stored
     const rect = currentElement.getBoundingClientRect(); // get ref element position
-    rect.top <= -10 ? props.setIsScroll(true) : props.setIsScroll(false);
+    rect.top <= -0.5 ? props.setIsScroll(true) : props.setIsScroll(false);
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -18,13 +18,11 @@ const HeroSection = (props) => {
     };
   }, []);
   return (
-    <section className="hero-container">
+    <section className="hero-container" ref={refElement}>
       <section className="hero-content">
         <div>
           <h1 className="hero-content__name">
-            <span className="hero-content__name--first" ref={refElement}>
-              Hi, I'm Tsering
-            </span>
+            <span className="hero-content__name--first">Hi, I'm Tsering</span>
             <span className="hero-content__name--last">Dhondup</span>
           </h1>
           <h3 className="hero-content__title">

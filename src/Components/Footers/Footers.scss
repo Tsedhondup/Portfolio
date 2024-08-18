@@ -51,9 +51,10 @@
     position: relative;
     z-index: 10;
   }
+
   &__statement {
     font-weight: 300;
-    border-bottom: 1px solid #a70000;
+    border-bottom: 1px solid $pewter;
     padding-bottom: $mobile-margin;
   }
 
