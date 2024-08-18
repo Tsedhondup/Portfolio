@@ -49,7 +49,7 @@
     }
     @include tablet {
       &--img {
-        width: 400px;
+        max-width: 400px;
       }
     }
     &--text {
@@ -130,6 +130,9 @@
   &__icon-container-4 {
     display: flex;
     justify-content: flex-end;
+    @include tablet {
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -137,41 +140,29 @@
   border-top: 1px solid #a70000;
   border-left: 1px solid #a70000;
   border-bottom: 1px solid #a70000;
+  @include tablet {
+    border: unset;
+    padding-top: 0px;
+  }
 }
 .about-text-journey {
   border-right: 1px solid #a70000;
   border-bottom: 1px solid #a70000;
-  // border-bottom-left-radius: 10px;
-  // background-image: linear-gradient(
-  //   to bottom left,
-
-  //   $black,
-  //   $ebony,
-  //   $black
-  // );
+  @include tablet {
+    border: unset;
+  }
 }
 .about-text-certification {
   border-bottom: 1px solid #a70000;
   border-left: 1px solid #a70000;
-
-  // border-bottom-right-radius: 10px;
-  // background-image: linear-gradient(
-  //   to bottom right,
-
-  //   $black,
-  //   $ebony,
-  //   $black
-  // );
+  @include tablet {
+    border: unset;
+  }
 }
 .about-text-goals {
   border-right: 1px solid #a70000;
   border-bottom: 1px solid #a70000;
-  // border-bottom-left-radius: 10px;
-  // background-image: linear-gradient(
-  //   to bottom left,
-
-  //   $black,
-  //   $ebony,
-  //   $black
-  // );
+  @include tablet {
+    border: unset;
+  }
 }
