@@ -44,7 +44,7 @@ const AboutFirst = (props) => {
       </div>
 
       <section className="about-text-container">
-        <h2 className="about-first__mobile-header-2">About Me</h2>
+        <h2 className="about-first__mobile-header">About Me</h2>
         {/* Untold story */}
         <section className="about-text about-text-education">
           <h2 className="about-text__title">Education</h2>
