@@ -3,6 +3,13 @@
 .about-first {
   padding-top: 50px;
   box-sizing: border-box;
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 100px;
+    padding-left: $tablet-margin;
+    padding-right: $tablet-margin;
+  }
 
   // Header Two
   &__mobile-header {
@@ -13,6 +20,9 @@
     padding-bottom: 16px;
     position: relative;
     z-index: 5;
+    @include tablet {
+      display: none;
+    }
   }
 
   &__image-container {
@@ -63,6 +73,7 @@
   padding: $mobile-margin;
   @include tablet {
     padding: $tablet-margin;
+    padding-top: 0px;
   }
 }
 .about-text {
