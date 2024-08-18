@@ -6,9 +6,14 @@
   @include tablet {
     display: flex;
     flex-direction: row-reverse;
-    padding-top: 100px;
+    padding-top: 150px;
     padding-left: $tablet-margin;
     padding-right: $tablet-margin;
+  }
+  @include desktop {
+    padding-top: 200px;
+    max-width: 1280px;
+    margin: auto;
   }
 
   // Header Two
