@@ -49,15 +49,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include desktop {
+    font-size: 24px;
+    max-width: 1280px;
+    padding-left: $tablet-margin;
+    padding-right: $tablet-margin;
+    margin: auto;
+  }
   &__brand-name {
     color: $ebony;
     text-decoration: none;
     letter-spacing: 0.2em;
     font-size: 20px;
     width: auto;
-    @include desktop {
-      font-size: 24px;
-    }
   }
   &__brand-name:hover {
     color: $pewter;
