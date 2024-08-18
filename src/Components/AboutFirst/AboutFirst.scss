@@ -106,7 +106,7 @@
   }
   // About text content paragraph
   &__para {
-    color: $ebony;
+    color: $black;
     font-size: 15px;
     font-weight: 200;
     padding-bottom: 16px;
@@ -175,31 +175,31 @@
 }
 
 .about-text-education {
-  border-top: 1px solid #a70000;
-  border-left: 1px solid #a70000;
-  border-bottom: 1px solid #a70000;
+  border-top: 1px solid $pewter;
+  border-left: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
   @include tablet {
     border: unset;
     padding-top: 0px;
   }
 }
 .about-text-journey {
-  border-right: 1px solid #a70000;
-  border-bottom: 1px solid #a70000;
+  border-right: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
   @include tablet {
     border: unset;
   }
 }
 .about-text-certification {
-  border-bottom: 1px solid #a70000;
-  border-left: 1px solid #a70000;
+  border-bottom: 1px solid $pewter;
+  border-left: 1px solid $pewter;
   @include tablet {
     border: unset;
   }
 }
 .about-text-goals {
-  border-right: 1px solid #a70000;
-  border-bottom: 1px solid #a70000;
+  border-right: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
   @include tablet {
     border: unset;
   }
