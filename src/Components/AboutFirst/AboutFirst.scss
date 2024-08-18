@@ -54,11 +54,8 @@
         max-width: 400px;
         margin: unset;
       }
-    }
-    @include mobile2 {
-      &--img {
-        width: 300px;
-        height: auto;
+      @include desktop {
+        width: 500px;
       }
     }
 
