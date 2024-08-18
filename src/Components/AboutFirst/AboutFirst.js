@@ -40,6 +40,7 @@ const AboutFirst = (props) => {
           alt="author-photo"
           className="about-first__image-container--img"
         />
+        <h2 className="about-first__image-container--text">About me</h2>
         {/* <div className="about-first__image-container--shadow-el"></div> */}
       </div>
 
