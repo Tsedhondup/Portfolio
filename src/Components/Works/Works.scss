@@ -10,6 +10,10 @@
     padding-left: $tablet-margin;
     padding-right: $tablet-margin;
   }
+  @include desktop {
+    max-width: 1280px;
+    margin: auto;
+  }
   &__title {
     color: $black;
     text-align: center;
@@ -30,6 +34,7 @@
     }
   }
 }
+// Projects
 .projects {
   padding: 16px 0px;
   border-radius: 5px;
@@ -40,12 +45,14 @@
   @include desktop {
     max-width: unset;
   }
+  // Project headers
   &__personal,
   &__collaboration {
     color: $ebony;
     font-size: 18px;
     font-weight: normal;
     text-align: center;
+    text-transform: uppercase;
     padding: 10px;
     margin: auto;
     margin-bottom: 16px;
@@ -53,46 +60,52 @@
       text-align: left;
     }
   }
-
+  // Project items
   &__content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: $tablet-gutter;
     margin-bottom: 16px;
+    border-bottom: 1px solid $gray;
     @include tablet {
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin-bottom: 100px;
+      border-bottom: unset;
     }
     @include desktop {
       margin-bottom: 150px;
+      gap: 200px;
     }
-
+    // Project images
     &--img {
       display: block;
       margin: auto;
       object-fit: cover;
-      border: 1px solid $pewter;
       border-radius: 10px;
-      // box-shadow: 12px 12px 12px 1px $ebony;
+      box-shadow: 12px 12px 12px 1px $ebony;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
       transform: 1s;
 
       @include tablet {
         margin: unset;
         max-width: 350px;
         height: 450px;
-        box-shadow: 16px 16px 16px 2px $ebony;
       }
       @include desktop {
         max-width: 450px;
         height: 700px;
-        box-shadow: 16px 16px 16px 2px $ebony;
       }
     }
     &--img:hover {
-      transform: rotate3d(1, 1, 1, 1deg);
-      box-shadow: 5px 5px 2px 1px $pewter;
+      box-shadow: unset;
+      border: 1px solid $pewter;
     }
+    // Email reader and brainflix image
     &--email-image,
     &--brainflix-image {
       max-width: 400px;
@@ -105,11 +118,14 @@
         height: 600px;
       }
     }
+    // fiserv and weather app image
     &--fiserv-image,
     &--weather-app-image {
       max-width: 300px;
       height: 500px;
     }
+
+    // Projects text section
     &--text {
       text-align: center;
       color: $ebony;
@@ -119,27 +135,44 @@
         height: fit-content;
       }
     }
-    &--text-email,
-    &--text-fiserv {
-      padding-left: 10%;
-    }
+
+    // project name
     &--project-name {
       color: $black;
       font-size: 16px;
       font-weight: normal;
-      text-transform: uppercase;
-      padding-top: 32px;
+      text-transform: capitalize;
+      text-align: center;
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: 1px solid $gray;
+      width: fit-content;
+      margin: auto;
       @include tablet {
-        padding-top: 0px;
+        text-align: left;
+        margin: unset;
+        margin-bottom: 10px;
       }
       @include desktop {
         padding-bottom: 10px;
       }
     }
+    // email reader and fiserv app project name
+    &--text-email,
+    &--text-fiserv {
+      // @include tablet {
+      //   text-align: left;
+      // }
+      @include desktop {
+        // padding-left: 10%;
+      }
+    }
+
+    // Project description
     &--project-description {
       font-size: 15px;
       padding: 16px 0px;
-      display: none;
+      // display: none;
 
       @include tablet {
         display: block;
@@ -147,6 +180,7 @@
       }
     }
   }
+  // brainflix and weatherapp projects content
   &__content-brainflix,
   &__content-weather {
     @include tablet {
@@ -154,36 +188,4 @@
       flex-direction: row-reverse;
     }
   }
-
-  // &__icon {
-  //   text-align: center;
-  //   color: $ebony;
-  //   color: #a70000;
-  //   @include tablet {
-  //     display: none;
-  //   }
-  // }
-  // &__icon-tablet {
-  //   display: none;
-  //   @include tablet {
-  //     display: block;
-  //     text-align: center;
-  //     color: $ebony;
-  //     color: #a70000;
-  //     padding-bottom: 16px;
-  //   }
-  // }
-  // &__header {
-  //   padding-top: 16px;
-  //   font-weight: normal;
-  //   text-align: center;
-  // }
-  // &__description {
-  //   padding-top: $mobile-margin;
-  //   padding-bottom: $mobile-margin;
-  //   text-align: center;
-  //   font-size: 15px;
-  //   font-weight: 200;
-  //   color: $black;
-  // }
 }

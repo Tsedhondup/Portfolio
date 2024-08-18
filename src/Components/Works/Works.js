@@ -15,6 +15,7 @@ const Works = () => {
     <section className="project-container">
       <h2 className="project-container__title">Projects</h2>
       <section className="projects">
+        {/* Personal */}
         <h2 className="projects__personal">Personal works</h2>
         <div className="projects__content projects__content-email-reader">
           <img
@@ -22,8 +23,8 @@ const Works = () => {
             alt="job-application-tracker-image"
             className="projects__content--img projects__content--email-image"
           />
-          <div className="projects__content--text projects__content--text-email">
-            <h2 className="projects__content--project-name">
+          <div className="projects__content--text ">
+            <h2 className="projects__content--project-name projects__content--text-email">
               Personal Email Reader
             </h2>
             <p className="projects__content--project-description">
@@ -45,6 +46,7 @@ const Works = () => {
             </p>
           </div>
         </div>
+        {/* Collab */}
         <h2 className="projects__collaboration">Collaboration</h2>
         <div className="projects__content projects__content-fiserv">
           <img
@@ -52,8 +54,8 @@ const Works = () => {
             alt="fiserv-app-image"
             className="projects__content--img projects__content--fiserv-image"
           />
-          <div className="projects__content--text projects__content--text-fiserv">
-            <h2 className="projects__content--project-name">
+          <div className="projects__content--text ">
+            <h2 className="projects__content--project-name projects__content--text-fiserv">
               Restaurent App UI
             </h2>
             <p className="projects__content--project-description">

@@ -9,7 +9,7 @@
     width: 100%;
     margin: auto;
     padding: 0px $tablet-margin;
-    margin-top: $tablet-margin;
+    margin-top: 64px;
   }
   @include desktop {
     max-width: 1000px;
