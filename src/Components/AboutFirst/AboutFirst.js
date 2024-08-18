@@ -35,21 +35,18 @@ const AboutFirst = (props) => {
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>
-        <h2 className="about-first__image-container--mobile-header-2">
-          About <br /> me
-        </h2>
         <img
           src={profilePic}
           alt="author-photo"
           className="about-first__image-container--img"
         />
-        <div className="about-first__image-container--shadow-el"></div>
+        {/* <div className="about-first__image-container--shadow-el"></div> */}
       </div>
-      <h2 className="about-first__mobile-header-1">About Me</h2>
 
       <section className="about-text-container">
+        <h2 className="about-first__mobile-header-2">About Me</h2>
         {/* Untold story */}
-        <section className="about-text">
+        <section className="about-text about-text-education">
           <h2 className="about-text__title">Education</h2>
 
           <p className="about-text__para">
@@ -75,7 +72,7 @@ const AboutFirst = (props) => {
           </div>
         </section>
         {/* Earliest coding journey */}
-        <section className="about-text">
+        <section className="about-text about-text-journey">
           <h3 className="about-text__title">Earliest coding journey</h3>
 
           <p className="about-text__para">
@@ -104,7 +101,7 @@ const AboutFirst = (props) => {
           </div>
         </section>
         {/* Becoming a certified developer! */}
-        <section className="about-text">
+        <section className="about-text about-text-certification">
           <h3 className="about-text__title">Becoming a certified developer!</h3>
 
           <p className="about-text__para">
@@ -135,7 +132,7 @@ const AboutFirst = (props) => {
           </div>
         </section>
         {/* What next */}
-        <section className="about-text">
+        <section className="about-text about-text-goals">
           <h3 className="about-text__title">What next</h3>
 
           <p className="about-text__para">

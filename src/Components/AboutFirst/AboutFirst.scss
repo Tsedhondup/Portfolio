@@ -2,33 +2,34 @@
 @import "../../styles/partials/_variables";
 .about-first {
   padding-top: 50px;
-  background-color: $black;
   box-sizing: border-box;
 
-  // Header One
-  &__mobile-header-1 {
+  // Header Two
+  &__mobile-header-2 {
     color: $ebony;
+    text-align: center;
     text-transform: uppercase;
     padding: 16px 32px;
     padding-bottom: 0px;
-    background-color: #ffffff;
     position: relative;
     z-index: 5;
   }
-  @include mobile2 {
-    &__mobile-header-1 {
-      display: none;
-    }
-  }
+
   &__image-container {
     position: relative;
     &--img {
       object-fit: contain;
       display: block;
-      height: 300px;
+      width: 300px;
+      border-radius: 5px;
+      margin: auto;
       position: relative;
       z-index: 5;
       filter: drop-shadow(2px 2px 20px $gray);
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
     }
     @include mobile2 {
       &--img {
@@ -41,47 +42,19 @@
         width: 400px;
       }
     }
-    &--shadow-el {
-      position: absolute;
-      top: 0;
-      left: 0;
+    // &--shadow-el {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
 
-      z-index: 10;
-      height: 100%;
-      background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.1)
-      );
-    }
-
-    // Header Two
-    &--mobile-header-2 {
-      display: none;
-      text-transform: uppercase;
-      color: #a70000;
-      padding: relative;
-      z-index: 14;
-    }
-    @include mobile2 {
-      &--mobile-header-2 {
-        display: block;
-        width: auto;
-        font-size: 24px;
-        text-align: left;
-        position: absolute;
-        left: 10%;
-        top: 50%;
-      }
-    }
-  }
-  @include mobile2 {
-    &__image-container {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      height: 40vh;
-    }
+    //   z-index: 10;
+    //   height: 100%;
+    //   background-image: linear-gradient(
+    //     to right,
+    //     rgba(0, 0, 0, 0.3),
+    //     rgba(0, 0, 0, 0.1)
+    //   );
+    // }
   }
 }
 
