@@ -10,7 +10,7 @@
     text-align: center;
     text-transform: uppercase;
     padding: 16px 32px;
-    padding-bottom: 0px;
+    padding-bottom: 16px;
     position: relative;
     z-index: 5;
   }
@@ -111,21 +111,13 @@
   }
 }
 
-.about-text:nth-child(1) {
+.about-text-education {
   border-top: 1px solid #a70000;
-  border-right: 1px solid #a70000;
-  border-bottom: 1px solid #a70000;
-  // border-bottom-right-radius: 10px;
-  // background-image: linear-gradient(
-  //   to bottom right,
-
-  //   $black,
-  //   $ebony,
-  //   $black
-  // );
-}
-.about-text:nth-child(2) {
   border-left: 1px solid #a70000;
+  border-bottom: 1px solid #a70000;
+}
+.about-text-journey {
+  border-right: 1px solid #a70000;
   border-bottom: 1px solid #a70000;
   // border-bottom-left-radius: 10px;
   // background-image: linear-gradient(
@@ -136,9 +128,10 @@
   //   $black
   // );
 }
-.about-text:nth-child(3) {
-  border-right: 1px solid #a70000;
+.about-text-certification {
   border-bottom: 1px solid #a70000;
+  border-left: 1px solid #a70000;
+
   // border-bottom-right-radius: 10px;
   // background-image: linear-gradient(
   //   to bottom right,
@@ -148,8 +141,8 @@
   //   $black
   // );
 }
-.about-text:nth-child(4) {
-  border-left: 1px solid #a70000;
+.about-text-goals {
+  border-right: 1px solid #a70000;
   border-bottom: 1px solid #a70000;
   // border-bottom-left-radius: 10px;
   // background-image: linear-gradient(
