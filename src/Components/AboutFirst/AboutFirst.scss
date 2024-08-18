@@ -26,7 +26,13 @@
   }
 
   &__image-container {
-    position: relative;
+    &--img-wrapper {
+      @include tablet {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
     &--img {
       object-fit: contain;
       display: block;
@@ -34,12 +40,15 @@
       border-radius: 5px;
       margin: auto;
       position: relative;
-      z-index: 5;
       filter: drop-shadow(2px 2px 20px $gray);
       box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 22.3px 17.9px rgba(0, 0, 0, 0.072),
         0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+      @include tablet {
+        max-width: 400px;
+        margin: unset;
+      }
     }
     @include mobile2 {
       &--img {
@@ -47,35 +56,18 @@
         height: auto;
       }
     }
-    @include tablet {
-      &--img {
-        max-width: 400px;
-      }
-    }
+
     &--text {
       display: none;
       @include tablet {
         display: block;
         color: $black;
-        text-align: center;
+        text-align: right;
         text-transform: capitalize;
         font-weight: normal;
         padding-top: 16px;
       }
     }
-    // &--shadow-el {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-
-    //   z-index: 10;
-    //   height: 100%;
-    //   background-image: linear-gradient(
-    //     to right,
-    //     rgba(0, 0, 0, 0.3),
-    //     rgba(0, 0, 0, 0.1)
-    //   );
-    // }
   }
 }
 
@@ -83,13 +75,14 @@
   background-color: #ffffff;
   padding: $mobile-margin;
   @include tablet {
-    padding: $tablet-margin;
-    padding-top: 0px;
+    padding: 0px;
   }
 }
 .about-text {
   padding: 32px 16px;
-  // background-image: linear-gradient(to bottom right, $black, $pewter);
+  @include tablet {
+    padding: 32px 0px;
+  }
   &__title {
     display: flex;
     color: $ebony;
@@ -104,7 +97,6 @@
     color: $ebony;
     font-size: 15px;
     font-weight: 200;
-    // text-align: justify;
     padding-bottom: 16px;
   }
   &__icon-container {
@@ -116,15 +108,6 @@
       padding-right: 10px;
       color: #a70000;
     }
-    // &--icon-dna {
-    //   color: $dna;
-    // }
-    // &--icon-leaf {
-    //   color: $leaf;
-    // }
-    // &--icon-scope {
-    //   color: $microScope;
-    // }
   }
   &__icon-container-2,
   &__icon-container-4 {

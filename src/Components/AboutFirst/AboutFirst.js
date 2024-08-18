@@ -35,13 +35,15 @@ const AboutFirst = (props) => {
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>
-        <img
-          src={profilePic}
-          alt="author-photo"
-          className="about-first__image-container--img"
-        />
+        <div className="about-first__image-container--img-wrapper">
+          <img
+            src={profilePic}
+            alt="author-photo"
+            className="about-first__image-container--img"
+          />
+        </div>
+
         <h2 className="about-first__image-container--text">About me</h2>
-        {/* <div className="about-first__image-container--shadow-el"></div> */}
       </div>
 
       <section className="about-text-container">
