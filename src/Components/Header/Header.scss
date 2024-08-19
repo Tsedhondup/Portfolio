@@ -4,7 +4,7 @@
 .header {
   padding: 0px $mobile-margin;
   background-color: $black;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,9 +15,9 @@
     padding-top: 16px;
   }
   // Header is hidden for desktop view when page home page gets renderded for the first time
-  @include desktop {
-    top: -150px;
-  }
+  // @include desktop {
+  //   top: -150px;
+  // }
 }
 // JS Dynamic class
 // Header is only shown when page is being scrolled

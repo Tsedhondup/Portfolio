@@ -9,14 +9,14 @@ const HeroSection = (props) => {
     const rect = currentElement.getBoundingClientRect(); // get ref element position
     rect.top <= -0.5 ? props.setIsScroll(true) : props.setIsScroll(false);
   };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    // Clean up the event listener when the component unmounts
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   // Clean up the event listener when the component unmounts
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
   return (
     <section className="hero-container" ref={refElement}>
       <section className="hero-content">
