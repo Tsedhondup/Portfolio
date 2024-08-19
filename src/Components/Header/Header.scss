@@ -1,0 +1,208 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/_variables";
+
+.header {
+  padding: 0px $mobile-margin;
+  background-color: $black;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 15;
+  @include tablet {
+    padding: 0px $tablet-margin;
+    padding-top: 16px;
+  }
+  // Header is hidden for desktop view when page home page gets renderded for the first time
+  // @include desktop {
+  //   top: -150px;
+  // }
+}
+// JS Dynamic class
+// Header is only shown when page is being scrolled
+.header-opaque-home-page {
+  background-color: #ffffff;
+  top: 0;
+  @include tablet {
+    padding: 10px $tablet-margin;
+  }
+}
+// Header is shown when page gets rendered for the firs time only in about page
+.header-opaque-about-2-page {
+  @include tablet {
+    padding: 10px $tablet-margin;
+    top: 0;
+  }
+}
+
+// Heder gets white background when page is being scrolled
+.header-opaque-about-page {
+  background-color: #ffffff;
+  @include tablet {
+    padding: 10px $tablet-margin;
+  }
+}
+
+.navigation {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include desktop {
+    font-size: 24px;
+    max-width: 1280px;
+    padding-left: $tablet-margin;
+    padding-right: $tablet-margin;
+    margin: auto;
+  }
+  &__brand-name {
+    color: $ebony;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    font-size: 20px;
+    width: auto;
+  }
+  &__brand-name:hover {
+    color: $pewter;
+  }
+}
+
+// Nav Links
+.navigation-pages {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  transition: 0.3s;
+  // Media queries [][]
+
+  &__link-container {
+    padding: 0px 16px;
+    background-color: #ffffff;
+    @include tablet {
+      display: flex;
+      justify-content: flex-end;
+      gap: 50px;
+      background-color: unset;
+      padding: 0px;
+    }
+    &--author-name {
+      font-weight: 200;
+      color: $gray;
+      color: $ebony;
+      padding: 16px 0px;
+      font-size: 14px;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+
+      // Media queries [][]
+      @include tablet {
+        display: none;
+      }
+    }
+    &--home,
+    &--about {
+      text-decoration: none;
+      color: $ebony;
+      border-bottom: 1px solid $ebony;
+      display: block;
+      padding: 10px 0px;
+      text-transform: uppercase;
+      font-size: 13px;
+
+      // Media queries [][]
+      @include tablet {
+        border: unset;
+        text-align: right;
+        width: auto;
+      }
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+    &--home:hover,
+    &--about:hover {
+      color: $pewter;
+    }
+    &--resume {
+      color: $ebony;
+      text-decoration: none;
+      border-bottom: 1px solid $gray;
+      border-bottom: 1px solid #a70000;
+      text-transform: uppercase;
+      font-size: 13px;
+      display: block;
+      padding: 10px 0px;
+      // background-color: $pewter;
+
+      // Media queries [][]
+      @include tablet {
+        border: 1px solid $pewter;
+        color: $ebony;
+        text-align: right;
+        width: auto;
+        padding: 10px 16px;
+        border-radius: 5px;
+      }
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+    &--resume:hover {
+      color: $pewter;
+    }
+  }
+
+  &__hide-button {
+    color: #a70000;
+    padding: 16px 0px;
+    background-color: #ffffff;
+
+    // Media queries [][]
+    @include tablet {
+      display: none;
+    }
+  }
+  &__shadow-element {
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 1)
+    );
+    height: 100%;
+  }
+
+  // Media queries [][]
+  @include tablet {
+    height: auto;
+    position: relative;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+// Dynamic class
+.navigation-pages-show {
+  top: 0%;
+  left: 0%;
+}
+
+// Nav show button
+.nav-button-container {
+  text-align: right;
+  &__open {
+    padding: 0;
+    color: $ebony;
+    width: auto;
+  }
+
+  // Media queries [][]
+  @include tablet {
+    display: none;
+  }
+}

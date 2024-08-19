@@ -1,0 +1,207 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/_variables";
+.about-first {
+  padding-top: 100px;
+  box-sizing: border-box;
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 150px;
+    padding-left: $tablet-margin;
+    padding-right: $tablet-margin;
+  }
+  @include desktop {
+    padding-top: 200px;
+    max-width: 1280px;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+
+  // About header for mobile view
+  &__mobile-header {
+    color: $ebony;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    padding-bottom: 16px;
+    position: relative;
+    z-index: 5;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  // Image container - also contains header for tablet and desktop
+  &__image-container {
+    // Profile image wrapper
+    &--img-wrapper {
+      @include tablet {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    // Profile image
+    &--img {
+      object-fit: contain;
+      display: block;
+      width: 300px;
+      border-radius: 5px;
+      margin: auto;
+      position: relative;
+      filter: drop-shadow(2px 2px 20px $gray);
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+      @include tablet {
+        max-width: 400px;
+        margin: unset;
+      }
+      @include desktop {
+        width: 500px;
+      }
+    }
+    // About header for tablet and desktop
+    &--text {
+      display: none;
+      @include tablet {
+        display: block;
+        color: $black;
+        text-align: right;
+        text-transform: capitalize;
+        font-weight: normal;
+        padding-top: 16px;
+      }
+      @include desktop {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+// About text container
+.about-text-container {
+  background-color: #ffffff;
+  padding: $mobile-margin;
+  @include tablet {
+    padding: 0px;
+  }
+}
+// About text content
+.about-text {
+  padding: 32px 16px;
+  @include tablet {
+    padding: 32px 0px;
+  }
+  // About text content title
+  &__title {
+    display: flex;
+    color: $ebony;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: capitalize;
+    padding-bottom: 16px;
+  }
+  // About text content paragraph
+  &__para {
+    color: $black;
+    font-size: 15px;
+    font-weight: 200;
+    padding-bottom: 16px;
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+  // About text content icon container
+  &__icon-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // All icons
+    &--icons {
+      width: auto;
+      padding-right: 10px;
+      color: #a70000;
+    }
+
+    // Specific icon color-scheme:
+    &--icon-dna {
+      color: $dna;
+    }
+    &--icon-leaf {
+      color: $leaf;
+    }
+    &--icon-vial {
+      color: $vial;
+    }
+    &--icon-laptop {
+      color: $laptop;
+    }
+    &--icon-code {
+      color: $code;
+    }
+    &--icon-coffee {
+      color: $coffee;
+    }
+    &--icon-book {
+      color: $book;
+    }
+    &--icon-head-set {
+      color: $headSet;
+    }
+    &--icon-check-square {
+      color: $checkSquare;
+    }
+    &--icon-point-right {
+      color: $pointRight;
+    }
+    &--icon-house {
+      color: $house;
+    }
+    &--icon-globe {
+      color: $globe;
+    }
+  }
+  &__icon-container-2,
+  &__icon-container-4 {
+    display: flex;
+    justify-content: flex-end;
+    @include tablet {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.about-text-education {
+  border-top: 1px solid $pewter;
+  border-left: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
+  @include tablet {
+    border: unset;
+    padding-top: 0px;
+  }
+}
+.about-text-journey {
+  border-right: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
+  @include tablet {
+    border: unset;
+  }
+}
+.about-text-certification {
+  border-bottom: 1px solid $pewter;
+  border-left: 1px solid $pewter;
+  @include tablet {
+    border: unset;
+  }
+}
+.about-text-goals {
+  border-right: 1px solid $pewter;
+  border-bottom: 1px solid $pewter;
+  @include tablet {
+    border: unset;
+  }
+}

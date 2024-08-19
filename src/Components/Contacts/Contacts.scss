@@ -1,0 +1,103 @@
+@import "../../styles/partials/_mixins.scss";
+@import "../../styles/partials/_variables";
+
+.contacts {
+  background-image: url("../../assets/image/contact_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 5;
+  padding: $mobile-margin;
+  min-height: 270px;
+  @include tablet {
+    padding: $tablet-margin;
+    height: 400px;
+  }
+  &__translucent-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient($black, $black, $black, $ebony);
+    opacity: 0.7;
+    z-index: 10;
+  }
+  &__header {
+    color: $pewter;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: normal;
+    padding: $mobile-margin;
+    position: relative;
+    z-index: 15;
+    border-bottom: 1px solid $pewter;
+  }
+}
+.phone-email {
+  position: relative;
+  z-index: 15;
+  max-width: 200px;
+  margin: auto;
+  margin-top: 32px;
+  &__phone-container {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      margin-bottom: 32px;
+    }
+    &--text {
+      color: $pewter;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: 200;
+    }
+
+    &--icon {
+      color: #a70000;
+      text-decoration: none;
+      @include tablet {
+        display: none;
+      }
+    }
+    &--tablet-icon {
+      display: none;
+      @include tablet {
+        display: block;
+        color: #a70000;
+        text-decoration: none;
+      }
+    }
+  }
+  &__email-container {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    &--text {
+      color: $pewter;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: 200;
+    }
+    &--icon {
+      color: #a70000;
+      text-decoration: none;
+      @include tablet {
+        display: none;
+      }
+    }
+    &--tablet-icon {
+      display: none;
+      @include tablet {
+        display: block;
+        color: #a70000;
+        text-decoration: none;
+      }
+    }
+  }
+}

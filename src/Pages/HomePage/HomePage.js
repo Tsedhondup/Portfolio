@@ -1,18 +1,22 @@
-import LandingDisplay from "../../Components/LandingDisplay/LandingDisplay";
+import Header from "../../Components/Header/Header";
+import HeroSection from "../../Components/HeroSection/HeroSection";
 import AboutSecond from "../../Components/AboutSecond/AboutSecond";
 import TechStacks from "../../Components/TechStacks/TechStacks";
 import Works from "../../Components/Works/Works";
 import Contacts from "../../Components/Contacts/Contacts";
-import Footers from "../../Components/Footers/Footers";
+import { useState } from "react";
 const HomePage = () => {
+  const [isScroll, setIsScroll] = useState(false);
+  const [headerClass, setHeaderClass] = useState("header-opaque-home-page");
+
   return (
     <>
-      <LandingDisplay />
+      <Header isScroll={isScroll} headerClass={headerClass} />
+      <HeroSection setIsScroll={setIsScroll} />
       <AboutSecond />
       <TechStacks />
       <Works />
       <Contacts />
-      <Footers />
     </>
   );
 };

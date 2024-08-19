@@ -1,12 +1,82 @@
 import { Link } from "react-router-dom";
-const Header = () => {
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import "./Header.scss";
+const Header = (props) => {
+  const [navPageClass, setNavPageClass] = useState("");
+  const [isNavPageShow, setIsNavPageShow] = useState(false);
+  // event handlers
+  const handleNavButton = () => {
+    if (!isNavPageShow) {
+      setNavPageClass("navigation-pages-show");
+      setIsNavPageShow(true);
+    }
+    if (isNavPageShow) {
+      setNavPageClass("");
+      setIsNavPageShow(false);
+    }
+  };
   return (
-    <section>
-      <nav>
-        <Link to="/">TD</Link>
-        <Link to="/">Home</Link>
-        <Link to="/About">About</Link>
-        <span>Resume</span>
+    <section
+      className={`header ${props.isScroll ? props.headerClass : ""} ${
+        props.windowWitdh
+      }`}
+    >
+      <nav className="navigation">
+        {/* Brand name */}
+        <Link to="/" className="navigation__brand-name">
+          TD
+        </Link>
+        {/* Pages links */}
+
+        <div className={`navigation-pages ${navPageClass}`}>
+          <div className="navigation-pages__link-container">
+            <h2 className="navigation-pages__link-container--author-name">
+              Tsering Dhondup
+            </h2>
+            <Link
+              to="/"
+              className="navigation-pages__link-container--home"
+              onClick={handleNavButton}
+            >
+              Home
+            </Link>
+            <Link
+              to="/About"
+              className="navigation-pages__link-container--about"
+              onClick={handleNavButton}
+            >
+              About
+            </Link>
+            <a
+              href="https://www.linkedin.com/in/tsering-dhondup-078084161/"
+              className="navigation-pages__link-container--resume"
+            >
+              Resume
+            </a>
+          </div>
+
+          <FontAwesomeIcon
+            className="navigation-pages__hide-button"
+            icon={faTimes}
+            transform="grow-10"
+            onClick={handleNavButton}
+          />
+          <div
+            className="navigation-pages__shadow-element"
+            onClick={handleNavButton}
+          ></div>
+        </div>
+        {/* Toggle buttons */}
+        <div className="nav-button-container">
+          <FontAwesomeIcon
+            icon={faBars}
+            transform="grow-5"
+            className="nav-button-container__open"
+            onClick={handleNavButton}
+          />
+        </div>
       </nav>
     </section>
   );

@@ -5,6 +5,12 @@
     @content;
   }
 }
+@mixin mobile2 {
+  @media (min-width: $mobile-width2) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
@@ -13,6 +19,11 @@
 
 @mixin desktop {
   @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+@mixin hero-min-heigt {
+  @media (max-height: $hero-min-height) {
     @content;
   }
 }

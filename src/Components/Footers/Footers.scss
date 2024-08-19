@@ -1,0 +1,103 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/_variables";
+.footer {
+  min-height: 250px;
+  padding: $mobile-margin;
+  @include tablet {
+    padding: $tablet-margin;
+  }
+  position: relative;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: $mobile-margin 0px;
+  transition: 2s;
+  @include tablet {
+    bottom: $tablet-margin;
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    z-index: 5;
+  }
+  &__icon {
+    display: block;
+    width: auto;
+  }
+  &__icon:nth-child(1) {
+    color: $linkedIn;
+  }
+  &__icon:nth-child(2) {
+    color: $gitHub;
+  }
+  &__icon:nth-child(3) {
+    color: $xTwitter;
+  }
+  &__icon:nth-child(4) {
+    color: $faceBook;
+  }
+  &__icon:nth-child(5) {
+    color: $instagram;
+  }
+}
+
+.author {
+  padding: $mobile-margin;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+  @include tablet {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__statement {
+    font-weight: 300;
+    border-bottom: 1px solid $pewter;
+    padding-bottom: $mobile-margin;
+  }
+
+  &__name {
+    padding: $mobile-margin;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
+.location-copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  @include tablet {
+    position: relative;
+    z-index: 10;
+  }
+  &__copyright {
+    font-weight: normal;
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    @include tablet {
+      width: 69.55px;
+    }
+    &--icon {
+      display: inline;
+      color: $ebony;
+      padding-right: 2px;
+      width: auto;
+    }
+  }
+  &__location {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 15px;
+    width: auto;
+    &--name {
+      padding-right: 3px;
+    }
+  }
+}
