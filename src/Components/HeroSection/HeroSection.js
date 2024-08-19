@@ -1,5 +1,6 @@
 import "./HeroSection.scss";
 import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 import profileImage from "../../assets/image/tsering.png";
 const HeroSection = (props) => {
   // Element reference
@@ -18,7 +19,12 @@ const HeroSection = (props) => {
   //   };
   // }, []);
   return (
-    <section className="hero-container" ref={refElement}>
+    <motion
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="hero-container"
+      ref={refElement}
+    >
       <section className="hero-content">
         <div>
           <h1 className="hero-content__name">
@@ -40,7 +46,7 @@ const HeroSection = (props) => {
           <div className="image-container__shadow-element"></div>
         </div>
       </section>
-    </section>
+    </motion>
   );
 };
 export default HeroSection;
