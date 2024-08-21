@@ -22,6 +22,11 @@
     @content;
   }
 }
+@mixin desktop2 {
+  @media (min-width: $desktop-width2) {
+    @content;
+  }
+}
 @mixin hero-min-heigt {
   @media (max-height: $hero-min-height) {
     @content;
