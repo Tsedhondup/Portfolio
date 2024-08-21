@@ -14,10 +14,7 @@
     padding: 0px $tablet-margin;
     padding-top: 16px;
   }
-  // Header is hidden for desktop view when page home page gets renderded for the first time
-  // @include desktop {
-  //   top: -150px;
-  // }
+
 }
 // JS Dynamic class
 // Header is only shown when page is being scrolled
@@ -52,8 +49,8 @@
   @include desktop {
     font-size: 24px;
     max-width: 1280px;
-    padding-left: $tablet-margin;
-    padding-right: $tablet-margin;
+    // padding-left: $tablet-margin;
+    // padding-right: $tablet-margin;
     margin: auto;
   }
   &__brand-name {
