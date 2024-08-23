@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -18,12 +19,27 @@ const Header = (props) => {
     }
   };
   return (
-    <section
+    <motion.section
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{
+        duration: 1.2,
+        ease: "easeOut",
+      }}
       className={`header ${props.isScroll ? props.headerClass : ""} ${
         props.windowWitdh
       }`}
     >
-      <nav className="navigation">
+      <motion.nav
+        initial={{ opacity: 0.5 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 2.5,
+          duration: 1,
+          ease: "easeOut",
+        }}
+        className="navigation"
+      >
         {/* Brand name */}
         <Link to="/" className="navigation__brand-name">
           TD
@@ -77,8 +93,8 @@ const Header = (props) => {
             onClick={handleNavButton}
           />
         </div>
-      </nav>
-    </section>
+      </motion.nav>
+    </motion.section>
   );
 };
 
