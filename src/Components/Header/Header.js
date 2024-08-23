@@ -24,6 +24,7 @@ const Header = (props) => {
       animate={{ y: 0 }}
       transition={{
         duration: 1.2,
+        delay: 3.5,
         ease: "easeOut",
       }}
       className={`header ${props.isScroll ? props.headerClass : ""} ${

@@ -10,31 +10,83 @@ const HeroSection = (props) => {
     const rect = currentElement.getBoundingClientRect(); // get ref element position
     rect.top <= -0.5 ? props.setIsScroll(true) : props.setIsScroll(false);
   };
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   // Clean up the event listener when the component unmounts
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
   return (
-    <motion
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className="hero-container"
-      ref={refElement}
-    >
+    <motion className="hero-container" ref={refElement}>
       <section className="hero-content">
         <div>
           <h1 className="hero-content__name">
-            <span className="hero-content__name--first">Hi, I'm Tsering</span>
-            <span className="hero-content__name--last">Dhondup</span>
+            <span className="hero-content__name--first">
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 1.5,
+                  ease: "easeOut",
+                }}
+              >
+                Hi,
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.5,
+                  ease: "easeOut",
+                }}
+              >
+                I'm
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 1,
+                  ease: "easeOut",
+                }}
+              >
+                Tsering
+              </motion.span>
+            </span>
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 1.5,
+                delay: 1.5,
+                ease: "easeOut",
+              }}
+              className="hero-content__name--last"
+            >
+              Dhondup
+            </motion.span>
           </h1>
-          <h3 className="hero-content__title">
+          <motion.h3
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1.5,
+              delay: 2,
+              ease: "easeOut",
+            }}
+            className="hero-content__title"
+          >
             A Front-End Developer from
-            <span className="hero-content__title--city">Toronto</span>
-          </h3>
+            <motion.span
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 1.5,
+                delay: 2.5,
+                ease: "easeOut",
+              }}
+              className="hero-content__title--city"
+            >
+              Toronto
+            </motion.span>
+          </motion.h3>
         </div>
 
         <div className="image-container">
