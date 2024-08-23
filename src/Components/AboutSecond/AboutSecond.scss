@@ -25,7 +25,7 @@
   }
   &__image-container {
     position: relative;
-    @include desktop {
+    @include tablet2 {
       display: none;
     }
     &--shadow-element {
@@ -75,7 +75,7 @@
     @include tablet {
       text-align: left;
     }
-    @include desktop {
+    @include tablet2{
       font-size: 16px;
       text-align: center;
     }
