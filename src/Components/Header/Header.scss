@@ -70,7 +70,9 @@
   height: 100vh;
   position: fixed;
   top: calc(100vh - 200vh);
-  transform: translateY(-100vh); /* Moves the element 100% of the viewport height upwards */
+  transform: translateY(
+    -100vh
+  ); /* Moves the element 100% of the viewport height upwards */
 
   left: 0%;
   transition: 1s;
@@ -79,8 +81,7 @@
     height: auto;
     position: relative;
     top: 0%;
-    left: 0%;
-    
+    transform: translateY(0px);
   }
 
   &__link-container {
@@ -186,7 +187,9 @@
 // Dynamic class
 .navigation-pages-show {
   top: 0%;
-  transform: translateY(0vh); /* Moves the element 100% of the viewport height upwards */
+  transform: translateY(
+    0vh
+  ); /* Moves the element 100% of the viewport height upwards */
   left: 0%;
 }
 
