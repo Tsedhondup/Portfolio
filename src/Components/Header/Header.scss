@@ -53,9 +53,12 @@
     color: $ebony;
     text-decoration: none;
     letter-spacing: 0.2em;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     width: auto;
+    @include tablet {
+      font-size: 24px;
+    }
   }
   &__brand-name:hover {
     color: $pewter;
