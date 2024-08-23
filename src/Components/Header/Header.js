@@ -34,7 +34,7 @@ const Header = (props) => {
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         transition={{
-          delay: 2.5,
+          delay: 1.2,
           duration: 1,
           ease: "easeOut",
         }}
