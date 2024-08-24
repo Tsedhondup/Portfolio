@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 const Header = (props) => {
   const [navPageClass, setNavPageClass] = useState("");
   const [isNavPageShow, setIsNavPageShow] = useState(false);
+
+  const elementRef = useRef(null);
   // event handlers
   const handleNavButton = () => {
     if (!isNavPageShow) {
@@ -18,6 +20,7 @@ const Header = (props) => {
       setIsNavPageShow(false);
     }
   };
+  useEffect(() => {}, []);
   return (
     <motion.section
       initial={{ y: -100 }}
@@ -47,39 +50,77 @@ const Header = (props) => {
         </Link>
         {/* Pages links */}
 
-        <div className={`navigation-pages ${navPageClass}`}>
+        <div className={`navigation-pages ${navPageClass}`} ref={elementRef}>
           <div className="navigation-pages__link-container">
-            <h2 className="navigation-pages__link-container--author-name">
+            <motion.h2
+              initial={{ opacity: 0, borderBottomWidth: 0 }}
+              whileInView={{
+                opacity: 1,
+                borderWidth: 1,
+                transition: { delay: 2, duration: 1.5 },
+              }}
+              viewport={{ once: false, amount: 1 }}
+              className="navigation-pages__link-container--author-name"
+            >
               Tsering Dhondup
-            </h2>
-            <Link
+            </motion.h2>
+            <motion.Link
+              initial={{ opacity: 0, borderBottomWidth: 0 }}
+              whileInView={{
+                opacity: 1,
+                borderWidth: 1,
+                transition: { delay: 0.8, duration: 0.5 },
+              }}
+              viewport={{ once: false, amount: 1 }}
               to="/"
               className="navigation-pages__link-container--home"
               onClick={handleNavButton}
             >
               Home
-            </Link>
-            <Link
+            </motion.Link>
+            <motion.Link
+              initial={{ opacity: 0, borderBottomWidth: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { delay: 0.6, duration: 0.5 },
+              }}
+              viewport={{ once: false, amount: 1 }}
               to="/About"
               className="navigation-pages__link-container--about"
               onClick={handleNavButton}
             >
               About
-            </Link>
-            <a
+            </motion.Link>
+            <motion.a
+              initial={{ opacity: 0, borderBottomWidth: 0 }}
+              whileInView={{
+                opacity: 1,
+                borderBottomWidth: 1,
+                transition: { delay: 0.4, duration: 0.5 },
+              }}
+              viewport={{ once: false, amount: 1 }}
               href="https://www.linkedin.com/in/tsering-dhondup-078084161/"
               className="navigation-pages__link-container--resume"
             >
               Resume
-            </a>
+            </motion.a>
           </div>
+          <motion.div
+            initial={{ opacity: 0, borderBottomWidth: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: { delay: 0.2, duration: 0.5 },
+            }}
+            viewport={{ once: false, amount: 1 }}
+          >
+            <FontAwesomeIcon
+              className="navigation-pages__hide-button"
+              icon={faTimes}
+              transform="grow-10"
+              onClick={handleNavButton}
+            />
+          </motion.div>
 
-          <FontAwesomeIcon
-            className="navigation-pages__hide-button"
-            icon={faTimes}
-            transform="grow-10"
-            onClick={handleNavButton}
-          />
           <div
             className="navigation-pages__shadow-element"
             onClick={handleNavButton}

@@ -117,7 +117,7 @@
       color: $ebony;
       text-decoration: none;
       text-transform: uppercase;
-      border-bottom: 1px solid $ebony;
+      border-bottom: 1px solid $pewter;
       display: block;
       padding: 10px 0px;
 
@@ -142,9 +142,7 @@
       text-transform: uppercase;
       display: block;
       padding: 10px 0px;
-      border-bottom: 1px solid $gray;
-      border-bottom: 1px solid #a70000;
-      // background-color: $pewter;
+      border-bottom: 1px solid $pewter;
 
       // Media queries [][]
       @include tablet {
