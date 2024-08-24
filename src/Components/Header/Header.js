@@ -12,9 +12,9 @@ const Header = (props) => {
   const [navPageClass, setNavPageClass] = useState("");
   const [isNavPageShow, setIsNavPageShow] = useState(false);
   const [isMobile, setIsMobile] = useState(
-    window.innerWitdh >= 767 ? false : true
+    window.innerWidth >= 767 ? false : true
   );
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   // event handlers
   const handleNavButton = () => {
     if (!isNavPageShow) {
@@ -26,10 +26,18 @@ const Header = (props) => {
       setIsNavPageShow(false);
     }
   };
-  useEffect(() => {
-    screenWidth >= 767 ? setIsMobile(false) : setIsMobile(true);
-  }, [screenWidth]);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setIsMobile(window.innerWidth >= 767 ? false : true);
+    });
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", () => {
+        setIsMobile(window.innerWidth >= 767 ? false : true);
+      });
+    };
+  }, []);
   return (
     <motion.section
       initial={{ y: -100 }}
