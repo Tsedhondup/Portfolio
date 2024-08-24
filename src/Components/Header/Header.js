@@ -7,7 +7,7 @@ import "./Header.scss";
 const Header = (props) => {
   const [navPageClass, setNavPageClass] = useState("");
   const [isNavPageShow, setIsNavPageShow] = useState(false);
-
+  const [elememtPosition, setElementPosition] = useState("");
   const elementRef = useRef(null);
   // event handlers
   const handleNavButton = () => {
@@ -20,7 +20,7 @@ const Header = (props) => {
       setIsNavPageShow(false);
     }
   };
-  useEffect(() => {}, []);
+  const handleNavLinkPosition = () => {};
   return (
     <motion.section
       initial={{ y: -100 }}
@@ -123,7 +123,10 @@ const Header = (props) => {
 
           <div
             className="navigation-pages__shadow-element"
-            onClick={handleNavButton}
+            onClick={() => {
+              handleNavButton();
+              handleNavLinkPosition();
+            }}
           ></div>
         </div>
         {/* Toggle buttons */}
@@ -132,7 +135,10 @@ const Header = (props) => {
             icon={faBars}
             transform="grow-5"
             className="nav-button-container__open"
-            onClick={handleNavButton}
+            onClick={() => {
+              handleNavButton();
+              handleNavLinkPosition();
+            }}
           />
         </div>
       </motion.nav>
