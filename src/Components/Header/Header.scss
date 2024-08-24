@@ -71,6 +71,7 @@
   height: 100vh;
   position: fixed;
   top: calc(100vh - 200vh);
+  background-color: #ffffff;
   transform: translateY(
     -100vh
   ); /* Moves the element 100% of the viewport height upwards */
@@ -87,7 +88,6 @@
 
   &__link-container {
     padding: 0px 16px;
-    background-color: #ffffff;
     @include tablet {
       display: flex;
       justify-content: flex-end;
@@ -165,8 +165,6 @@
   &__hide-button {
     color: #a70000;
     padding: 16px 0px;
-    background-color: #ffffff;
-
     // Media queries [][]
     @include tablet {
       display: none;
