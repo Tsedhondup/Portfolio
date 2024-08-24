@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+// Components
+import AnimatedPageLinks from "./AnimatedPageLinks/AnimatedPageLinks";
+import NonAnimatedPageLinks from "./NonAnimatedPageLinks/NonAnimatedPageLinks";
 import "./Header.scss";
 const Header = (props) => {
   const [navPageClass, setNavPageClass] = useState("");
@@ -54,90 +58,19 @@ const Header = (props) => {
           TD
         </Link>
         {/* Pages links */}
-
-        <div className={`navigation-pages ${navPageClass}`}>
-          <div className="navigation-pages__link-container">
-            <motion.h2
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: { delay: 1, duration: 1.5 },
-              }}
-              viewport={{ once: false, amount: 1 }}
-              className="navigation-pages__link-container--author-name"
-            >
-              Tsering Dhondup
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, borderBottomWidth: 0 }}
-              whileInView={{
-                opacity: 1,
-                borderBottomWidth: 1,
-                transition: { delay: 0.8, duration: 0.5 },
-              }}
-              viewport={{ once: false, amount: 1 }}
-            >
-              <Link
-                to="/"
-                className="navigation-pages__link-container--home"
-                onClick={handleNavButton}
-              >
-                Home
-              </Link>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, borderBottomWidth: 0 }}
-              whileInView={{
-                opacity: 1,
-                borderBottomWidth: 1,
-                transition: { delay: 0.6, duration: 0.5 },
-              }}
-              viewport={{ once: false, amount: 1 }}
-            >
-              <Link
-                to="/About"
-                className="navigation-pages__link-container--about"
-                onClick={handleNavButton}
-              >
-                About
-              </Link>
-            </motion.div>
-
-            <motion.a
-              initial={{ opacity: 0, borderBottomWidth: 0 }}
-              whileInView={{
-                opacity: 1,
-                borderBottomWidth: 1,
-                transition: { delay: 0.4, duration: 0.5 },
-              }}
-              viewport={{ once: false, amount: 1 }}
-              href="https://www.linkedin.com/in/tsering-dhondup-078084161/"
-              className="navigation-pages__link-container--resume"
-            >
-              Resume
-            </motion.a>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, borderBottomWidth: 0 }}
-            whileInView={{
-              opacity: 1,
-            }}
-            viewport={{ once: false, amount: 1 }}
-            className="navigation-pages__hide-button-container"
-          >
-            <FontAwesomeIcon
-              className="navigation-pages__hide-button-container--button"
-              icon={faTimes}
-              transform="grow-10"
-              onClick={handleNavButton}
+        <section>
+          {isMobile ? (
+            <AnimatedPageLinks
+              handleNavButton={handleNavButton}
+              navPageClass={navPageClass}
             />
-          </motion.div>
-
-          <div
-            className="navigation-pages__shadow-element"
-            onClick={handleNavButton}
-          ></div>
-        </div>
+          ) : (
+            <NonAnimatedPageLinks
+              handleNavButton={handleNavButton}
+              navPageClass={navPageClass}
+            />
+          )}
+        </section>
         {/* Toggle buttons */}
         <div className="nav-button-container">
           <FontAwesomeIcon
