@@ -5,47 +5,32 @@ const NonAnimatedPageLinks = (props) => {
   return (
     <div className={`navigation-pages ${props.navPageClass}`}>
       <div className="navigation-pages__link-container">
-        <h2
-      
-          className="navigation-pages__link-container--author-name"
-        >
+        <h2 className="navigation-pages__link-container--author-name">
           Tsering Dhondup
         </h2>
-        <div
-         
+        <Link
+          to="/"
+          className="navigation-pages__link-container--home"
+          onClick={props.handleNavButton}
         >
-          <Link
-            to="/"
-            className="navigation-pages__link-container--home"
-            onClick={props.handleNavButton}
-          >
-            Home
-          </Link>
-        </div>
-        <div
-         
+          Home
+        </Link>
+        <Link
+          to="/About"
+          className="navigation-pages__link-container--about"
+          onClick={props.handleNavButton}
         >
-          <Link
-            to="/About"
-            className="navigation-pages__link-container--about"
-            onClick={props.handleNavButton}
-          >
-            About
-          </Link>
-        </div>
+          About
+        </Link>
 
         <a
-       
           href="https://www.linkedin.com/in/tsering-dhondup-078084161/"
           className="navigation-pages__link-container--resume"
         >
           Resume
         </a>
       </div>
-      <div
-  
-        className="navigation-pages__hide-button-container"
-      >
+      <div className="navigation-pages__hide-button-container">
         <FontAwesomeIcon
           className="navigation-pages__hide-button-container--button"
           icon={faTimes}
