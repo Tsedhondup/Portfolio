@@ -7,7 +7,7 @@ import "./Header.scss";
 const Header = (props) => {
   const [navPageClass, setNavPageClass] = useState("");
   const [isNavPageShow, setIsNavPageShow] = useState(false);
-  const elementRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
   // event handlers
   const handleNavButton = () => {
     if (!isNavPageShow) {
