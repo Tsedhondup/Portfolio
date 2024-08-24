@@ -10,12 +10,24 @@ import {
 import expressLogo from "../../assets/image/express.png";
 import mysqlLogo from "../../assets/image/mysql.png";
 import knexLogo from "../../assets/image/knex.png";
+import { motion } from "framer-motion";
 
 import "./TechStacks.scss";
 const TechStacks = () => {
   return (
     <section className="tech-stacks">
-      <h2 className="tech-stacks__header">Primary skill sets</h2>
+      <motion.h2
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          transition: { duration: 1, ease: "linear" },
+        }}
+        viewport={{ once: true, amount: 1 }}
+        className="tech-stacks__header"
+      >
+        Primary skill sets
+      </motion.h2>
       <div className="tech-stacks__tools">
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
