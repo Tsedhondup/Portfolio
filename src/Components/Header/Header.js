@@ -7,7 +7,10 @@ import "./Header.scss";
 const Header = (props) => {
   const [navPageClass, setNavPageClass] = useState("");
   const [isNavPageShow, setIsNavPageShow] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWitdh >= 767 ? false : true
+  );
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   // event handlers
   const handleNavButton = () => {
     if (!isNavPageShow) {
@@ -19,6 +22,7 @@ const Header = (props) => {
       setIsNavPageShow(false);
     }
   };
+  useEffect(() => {}, []);
 
   return (
     <motion.section
