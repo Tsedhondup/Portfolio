@@ -22,7 +22,9 @@ const Header = (props) => {
       setIsNavPageShow(false);
     }
   };
-  useEffect(() => {}, []);
+  useEffect(() => {
+    screenWidth >= 767 ? setIsMobile(false) : setIsMobile(true);
+  }, [screenWidth]);
 
   return (
     <motion.section
