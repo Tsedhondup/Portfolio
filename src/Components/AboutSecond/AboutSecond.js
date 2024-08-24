@@ -9,7 +9,7 @@ const AboutSecond = () => {
     <section className="about-second">
       <section className="about-second-content">
         <div className="about-second-content__image-container">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
@@ -17,15 +17,15 @@ const AboutSecond = () => {
             }}
             viewport={{ once: false, amount: 1 }}
             className="about-second-content__image-container--shadow-element"
-          ></motion.div>
+          ></motion.div> */}
           <motion.img
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.2, duration: 1 },
+              transition: { duration: 1.5, ease: "linear" },
             }}
-            viewport={{ once: false, amount: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
             src={profileImage}
             alt="profile-image"
             className="about-second-content__image-container--img"
@@ -33,13 +33,13 @@ const AboutSecond = () => {
         </div>
 
         <motion.p
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{
             opacity: 1,
             y: 0,
-            transition: { delay: 0.2, duration: 1 },
+            transition: { duration: 1.7 },
           }}
-          viewport={{ once: false, amount: 1 }}
+          viewport={{ once: true, amount: 1 }}
           className="about-second-content__texts"
         >
           "I've always been fascinated by the power of the web to connect,

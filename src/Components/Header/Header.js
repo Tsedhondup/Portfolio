@@ -14,7 +14,6 @@ const Header = (props) => {
   const [isMobile, setIsMobile] = useState(
     window.innerWidth >= 767 ? false : true
   );
-  // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   // event handlers
   const handleNavButton = () => {
     if (!isNavPageShow) {
