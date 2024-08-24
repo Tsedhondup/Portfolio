@@ -1,15 +1,27 @@
 import "./HeroSection.scss";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import profileImage from "../../assets/image/tsering.png";
 const HeroSection = (props) => {
   // Element reference
   const refElement = useRef(null);
-  const handleScroll = () => {
-    const currentElement = refElement.current; // current ref element stored
-    const rect = currentElement.getBoundingClientRect(); // get ref element position
-    rect.top <= -0.5 ? props.setIsScroll(true) : props.setIsScroll(false);
-  };
+  // const handleScroll = () => {
+  //   const currentElement = refElement.current; // current ref element stored
+  //   const rect = currentElement.getBoundingClientRect(); // get ref element position
+  //   rect.top <= -0.5 ? props.setIsScroll(true) : props.setIsScroll(false);
+  // };
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreenWidth(window.innerWidth);
+    });
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", () => {
+        setScreenWidth(window.innerWidth);
+      });
+    };
+  }, []);
 
   return (
     <motion className="hero-container" ref={refElement}>
@@ -18,12 +30,14 @@ const HeroSection = (props) => {
           <h1 className="hero-content__name">
             <span className="hero-content__name--first">
               <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 1.5,
+                  delay: 1.5,
                   ease: "easeOut",
                 }}
+                className="hero-content__name--first-a"
               >
                 Hi,
               </motion.span>
@@ -32,9 +46,10 @@ const HeroSection = (props) => {
                 animate={{ opacity: 1 }}
                 transition={{
                   duration: 1.5,
-                  delay: 0.5,
+                  delay: 2,
                   ease: "easeOut",
                 }}
+                className="hero-content__name--first-b"
               >
                 I'm
               </motion.span>
@@ -43,9 +58,10 @@ const HeroSection = (props) => {
                 animate={{ opacity: 1 }}
                 transition={{
                   duration: 1.5,
-                  delay: 1,
+                  delay: 2.5,
                   ease: "easeOut",
                 }}
+                className="hero-content__name--first-c"
               >
                 Tsering
               </motion.span>
@@ -54,8 +70,8 @@ const HeroSection = (props) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                duration: 1.5,
-                delay: 1.5,
+                duration: 2,
+                delay: 3,
                 ease: "easeOut",
               }}
               className="hero-content__name--last"
@@ -67,19 +83,19 @@ const HeroSection = (props) => {
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
-              duration: 1.5,
-              delay: 2,
+              duration: 2.5,
+              delay: 3.5,
               ease: "easeOut",
             }}
             className="hero-content__title"
           >
             A Front-End Developer from
             <motion.span
-              initial={{ opacity: 0, x: 60 }}
+              initial={{ opacity: 0, x: screenWidth >= 767 ? -60 : 60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
                 duration: 1.5,
-                delay: 2.5,
+                delay: 4,
                 ease: "easeOut",
               }}
               className="hero-content__title--city"
@@ -90,7 +106,13 @@ const HeroSection = (props) => {
         </div>
 
         <div className="image-container">
-          <img
+          <motion.img
+            initial={{ opacity: 0, scale: 0.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1.6,
+              ease: "linear",
+            }}
             src={profileImage}
             alt="profile-image"
             className="image-container__image"
