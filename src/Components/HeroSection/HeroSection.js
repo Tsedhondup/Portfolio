@@ -91,7 +91,7 @@ const HeroSection = (props) => {
           >
             A Front-End Developer from
             <motion.span
-              initial={{ opacity: 0, x: screenWidth >= 767 ? -60 : 60 }}
+              initial={{ opacity: 0, x: screenWidth >= 950 ? -60 : 60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
                 duration: 1.5,
