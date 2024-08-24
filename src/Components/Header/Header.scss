@@ -3,8 +3,9 @@
 
 .header {
   padding: 0px $mobile-margin;
-  background-color: $black;
-  background-color: #ffffff;
+  // // background-color: $black;
+  // // background-color: #ffffff;
+  // background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -71,7 +72,6 @@
   height: 100vh;
   position: fixed;
   top: calc(100vh - 200vh);
-  background-color: #ffffff;
   transform: translateY(
     -100vh
   ); /* Moves the element 100% of the viewport height upwards */
@@ -87,6 +87,7 @@
   }
 
   &__link-container {
+    background-color: #ffffff;
     padding: 0px 16px;
     @include tablet {
       display: flex;
@@ -162,12 +163,15 @@
     }
   }
 
-  &__hide-button {
-    color: #a70000;
-    padding: 16px 0px;
-    // Media queries [][]
-    @include tablet {
-      display: none;
+  &__hide-button-container {
+    background-color: #ffffff;
+    &--button {
+      color: #a70000;
+      padding: 16px 0px;
+      // Media queries [][]
+      @include tablet {
+        display: none;
+      }
     }
   }
   &__shadow-element {

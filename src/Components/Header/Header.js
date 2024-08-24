@@ -65,8 +65,6 @@ const Header = (props) => {
             <motion.div
               initial={{ opacity: 0, borderBottomWidth: 0 }}
               whileInView={{
-                // opacity: elememtPosition <= 0 ? 1 : 0,
-                // borderBottomWidth: elememtPosition <= 0 ? 1 : 0,
                 opacity: 1,
                 borderBottomWidth: 1,
                 transition: { delay: 0.8, duration: 0.5 },
@@ -119,9 +117,10 @@ const Header = (props) => {
               opacity: 1,
             }}
             viewport={{ once: false, amount: 1 }}
+            className="navigation-pages__hide-button-container"
           >
             <FontAwesomeIcon
-              className="navigation-pages__hide-button"
+              className="navigation-pages__hide-button-container--button"
               icon={faTimes}
               transform="grow-10"
               onClick={handleNavButton}
