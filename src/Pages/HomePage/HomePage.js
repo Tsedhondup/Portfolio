@@ -7,6 +7,7 @@ import Contacts from "../../Components/Contacts/Contacts";
 import { useState } from "react";
 const HomePage = () => {
   const [isScroll, setIsScroll] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [headerClass, setHeaderClass] = useState("header-opaque-home-page");
 
   return (

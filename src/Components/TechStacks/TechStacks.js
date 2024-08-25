@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import "./TechStacks.scss";
 const TechStacks = () => {
+  // eslint-disable-next-line no-unused-vars
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   return (

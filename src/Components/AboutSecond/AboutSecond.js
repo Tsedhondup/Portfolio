@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, } from "react";
 import { motion } from "framer-motion";
 
 import profileImage from "../../assets/image/tsering.png";
 import "./AboutSecond.scss";
 const AboutSecond = () => {
+  // eslint-disable-next-line no-unused-vars
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   return (

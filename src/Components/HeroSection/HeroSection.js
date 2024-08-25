@@ -5,11 +5,7 @@ import profileImage from "../../assets/image/tsering.png";
 const HeroSection = (props) => {
   // Element reference
   const refElement = useRef(null);
-  // const handleScroll = () => {
-  //   const currentElement = refElement.current; // current ref element stored
-  //   const rect = currentElement.getBoundingClientRect(); // get ref element position
-  //   rect.top <= -0.5 ? props.setIsScroll(true) : props.setIsScroll(false);
-  // };
+
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -33,7 +29,7 @@ const HeroSection = (props) => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: .1,
+                  duration: 0.1,
                   delay: 0.5,
                   ease: "easeOut",
                 }}
@@ -45,7 +41,7 @@ const HeroSection = (props) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  duration: .2,
+                  duration: 0.2,
                   delay: 1,
                   ease: "easeOut",
                 }}
@@ -57,7 +53,7 @@ const HeroSection = (props) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  duration: .3,
+                  duration: 0.3,
                   delay: 1.5,
                   ease: "easeOut",
                 }}
