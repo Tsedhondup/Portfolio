@@ -19,7 +19,7 @@ const AboutSecond = () => {
             className="about-second-content__image-container--shadow-element"
           ></motion.div> */}
           <motion.img
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{
               opacity: 1,
               y: 0,
@@ -33,11 +33,11 @@ const AboutSecond = () => {
         </div>
 
         <motion.p
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{
             opacity: 1,
             y: 0,
-            transition: { duration: 1.7 },
+            transition: { duration: 1 },
           }}
           viewport={{ once: true, amount: 1 }}
           className="about-second-content__texts"

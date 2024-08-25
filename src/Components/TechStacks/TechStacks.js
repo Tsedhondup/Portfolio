@@ -17,10 +17,10 @@ const TechStacks = () => {
   return (
     <section className="tech-stacks">
       <motion.h2
-        initial={{ opacity: 0, scale: 0 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{
           opacity: 1,
-          scale: 1,
+          y: 0,
           transition: { duration: 1, ease: "linear" },
         }}
         viewport={{ once: true, amount: 1 }}
@@ -28,7 +28,16 @@ const TechStacks = () => {
       >
         Primary skill sets
       </motion.h2>
-      <div className="tech-stacks__tools">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1, ease: "linear" },
+        }}
+        viewport={{ once: true, amount: 1 }}
+        className="tech-stacks__tools"
+      >
         <span className="tech-stacks__tools--tech">
           <FontAwesomeIcon
             icon={faHtml5}
@@ -93,7 +102,7 @@ const TechStacks = () => {
             className="tech-stacks__tools--img tech-stacks__tools--knex"
           />
         </span>
-      </div>
+      </motion.div>
     </section>
   );
 };
