@@ -29,11 +29,10 @@ const TechStacks = () => {
         Primary skill sets
       </motion.h2>
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
+        initial={{ opacity: 0,  }}
         whileInView={{
           opacity: 1,
-          y: 0,
-          transition: { duration: 1, ease: "linear" },
+          transition: { duration: 1.5, ease: "linear" },
         }}
         viewport={{ once: true, amount: 1 }}
         className="tech-stacks__tools"

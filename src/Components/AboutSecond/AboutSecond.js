@@ -19,13 +19,12 @@ const AboutSecond = () => {
             className="about-second-content__image-container--shadow-element"
           ></motion.div> */}
           <motion.img
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
-              y: 0,
               transition: { duration: 1.5, ease: "linear" },
             }}
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: true, amount: 1 }}
             src={profileImage}
             alt="profile-image"
             className="about-second-content__image-container--img"
