@@ -46,8 +46,8 @@ const AboutSecond = () => {
         <motion.p
           initial={{
             opacity: 0,
-            y: screenWidth >= 767 ? 0 : 100,
-            x: screenWidth >= 767 ? 100 : 0,
+            y: screenWidth < 767 || screenWidth >= 950 ? 100 : 0,
+            x: screenWidth >= 767 && screenWidth < 950 ? 100 : 0,
           }}
           whileInView={{
             opacity: 1,
