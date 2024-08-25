@@ -33,8 +33,8 @@ const HeroSection = (props) => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 1.5,
-                  delay: 1.5,
+                  duration: .1,
+                  delay: 0.5,
                   ease: "easeOut",
                 }}
                 className="hero-content__name--first-a"
@@ -45,8 +45,8 @@ const HeroSection = (props) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  duration: 1.5,
-                  delay: 2,
+                  duration: .2,
+                  delay: 1,
                   ease: "easeOut",
                 }}
                 className="hero-content__name--first-b"
@@ -57,8 +57,8 @@ const HeroSection = (props) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  duration: 1.5,
-                  delay: 2.5,
+                  duration: .3,
+                  delay: 1.5,
                   ease: "easeOut",
                 }}
                 className="hero-content__name--first-c"
@@ -67,11 +67,11 @@ const HeroSection = (props) => {
               </motion.span>
             </span>
             <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
               transition={{
-                duration: 2,
-                delay: 3,
+                duration: 1.5,
+                delay: 2,
                 ease: "easeOut",
               }}
               className="hero-content__name--last"
@@ -84,7 +84,7 @@ const HeroSection = (props) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{
               duration: 2.5,
-              delay: 3.5,
+              delay: 3,
               ease: "easeOut",
             }}
             className="hero-content__title"
@@ -95,7 +95,7 @@ const HeroSection = (props) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{
                 duration: 1.5,
-                delay: 4,
+                delay: 3,
                 ease: "easeOut",
               }}
               className="hero-content__title--city"
