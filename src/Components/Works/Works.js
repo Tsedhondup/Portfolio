@@ -59,7 +59,9 @@ const Works = () => {
             src={jobTracker}
             alt="job-application-tracker-image"
             className={`projects__content--img projects__content--email-image ${
-              window.innerWidth >= 767 && window.innerHeight >= 585
+              window.innerHeight >= 585 &&
+              window.innerHeight < 700 &&
+              window.innerWidth >= 767
                 ? " projects__content--email-image-2"
                 : ""
             }`}
@@ -119,7 +121,9 @@ const Works = () => {
             src={brainflix}
             alt="brainflix-app-image"
             className={`projects__content--img projects__content--brainflix-image ${
-              window.innerHeight >= 585 && window.innerWidth >= 767
+              window.innerHeight >= 585 &&
+              window.innerHeight < 700 &&
+              window.innerWidth >= 767
                 ? " projects__content--brainflix-image-2"
                 : ""
             }`}
@@ -191,7 +195,9 @@ const Works = () => {
             src={fiserv}
             alt="fiserv-app-image"
             className={`projects__content--img projects__content--fiserv-image ${
-              window.innerHeight >= 585 && window.innerWidth >= 767
+              window.innerHeight >= 585 &&
+              window.innerHeight < 700 &&
+              window.innerWidth >= 767
                 ? "projects__content--fiserv-image-2"
                 : ""
             }`}
@@ -250,7 +256,9 @@ const Works = () => {
             src={weatherApp}
             alt="weather-app-image"
             className={`projects__content--img projects__content--weather-app-image ${
-              window.innerHeight >= 585 && window.innerWidth >= 767
+              window.innerHeight >= 585 &&
+              window.innerHeight < 700 &&
+              window.innerWidth >= 767
                 ? "projects__content--weather-app-image-2"
                 : ""
             }`}
