@@ -8,17 +8,17 @@ import { useEffect, useState } from "react";
 import "./Works.scss";
 const Works = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setScreenWidth(window.innerWidth);
-    });
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", () => {
-        setScreenWidth(window.innerWidth);
-      });
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => {
+  //     setScreenWidth(window.innerWidth);
+  //   });
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener("resize", () => {
+  //       setScreenWidth(window.innerWidth);
+  //     });
+  //   };
+  // }, []);
   return (
     <section className="project-container">
       <motion.h2
@@ -61,11 +61,19 @@ const Works = () => {
           />
           <div className="projects__content--text ">
             <motion.h2
-              initial={{ opacity: 0, y: 100 }}
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? 70 : 0,
+              }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1, ease: "linear" },
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.7 : 1,
+                  ease: "linear",
+                },
               }}
               viewport={{ once: true, amount: 1 }}
               className="projects__content--project-name projects__content--text-email"
@@ -73,11 +81,19 @@ const Works = () => {
               Personal Email Reader
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 100 }}
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? 70 : 0,
+              }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1, ease: "linear" },
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.9 : 1,
+                  ease: "linear",
+                },
               }}
               viewport={{ once: true, amount: 1 }}
               className="projects__content--project-description"
@@ -101,11 +117,19 @@ const Works = () => {
           />
           <div className="projects__content--text projects__content--text-brainflix">
             <motion.h2
-              initial={{ opacity: 0, y: 100 }}
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? -70 : 0,
+              }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1, ease: "linear" },
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.7 : 1,
+                  ease: "linear",
+                },
               }}
               viewport={{ once: true, amount: 1 }}
               className="projects__content--project-name"
@@ -113,11 +137,19 @@ const Works = () => {
               BrainFlix
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 100 }}
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? -70 : 0,
+              }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1, ease: "linear" },
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.9 : 1,
+                  ease: "linear",
+                },
               }}
               viewport={{ once: true, amount: 1 }}
               className="projects__content--project-description"
@@ -153,11 +185,19 @@ const Works = () => {
           />
           <div className="projects__content--text ">
             <motion.h2
-              initial={{ opacity: 0, y: 100 }}
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? 70 : 0,
+              }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1, ease: "linear" },
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.7 : 1,
+                  ease: "linear",
+                },
               }}
               viewport={{ once: true, amount: 1 }}
               className="projects__content--project-name projects__content--text-fiserv"
@@ -165,11 +205,19 @@ const Works = () => {
               Restaurent App UI
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 100 }}
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? 70 : 0,
+              }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1, ease: "linear" },
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.9 : 1,
+                  ease: "linear",
+                },
               }}
               viewport={{ once: true, amount: 1 }}
               className="projects__content--project-description"
@@ -192,11 +240,19 @@ const Works = () => {
           />
           <div className="projects__content--text projects__content--text-weather">
             <motion.h2
-              initial={{ opacity: 0, y: 100 }}
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? -70 : 0,
+              }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1, ease: "linear" },
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.7 : 1,
+                  ease: "linear",
+                },
               }}
               viewport={{ once: true, amount: 1 }}
               className="projects__content--project-name"
@@ -204,11 +260,19 @@ const Works = () => {
               Weather App
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 100 }}
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? -70 : 0,
+              }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 1, ease: "linear" },
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.9 : 1,
+                  ease: "linear",
+                },
               }}
               viewport={{ once: true, amount: 1 }}
               className="projects__content--project-description"
