@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import "./Works.scss";
 const Works = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // alert(window.innerHeight);
   // useEffect(() => {
   //   window.addEventListener("resize", () => {
   //     setScreenWidth(window.innerWidth);
@@ -57,7 +58,11 @@ const Works = () => {
             viewport={{ once: true, amount: 1 }}
             src={jobTracker}
             alt="job-application-tracker-image"
-            className="projects__content--img projects__content--email-image"
+            className={`projects__content--img projects__content--email-image ${
+              window.innerWidth >= 767 && window.innerHeight >= 585
+                ? " projects__content--email-image-2"
+                : ""
+            }`}
           />
           <div className="projects__content--text ">
             <motion.h2
@@ -113,7 +118,11 @@ const Works = () => {
             viewport={{ once: true, amount: 1 }}
             src={brainflix}
             alt="brainflix-app-image"
-            className="projects__content--img projects__content--brainflix-image"
+            className={`projects__content--img projects__content--brainflix-image ${
+              window.innerHeight >= 585 && window.innerWidth >= 767
+                ? " projects__content--brainflix-image-2"
+                : ""
+            }`}
           />
           <div className="projects__content--text projects__content--text-brainflix">
             <motion.h2
@@ -181,7 +190,11 @@ const Works = () => {
             viewport={{ once: true, amount: 1 }}
             src={fiserv}
             alt="fiserv-app-image"
-            className="projects__content--img projects__content--fiserv-image"
+            className={`projects__content--img projects__content--fiserv-image ${
+              window.innerHeight >= 585 && window.innerWidth >= 767
+                ? "projects__content--fiserv-image-2"
+                : ""
+            }`}
           />
           <div className="projects__content--text ">
             <motion.h2
@@ -236,7 +249,11 @@ const Works = () => {
             viewport={{ once: true, amount: 1 }}
             src={weatherApp}
             alt="weather-app-image"
-            className="projects__content--img projects__content--weather-app-image"
+            className={`projects__content--img projects__content--weather-app-image ${
+              window.innerHeight >= 585 && window.innerWidth >= 767
+                ? "projects__content--weather-app-image"
+                : ""
+            }`}
           />
           <div className="projects__content--text projects__content--text-weather">
             <motion.h2

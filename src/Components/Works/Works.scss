@@ -14,6 +14,7 @@
     max-width: 1280px;
     margin: auto;
   }
+
   &__title {
     color: $black;
     text-align: center;
@@ -103,6 +104,7 @@
       box-shadow: unset;
       border: 1px solid $pewter;
     }
+
     // Email reader and brainflix image
     &--email-image,
     &--brainflix-image {
@@ -115,12 +117,21 @@
         max-width: 650px;
         height: 600px;
       }
+      // @include desktopViewPortHeight {
+      //   max-width: 350px;
+      //   height: 300px;
+      //   object-fit: contain;
+      // }
     }
     // fiserv and weather app image
+
     &--fiserv-image,
     &--weather-app-image {
       max-width: 300px;
       height: 500px;
+      // @include desktopViewPortHeight {
+      //   height: 350px;
+      // }
     }
 
     // Projects text section
