@@ -76,7 +76,7 @@
     @include tablet {
       text-align: left;
     }
-    @include tablet2{
+    @include tablet2 {
       font-size: 16px;
       text-align: center;
     }
@@ -85,6 +85,6 @@
     padding-left: 8px;
     font-style: italic;
     text-decoration: none;
-    color: $black;
+    color: $mysql;
   }
 }
