@@ -1,148 +1,312 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCloudSunRain,
-  faCirclePlay,
-  faEnvelopeCircleCheck,
-  faCartFlatbed,
-} from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 import brainflix from "../../assets/image/brainflix.jpg";
 import jobTracker from "../../assets/image/job-tracker.jpg";
 import weatherApp from "../../assets/image/weather-app.jpg";
 import fiserv from "../../assets/image/fiserv.jpg";
+import { useEffect, useState } from "react";
+
 import "./Works.scss";
 const Works = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // alert(window.innerHeight);
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => {
+  //     setScreenWidth(window.innerWidth);
+  //   });
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener("resize", () => {
+  //       setScreenWidth(window.innerWidth);
+  //     });
+  //   };
+  // }, []);
   return (
     <section className="project-container">
-      <h2 className="project-container__title">Projects</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1, ease: "linear" },
+        }}
+        viewport={{ once: true, amount: 1 }}
+        className="project-container__title"
+      >
+        Projects
+      </motion.h2>
       <section className="projects">
         {/* Personal */}
-        <h2 className="projects__personal">Personal works</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="projects__personal"
+        >
+          Personal works
+        </motion.h2>
         <div className="projects__content projects__content-email-reader">
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 1.5, ease: "linear" },
+            }}
+            viewport={{ once: true, amount: 1 }}
             src={jobTracker}
             alt="job-application-tracker-image"
-            className="projects__content--img projects__content--email-image"
+            className={`projects__content--img projects__content--email-image ${
+              window.innerHeight >= 585 &&
+              window.innerHeight < 700 &&
+              window.innerWidth >= 767
+                ? " projects__content--email-image-2"
+                : ""
+            }`}
           />
           <div className="projects__content--text ">
-            <h2 className="projects__content--project-name projects__content--text-email">
+            <motion.h2
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? 70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.7 : 1,
+                  ease: "linear",
+                },
+              }}
+              viewport={{ once: true, amount: 1 }}
+              className="projects__content--project-name projects__content--text-email"
+            >
               Personal Email Reader
-            </h2>
-            <p className="projects__content--project-description">
+            </motion.h2>
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? 70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.9 : 1,
+                  ease: "linear",
+                },
+              }}
+              viewport={{ once: true, amount: 1 }}
+              className="projects__content--project-description"
+            >
               App for fetching reading email from mail server
-            </p>
+            </motion.p>
           </div>
         </div>
 
         <div className="projects__content projects__content-brainflix">
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 1.5, ease: "linear" },
+            }}
+            viewport={{ once: true, amount: 1 }}
             src={brainflix}
             alt="brainflix-app-image"
-            className="projects__content--img projects__content--brainflix-image"
+            className={`projects__content--img projects__content--brainflix-image ${
+              window.innerHeight >= 585 &&
+              window.innerHeight < 700 &&
+              window.innerWidth >= 767
+                ? " projects__content--brainflix-image-2"
+                : ""
+            }`}
           />
           <div className="projects__content--text projects__content--text-brainflix">
-            <h2 className="projects__content--project-name">BrainFlix</h2>
-            <p className="projects__content--project-description">
+            <motion.h2
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? -70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.7 : 1,
+                  ease: "linear",
+                },
+              }}
+              viewport={{ once: true, amount: 1 }}
+              className="projects__content--project-name"
+            >
+              BrainFlix
+            </motion.h2>
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? -70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.9 : 1,
+                  ease: "linear",
+                },
+              }}
+              viewport={{ once: true, amount: 1 }}
+              className="projects__content--project-description"
+            >
               Video streaming website built on React and Node
-            </p>
+            </motion.p>
           </div>
         </div>
         {/* Collab */}
-        <h2 className="projects__collaboration">Collaboration</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="projects__collaboration"
+        >
+          Collaboration
+        </motion.h2>
         <div className="projects__content projects__content-fiserv">
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 1.5, ease: "linear" },
+            }}
+            viewport={{ once: true, amount: 1 }}
             src={fiserv}
             alt="fiserv-app-image"
-            className="projects__content--img projects__content--fiserv-image"
+            className={`projects__content--img projects__content--fiserv-image ${
+              window.innerHeight >= 585 &&
+              window.innerHeight < 700 &&
+              window.innerWidth >= 767
+                ? "projects__content--fiserv-image-2"
+                : ""
+            }`}
           />
           <div className="projects__content--text ">
-            <h2 className="projects__content--project-name projects__content--text-fiserv">
+            <motion.h2
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? 70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.7 : 1,
+                  ease: "linear",
+                },
+              }}
+              viewport={{ once: true, amount: 1 }}
+              className="projects__content--project-name projects__content--text-fiserv"
+            >
               Restaurent App UI
-            </h2>
-            <p className="projects__content--project-description">
+            </motion.h2>
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? 70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.9 : 1,
+                  ease: "linear",
+                },
+              }}
+              viewport={{ once: true, amount: 1 }}
+              className="projects__content--project-description"
+            >
               Restaurent App UI built on React, Node and MySQL
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="projects__content projects__content-weather">
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: { duration: 1.5, ease: "linear" },
+            }}
+            viewport={{ once: true, amount: 1 }}
             src={weatherApp}
             alt="weather-app-image"
-            className="projects__content--img projects__content--weather-app-image"
+            className={`projects__content--img projects__content--weather-app-image ${
+              window.innerHeight >= 585 &&
+              window.innerHeight < 700 &&
+              window.innerWidth >= 767
+                ? "projects__content--weather-app-image-2"
+                : ""
+            }`}
           />
           <div className="projects__content--text projects__content--text-weather">
-            <h2 className="projects__content--project-name">Weather App</h2>
-            <p className="projects__content--project-description">
+            <motion.h2
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? -70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.7 : 1,
+                  ease: "linear",
+                },
+              }}
+              viewport={{ once: true, amount: 1 }}
+              className="projects__content--project-name"
+            >
+              Weather App
+            </motion.h2>
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: screenWidth < 767 ? 100 : 0,
+                x: screenWidth >= 767 ? -70 : 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: {
+                  duration: screenWidth >= 767 ? 1.9 : 1,
+                  ease: "linear",
+                },
+              }}
+              viewport={{ once: true, amount: 1 }}
+              className="projects__content--project-description"
+            >
               Weather App built on React using free weather API
-            </p>
+            </motion.p>
           </div>
         </div>
       </section>
-      {/* <section className="project-container__project-content">
-        <section className="projects">
-          <FontAwesomeIcon
-            icon={faCloudSunRain}
-            transform="grow-15"
-            className="projects__icon"
-          />
-          <FontAwesomeIcon
-            icon={faCloudSunRain}
-            transform="grow-30"
-            className="projects__icon-tablet"
-          />
-          <h3 className="projects__header">Weather App</h3>
-          <p className="projects__description">
-            BrainStation Projects built on Reacts.js
-          </p>
-        </section>
-        <section className="projects">
-          <FontAwesomeIcon
-            icon={faCirclePlay}
-            transform="grow-15"
-            className="projects__icon"
-          />
-          <FontAwesomeIcon
-            icon={faCirclePlay}
-            transform="grow-30"
-            className="projects__icon-tablet"
-          />
-          <h3 className="projects__header">BrainFlix</h3>
-          <p className="projects__description">
-            BrainStation Projects built on Reacts.js
-          </p>
-        </section>
-        <section className="projects">
-          <FontAwesomeIcon
-            icon={faEnvelopeCircleCheck}
-            transform="grow-15"
-            className="projects__icon"
-          />
-          <FontAwesomeIcon
-            icon={faEnvelopeCircleCheck}
-            transform="grow-30"
-            className="projects__icon-tablet"
-          />
-          <h3 className="projects__header">Job Application Tracker</h3>
-          <p className="projects__description">
-            BrainStation Projects built on Reacts.js
-          </p>
-        </section>
-        <section className="projects">
-          <FontAwesomeIcon
-            icon={faCartFlatbed}
-            transform="grow-15"
-            className="projects__icon"
-          />
-          <FontAwesomeIcon
-            icon={faCartFlatbed}
-            transform="grow-30"
-            className="projects__icon-tablet"
-          />
-          <h3 className="projects__header">InStock</h3>
-          <p className="projects__description">
-            BrainStation Projects built on Reacts.js
-          </p>
-        </section>
-      </section> */}
     </section>
   );
 };

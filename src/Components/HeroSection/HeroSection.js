@@ -1,38 +1,118 @@
 import "./HeroSection.scss";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import profileImage from "../../assets/image/tsering.png";
 const HeroSection = (props) => {
   // Element reference
   const refElement = useRef(null);
-  const handleScroll = () => {
-    const currentElement = refElement.current; // current ref element stored
-    const rect = currentElement.getBoundingClientRect(); // get ref element position
-    rect.top <= -0.5 ? props.setIsScroll(true) : props.setIsScroll(false);
-  };
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   // Clean up the event listener when the component unmounts
+  // const handleScroll = () => {
+  //   const currentElement = refElement.current; // current ref element stored
+  //   const rect = currentElement.getBoundingClientRect(); // get ref element position
+  //   rect.top <= -0.5 ? props.setIsScroll(true) : props.setIsScroll(false);
+  // };
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreenWidth(window.innerWidth);
+    });
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", () => {
+        setScreenWidth(window.innerWidth);
+      });
+    };
+  }, []);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
   return (
-    <section className="hero-container" ref={refElement}>
+    <motion className="hero-container" ref={refElement}>
       <section className="hero-content">
         <div>
           <h1 className="hero-content__name">
-            <span className="hero-content__name--first">Hi, I'm Tsering</span>
-            <span className="hero-content__name--last">Dhondup</span>
+            <span className="hero-content__name--first">
+              <motion.span
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: .1,
+                  delay: 0.5,
+                  ease: "easeOut",
+                }}
+                className="hero-content__name--first-a"
+              >
+                Hi,
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: .2,
+                  delay: 1,
+                  ease: "easeOut",
+                }}
+                className="hero-content__name--first-b"
+              >
+                I'm
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: .3,
+                  delay: 1.5,
+                  ease: "easeOut",
+                }}
+                className="hero-content__name--first-c"
+              >
+                Tsering
+              </motion.span>
+            </span>
+            <motion.span
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                duration: 1.5,
+                delay: 2,
+                ease: "easeOut",
+              }}
+              className="hero-content__name--last"
+            >
+              Dhondup
+            </motion.span>
           </h1>
-          <h3 className="hero-content__title">
+          <motion.h3
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 2.5,
+              delay: 3,
+              ease: "easeOut",
+            }}
+            className="hero-content__title"
+          >
             A Front-End Developer from
-            <span className="hero-content__title--city">Toronto</span>
-          </h3>
+            <motion.span
+              initial={{ opacity: 0, x: screenWidth >= 950 ? -60 : 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 1.5,
+                delay: 3,
+                ease: "easeOut",
+              }}
+              className="hero-content__title--city"
+            >
+              Toronto
+            </motion.span>
+          </motion.h3>
         </div>
 
         <div className="image-container">
-          <img
+          <motion.img
+            initial={{ opacity: 0, scale: 0.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1.6,
+              ease: "linear",
+            }}
             src={profileImage}
             alt="profile-image"
             className="image-container__image"
@@ -40,7 +120,7 @@ const HeroSection = (props) => {
           <div className="image-container__shadow-element"></div>
         </div>
       </section>
-    </section>
+    </motion>
   );
 };
 export default HeroSection;

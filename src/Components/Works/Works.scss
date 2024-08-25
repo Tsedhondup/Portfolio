@@ -14,11 +14,12 @@
     max-width: 1280px;
     margin: auto;
   }
+
   &__title {
     color: $black;
     text-align: center;
     text-transform: capitalize;
-    font-weight: normal;
+    font-weight: 600;
     padding-top: 16px;
     @include tablet {
       padding-top: 32px;
@@ -50,7 +51,7 @@
   &__collaboration {
     color: $ebony;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
     padding: 10px;
@@ -66,13 +67,11 @@
     grid-template-columns: repeat(1, 1fr);
     gap: $tablet-gutter;
     margin-bottom: 16px;
-    border-bottom: 1px solid $gray;
     @include tablet {
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin-bottom: 100px;
-      border-bottom: unset;
     }
     @include desktop {
       margin-bottom: 150px;
@@ -105,6 +104,7 @@
       box-shadow: unset;
       border: 1px solid $pewter;
     }
+
     // Email reader and brainflix image
     &--email-image,
     &--brainflix-image {
@@ -117,12 +117,32 @@
         max-width: 650px;
         height: 600px;
       }
+      // @include desktopViewPortHeight {
+      //   max-width: 350px;
+      //   height: 300px;
+      //   object-fit: contain;
+      // }
+    }
+
+    // Dynamic classes based on screen size and heights
+    &--email-image-2,
+    &--brainflix-image-2 {
+      max-width: 350px;
+      height: 300px;
     }
     // fiserv and weather app image
+
     &--fiserv-image,
     &--weather-app-image {
       max-width: 300px;
       height: 500px;
+      // @include desktopViewPortHeight {
+      //   height: 350px;
+      // }
+    }
+    &--fiserv-image-2,
+    &--weather-app-image-2 {
+      height: 350px;
     }
 
     // Projects text section
@@ -140,7 +160,7 @@
     &--project-name {
       color: $black;
       font-size: 16px;
-      font-weight: normal;
+      font-weight: 400;
       text-transform: capitalize;
       text-align: center;
       padding: 10px 15px;

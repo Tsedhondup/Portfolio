@@ -16,14 +16,30 @@
     @content;
   }
 }
+@mixin tablet2 {
+  @media (min-width: $tablet-width2) {
+    @content;
+  }
+}
 
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;
   }
 }
+@mixin desktop2 {
+  @media (min-width: $desktop-width2) {
+    @content;
+  }
+}
 @mixin hero-min-heigt {
   @media (max-height: $hero-min-height) {
+    @content;
+  }
+}
+
+@mixin desktopViewPortHeight {
+  @media (min-height: $deskTopViewPortHeight) {
     @content;
   }
 }

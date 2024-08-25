@@ -1,16 +1,12 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
 .hero-container {
-  // height: calc(100vh - 50px);
-  // margin-top: 50px;
-  // background-color: $black;
   color: $ebony;
   display: flex;
   justify-content: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  // background-image: url("../../assets/image/city.jpg");
   background-attachment: fixed;
   position: relative;
   // z-index: 15;
@@ -18,20 +14,14 @@
 
 .hero-content {
   height: 100vh;
-  // background-color: rgba(0, 0, 0, 0.8);
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   rgba(255, 255, 255, 0.1),
-  //   rgba(0, 0, 0, 0.1),
-  //   rgba(0, 0, 0, 0.9)
-  // );
+
   padding: 0px $mobile-margin;
   padding-top: calc((100vh - 50px) / 3);
   text-align: center;
   @include hero-min-heigt {
     height: 400px;
   }
-  @include desktop {
+  @include tablet2 {
     text-align: left;
     display: flex;
     justify-content: space-between;
@@ -40,6 +30,7 @@
     padding-top: unset;
     max-width: 1280px;
   }
+
   // Name
   &__name {
     margin: 0;
@@ -54,11 +45,16 @@
         font-size: 36px;
       }
     }
+    // &--first-a,
+    // &--first-b,
+    // &--first-c {
+    //   display: flex;
+    // }
     &--last {
       display: block;
       text-transform: uppercase;
       // color: #a70000;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 48px;
       @include tablet {
         font-size: 60px;
@@ -86,22 +82,25 @@
   position: relative;
   width: auto;
   height: auto;
-  @include desktop {
+  @include tablet2 {
     display: block;
     text-align: right;
   }
   &__image {
     height: auto;
-    width: 500px;
+    width: 320px;
     object-fit: contain;
-    // filter: drop-shadow(2px 2px 20px $black);
-    // box-shadow: 16px 16px 16px 4px $ebony;
+    transition: 0.5;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
       0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
       0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
       0 100px 80px rgba(0, 0, 0, 0.12);
-
-    // border: 1px solid $pewter;
+    @include tablet2 {
+      width: 400px;
+    }
+    @include desktop2 {
+      width: 500px;
+    }
     border-radius: 5px;
   }
   &__shadow-element {
@@ -109,12 +108,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    // background-image: linear-gradient(
-    //   to right,
-    //   rgba(255, 255, 255, 0.1),
-    //   rgba(0, 0, 0, 0.1),
-    //   rgba(0, 0, 0, 0.8)
-    // );
+
     border-radius: 5px;
   }
 }
