@@ -251,7 +251,7 @@ const Works = () => {
             alt="weather-app-image"
             className={`projects__content--img projects__content--weather-app-image ${
               window.innerHeight >= 585 && window.innerWidth >= 767
-                ? "projects__content--weather-app-image"
+                ? "projects__content--weather-app-image-2"
                 : ""
             }`}
           />

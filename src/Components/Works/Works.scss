@@ -123,6 +123,13 @@
       //   object-fit: contain;
       // }
     }
+
+    // Dynamic classes based on screen size and heights
+    &--email-image-2,
+    &--brainflix-image-2 {
+      max-width: 350px;
+      height: 300px;
+    }
     // fiserv and weather app image
 
     &--fiserv-image,
@@ -132,6 +139,10 @@
       // @include desktopViewPortHeight {
       //   height: 350px;
       // }
+    }
+    &--fiserv-image-2,
+    &--weather-app-image-2 {
+      height: 350px;
     }
 
     // Projects text section
