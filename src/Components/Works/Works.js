@@ -8,18 +8,7 @@ import { useEffect, useState } from "react";
 import "./Works.scss";
 const Works = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  // alert(window.innerHeight);
-  // useEffect(() => {
-  //   window.addEventListener("resize", () => {
-  //     setScreenWidth(window.innerWidth);
-  //   });
-  //   // Clean up the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener("resize", () => {
-  //       setScreenWidth(window.innerWidth);
-  //     });
-  //   };
-  // }, []);
+
   return (
     <section className="project-container">
       <motion.h2

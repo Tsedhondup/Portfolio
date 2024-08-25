@@ -117,11 +117,7 @@
         max-width: 650px;
         height: 600px;
       }
-      // @include desktopViewPortHeight {
-      //   max-width: 350px;
-      //   height: 300px;
-      //   object-fit: contain;
-      // }
+     
     }
 
     // Dynamic classes based on screen size and heights
@@ -136,9 +132,7 @@
     &--weather-app-image {
       max-width: 300px;
       height: 500px;
-      // @include desktopViewPortHeight {
-      //   height: 350px;
-      // }
+  
     }
     &--fiserv-image-2,
     &--weather-app-image-2 {
@@ -180,11 +174,8 @@
     // email reader and fiserv app project name
     &--text-email,
     &--text-fiserv {
-      // @include tablet {
-      //   text-align: left;
-      // }
+     
       @include desktop {
-        // padding-left: 10%;
       }
     }
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCode,
@@ -14,25 +14,12 @@ import {
   faGlobeAmericas,
   faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
-import profilePic from "../../assets/image/tsering.png";
 import profilePic2 from "../../assets/image/tsering3.jpg";
 import "./AboutFirst.scss";
-const AboutFirst = (props) => {
+const AboutFirst = () => {
   // Element reference
   const refElement = useRef(null);
-  const handleScroll = () => {
-    const currentElement = refElement.current; // current ref element stored
-    const rect = currentElement.getBoundingClientRect(); // get ref element position
-    rect.top <= -100 ? props.setIsScroll(true) : props.setIsScroll(false);
-  };
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   // Clean up the event listener when the component unmounts
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>

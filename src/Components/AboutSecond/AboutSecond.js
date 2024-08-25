@@ -6,30 +6,11 @@ import profileImage from "../../assets/image/tsering.png";
 import "./AboutSecond.scss";
 const AboutSecond = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  // useEffect(() => {
-  //   window.addEventListener("resize", () => {
-  //     setScreenWidth(window.innerWidth);
-  //   });
-  //   // Clean up the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener("resize", () => {
-  //       setScreenWidth(window.innerWidth);
-  //     });
-  //   };
-  // }, []);
+
   return (
     <section className="about-second">
       <section className="about-second-content">
         <div className="about-second-content__image-container">
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: 1,
-              transition: { delay: 2, duration: 1 },
-            }}
-            viewport={{ once: false, amount: 1 }}
-            className="about-second-content__image-container--shadow-element"
-          ></motion.div> */}
           <motion.img
             initial={{ opacity: 0 }}
             whileInView={{
