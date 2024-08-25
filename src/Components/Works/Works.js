@@ -3,8 +3,22 @@ import brainflix from "../../assets/image/brainflix.jpg";
 import jobTracker from "../../assets/image/job-tracker.jpg";
 import weatherApp from "../../assets/image/weather-app.jpg";
 import fiserv from "../../assets/image/fiserv.jpg";
+import { useEffect, useState } from "react";
+
 import "./Works.scss";
 const Works = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreenWidth(window.innerWidth);
+    });
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", () => {
+        setScreenWidth(window.innerWidth);
+      });
+    };
+  }, []);
   return (
     <section className="project-container">
       <motion.h2

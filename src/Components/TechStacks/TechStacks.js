@@ -11,9 +11,9 @@ import expressLogo from "../../assets/image/express.png";
 import mysqlLogo from "../../assets/image/mysql.png";
 import knexLogo from "../../assets/image/knex.png";
 import { motion } from "framer-motion";
-
 import "./TechStacks.scss";
 const TechStacks = () => {
+ 
   return (
     <section className="tech-stacks">
       <motion.h2
@@ -29,7 +29,7 @@ const TechStacks = () => {
         Primary skill sets
       </motion.h2>
       <motion.div
-        initial={{ opacity: 0,  }}
+        initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
           transition: { duration: 1.5, ease: "linear" },

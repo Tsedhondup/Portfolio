@@ -1,10 +1,22 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStarOfLife } from "@fortawesome/free-solid-svg-icons";
+
 import profileImage from "../../assets/image/tsering.png";
 import "./AboutSecond.scss";
 const AboutSecond = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => {
+  //     setScreenWidth(window.innerWidth);
+  //   });
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener("resize", () => {
+  //       setScreenWidth(window.innerWidth);
+  //     });
+  //   };
+  // }, []);
   return (
     <section className="about-second">
       <section className="about-second-content">
@@ -32,10 +44,15 @@ const AboutSecond = () => {
         </div>
 
         <motion.p
-          initial={{ opacity: 0, y: 100 }}
+          initial={{
+            opacity: 0,
+            y: screenWidth >= 767 ? 0 : 100,
+            x: screenWidth >= 767 ? 100 : 0,
+          }}
           whileInView={{
             opacity: 1,
             y: 0,
+            x: 0,
             transition: { duration: 1 },
           }}
           viewport={{ once: true, amount: 1 }}
