@@ -11,17 +11,28 @@ import expressLogo from "../../assets/image/express.png";
 import mysqlLogo from "../../assets/image/mysql.png";
 import knexLogo from "../../assets/image/knex.png";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import "./TechStacks.scss";
 const TechStacks = () => {
- 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
   return (
     <section className="tech-stacks">
       <motion.h2
-        initial={{ opacity: 0, y: 100 }}
+        initial={{
+          opacity: 0,
+          y: screenWidth < 767 ? 100 : 0,
+          x: screenWidth >= 767 ? -70 : 0,
+        }}
         whileInView={{
           opacity: 1,
           y: 0,
-          transition: { duration: 1, ease: "linear" },
+          x: 0,
+          transition: {
+            delay: screenWidth > 1280 ? 1 : 0,
+            duration: 1,
+            ease: "linear",
+          },
         }}
         viewport={{ once: true, amount: 1 }}
         className="tech-stacks__header"
