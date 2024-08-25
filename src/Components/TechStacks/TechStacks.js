@@ -38,70 +38,137 @@ const TechStacks = () => {
         viewport={{ once: true, amount: 1 }}
         className="tech-stacks__tools"
       >
-        <span className="tech-stacks__tools--tech">
+        {/* Icons  */}
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 1, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <FontAwesomeIcon
             icon={faHtml5}
-            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--html"
           />
-        </span>
-        <span className="tech-stacks__tools--tech">
+        </motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 1.2, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <FontAwesomeIcon
             icon={faCss3}
-            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--css"
           />
-        </span>
-        <span className="tech-stacks__tools--tech">
+        </motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 1.4, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <FontAwesomeIcon
             icon={faSass}
-            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--sass"
           />
-        </span>
-        <span className="tech-stacks__tools--tech">
+        </motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 1.6, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <FontAwesomeIcon
             icon={faJs}
-            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--js"
           />
-        </span>
-        <span className="tech-stacks__tools--tech">
+        </motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 1.8, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <FontAwesomeIcon
             icon={faReact}
-            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--react"
           />
-        </span>
-        <span className="tech-stacks__tools--tech">
+        </motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 2, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <FontAwesomeIcon
             icon={faNodeJs}
-            // transform="grow-15"
             className="tech-stacks__tools--icon tech-stacks__tools--node"
           />
-        </span>
+        </motion.span>
 
-        <span className="tech-stacks__tools--tech">
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 2.2, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <img
             src={expressLogo}
             alt="express-logo"
             className="tech-stacks__tools--img tech-stacks__tools--express"
           />
-        </span>
-        <span className="tech-stacks__tools--tech">
+        </motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 2.4, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <img
             src={mysqlLogo}
             alt="mysql-logo"
             className="tech-stacks__tools--img tech-stacks__tools--mysql"
           />
-        </span>
-        <span className="tech-stacks__tools--tech">
+        </motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 2.8, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
           <img
             src={knexLogo}
             alt="knex-logo"
             className="tech-stacks__tools--img tech-stacks__tools--knex"
           />
-        </span>
+        </motion.span>
       </motion.div>
     </section>
   );
