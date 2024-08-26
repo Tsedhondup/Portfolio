@@ -65,13 +65,20 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: $tablet-gutter;
+    border-radius: 10px;
     margin-bottom: 16px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+
     @include tablet {
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin-bottom: 100px;
+      border-radius: 0px;
+      box-shadow: unset;
     }
     @include desktop {
       margin-bottom: 150px;
@@ -82,17 +89,16 @@
       display: block;
       margin: auto;
       object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 12px 12px 12px 1px $ebony;
-      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+      // box-shadow: 12px 12px 12px 1px $ebony;
 
       @include tablet {
         margin: unset;
         max-width: 350px;
         height: 450px;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
       }
       @include desktop {
         max-width: 450px;
@@ -140,10 +146,13 @@
     &--text {
       text-align: center;
       color: $ebony;
+      border-top: 1px solid $gray;
+
       @include tablet {
         text-align: left;
         align-items: center;
         height: fit-content;
+        border-top: unset;
       }
     }
 
@@ -156,7 +165,6 @@
       text-align: center;
       padding: 10px 15px;
       border-radius: 5px;
-      border: 1px solid $gray;
       width: fit-content;
       margin: auto;
       @include tablet {
