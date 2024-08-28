@@ -37,9 +37,3 @@
     @content;
   }
 }
-
-@mixin desktopViewPortHeight {
-  @media (min-height: $deskTopViewPortHeight) {
-    @content;
-  }
-}

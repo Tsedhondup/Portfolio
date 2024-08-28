@@ -3,13 +3,13 @@ import brainflix from "../../assets/image/brainflix.jpg";
 import jobTracker from "../../assets/image/job-tracker.jpg";
 import weatherApp from "../../assets/image/weather-app.jpg";
 import fiserv from "../../assets/image/fiserv.jpg";
-import {  useState } from "react";
+import { useState } from "react";
 
 import "./Works.scss";
 const Works = () => {
   // eslint-disable-next-line no-unused-vars
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
+  console.log(window.innerHeight);
   return (
     <section className="project-container">
       <motion.h2
@@ -48,13 +48,7 @@ const Works = () => {
             viewport={{ once: true, amount: 1 }}
             src={jobTracker}
             alt="job-application-tracker-image"
-            className={`projects__content--img projects__content--email-image ${
-              window.innerHeight >= 585 &&
-              window.innerHeight < 700 &&
-              window.innerWidth >= 767
-                ? " projects__content--email-image-2"
-                : ""
-            }`}
+            className="projects__content--img projects__content--email-image "
           />
           <div className="projects__content--text ">
             <motion.h2
@@ -110,13 +104,7 @@ const Works = () => {
             viewport={{ once: true, amount: 1 }}
             src={brainflix}
             alt="brainflix-app-image"
-            className={`projects__content--img projects__content--brainflix-image ${
-              window.innerHeight >= 585 &&
-              window.innerHeight < 700 &&
-              window.innerWidth >= 767
-                ? " projects__content--brainflix-image-2"
-                : ""
-            }`}
+            className="projects__content--img projects__content--brainflix-image"
           />
           <div className="projects__content--text projects__content--text-brainflix">
             <motion.h2
@@ -184,13 +172,7 @@ const Works = () => {
             viewport={{ once: true, amount: 1 }}
             src={fiserv}
             alt="fiserv-app-image"
-            className={`projects__content--img projects__content--fiserv-image ${
-              window.innerHeight >= 585 &&
-              window.innerHeight < 700 &&
-              window.innerWidth >= 767
-                ? "projects__content--fiserv-image-2"
-                : ""
-            }`}
+            className="projects__content--img projects__content--fiserv-image "
           />
           <div className="projects__content--text ">
             <motion.h2
@@ -245,13 +227,7 @@ const Works = () => {
             viewport={{ once: true, amount: 1 }}
             src={weatherApp}
             alt="weather-app-image"
-            className={`projects__content--img projects__content--weather-app-image ${
-              window.innerHeight >= 585 &&
-              window.innerHeight < 700 &&
-              window.innerWidth >= 767
-                ? "projects__content--weather-app-image-2"
-                : ""
-            }`}
+            className="projects__content--img projects__content--weather-app-image "
           />
           <div className="projects__content--text projects__content--text-weather">
             <motion.h2
