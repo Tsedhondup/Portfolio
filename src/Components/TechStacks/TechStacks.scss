@@ -10,14 +10,14 @@
     margin: auto;
     padding: 0px $tablet-margin;
     margin-top: 64px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   @include desktop {
     max-width: 1000px;
     padding: 0px $tablet-margin;
     margin: 100px auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
   }
   &__header {
     padding-top: $mobile-margin;
@@ -25,12 +25,20 @@
     text-transform: capitalize;
     text-align: center;
     font-weight: 600;
+    color: $black;
     @include tablet {
       margin-bottom: $tablet-margin;
+      display: none;
     }
     @include desktop {
       font-size: 30px;
       text-align: left;
+    }
+  }
+  &__header-tablet {
+    display: none;
+    @include tablet {
+      display: block;
     }
   }
   &__tools {
