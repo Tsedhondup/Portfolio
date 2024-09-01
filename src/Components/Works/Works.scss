@@ -100,12 +100,8 @@
       // border-top-right-radius: 10px;
       @include tablet {
         max-width: 550px;
-        height: 500px;
+        // height: 500px;
       }
-    }
-    &--img:hover {
-      box-shadow: unset;
-      border: 1px solid $pewter;
     }
 
     // Email reader and brainflix image
@@ -127,7 +123,7 @@
     &--fiserv-image,
     &--weather-app-image {
       @include tablet {
-        object-fit: contain;
+        max-width: 250px;
       }
     }
 
@@ -135,15 +131,8 @@
     &--text {
       text-align: center;
       color: $ebony;
-      padding: 0px $mobile-margin;
+      padding: $mobile-margin;
       border-top: 1px solid $pewter;
-
-      @include tablet {
-        text-align: left;
-        align-items: center;
-        height: fit-content;
-        border-top: unset;
-      }
     }
 
     // project name
@@ -153,9 +142,8 @@
       font-weight: 400;
       text-transform: capitalize;
       text-align: center;
-      padding: 10px 15px;
+      padding-bottom: 16px;
       border-radius: 5px;
-      width: fit-content;
       margin: auto;
       @include tablet {
         text-align: left;
@@ -176,13 +164,15 @@
     // Project description
     &--project-description {
       font-size: 15px;
-      padding: 16px 0px;
-      // display: none;
 
       @include tablet {
         display: block;
         padding-top: 0px;
       }
     }
+  }
+  &__content:hover {
+    box-shadow: unset;
+    border: 1px solid $pewter;
   }
 }
