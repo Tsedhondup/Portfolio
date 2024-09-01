@@ -20,7 +20,7 @@ const Works = () => {
       </motion.h2>
       <section className="projects">
         {/* Personal */}
-        <motion.h2 className="projects__personal">Personal works</motion.h2>
+        {/* <motion.h2 className="projects__personal">Personal works</motion.h2> */}
         <div className="projects__content projects__content-email-reader">
           <motion.img
             src={jobTracker}
@@ -53,7 +53,7 @@ const Works = () => {
           </div>
         </div>
         {/* Collab */}
-        <motion.h2 className="projects__collaboration">Collaboration</motion.h2>
+        {/* <motion.h2 className="projects__collaboration">Collaboration</motion.h2> */}
         <div className="projects__content projects__content-fiserv">
           <motion.img
             src={fiserv}
