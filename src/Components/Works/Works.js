@@ -23,6 +23,13 @@ const Works = () => {
         {/* <motion.h2 className="projects__personal">Personal works</motion.h2> */}
         <div className="projects__content projects__content-email-reader">
           <motion.img
+            initial={{ filter: "grayScale(100)", opacity: 0 }}
+            whileInView={{
+              filter: "grayScale(0)",
+              opacity: 1,
+              transition: { duration: 1, ease: "linear" },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
             src={jobTracker}
             alt="job-application-tracker-image"
             className="projects__content--img projects__content--email-image "
@@ -39,6 +46,13 @@ const Works = () => {
 
         <div className="projects__content projects__content-brainflix">
           <motion.img
+            initial={{ filter: "grayScale(100)", opacity: 0 }}
+            whileInView={{
+              filter: "grayScale(0)",
+              opacity: 1,
+              transition: { duration: 1, ease: "linear" },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
             src={brainflix}
             alt="brainflix-app-image"
             className="projects__content--img projects__content--brainflix-image"
@@ -56,6 +70,13 @@ const Works = () => {
         {/* <motion.h2 className="projects__collaboration">Collaboration</motion.h2> */}
         <div className="projects__content projects__content-fiserv">
           <motion.img
+            initial={{ filter: "grayScale(100)", opacity: 0 }}
+            whileInView={{
+              filter: "grayScale(0)",
+              opacity: 1,
+              transition: { duration: 1, ease: "linear" },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
             src={fiserv}
             alt="fiserv-app-image"
             className="projects__content--img projects__content--fiserv-image "
@@ -71,6 +92,13 @@ const Works = () => {
         </div>
         <div className="projects__content projects__content-weather">
           <motion.img
+            initial={{ filter: "grayScale(100)", opacity: 0 }}
+            whileInView={{
+              filter: "grayScale(0)",
+              opacity: 1,
+              transition: { duration: 1, ease: "linear" },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
             src={weatherApp}
             alt="weather-app-image"
             className="projects__content--img projects__content--weather-app-image "
