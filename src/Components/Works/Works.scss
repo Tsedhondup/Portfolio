@@ -75,13 +75,8 @@
       0 100px 80px rgba(0, 0, 0, 0.12);
 
     @include tablet {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      max-width: unset;
       margin-bottom: 100px;
       border-radius: 0px;
-      box-shadow: unset;
     }
     @include desktop {
       margin-bottom: 150px;
@@ -94,22 +89,6 @@
       object-fit: cover;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      // box-shadow: 12px 12px 12px 1px $ebony;
-
-      @include tablet {
-        max-width: 350px;
-        height: 450px;
-        margin: unset;
-        border-radius: 10px;
-        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-      }
-      @include desktop {
-        max-width: 450px;
-        height: 700px;
-      }
     }
     &--img:hover {
       box-shadow: unset;
@@ -189,14 +168,6 @@
         display: block;
         padding-top: 0px;
       }
-    }
-  }
-  // brainflix and weatherapp projects content
-  &__content-brainflix,
-  &__content-weather {
-    @include tablet {
-      display: flex;
-      flex-direction: row-reverse;
     }
   }
 }
