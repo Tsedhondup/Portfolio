@@ -52,7 +52,7 @@ const Works = () => {
               opacity: 1,
               transition: { duration: 1, ease: "linear" },
             }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             src={brainflix}
             alt="brainflix-app-image"
             className="projects__content--img projects__content--brainflix-image"
