@@ -33,6 +33,7 @@
 
   // Image container - also contains header for tablet and desktop
   &__image-container {
+    display: none;
     @include tablet {
       display: flex;
       flex-direction: column;
