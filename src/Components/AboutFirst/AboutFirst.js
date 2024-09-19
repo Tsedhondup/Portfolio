@@ -23,6 +23,7 @@ const AboutFirst = () => {
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>
+        <h2 className="about-first__image-container--text">About me</h2>
         <div className="about-first__image-container--img-wrapper">
           <img
             src={profilePic2}
@@ -30,12 +31,10 @@ const AboutFirst = () => {
             className="about-first__image-container--img"
           />
         </div>
-
-        <h2 className="about-first__image-container--text">About me</h2>
       </div>
 
       <section className="about-text-container">
-        <h2 className="about-first__mobile-header">About Me</h2>
+        {/* <h2 className="about-first__mobile-header">About Me</h2> */}
         {/* Untold story */}
         <section className="about-text about-text-education">
           <h2 className="about-text__title">Education</h2>
