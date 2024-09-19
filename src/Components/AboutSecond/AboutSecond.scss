@@ -27,7 +27,7 @@
   }
   &__image-container {
     position: relative;
-    @include tablet2 {
+    @include tablet2 {  
       display: none;
     }
     &--shadow-element {

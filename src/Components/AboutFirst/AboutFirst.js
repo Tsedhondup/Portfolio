@@ -14,7 +14,7 @@ import {
   faGlobeAmericas,
   faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
-import profilePic2 from "../../assets/image/tsering3.jpg";
+import profilePic2 from "../../assets/image/about-first.jpg";
 import "./AboutFirst.scss";
 const AboutFirst = () => {
   // Element reference
