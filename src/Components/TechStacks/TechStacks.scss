@@ -6,13 +6,10 @@
   margin-top: $mobile-margin;
 
   @include tablet {
-    width: 100%;
-    margin: auto;
+    max-width: 800px;
     padding: 0px $tablet-margin;
+    margin: auto;
     margin-top: 64px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
   }
   @include desktop {
     max-width: 1000px;
@@ -27,20 +24,10 @@
     font-weight: 600;
     color: $black;
     @include tablet {
-      margin-bottom: $tablet-margin;
-      display: none;
-    }
-    @include desktop {
-      font-size: 30px;
       text-align: left;
     }
   }
-  &__header-tablet {
-    display: none;
-    @include tablet {
-      display: block;
-    }
-  }
+
   &__tools {
     list-style: none;
     display: grid;
@@ -53,7 +40,9 @@
       0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
       0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
       0 100px 80px rgba(0, 0, 0, 0.12);
-
+    @include tablet {
+      max-width: 100%;
+    }
     &--tech {
       display: flex;
       justify-content: center;

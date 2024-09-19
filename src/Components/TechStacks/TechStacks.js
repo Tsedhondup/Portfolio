@@ -39,7 +39,7 @@ const TechStacks = () => {
         Primary skill sets
       </motion.h2>
       {/* Screen Width greater than mobile witdh = 320px */}
-      <motion.h2
+      {/* <motion.h2
         initial={{
           opacity: 0,
           x: -70,
@@ -56,7 +56,7 @@ const TechStacks = () => {
         className="tech-stacks__header-tablet"
       >
         Primary skill sets
-      </motion.h2>
+      </motion.h2> */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
