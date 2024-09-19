@@ -14,7 +14,7 @@ import {
   faGlobeAmericas,
   faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
-import profilePic2 from "../../assets/image/about-first.jpg";
+import profilePic2 from "../../assets/image/about-first.png";
 import "./AboutFirst.scss";
 const AboutFirst = () => {
   // Element reference
@@ -69,8 +69,7 @@ const AboutFirst = () => {
           <p className="about-text__para">
             I came across a video on YouTube about a young and successful
             self-taught software developer. As influential and inspiring as the
-            video was, I was rather excited to learn coding as a hobby and feed
-            my curiosities.
+            video was, I was rather excited to learn coding as a hobby.
           </p>
           {/* Icons */}
           <div className="about-text__icon-container about-text__icon-container-2">
