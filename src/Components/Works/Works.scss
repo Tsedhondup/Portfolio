@@ -10,9 +10,11 @@
     padding-top: $tablet-margin;
     padding-left: $tablet-margin;
     padding-right: $tablet-margin;
+    max-width: 800px;
+    margin: auto;
   }
   @include desktop {
-    max-width: 1280px;
+    max-width: 1000px;
     margin: auto;
   }
 
@@ -24,9 +26,7 @@
     padding-top: 16px;
     @include tablet {
       text-align: left;
-      max-width: 800px;
       padding-top: 32px;
-      margin: auto;
       margin-bottom: $tablet-margin;
     }
   }
