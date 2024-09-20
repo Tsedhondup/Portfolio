@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+
 import {
   faCode,
   faLaptop,
@@ -34,7 +36,17 @@ const AboutFirst = () => {
       </div>
 
       <section className="about-text-container">
-        <h2 className="about-first__mobile-header">About Me</h2>
+        <motion.h2
+          className="about-first__mobile-header"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1.5, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
+          About Me
+        </motion.h2>
         {/* Untold story */}
         <section className="about-text about-text-education">
           <h2 className="about-text__title">Education</h2>
