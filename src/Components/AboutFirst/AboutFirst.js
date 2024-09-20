@@ -21,16 +21,31 @@ import "./AboutFirst.scss";
 const AboutFirst = () => {
   // Element reference
   const refElement = useRef(null);
-  const [isBorderOne, setIsBorderOne] = useState(false);
-  const [isBorderTwo, setIsBorderTwo] = useState(false);
-  const [isBorderThree, setIsBorderThree] = useState(false);
-  const [isBorderFour, setIsBorderFour] = useState(false);
-  const [isBorderFive, setIsBorderFive] = useState(false);
-  const [isBorderSix, setIsBorderSix] = useState(false);
-  const [isBorderSeven, setIsBorderSeven] = useState(false);
-  const [isBorderEight, setIsBorderEight] = useState(false);
-  const [isBorderNine, setIsBorderNine] = useState(false);
-
+  // const [isBorderOne, setIsBorderOne] = useState(false);
+  // const [isBorderTwo, setIsBorderTwo] = useState(false);
+  // const [isBorderThree, setIsBorderThree] = useState(false);
+  // const [isBorderFour, setIsBorderFour] = useState(false);
+  // const [isBorderFive, setIsBorderFive] = useState(false);
+  // const [isBorderSix, setIsBorderSix] = useState(false);
+  // const [isBorderSeven, setIsBorderSeven] = useState(false);
+  // const [isBorderEight, setIsBorderEight] = useState(false);
+  // const [isBorderNine, setIsBorderNine] = useState(false);
+  let isBorderOne = false;
+  let isBorderTwo = false;
+  let isBorderThree = false;
+  let isBorderFour = false;
+  let isBorderFive = false;
+  let isBorderSix = false;
+  let isBorderSeven = false;
+  let isBorderEight = false;
+  let isBorderNine = false;
+  // Border rendering function
+  const renderBorders = (borderNumber) => {
+    if (borderNumber === 1) {
+      isBorderOne = true;
+      return Number(1);
+    }
+  };
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>
@@ -49,12 +64,10 @@ const AboutFirst = () => {
           className="about-first__mobile-header"
           initial={{
             opacity: 0,
-            borderTopWidth: 0,
-            borderBottomWidth: 0,
-            borderLeftWidth: 0,
           }}
           whileInView={{
             opacity: 1,
+
             transition: { duration: 1.5, ease: "linear" },
           }}
           viewport={{ once: true, amount: 1 }}
@@ -65,10 +78,22 @@ const AboutFirst = () => {
 
         <motion.section
           className="about-text about-text-education"
-          initial={{ opacity: 0 }}
+          initial={{
+            borderTop: "1px solid rgba(0,0,0,0)",
+            borderLeft: "1px solid rgba(0,0,0,0)",
+            borderBottom: "1px solid rgba(0,0,0,0)",
+          }}
           whileInView={{
-            opacity: 1,
-            transition: { duration: 1.5, ease: "linear" },
+            borderTop: "1px solid #d6d6d6",
+            borderLeft: "1px solid #d6d6d6",
+            borderBottom: "1px solid #d6d6d6",
+            transition: {
+              duration: 1.5,
+              ease: "linear",
+              borderTop: { duration: 1, delay: 0.5 },
+              borderLeft: { duration: 1, delay: 1 },
+              borderBottom: { duration: 1, delay: 1.5 },
+            },
           }}
           viewport={{ once: true, amount: 1 }}
         >
