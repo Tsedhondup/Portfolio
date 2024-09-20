@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
@@ -21,6 +21,15 @@ import "./AboutFirst.scss";
 const AboutFirst = () => {
   // Element reference
   const refElement = useRef(null);
+  const [isBorderOne, setIsBorderOne] = useState(false);
+  const [isBorderTwo, setIsBorderTwo] = useState(false);
+  const [isBorderThree, setIsBorderThree] = useState(false);
+  const [isBorderFour, setIsBorderFour] = useState(false);
+  const [isBorderFive, setIsBorderFive] = useState(false);
+  const [isBorderSix, setIsBorderSix] = useState(false);
+  const [isBorderSeven, setIsBorderSeven] = useState(false);
+  const [isBorderEight, setIsBorderEight] = useState(false);
+  const [isBorderNine, setIsBorderNine] = useState(false);
 
   return (
     <section className="about-first">
@@ -38,7 +47,12 @@ const AboutFirst = () => {
       <section className="about-text-container">
         <motion.h2
           className="about-first__mobile-header"
-          initial={{ opacity: 0 }}
+          initial={{
+            opacity: 0,
+            borderTopWidth: 0,
+            borderBottomWidth: 0,
+            borderLeftWidth: 0,
+          }}
           whileInView={{
             opacity: 1,
             transition: { duration: 1.5, ease: "linear" },
@@ -48,7 +62,16 @@ const AboutFirst = () => {
           About Me
         </motion.h2>
         {/* Untold story */}
-        <section className="about-text about-text-education">
+
+        <motion.section
+          className="about-text about-text-education"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1.5, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <h2 className="about-text__title">Education</h2>
 
           <p className="about-text__para">
@@ -72,7 +95,7 @@ const AboutFirst = () => {
               className="about-text__icon-container--icons about-text__icon-container--icon-vial"
             />
           </div>
-        </section>
+        </motion.section>
         {/* Earliest coding journey */}
         <section className="about-text about-text-journey">
           <h3 className="about-text__title">Earliest coding journey</h3>
