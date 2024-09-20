@@ -92,7 +92,7 @@ const AboutFirst = () => {
               ease: "linear",
               borderTop: { duration: 1, delay: 0.5 },
               borderLeft: { duration: 1, delay: 1 },
-              borderBottom: { duration: 1, delay: 1.5 },
+              borderBottom: { duration: 1, delay: 3 },
             },
           }}
           viewport={{ once: true, amount: 1 }}
@@ -101,12 +101,14 @@ const AboutFirst = () => {
             className="about-text__title"
             initial={{
               opacity: 0,
+              x: 60,
             }}
             whileInView={{
               opacity: 1,
+              x: 0,
               transition: {
                 duration: 1.5,
-                delay: 2,
+                delay: 1.5,
               },
             }}
             viewport={{ once: true, amount: 1 }}
@@ -114,11 +116,41 @@ const AboutFirst = () => {
             Education
           </motion.h2>
 
-          <p className="about-text__para">
+          <motion.p
+            className="about-text__para"
+            initial={{
+              opacity: 0,
+              x: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 1.5,
+                delay: 2,
+              },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
             First division botany graduates from University of Delhi
-          </p>
+          </motion.p>
           {/* Icons */}
-          <div className="about-text__icon-container">
+          <motion.div
+            className="about-text__icon-container"
+            initial={{
+              opacity: 0,
+              x: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 1.5,
+                delay: 2.5,
+              },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
             <FontAwesomeIcon
               icon={faDna}
               transform="grow-2"
@@ -134,7 +166,7 @@ const AboutFirst = () => {
               transform="grow-2"
               className="about-text__icon-container--icons about-text__icon-container--icon-vial"
             />
-          </div>
+          </motion.div>
         </motion.section>
         {/* Earliest coding journey */}
         <section className="about-text about-text-journey">
