@@ -38,6 +38,9 @@ const AboutFirst = () => {
     setTimeout(() => {
       setIsBorderTwo(true);
     }, 6500);
+    setTimeout(() => {
+      setIsBorderThree(true);
+    }, 9500);
   }, []);
 
   return (
@@ -79,9 +82,9 @@ const AboutFirst = () => {
             borderBottom: "1px solid rgba(0,0,0,0)",
           }}
           whileInView={{
-            borderTop: "1px solid #d6d6d6",
-            borderLeft: "1px solid #d6d6d6",
-            borderBottom: "1px solid #d6d6d6",
+            borderTop: "1px solid #8c8c8c",
+            borderLeft: "1px solid #8c8c8c",
+            borderBottom: "1px solid #8c8c8c",
             // borderBottom: renderBorderOne(),
             transition: {
               duration: 1.5,
@@ -175,8 +178,8 @@ const AboutFirst = () => {
           whileInView={
             isBorderOne
               ? {
-                  borderRight: "1px solid #d6d6d6",
-                  borderBottom: "1px solid #d6d6d6",
+                  borderRight: "1px solid #8c8c8c",
+                  borderBottom: "1px solid #8c8c8c",
                   transition: {
                     ease: "linear",
                     borderRight: { duration: 1.5, delay: 2 },
@@ -286,8 +289,8 @@ const AboutFirst = () => {
           whileInView={
             isBorderTwo
               ? {
-                  borderLeft: "1px solid #d6d6d6",
-                  borderBottom: "1px solid #d6d6d6",
+                  borderLeft: "1px solid #8c8c8c",
+                  borderBottom: "1px solid #8c8c8c",
                   transition: {
                     ease: "linear",
                     borderRight: { duration: 1.5, delay: 0.5 },
@@ -391,18 +394,100 @@ const AboutFirst = () => {
         </motion.section>
         {/* --------------------------- Future Goal --------------------------- */}
 
-        <section className="about-text about-text-goals">
-          <h3 className="about-text__title">What next</h3>
+        <motion.section
+          className="about-text about-text-goals"
+          initial={{
+            borderRight: "1px solid rgba(0,0,0,0)",
+            borderBottom: "1px solid rgba(0,0,0,0)",
+          }}
+          whileInView={
+            isBorderThree
+              ? {
+                  borderRight: "1px solid #8c8c8c",
+                  borderBottom: "1px solid #8c8c8c",
+                  transition: {
+                    ease: "linear",
+                    borderRight: { duration: 1.5, delay: 2 },
+                    borderBottom: { duration: 1.5, delay: 2.5 },
+                  },
+                }
+              : { borderRight: "1px solid rgba(0,0,0,0)" }
+          }
+          viewport={{ once: true, amount: 1 }}
+        >
+          <motion.h3
+            className="about-text__title"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderThree
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 0.5,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
+            What next
+          </motion.h3>
 
-          <p className="about-text__para">
+          <motion.p
+            className="about-text__para"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderThree
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
             As a full-stack developer, I aim to secure a role in a dynamic tech
             company to enhance my skills in modern frameworks. I plan to
             continuously improve my knowledge through advanced courses,
             certifications, and hands-on projects. My long-term goal is to grow
             into a senior developer role and mentor others.
-          </p>
+          </motion.p>
           {/* Icons */}
-          <div className="about-text__icon-container about-text__icon-container-4">
+          <motion.div
+            className="about-text__icon-container about-text__icon-container-4"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderThree
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1.5,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
             <FontAwesomeIcon
               icon={faHandPointRight}
               transform="grow-2"
@@ -418,8 +503,8 @@ const AboutFirst = () => {
               transform="grow-2"
               className="about-text__icon-container--icons about-text__icon-container--icon-globe"
             />
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
       </section>
     </section>
   );
