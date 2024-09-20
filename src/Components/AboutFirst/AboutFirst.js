@@ -97,7 +97,22 @@ const AboutFirst = () => {
           }}
           viewport={{ once: true, amount: 1 }}
         >
-          <h2 className="about-text__title">Education</h2>
+          <motion.h2
+            className="about-text__title"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 1.5,
+                delay: 2,
+              },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
+            Education
+          </motion.h2>
 
           <p className="about-text__para">
             First division botany graduates from University of Delhi
