@@ -277,19 +277,101 @@ const AboutFirst = () => {
         </motion.section>
         {/* --------------------------- Certification --------------------------- */}
 
-        <section className="about-text about-text-certification">
-          <h3 className="about-text__title">Becoming a certified developer!</h3>
+        <motion.section
+          className="about-text about-text-certification"
+          initial={{
+            borderLeft: "1px solid rgba(0,0,0,0)",
+            borderBottom: "1px solid rgba(0,0,0,0)",
+          }}
+          whileInView={
+            isBorderTwo
+              ? {
+                  borderLeft: "1px solid #d6d6d6",
+                  borderBottom: "1px solid #d6d6d6",
+                  transition: {
+                    ease: "linear",
+                    borderRight: { duration: 1.5, delay: 0.5 },
+                    borderBottom: { duration: 1.5, delay: 2.5 },
+                  },
+                }
+              : { borderLeft: "1px solid rgba(0,0,0,0)" }
+          }
+          viewport={{ once: true, amount: 1 }}
+        >
+          <motion.h3
+            className="about-text__title"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderTwo
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
+            Becoming a certified developer!
+          </motion.h3>
 
-          <p className="about-text__para">
+          <motion.p
+            className="about-text__para"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderTwo
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1.5,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
             Teaching myself to code was of great success, and it continues to be
             my greatest strength in keeping up with ever-changing technologies
             that are paramount. However, the need for a proper mentor to assist
             in honing my skills tailored to professional requirements was vital.
             I take pride in investing time and resources in joining the Software
             Engineering Boot Camp at BrainStation, Toronto'
-          </p>
+          </motion.p>
           {/* Icons */}
-          <div className="about-text__icon-container ">
+          <motion.div
+            className="about-text__icon-container "
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderTwo
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 2,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
             <FontAwesomeIcon
               icon={faBook}
               transform="grow-2"
@@ -305,8 +387,8 @@ const AboutFirst = () => {
               transform="grow-2"
               className="about-text__icon-container--icons about-text__icon-container--icon-check-square"
             />
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
         {/* --------------------------- Future Goal --------------------------- */}
 
         <section className="about-text about-text-goals">
