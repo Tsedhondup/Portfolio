@@ -169,7 +169,23 @@ const AboutFirst = () => {
           </motion.div>
         </motion.section>
         {/* Earliest coding journey */}
-        <section className="about-text about-text-journey">
+        <motion.section
+          className="about-text about-text-journey"
+          initial={{
+            borderRight: "1px solid rgba(0,0,0,0)",
+            borderBottom: "1px solid rgba(0,0,0,0)",
+          }}
+          whileInView={{
+            borderRight: "1px solid #d6d6d6",
+            borderBottom: "1px solid #d6d6d6",
+            transition: {
+              ease: "linear",
+              borderRight: { duration: 1.5, delay: 3.5 },
+              borderBottom: { duration: 1.5, delay: 5.5 },
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <h3 className="about-text__title">Earliest coding journey</h3>
 
           <p className="about-text__para">
@@ -195,7 +211,7 @@ const AboutFirst = () => {
               className="about-text__icon-container--icons about-text__icon-container--icon-coffee"
             />
           </div>
-        </section>
+        </motion.section>
         {/* Becoming a certified developer! */}
         <section className="about-text about-text-certification">
           <h3 className="about-text__title">Becoming a certified developer!</h3>
