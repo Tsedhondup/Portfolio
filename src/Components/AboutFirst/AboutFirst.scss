@@ -107,6 +107,7 @@
   @include tablet {
     padding: 0px;
     padding-left: $tablet-margin;
+    padding-right: $tablet-gutter;
     padding-top: 150px;
   }
   @include desktop {
