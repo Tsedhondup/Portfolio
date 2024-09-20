@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
@@ -21,31 +21,25 @@ import "./AboutFirst.scss";
 const AboutFirst = () => {
   // Element reference
   const refElement = useRef(null);
-  // const [isBorderOne, setIsBorderOne] = useState(false);
-  // const [isBorderTwo, setIsBorderTwo] = useState(false);
-  // const [isBorderThree, setIsBorderThree] = useState(false);
-  // const [isBorderFour, setIsBorderFour] = useState(false);
-  // const [isBorderFive, setIsBorderFive] = useState(false);
-  // const [isBorderSix, setIsBorderSix] = useState(false);
-  // const [isBorderSeven, setIsBorderSeven] = useState(false);
-  // const [isBorderEight, setIsBorderEight] = useState(false);
-  // const [isBorderNine, setIsBorderNine] = useState(false);
-  let isBorderOne = false;
-  let isBorderTwo = false;
-  let isBorderThree = false;
-  let isBorderFour = false;
-  let isBorderFive = false;
-  let isBorderSix = false;
-  let isBorderSeven = false;
-  let isBorderEight = false;
-  let isBorderNine = false;
-  // Border rendering function
-  const renderBorders = (borderNumber) => {
-    if (borderNumber === 1) {
-      isBorderOne = true;
-      return Number(1);
-    }
-  };
+  const [isBorderOne, setIsBorderOne] = useState(false);
+  const [isBorderTwo, setIsBorderTwo] = useState(false);
+  const [isBorderThree, setIsBorderThree] = useState(false);
+  const [isBorderFour, setIsBorderFour] = useState(false);
+  const [isBorderFive, setIsBorderFive] = useState(false);
+  const [isBorderSix, setIsBorderSix] = useState(false);
+  const [isBorderSeven, setIsBorderSeven] = useState(false);
+  const [isBorderEight, setIsBorderEight] = useState(false);
+  const [isBorderNine, setIsBorderNine] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBorderOne(true);
+    }, 3500);
+    setTimeout(() => {
+      setIsBorderTwo(true);
+    }, 6500);
+  }, []);
+
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>
@@ -64,17 +58,18 @@ const AboutFirst = () => {
           className="about-first__mobile-header"
           initial={{
             opacity: 0,
+            x: 80,
           }}
           whileInView={{
             opacity: 1,
-
-            transition: { duration: 1.5, ease: "linear" },
+            x: 0,
+            transition: { duration: 1, ease: "linear" },
           }}
           viewport={{ once: true, amount: 1 }}
         >
           About Me
         </motion.h2>
-        {/* Untold story */}
+        {/* --------------------------- Education Section --------------------------- */}
 
         <motion.section
           className="about-text about-text-education"
@@ -87,12 +82,13 @@ const AboutFirst = () => {
             borderTop: "1px solid #d6d6d6",
             borderLeft: "1px solid #d6d6d6",
             borderBottom: "1px solid #d6d6d6",
+            // borderBottom: renderBorderOne(),
             transition: {
               duration: 1.5,
               ease: "linear",
-              borderTop: { duration: 1, delay: 0.5 },
-              borderLeft: { duration: 1, delay: 1 },
-              borderBottom: { duration: 1, delay: 3 },
+              borderTop: { duration: 1.5, delay: 0.8 },
+              borderLeft: { duration: 1.5, delay: 1 },
+              borderBottom: { duration: 1.5, delay: 3 },
             },
           }}
           viewport={{ once: true, amount: 1 }}
@@ -101,13 +97,13 @@ const AboutFirst = () => {
             className="about-text__title"
             initial={{
               opacity: 0,
-              x: 60,
+              y: 60,
             }}
             whileInView={{
               opacity: 1,
-              x: 0,
+              y: 0,
               transition: {
-                duration: 1.5,
+                duration: 1,
                 delay: 1.5,
               },
             }}
@@ -120,13 +116,13 @@ const AboutFirst = () => {
             className="about-text__para"
             initial={{
               opacity: 0,
-              x: 60,
+              y: 60,
             }}
             whileInView={{
               opacity: 1,
-              x: 0,
+              y: 0,
               transition: {
-                duration: 1.5,
+                duration: 1,
                 delay: 2,
               },
             }}
@@ -139,13 +135,13 @@ const AboutFirst = () => {
             className="about-text__icon-container"
             initial={{
               opacity: 0,
-              x: 60,
+              y: 60,
             }}
             whileInView={{
               opacity: 1,
-              x: 0,
+              y: 0,
               transition: {
-                duration: 1.5,
+                duration: 1,
                 delay: 2.5,
               },
             }}
@@ -168,22 +164,27 @@ const AboutFirst = () => {
             />
           </motion.div>
         </motion.section>
-        {/* Earliest coding journey */}
+        {/* --------------------------- Coding Journey --------------------------- */}
+
         <motion.section
           className="about-text about-text-journey"
           initial={{
             borderRight: "1px solid rgba(0,0,0,0)",
             borderBottom: "1px solid rgba(0,0,0,0)",
           }}
-          whileInView={{
-            borderRight: "1px solid #d6d6d6",
-            borderBottom: "1px solid #d6d6d6",
-            transition: {
-              ease: "linear",
-              borderRight: { duration: 1.5, delay: 3.5 },
-              borderBottom: { duration: 1.5, delay: 5.5 },
-            },
-          }}
+          whileInView={
+            isBorderOne
+              ? {
+                  borderRight: "1px solid #d6d6d6",
+                  borderBottom: "1px solid #d6d6d6",
+                  transition: {
+                    ease: "linear",
+                    borderRight: { duration: 1.5, delay: 2 },
+                    borderBottom: { duration: 1.5, delay: 2.5 },
+                  },
+                }
+              : { borderRight: "1px solid rgba(0,0,0,0)" }
+          }
           viewport={{ once: true, amount: 1 }}
         >
           <motion.h3
@@ -192,15 +193,19 @@ const AboutFirst = () => {
               opacity: 0,
               y: 60,
             }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                ease: "linear",
-                duration: 1.5,
-                delay: 4,
-              },
-            }}
+            whileInView={
+              isBorderOne
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 0.5,
+                    },
+                  }
+                : { opacity: 0 }
+            }
             viewport={{ once: true, amount: 1 }}
           >
             Earliest coding journey
@@ -212,15 +217,19 @@ const AboutFirst = () => {
               opacity: 0,
               y: 60,
             }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                ease: "linear",
-                duration: 1.5,
-                delay: 4.5,
-              },
-            }}
+            whileInView={
+              isBorderOne
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1,
+                    },
+                  }
+                : { opacity: 0 }
+            }
             viewport={{ once: true, amount: 1 }}
           >
             I came across a video on YouTube about a young and successful
@@ -234,15 +243,19 @@ const AboutFirst = () => {
               opacity: 0,
               y: 60,
             }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                ease: "linear",
-                duration: 1.5,
-                delay: 5,
-              },
-            }}
+            whileInView={
+              isBorderOne
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1.5,
+                    },
+                  }
+                : { opacity: 0 }
+            }
             viewport={{ once: true, amount: 1 }}
           >
             <FontAwesomeIcon
@@ -262,7 +275,8 @@ const AboutFirst = () => {
             />
           </motion.div>
         </motion.section>
-        {/* Becoming a certified developer! */}
+        {/* --------------------------- Certification --------------------------- */}
+
         <section className="about-text about-text-certification">
           <h3 className="about-text__title">Becoming a certified developer!</h3>
 
@@ -293,7 +307,8 @@ const AboutFirst = () => {
             />
           </div>
         </section>
-        {/* What next */}
+        {/* --------------------------- Future Goal --------------------------- */}
+
         <section className="about-text about-text-goals">
           <h3 className="about-text__title">What next</h3>
 
