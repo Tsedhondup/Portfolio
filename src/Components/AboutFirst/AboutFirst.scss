@@ -46,6 +46,7 @@
       background-color: $black;
       display: flex;
       flex-direction: column;
+      padding-right: $tablet-margin;
       padding-top: 150px;
     }
     @include desktop {
@@ -105,6 +106,7 @@
   padding: $mobile-margin;
   @include tablet {
     padding: 0px;
+    padding-left: $tablet-margin;
     padding-top: 150px;
   }
   @include desktop {
