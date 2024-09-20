@@ -186,15 +186,65 @@ const AboutFirst = () => {
           }}
           viewport={{ once: true, amount: 1 }}
         >
-          <h3 className="about-text__title">Earliest coding journey</h3>
+          <motion.h3
+            className="about-text__title"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                ease: "linear",
+                duration: 1.5,
+                delay: 4,
+              },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
+            Earliest coding journey
+          </motion.h3>
 
-          <p className="about-text__para">
+          <motion.p
+            className="about-text__para"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                ease: "linear",
+                duration: 1.5,
+                delay: 4.5,
+              },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
             I came across a video on YouTube about a young and successful
             self-taught software developer. As influential and inspiring as the
             video was, I was rather excited to learn coding as a hobby.
-          </p>
+          </motion.p>
           {/* Icons */}
-          <div className="about-text__icon-container about-text__icon-container-2">
+          <motion.div
+            className="about-text__icon-container about-text__icon-container-2"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                ease: "linear",
+                duration: 1.5,
+                delay: 5,
+              },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
             <FontAwesomeIcon
               icon={faLaptop}
               transform="grow-2"
@@ -210,7 +260,7 @@ const AboutFirst = () => {
               transform="grow-2"
               className="about-text__icon-container--icons about-text__icon-container--icon-coffee"
             />
-          </div>
+          </motion.div>
         </motion.section>
         {/* Becoming a certified developer! */}
         <section className="about-text about-text-certification">
