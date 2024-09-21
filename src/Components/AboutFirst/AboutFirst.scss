@@ -107,7 +107,7 @@
   padding: $mobile-margin;
   @include tablet {
     padding: 0px;
-    padding-right: $tablet-gutter;
+    padding-right: $tablet-margin;
     padding-top: 150px;
   }
   @include desktop {
@@ -120,7 +120,7 @@
   background-color: rgba(255, 255, 255, 0.5);
 
   @include tablet {
-    padding: 32px 0px;
+    padding: 32px;
     background-color: unset;
   }
   // About text content title
@@ -210,7 +210,7 @@
   border-bottom: 1px solid $pewter;
   @include tablet {
     border: unset;
-    padding-top: 0px;
+    // padding-top: 0px;
   }
 }
 .about-text-journey {
@@ -232,5 +232,6 @@
   border-bottom: 1px solid $pewter;
   @include tablet {
     border: unset;
+    margin-bottom: $tablet-margin;
   }
 }
