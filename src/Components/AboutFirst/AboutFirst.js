@@ -52,10 +52,20 @@ const AboutFirst = () => {
           About me
         </motion.h2>
         <div className="about-first__image-container--img-wrapper">
-          <img
+          <motion.img
+            className="about-first__image-container--img"
+            initial={{
+              opacity: 0,
+              x: -100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { ease: "linear", duration: 1, delay: 1.5 },
+            }}
+            viewport={{ once: true, amount: 1 }}
             src={profilePic2}
             alt="author-photo"
-            className="about-first__image-container--img"
           />
         </div>
       </div>
