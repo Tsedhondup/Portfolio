@@ -39,6 +39,9 @@ const Header = (props) => {
   }, []);
   return (
     <motion.section
+      className={`header ${props.isScroll ? props.headerClass : ""} ${
+        props.windowWitdh
+      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{
@@ -46,11 +49,9 @@ const Header = (props) => {
         delay: 4,
         ease: "easeOut",
       }}
-      className={`header ${props.isScroll ? props.headerClass : ""} ${
-        props.windowWitdh
-      }`}
     >
       <motion.nav
+        className="navigation"
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         transition={{
@@ -58,7 +59,6 @@ const Header = (props) => {
           duration: 1,
           ease: "easeOut",
         }}
-        className="navigation"
       >
         {/* Brand name */}
         <Link to="/" className="navigation__brand-name">
