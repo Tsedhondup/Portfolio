@@ -5,8 +5,10 @@
   padding: 0 $mobile-margin;
   padding-top: $mobile-margin;
   @include tablet {
+    max-width: 800px;
     padding: 0 $tablet-margin;
     padding-top: $tablet-margin;
+    margin: auto;
   }
 }
 .about-second-content {
@@ -20,12 +22,12 @@
   }
 
   @include desktop {
-    max-width: 680px;
+    max-width: 800px;
     margin: auto;
   }
   &__image-container {
     position: relative;
-    @include tablet2 {
+    @include tablet2 {  
       display: none;
     }
     &--shadow-element {

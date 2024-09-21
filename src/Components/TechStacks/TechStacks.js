@@ -19,18 +19,16 @@ const TechStacks = () => {
 
   return (
     <section className="tech-stacks">
+      {/* Mobile header */}
       <motion.h2
         initial={{
           opacity: 0,
-          y: screenWidth < 767 ? 100 : 0,
-          x: screenWidth >= 767 ? -70 : 0,
+          y: 100,
         }}
         whileInView={{
           opacity: 1,
           y: 0,
-          x: 0,
           transition: {
-            delay: screenWidth > 1280 ? 1 : 0,
             duration: 1,
             ease: "linear",
           },
@@ -40,6 +38,25 @@ const TechStacks = () => {
       >
         Primary skill sets
       </motion.h2>
+      {/* Screen Width greater than mobile witdh = 320px */}
+      {/* <motion.h2
+        initial={{
+          opacity: 0,
+          x: -70,
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            duration: 1,
+            ease: "linear",
+          },
+        }}
+        viewport={{ once: true, amount: 1 }}
+        className="tech-stacks__header-tablet"
+      >
+        Primary skill sets
+      </motion.h2> */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{

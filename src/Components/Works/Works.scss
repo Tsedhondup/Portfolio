@@ -5,13 +5,16 @@
   margin-top: 32px;
   padding-left: $mobile-margin;
   padding-right: $mobile-margin;
+  padding-bottom: 100px;
   @include tablet {
     padding-top: $tablet-margin;
     padding-left: $tablet-margin;
     padding-right: $tablet-margin;
+    max-width: 800px;
+    margin: auto;
   }
   @include desktop {
-    max-width: 1280px;
+    max-width: 1000px;
     margin: auto;
   }
 
@@ -22,7 +25,9 @@
     font-weight: 600;
     padding-top: 16px;
     @include tablet {
+      text-align: left;
       padding-top: 32px;
+      margin-bottom: $tablet-margin;
     }
   }
   &__project-content {
@@ -39,13 +44,19 @@
 .projects {
   padding: 16px 0px;
   border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: $mobile-margin;
   @include tablet {
-    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: $tablet-gutter;
+    max-width: 800px;
     margin: auto;
   }
-  @include desktop {
-    max-width: unset;
-  }
+
   // Project headers
   &__personal,
   &__collaboration {
@@ -65,89 +76,62 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: $tablet-gutter;
-    margin-bottom: 16px;
-    @include tablet {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin-bottom: 100px;
-    }
-    @include desktop {
-      margin-bottom: 150px;
-      gap: 200px;
-    }
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid $pewter;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+
     // Project images
     &--img {
       display: block;
       margin: auto;
+      max-width: 100%;
+      height: 300px;
       object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 12px 12px 12px 1px $ebony;
-      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-      transform: 1s;
+      filter: grayscale(100%);
+      // filter: brightness(50%) contrast(50%);
 
+      // border-top-left-radius: 10px;
+      // border-top-right-radius: 10px;
       @include tablet {
-        margin: unset;
-        max-width: 350px;
-        height: 450px;
+        max-width: 500px;
+        // height: 500px;
       }
-      @include desktop {
-        max-width: 450px;
-        height: 700px;
-      }
-    }
-    &--img:hover {
-      box-shadow: unset;
-      border: 1px solid $pewter;
     }
 
     // Email reader and brainflix image
-    &--email-image,
-    &--brainflix-image {
-      max-width: 400px;
-      @include tablet {
-        max-width: 550px;
-        height: 400px;
-      }
-      @include desktop {
-        max-width: 650px;
-        height: 600px;
-      }
-     
-    }
+    // &--email-image,
+    // &--brainflix-image {
+    //   max-width: 400px;
+    //   @include tablet {
+    //     max-width: 550px;
+    //     height: 400px;
+    //   }
+    //   @include desktop {
+    //     max-width: 650px;
+    //     height: 600px;
+    //   }
+    // }
 
-    // Dynamic classes based on screen size and heights
-    &--email-image-2,
-    &--brainflix-image-2 {
-      max-width: 350px;
-      height: 300px;
-    }
     // fiserv and weather app image
 
     &--fiserv-image,
     &--weather-app-image {
-      max-width: 300px;
-      height: 500px;
-  
-    }
-    &--fiserv-image-2,
-    &--weather-app-image-2 {
-      height: 350px;
+      @include tablet {
+        max-width: 300px;
+        // object-fit: cover;
+      }
     }
 
     // Projects text section
     &--text {
-      text-align: center;
-      color: $ebony;
-      @include tablet {
-        text-align: left;
-        align-items: center;
-        height: fit-content;
-      }
+      text-align: left;
+      padding: $mobile-margin;
+      border-top: 1px solid $pewter;
+      padding-bottom: 32px;
     }
 
     // project name
@@ -155,12 +139,8 @@
       color: $black;
       font-size: 16px;
       font-weight: 400;
-      text-transform: capitalize;
-      text-align: center;
-      padding: 10px 15px;
-      border-radius: 5px;
-      border: 1px solid $gray;
-      width: fit-content;
+      text-transform: uppercase;
+      padding-bottom: 16px;
       margin: auto;
       @include tablet {
         text-align: left;
@@ -171,32 +151,19 @@
         padding-bottom: 10px;
       }
     }
-    // email reader and fiserv app project name
-    &--text-email,
-    &--text-fiserv {
-     
-      @include desktop {
-      }
-    }
 
     // Project description
     &--project-description {
       font-size: 15px;
-      padding: 16px 0px;
-      // display: none;
-
+      color: $ebony;
       @include tablet {
         display: block;
         padding-top: 0px;
       }
     }
   }
-  // brainflix and weatherapp projects content
-  &__content-brainflix,
-  &__content-weather {
-    @include tablet {
-      display: flex;
-      flex-direction: row-reverse;
-    }
+  &__content:hover {
+    box-shadow: unset;
+    border: 1px solid $pewter;
   }
 }
