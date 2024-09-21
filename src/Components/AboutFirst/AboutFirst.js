@@ -24,13 +24,6 @@ const AboutFirst = () => {
   const [isBorderOne, setIsBorderOne] = useState(false);
   const [isBorderTwo, setIsBorderTwo] = useState(false);
   const [isBorderThree, setIsBorderThree] = useState(false);
-  const [isBorderFour, setIsBorderFour] = useState(false);
-  const [isBorderFive, setIsBorderFive] = useState(false);
-  const [isBorderSix, setIsBorderSix] = useState(false);
-  const [isBorderSeven, setIsBorderSeven] = useState(false);
-  const [isBorderEight, setIsBorderEight] = useState(false);
-  const [isBorderNine, setIsBorderNine] = useState(false);
-
   useEffect(() => {
     setTimeout(() => {
       setIsBorderOne(true);
@@ -46,7 +39,18 @@ const AboutFirst = () => {
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>
-        <h2 className="about-first__image-container--text">About me</h2>
+        <motion.h2
+          className="about-first__image-container--text"
+          initial={{
+            scale: 0.2,
+          }}
+          whileInView={{
+            scale: 1,
+            transition: { ease: "linear", duration: 1 },
+          }}
+        >
+          About me
+        </motion.h2>
         <div className="about-first__image-container--img-wrapper">
           <img
             src={profilePic2}
