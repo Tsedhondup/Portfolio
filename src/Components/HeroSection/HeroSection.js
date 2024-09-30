@@ -85,7 +85,7 @@ const HeroSection = (props) => {
             }}
             className="hero-content__title"
           >
-            A Front-End Developer from
+            A Full Stack Developer from
             <motion.span
               initial={{ opacity: 0, x: screenWidth >= 950 ? -60 : 60 }}
               animate={{ opacity: 1, x: 0 }}
