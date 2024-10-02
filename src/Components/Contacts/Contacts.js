@@ -3,7 +3,7 @@ import {
   faMobileScreenButton,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { motion } from "framer-motion";
 import "./Contacts.scss";
 const Contacts = (props) => {
   return (
@@ -12,7 +12,27 @@ const Contacts = (props) => {
         props.isHomePage ? "contact-home" : "contact-about"
       } contacts`}
     >
-      <h2 className="contacts__header">Contact me</h2>
+      <motion.h2
+        className="contacts__header"
+        initial={{
+          opacity: 0,
+          borderBottom: "1px solid rgba(0,0,0,0)",
+        }}
+        whileInView={{
+          opacity: 1,
+          borderBottom: "1px solid #d6d6d6",
+
+          transition: {
+            ease: "linear",
+            duration: 1,
+            delay: 1,
+            borderBottom: { duration: 1.5, delay: 1.5 },
+          },
+        }}
+        viewport={{ once: true, amount: 1 }}
+      >
+        Contact me
+      </motion.h2>
       <div className="phone-email">
         <div className="phone-email__phone-container">
           <a

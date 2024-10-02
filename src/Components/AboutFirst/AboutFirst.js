@@ -101,7 +101,6 @@ const AboutFirst = () => {
             borderTop: "1px solid #8c8c8c",
             borderLeft: "1px solid #8c8c8c",
             borderBottom: "1px solid #8c8c8c",
-            // borderBottom: renderBorderOne(),
             transition: {
               duration: 1.5,
               ease: "linear",
