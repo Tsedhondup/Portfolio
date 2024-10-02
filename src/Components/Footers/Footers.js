@@ -174,19 +174,51 @@ const Footers = () => {
       </div>
 
       <div className="location-copyright">
-        <h3 className="location-copyright__copyright">
+        <motion.h3
+          className="location-copyright__copyright"
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              ease: "linear",
+              duration: 1.5,
+              delay: 5,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <FontAwesomeIcon
             icon={faCopyright}
             transform="shrink-1"
             className="location-copyright__copyright--icon"
           />
           <span> 2024</span>
-        </h3>
+        </motion.h3>
 
-        <h3 className="location-copyright__location">
+        <motion.h3
+          className="location-copyright__location"
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              ease: "linear",
+              duration: 1.5,
+              delay: 5,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <span className="location-copyright__location--name"> Toronto</span>
           <FontAwesomeIcon icon={faGlobeAmericas} />
-        </h3>
+        </motion.h3>
       </div>
     </footer>
   );
