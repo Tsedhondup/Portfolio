@@ -56,31 +56,41 @@ const Footers = () => {
         </motion.h3>
       </div>
       <div className="socials">
-        <FontAwesomeIcon
-          icon={faLinkedin}
-          transform="grow-6"
-          className="socials__icon"
-        />
-        <FontAwesomeIcon
-          icon={faGithub}
-          transform="grow-6"
-          className="socials__icon"
-        />
-        <FontAwesomeIcon
-          icon={faXTwitter}
-          transform="grow-6"
-          className="socials__icon"
-        />
-        <FontAwesomeIcon
-          icon={faFacebook}
-          transform="grow-6"
-          className="socials__icon"
-        />
-        <FontAwesomeIcon
-          icon={faInstagram}
-          transform="grow-6"
-          className="socials__icon"
-        />
+        <span className="socials__container">
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            transform="grow-6"
+            className="socials__container--icon"
+          />
+        </span>
+        <span className="socials__container">
+          <FontAwesomeIcon
+            icon={faGithub}
+            transform="grow-6"
+            className="socials__container--icon"
+          />
+        </span>
+        <span className="socials__container">
+          <FontAwesomeIcon
+            icon={faXTwitter}
+            transform="grow-6"
+            className="socials__container--icon"
+          />
+        </span>
+        <span className="socials__container">
+          <FontAwesomeIcon
+            icon={faFacebook}
+            transform="grow-6"
+            className="socials__container--icon"
+          />
+        </span>
+        <span className="socials__container">
+          <FontAwesomeIcon
+            icon={faInstagram}
+            transform="grow-6"
+            className="socials__container--icon"
+          />
+        </span>
       </div>
 
       <div className="location-copyright">
