@@ -7,7 +7,11 @@ import {
 import "./Contacts.scss";
 const Contacts = (props) => {
   return (
-    <section className={`${props.isHomePage ? "contact-home" : ""} contacts`}>
+    <section
+      className={`${
+        props.isHomePage ? "contact-home" : "contact-about"
+      } contacts`}
+    >
       <h2 className="contacts__header">Contact me</h2>
       <div className="phone-email">
         <div className="phone-email__phone-container">

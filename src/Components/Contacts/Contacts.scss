@@ -2,7 +2,6 @@
 @import "../../styles/partials/_variables";
 
 .contacts {
-  background-image: url("../../assets/image/contact_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -36,6 +35,12 @@
     z-index: 15;
     border-bottom: 1px solid $pewter;
   }
+}
+.contact-home {
+  background-image: url("../../assets/image/contact-back-image-home.jpg");
+}
+.contact-about {
+  background-image: url("../../assets/image/contact-back-image-about.jpg");
 }
 .phone-email {
   position: relative;
