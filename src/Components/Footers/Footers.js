@@ -27,15 +27,33 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 0.5,
-              border: { delay: 2, duration: 1.5 },
+              delay: 3,
+              border: { delay: 3.5, duration: 1.5 },
             },
           }}
           viewport={{ once: true, amount: 1 }}
         >
           Designed and Built by
         </motion.h3>
-        <motion.h3 className="author__name">Tsering Dhondup</motion.h3>
+        <motion.h3
+          className="author__name"
+          initial={{
+            opacity: 0,
+            scale: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            transition: {
+              ease: "linear",
+              duration: 1,
+              delay: 4,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
+          Tsering Dhondup
+        </motion.h3>
       </div>
       <div className="socials">
         <FontAwesomeIcon
