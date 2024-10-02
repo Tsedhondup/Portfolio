@@ -8,13 +8,34 @@ import {
   faFacebook,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 import "./Footers.scss";
 const Footers = () => {
   return (
     <footer className="footer">
       <div className="author">
-        <h3 className="author__statement">Designed and Built by </h3>
-        <h3 className="author__name">Tsering Dhondup</h3>
+        <motion.h3
+          className="author__statement"
+          initial={{
+            opacity: 0,
+            borderBottom: "1px solid rgba(0,0,0,0)",
+          }}
+          whileInView={{
+            opacity: 1,
+            borderBottom: "1px solid #d6d6d6",
+
+            transition: {
+              ease: "linear",
+              duration: 1.5,
+              delay: 0.5,
+              border: { delay: 2, duration: 1.5 },
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
+          Designed and Built by
+        </motion.h3>
+        <motion.h3 className="author__name">Tsering Dhondup</motion.h3>
       </div>
       <div className="socials">
         <FontAwesomeIcon

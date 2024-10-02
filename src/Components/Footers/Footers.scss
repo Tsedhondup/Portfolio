@@ -56,6 +56,9 @@
     font-weight: 300;
     border-bottom: 1px solid $pewter;
     padding-bottom: $mobile-margin;
+    &--word {
+      padding-right: 4px;
+    }
   }
 
   &__name {
