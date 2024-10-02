@@ -56,41 +56,121 @@ const Footers = () => {
         </motion.h3>
       </div>
       <div className="socials">
-        <span className="socials__container">
+        <motion.span
+          className="socials__container"
+          initial={{
+            opacity: 0,
+            x: -60,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              ease: "linear",
+              duration: 1.5,
+              delay: 4.5,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <FontAwesomeIcon
             icon={faLinkedin}
             transform="grow-6"
             className="socials__container--icon"
           />
-        </span>
-        <span className="socials__container">
+        </motion.span>
+        <motion.span
+          className="socials__container"
+          initial={{
+            opacity: 0,
+            y: -60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              ease: "linear",
+              duration: 1.5,
+              delay: 4.5,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <FontAwesomeIcon
             icon={faGithub}
             transform="grow-6"
             className="socials__container--icon"
           />
-        </span>
-        <span className="socials__container">
+        </motion.span>
+        <motion.span
+          className="socials__container"
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              ease: "linear",
+              duration: 1.5,
+              delay: 4.5,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <FontAwesomeIcon
             icon={faXTwitter}
             transform="grow-6"
             className="socials__container--icon"
           />
-        </span>
-        <span className="socials__container">
+        </motion.span>
+        <motion.span
+          className="socials__container"
+          initial={{
+            opacity: 0,
+            y: -60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              ease: "linear",
+              duration: 1.5,
+              delay: 4.5,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <FontAwesomeIcon
             icon={faFacebook}
             transform="grow-6"
             className="socials__container--icon"
           />
-        </span>
-        <span className="socials__container">
+        </motion.span>
+        <motion.span
+          className="socials__container"
+          initial={{
+            opacity: 0,
+            x: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              ease: "linear",
+              duration: 1.5,
+              delay: 4.5,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
           <FontAwesomeIcon
             icon={faInstagram}
             transform="grow-6"
             className="socials__container--icon"
           />
-        </span>
+        </motion.span>
       </div>
 
       <div className="location-copyright">
