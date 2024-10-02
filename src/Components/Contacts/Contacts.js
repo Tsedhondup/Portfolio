@@ -35,19 +35,39 @@ const Contacts = (props) => {
       </motion.h2>
       <div className="phone-email">
         <div className="phone-email__phone-container">
-          <a
+          <motion.a
             href="tel:+1437245778"
             className="phone-email__phone-container--text"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              transition: { ease: "linear", duration: 1.5, delay: 2 },
+            }}
+            viewport={{ once: true, amount: 1 }}
           >
             call
-          </a>
-          <a href="tel:+1437245778">
+          </motion.a>
+          <motion.a
+            href="tel:+1437245778"
+            initial={{
+              x: 60,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+              transition: { ease: "linear", duration: 1, delay: 2.5 },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
             <FontAwesomeIcon
               icon={faMobileScreenButton}
               transform="grow-10"
               className="phone-email__phone-container--icon"
             />
-          </a>
+          </motion.a>
           {/* Icons for tablet */}
           <a
             href="tel:+1437245778"
