@@ -37,11 +37,20 @@ const AboutFirst = () => {
     }, 9500);
   }, []);
 
+  // Event handler
+  const handlePopUpClass = () => {
+    setPopUpHideClass("about-first__pop-up-hide");
+  };
   return (
     <section className="about-first">
       <div className={`about-first__pop-up ${popUpHideClass}`}>
         <p className="about-first__pop-up--text">page under maintanance!</p>
-        <button className="about-first__pop-up--button">close</button>
+        <button
+          className="about-first__pop-up--button"
+          onClick={handlePopUpClass}
+        >
+          close
+        </button>
       </div>
       <div className="about-first__image-container" ref={refElement}>
         {/* --------------------------- About Desktop header --------------------------- */}
