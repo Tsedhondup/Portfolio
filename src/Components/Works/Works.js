@@ -37,9 +37,9 @@ const Works = () => {
             <motion.h2 className="projects__content--project-name projects__content--text-email">
               Personal Email Reader
             </motion.h2>
-            <motion.p className="projects__content--project-description">
-              App for fetching reading email from mail server
-            </motion.p>
+            {/* <motion.p className="projects__content--project-description">
+              App for fetching and reading email from mail server
+            </motion.p> */}
           </div>
         </div>
 
@@ -60,9 +60,9 @@ const Works = () => {
             <motion.h2 className="projects__content--project-name">
               BrainFlix
             </motion.h2>
-            <motion.p className="projects__content--project-description">
-              Video streaming website built on React and Node
-            </motion.p>
+            {/* <motion.p className="projects__content--project-description">
+              Video streaming demo website
+            </motion.p> */}
           </div>
         </div>
         {/* Collab */}
@@ -84,9 +84,9 @@ const Works = () => {
             <motion.h2 className="projects__content--project-name projects__content--text-fiserv">
               Restaurent App UI
             </motion.h2>
-            <motion.p className="projects__content--project-description">
-              Restaurent App UI built on React, Node and MySQL
-            </motion.p>
+            {/* <motion.p className="projects__content--project-description">
+              Restaurent App UI
+            </motion.p> */}
           </div>
         </div>
         <div className="projects__content projects__content-weather">
@@ -106,9 +106,9 @@ const Works = () => {
             <motion.h2 className="projects__content--project-name">
               Weather App
             </motion.h2>
-            <motion.p className="projects__content--project-description">
-              Weather App built on React using free weather API
-            </motion.p>
+            {/* <motion.p className="projects__content--project-description">
+              Weather App built
+            </motion.p> */}
           </div>
         </div>
       </section>

@@ -56,7 +56,9 @@ const Footers = () => {
         </motion.h3>
       </div>
       <div className="socials">
-        <motion.span
+        <motion.a
+          href="https://www.linkedin.com/in/tseringdhondup/"
+          target="_blank"
           className="socials__container"
           initial={{
             opacity: 0,
@@ -78,8 +80,8 @@ const Footers = () => {
             transform="grow-6"
             className="socials__container--icon"
           />
-        </motion.span>
-        <motion.span
+        </motion.a>
+        <motion.a
           className="socials__container"
           initial={{
             opacity: 0,
@@ -101,7 +103,7 @@ const Footers = () => {
             transform="grow-6"
             className="socials__container--icon"
           />
-        </motion.span>
+        </motion.a>
         <motion.span
           className="socials__container"
           initial={{
