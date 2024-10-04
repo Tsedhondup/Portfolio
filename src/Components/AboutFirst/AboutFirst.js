@@ -38,6 +38,9 @@ const AboutFirst = () => {
 
   return (
     <section className="about-first">
+      <div className="about-frist__pop-up">
+        <p>page under maintanance</p>
+      </div>
       <div className="about-first__image-container" ref={refElement}>
         {/* --------------------------- About Desktop header --------------------------- */}
         <motion.h2
@@ -111,7 +114,7 @@ const AboutFirst = () => {
           }}
           viewport={{ once: true, amount: 1 }}
         >
-          <motion.h2
+          {/* <motion.h2
             className="about-text__title"
             initial={{
               opacity: 0,
@@ -128,8 +131,8 @@ const AboutFirst = () => {
             viewport={{ once: true, amount: 1 }}
           >
             Education
-          </motion.h2>
-
+          </motion.h2> */}
+          {/* 
           <motion.p
             className="about-text__para"
             initial={{
@@ -147,7 +150,7 @@ const AboutFirst = () => {
             viewport={{ once: true, amount: 1 }}
           >
             First division botany graduates from University of Delhi
-          </motion.p>
+          </motion.p> */}
           {/* Icons */}
           <motion.div
             className="about-text__icon-container"
@@ -205,7 +208,7 @@ const AboutFirst = () => {
           }
           viewport={{ once: true, amount: 1 }}
         >
-          <motion.h3
+          {/* <motion.h3
             className="about-text__title"
             initial={{
               opacity: 0,
@@ -227,9 +230,9 @@ const AboutFirst = () => {
             viewport={{ once: true, amount: 1 }}
           >
             Earliest coding journey
-          </motion.h3>
+          </motion.h3> */}
 
-          <motion.p
+          {/* <motion.p
             className="about-text__para"
             initial={{
               opacity: 0,
@@ -253,7 +256,7 @@ const AboutFirst = () => {
             I came across a video on YouTube about a young and successful
             self-taught software developer. As influential and inspiring as the
             video was, I was rather excited to learn coding as a hobby.
-          </motion.p>
+          </motion.p> */}
           {/* Icons */}
           <motion.div
             className="about-text__icon-container about-text__icon-container-2"
@@ -316,7 +319,7 @@ const AboutFirst = () => {
           }
           viewport={{ once: true, amount: 1 }}
         >
-          <motion.h3
+          {/* <motion.h3
             className="about-text__title"
             initial={{
               opacity: 0,
@@ -338,9 +341,9 @@ const AboutFirst = () => {
             viewport={{ once: true, amount: 1 }}
           >
             Becoming a certified developer!
-          </motion.h3>
+          </motion.h3> */}
 
-          <motion.p
+          {/* <motion.p
             className="about-text__para"
             initial={{
               opacity: 0,
@@ -367,7 +370,7 @@ const AboutFirst = () => {
             in honing my skills tailored to professional requirements was vital.
             I take pride in investing time and resources in joining the Software
             Engineering Boot Camp at BrainStation, Toronto'
-          </motion.p>
+          </motion.p> */}
           {/* Icons */}
           <motion.div
             className="about-text__icon-container "
@@ -430,7 +433,7 @@ const AboutFirst = () => {
           }
           viewport={{ once: true, amount: 1 }}
         >
-          <motion.h3
+          {/* <motion.h3
             className="about-text__title"
             initial={{
               opacity: 0,
@@ -452,9 +455,9 @@ const AboutFirst = () => {
             viewport={{ once: true, amount: 1 }}
           >
             What next
-          </motion.h3>
+          </motion.h3> */}
 
-          <motion.p
+          {/* <motion.p
             className="about-text__para"
             initial={{
               opacity: 0,
@@ -480,7 +483,7 @@ const AboutFirst = () => {
             continuously improve my knowledge through advanced courses,
             certifications, and hands-on projects. My long-term goal is to grow
             into a senior developer role and mentor others.
-          </motion.p>
+          </motion.p> */}
           {/* Icons */}
           <motion.div
             className="about-text__icon-container about-text__icon-container-4"
