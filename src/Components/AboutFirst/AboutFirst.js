@@ -44,7 +44,7 @@ const AboutFirst = () => {
   return (
     <section className="about-first">
       <div className={`about-first__pop-up ${popUpHideClass}`}>
-        <p className="about-first__pop-up--text">page under maintanance!</p>
+        <p className="about-first__pop-up--text">page under maintanance !!</p>
         <button
           className="about-first__pop-up--button"
           onClick={handlePopUpClass}
