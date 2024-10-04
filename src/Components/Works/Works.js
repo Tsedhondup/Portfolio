@@ -13,7 +13,6 @@ const Works = () => {
   return (
     <section className="project-container">
       <motion.h2
-        // initial={{ opacity: 0, y: 100 }}
         className="project-container__title"
       >
         Projects
