@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 import {
   faCode,
@@ -44,13 +44,45 @@ const AboutFirst = () => {
   return (
     <section className="about-first">
       <div className={`about-first__pop-up ${popUpHideClass}`}>
-        <p className="about-first__pop-up--text">page under maintanance !!</p>
-        <button
+        <motion.p
+          className="about-first__pop-up--text"
+          initial={{
+            opacity: 0,
+            y: -60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              ease: "linear",
+              duration: 1,
+              delay: 1,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+        >
+          page under maintanance !!
+        </motion.p>
+        <motion.button
           className="about-first__pop-up--button"
           onClick={handlePopUpClass}
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              ease: "linear",
+              duration: 1,
+              delay: 1,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
         >
           close
-        </button>
+        </motion.button>
       </div>
       <div className="about-first__image-container" ref={refElement}>
         {/* --------------------------- About Desktop header --------------------------- */}
