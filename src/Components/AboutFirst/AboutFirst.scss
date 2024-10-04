@@ -57,6 +57,9 @@
       text-transform: uppercase;
     }
   }
+  &__pop-up-hide {
+    display: none;
+  }
 
   // About header for mobile view
   &__mobile-header {

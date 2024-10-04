@@ -24,6 +24,7 @@ const AboutFirst = () => {
   const [isBorderOne, setIsBorderOne] = useState(false);
   const [isBorderTwo, setIsBorderTwo] = useState(false);
   const [isBorderThree, setIsBorderThree] = useState(false);
+  const [popUpHideClass, setPopUpHideClass] = useState("");
   useEffect(() => {
     setTimeout(() => {
       setIsBorderOne(true);
@@ -38,7 +39,7 @@ const AboutFirst = () => {
 
   return (
     <section className="about-first">
-      <div className="about-first__pop-up">
+      <div className={`about-first__pop-up ${popUpHideClass}`}>
         <p className="about-first__pop-up--text">page under maintanance!</p>
         <button className="about-first__pop-up--button">close</button>
       </div>
