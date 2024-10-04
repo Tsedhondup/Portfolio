@@ -38,8 +38,9 @@ const AboutFirst = () => {
 
   return (
     <section className="about-first">
-      <div className="about-frist__pop-up">
-        <p>page under maintanance</p>
+      <div className="about-first__pop-up">
+        <p className="about-first__pop-up--text">page under maintanance!</p>
+        <button className="about-first__pop-up--button">close</button>
       </div>
       <div className="about-first__image-container" ref={refElement}>
         {/* --------------------------- About Desktop header --------------------------- */}
