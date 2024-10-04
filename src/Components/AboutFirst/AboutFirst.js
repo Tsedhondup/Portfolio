@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import {
   faCode,
