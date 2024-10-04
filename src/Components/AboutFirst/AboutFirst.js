@@ -39,6 +39,7 @@ const AboutFirst = () => {
   return (
     <section className="about-first">
       <div className="about-first__image-container" ref={refElement}>
+        {/* --------------------------- About Desktop header --------------------------- */}
         <motion.h2
           className="about-first__image-container--text"
           initial={{
@@ -71,6 +72,7 @@ const AboutFirst = () => {
       </div>
 
       <section className="about-text-container">
+        {/* --------------------------- About Mobile header --------------------------- */}
         <motion.h2
           className="about-first__mobile-header"
           initial={{
@@ -99,7 +101,6 @@ const AboutFirst = () => {
             borderTop: "1px solid #8c8c8c",
             borderLeft: "1px solid #8c8c8c",
             borderBottom: "1px solid #8c8c8c",
-            // borderBottom: renderBorderOne(),
             transition: {
               duration: 1.5,
               ease: "linear",

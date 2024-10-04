@@ -17,7 +17,7 @@ const HomePage = () => {
       <AboutSecond />
       <TechStacks />
       <Works />
-      <Contacts />
+      <Contacts isHomePage={true} />
     </>
   );
 };
