@@ -191,7 +191,11 @@ const AboutFirst = () => {
             }}
             viewport={{ once: true, amount: 1 }}
           >
-            First division botany graduates from University of Delhi
+            As a botany graduate from the University of Delhi, my background in
+            scientific inquiry has inspired me to make a career transition into
+            tech, specializing in web development. I am excited to leverage my
+            skills in web development, building meaningful, responsive, and
+            user-centric web applications.
           </motion.p>
           {/* Icons */}
           <motion.div
@@ -297,7 +301,7 @@ const AboutFirst = () => {
           >
             I came across a video on YouTube about a young and successful
             self-taught software developer. As influential and inspiring as the
-            video was, I was rather excited to learn coding as a hobby.
+            video was, I was excited to learn coding as a hobby.
           </motion.p>
 
           {/* Icons */}
@@ -407,12 +411,11 @@ const AboutFirst = () => {
             }
             viewport={{ once: true, amount: 1 }}
           >
-            Teaching myself to code was of great success, and it continues to be
-            my greatest strength in keeping up with ever-changing technologies
-            that are paramount. However, the need for a proper mentor to assist
-            in honing my skills tailored to professional requirements was vital.
-            I take pride in investing time and resources in joining the Software
-            Engineering Boot Camp at BrainStation, Toronto'
+            My greatest strength comes from my self-learning ability. However,
+            the need for a proper mentor to assist in honing my skills tailored
+            to professional requirements was vital. I have committed time and
+            resources to becoming a certified web developer by enrolling at
+            BrainStation's Software Engineering Boot Camp in Toronto.
           </motion.p>
 
           {/* Icons */}
@@ -522,11 +525,15 @@ const AboutFirst = () => {
             }
             viewport={{ once: true, amount: 1 }}
           >
-            As a full-stack developer, I aim to secure a role in a dynamic tech
-            company to enhance my skills in modern frameworks. I plan to
-            continuously improve my knowledge through advanced courses,
-            certifications, and hands-on projects. My long-term goal is to grow
-            into a senior developer role and mentor others.
+            As a full-stack web developer, I intend to master both front-end and
+            back-end technologies by polishing my reach in designing and
+            developing user-friendly and scalable web applications. I aim to
+            continuously improve my coding skills, ensure seamless user
+            experiences, and contribute to innovative projects that solve
+            real-world problems. Furthermore, I aspire to stay updated with
+            industry trends, adopt best practices, and collaborate effectively
+            with cross-functional teams to deliver high-quality, secure, and
+            efficient web solutions that meet both user and business needs.
           </motion.p>
 
           {/* Icons */}
