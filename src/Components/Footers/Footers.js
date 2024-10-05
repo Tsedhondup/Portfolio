@@ -82,6 +82,8 @@ const Footers = () => {
           />
         </motion.a>
         <motion.a
+          href="https://github.com/Tsedhondup"
+          target="_blank"
           className="socials__container"
           initial={{
             opacity: 0,
@@ -104,7 +106,9 @@ const Footers = () => {
             className="socials__container--icon"
           />
         </motion.a>
-        <motion.span
+        <motion.a
+          href="https://x.com/TYDdhondup"
+          target="_blank"
           className="socials__container"
           initial={{
             opacity: 0,
@@ -126,8 +130,10 @@ const Footers = () => {
             transform="grow-6"
             className="socials__container--icon"
           />
-        </motion.span>
-        <motion.span
+        </motion.a>
+        <motion.a
+          href="https://www.facebook.com/share/wyRkNHrAqNbMECCS/?mibextid=LQQJ4d"
+          target="_blank"
           className="socials__container"
           initial={{
             opacity: 0,
@@ -149,8 +155,10 @@ const Footers = () => {
             transform="grow-6"
             className="socials__container--icon"
           />
-        </motion.span>
-        <motion.span
+        </motion.a>
+        <motion.a
+          href="https://www.instagram.com/dhonduptyd/profilecard/?igsh=cG01NzY3dGVzdTlk"
+          target="_blank"
           className="socials__container"
           initial={{
             opacity: 0,
@@ -172,7 +180,7 @@ const Footers = () => {
             transform="grow-6"
             className="socials__container--icon"
           />
-        </motion.span>
+        </motion.a>
       </div>
 
       <div className="location-copyright">
