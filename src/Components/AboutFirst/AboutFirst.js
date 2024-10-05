@@ -43,7 +43,7 @@ const AboutFirst = () => {
   };
   return (
     <section className="about-first">
-      <div className={`about-first__pop-up ${popUpHideClass}`}>
+      {/* <div className={`about-first__pop-up ${popUpHideClass}`}>
         <motion.p
           className="about-first__pop-up--text"
           initial={{
@@ -83,7 +83,7 @@ const AboutFirst = () => {
         >
           close
         </motion.button>
-      </div>
+      </div> */}
       <div className="about-first__image-container" ref={refElement}>
         {/* --------------------------- About Desktop header --------------------------- */}
         <motion.h2
@@ -157,6 +157,42 @@ const AboutFirst = () => {
           }}
           viewport={{ once: true, amount: 1 }}
         >
+          <motion.h2
+            className="about-text__title"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1,
+                delay: 1.5,
+              },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
+            Education
+          </motion.h2>{" "}
+          <motion.p
+            className="about-text__para"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1,
+                delay: 2,
+              },
+            }}
+            viewport={{ once: true, amount: 1 }}
+          >
+            First division botany graduates from University of Delhi
+          </motion.p>
           {/* Icons */}
           <motion.div
             className="about-text__icon-container"
@@ -214,6 +250,56 @@ const AboutFirst = () => {
           }
           viewport={{ once: true, amount: 1 }}
         >
+          <motion.h3
+            className="about-text__title"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderOne
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 0.5,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
+            Earliest coding journey
+          </motion.h3>
+
+          <motion.p
+            className="about-text__para"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderOne
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
+            I came across a video on YouTube about a young and successful
+            self-taught software developer. As influential and inspiring as the
+            video was, I was rather excited to learn coding as a hobby.
+          </motion.p>
+
           {/* Icons */}
           <motion.div
             className="about-text__icon-container about-text__icon-container-2"
@@ -276,6 +362,59 @@ const AboutFirst = () => {
           }
           viewport={{ once: true, amount: 1 }}
         >
+          <motion.h3
+            className="about-text__title"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderTwo
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
+            Becoming a certified developer!
+          </motion.h3>
+
+          <motion.p
+            className="about-text__para"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderTwo
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1.5,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
+            Teaching myself to code was of great success, and it continues to be
+            my greatest strength in keeping up with ever-changing technologies
+            that are paramount. However, the need for a proper mentor to assist
+            in honing my skills tailored to professional requirements was vital.
+            I take pride in investing time and resources in joining the Software
+            Engineering Boot Camp at BrainStation, Toronto'
+          </motion.p>
+
           {/* Icons */}
           <motion.div
             className="about-text__icon-container "
@@ -338,6 +477,58 @@ const AboutFirst = () => {
           }
           viewport={{ once: true, amount: 1 }}
         >
+          <motion.h3
+            className="about-text__title"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderThree
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 0.5,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
+            What next
+          </motion.h3>
+
+          <motion.p
+            className="about-text__para"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={
+              isBorderThree
+                ? {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      ease: "linear",
+                      duration: 1,
+                      delay: 1,
+                    },
+                  }
+                : { opacity: 0 }
+            }
+            viewport={{ once: true, amount: 1 }}
+          >
+            As a full-stack developer, I aim to secure a role in a dynamic tech
+            company to enhance my skills in modern frameworks. I plan to
+            continuously improve my knowledge through advanced courses,
+            certifications, and hands-on projects. My long-term goal is to grow
+            into a senior developer role and mentor others.
+          </motion.p>
+
           {/* Icons */}
           <motion.div
             className="about-text__icon-container about-text__icon-container-4"
