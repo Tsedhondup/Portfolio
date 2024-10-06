@@ -24,7 +24,7 @@ const AboutFirst = () => {
   const [isBorderOne, setIsBorderOne] = useState(false);
   const [isBorderTwo, setIsBorderTwo] = useState(false);
   const [isBorderThree, setIsBorderThree] = useState(false);
-  const [popUpHideClass, setPopUpHideClass] = useState("");
+  // const [popUpHideClass, setPopUpHideClass] = useState("");
   useEffect(() => {
     setTimeout(() => {
       setIsBorderOne(true);
@@ -38,9 +38,9 @@ const AboutFirst = () => {
   }, []);
 
   // Event handler
-  const handlePopUpClass = () => {
-    setPopUpHideClass("about-first__pop-up-hide");
-  };
+  // const handlePopUpClass = () => {
+  //   setPopUpHideClass("about-first__pop-up-hide");
+  // };
   return (
     <section className="about-first">
       {/* <div className={`about-first__pop-up ${popUpHideClass}`}>
