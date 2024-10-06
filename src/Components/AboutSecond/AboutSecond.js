@@ -40,12 +40,12 @@ const AboutSecond = () => {
           viewport={{ once: true, amount: 1 }}
           className="about-second-content__texts"
         >
-          " Botany graduate with a background in plant science, now transitioning
-          into the tech industry as a full-stack web developer. I am passionate
-          about creating responsive, user-centric web applications and
-          leveraging technology to develop innovative digital solutions. "
+          " Botany graduate with a background in plant science, now
+          transitioning into the tech industry as a full-stack web developer. I
+          am passionate about creating responsive, user-centric web applications
+          and leveraging technology to develop innovative digital solutions. "
           <Link to="/About" className="about-second-content__link">
-            Read more
+            Read more...
           </Link>
         </motion.p>
       </section>
