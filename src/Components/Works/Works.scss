@@ -92,37 +92,9 @@
       height: 300px;
       object-fit: cover;
       filter: grayscale(100%);
-      // filter: brightness(50%) contrast(50%);
 
-      // border-top-left-radius: 10px;
-      // border-top-right-radius: 10px;
       @include tablet {
         max-width: 500px;
-        // height: 500px;
-      }
-    }
-
-    // Email reader and brainflix image
-    // &--email-image,
-    // &--brainflix-image {
-    //   max-width: 400px;
-    //   @include tablet {
-    //     max-width: 550px;
-    //     height: 400px;
-    //   }
-    //   @include desktop {
-    //     max-width: 650px;
-    //     height: 600px;
-    //   }
-    // }
-
-    // fiserv and weather app image
-
-    &--fiserv-image,
-    &--weather-app-image {
-      @include tablet {
-        max-width: 300px;
-        // object-fit: cover;
       }
     }
 
