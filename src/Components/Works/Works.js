@@ -12,30 +12,6 @@ const Works = () => {
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
       <section className="projects">
-        {/* Personal */}
-        <div className="projects__content projects__content-portfolio">
-          <motion.img
-            initial={{ filter: "grayScale(100)", opacity: 0 }}
-            whileInView={{
-              filter: "grayScale(0)",
-              opacity: 1,
-              transition: { duration: 1, ease: "linear" },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            src={portfolio}
-            alt="portfolio-website-image"
-            className="projects__content--img projects__content--portfolio-image "
-          />
-          <div className="projects__content--text projects__content--text-portfolio">
-            <motion.h2 className="projects__content--project-name">
-              portfolio
-            </motion.h2>
-            <motion.p className="projects__content--project-description">
-              My Portfolio website deployed on Netlify, was primarily built on
-              ReactJs with real-time data provided by a Node server.
-            </motion.p>
-          </div>
-        </div>
         <div className="projects__content projects__content-email-reader">
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
@@ -60,7 +36,29 @@ const Works = () => {
             </motion.p>
           </div>
         </div>
-
+        <div className="projects__content projects__content-portfolio">
+          <motion.img
+            initial={{ filter: "grayScale(100)", opacity: 0 }}
+            whileInView={{
+              filter: "grayScale(0)",
+              opacity: 1,
+              transition: { duration: 1, ease: "linear" },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+            src={portfolio}
+            alt="portfolio-website-image"
+            className="projects__content--img projects__content--portfolio-image "
+          />
+          <div className="projects__content--text projects__content--text-portfolio">
+            <motion.h2 className="projects__content--project-name">
+              portfolio
+            </motion.h2>
+            <motion.p className="projects__content--project-description">
+              My Portfolio website deployed on Netlify, was primarily built on
+              ReactJs with real-time data provided by a Node server.
+            </motion.p>
+          </div>
+        </div>
         <div className="projects__content projects__content-brainflix">
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
