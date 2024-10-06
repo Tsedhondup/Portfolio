@@ -2,10 +2,7 @@ import { motion } from "framer-motion";
 import portfolio from "../../assets/image/portfolio.jpg";
 import brainflix from "../../assets/image/brainflix.jpg";
 import jobTracker from "../../assets/image/job-tracker.jpg";
-import weatherApp from "../../assets/image/weather-app.jpg";
-import fiserv from "../../assets/image/fiserv.jpg";
 import { useState } from "react";
-
 import "./Works.scss";
 const Works = () => {
   // eslint-disable-next-line no-unused-vars
