@@ -30,12 +30,12 @@ const Works = () => {
             <motion.h2 className="projects__content--project-name">
               portfolio
             </motion.h2>
-            {/* <motion.p className="projects__content--project-description">
-              Weather App built
-            </motion.p> */}
+            <motion.p className="projects__content--project-description">
+              My Portfolio website deployed on Netlify, was primarily built on
+              ReactJs with real-time data provided by a Node server.
+            </motion.p>
           </div>
         </div>
-        {/* <motion.h2 className="projects__personal">Personal works</motion.h2> */}
         <div className="projects__content projects__content-email-reader">
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
@@ -53,9 +53,11 @@ const Works = () => {
             <motion.h2 className="projects__content--project-name projects__content--text-email">
               Personal Email Reader
             </motion.h2>
-            {/* <motion.p className="projects__content--project-description">
-              App for fetching and reading email from mail server
-            </motion.p> */}
+            <motion.p className="projects__content--project-description">
+              Full-stack web application built on ReactJS that reads, and
+              fetches emails from the Gmail mail server using IMAP and stores
+              them in MySQL database.
+            </motion.p>
           </div>
         </div>
 
@@ -76,9 +78,11 @@ const Works = () => {
             <motion.h2 className="projects__content--project-name">
               BrainFlix
             </motion.h2>
-            {/* <motion.p className="projects__content--project-description">
-              Video streaming demo website
-            </motion.p> */}
+            <motion.p className="projects__content--project-description">
+              Showcasing my web developing skills, a React video streaming web
+              application connected to the backend server via RESTful API
+              developed using Express.js in Node js.
+            </motion.p>
           </div>
         </div>
       </section>
