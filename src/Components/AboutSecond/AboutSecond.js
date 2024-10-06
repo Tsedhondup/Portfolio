@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import profileImage from "../../assets/image/tsering.png";
@@ -40,11 +40,12 @@ const AboutSecond = () => {
           viewport={{ once: true, amount: 1 }}
           className="about-second-content__texts"
         >
-          "I bring your designs to life by developing them into fully functional
-          websites. With attention to detail, I ensure each site is responsive
-          and user-friendly."
+          " Botany graduate with a background in plant science, now
+          transitioning into the tech industry as a full-stack web developer. I
+          am passionate about creating responsive, user-centric web applications
+          and leveraging technology to develop innovative digital solutions. "
           <Link to="/About" className="about-second-content__link">
-            Read more
+            Read more...
           </Link>
         </motion.p>
       </section>

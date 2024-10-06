@@ -27,7 +27,7 @@
   }
   &__image-container {
     position: relative;
-    @include tablet2 {  
+    @include tablet2 {
       display: none;
     }
     &--shadow-element {
@@ -77,9 +77,10 @@
     // Media queries[][]
     @include tablet {
       text-align: left;
+      font-size: 18px;
     }
     @include tablet2 {
-      font-size: 16px;
+      font-size: 24px;
       text-align: center;
     }
   }
