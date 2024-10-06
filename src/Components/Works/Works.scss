@@ -57,21 +57,6 @@
     margin: auto;
   }
 
-  // Project headers
-  &__personal,
-  &__collaboration {
-    color: $ebony;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 10px;
-    margin: auto;
-    margin-bottom: 16px;
-    @include tablet {
-      text-align: left;
-    }
-  }
   // Project items
   &__content {
     display: grid;
@@ -79,6 +64,7 @@
     max-width: 400px;
     margin: auto;
     border: 1px solid $pewter;
+    border-radius: 4px;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
       0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
       0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
@@ -92,6 +78,8 @@
       height: 300px;
       object-fit: cover;
       filter: grayscale(100%);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
 
       @include tablet {
         max-width: 500px;
@@ -100,6 +88,7 @@
 
     // Projects text section
     &--text {
+      height: 150px;
       text-align: left;
       padding: $mobile-margin;
       border-top: 1px solid $pewter;
@@ -116,7 +105,7 @@
       padding-bottom: 16px;
       margin: auto;
       @include tablet {
-        // text-align: left;
+        text-align: left;
         margin: unset;
         margin-bottom: 10px;
       }
@@ -137,7 +126,7 @@
   }
   &__content:hover {
     border: 1px solid $pewter;
-    scale: 1.15;
+    scale: 1.13;
     transition: 1s;
   }
   &__content-brainflix {
