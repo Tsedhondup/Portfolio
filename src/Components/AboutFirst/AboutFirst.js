@@ -103,7 +103,7 @@ const AboutFirst = () => {
             className="about-first__image-container--img"
             initial={{
               opacity: 0,
-              x: -100,
+              x: -30,
             }}
             whileInView={{
               opacity: 1,

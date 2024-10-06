@@ -62,7 +62,7 @@ const Footers = () => {
           className="socials__container"
           initial={{
             opacity: 0,
-            x: -60,
+            x: -20,
           }}
           whileInView={{
             opacity: 1,
@@ -87,7 +87,7 @@ const Footers = () => {
           className="socials__container"
           initial={{
             opacity: 0,
-            y: -60,
+            y: -20,
           }}
           whileInView={{
             opacity: 1,
@@ -112,7 +112,7 @@ const Footers = () => {
           className="socials__container"
           initial={{
             opacity: 0,
-            y: 60,
+            y: 20,
           }}
           whileInView={{
             opacity: 1,
@@ -137,7 +137,7 @@ const Footers = () => {
           className="socials__container"
           initial={{
             opacity: 0,
-            y: -60,
+            y: -20,
           }}
           whileInView={{
             opacity: 1,
@@ -162,7 +162,7 @@ const Footers = () => {
           className="socials__container"
           initial={{
             opacity: 0,
-            x: 60,
+            x: 20,
           }}
           whileInView={{
             opacity: 1,
@@ -188,11 +188,11 @@ const Footers = () => {
           className="location-copyright__copyright"
           initial={{
             opacity: 0,
-            y: 60,
+            x: 60,
           }}
           whileInView={{
             opacity: 1,
-            y: 0,
+            x: 0,
             transition: {
               ease: "linear",
               duration: 1.5,
@@ -213,11 +213,11 @@ const Footers = () => {
           className="location-copyright__location"
           initial={{
             opacity: 0,
-            y: 60,
+            x: -60,
           }}
           whileInView={{
             opacity: 1,
-            y: 0,
+            x: 0,
             transition: {
               ease: "linear",
               duration: 1.5,
