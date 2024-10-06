@@ -136,8 +136,9 @@
     }
   }
   &__content:hover {
-    box-shadow: unset;
     border: 1px solid $pewter;
+    scale: 1.15;
+    transition: 1s;
   }
   &__content-brainflix {
     @include tablet {
