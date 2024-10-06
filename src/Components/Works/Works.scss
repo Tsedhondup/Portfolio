@@ -167,4 +167,9 @@
     box-shadow: unset;
     border: 1px solid $pewter;
   }
+  &__content-brainflix {
+    @include tablet {
+      grid-column: span 2;
+    }
+  }
 }
