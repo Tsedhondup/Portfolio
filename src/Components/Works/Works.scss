@@ -100,12 +100,11 @@
       color: $black;
       font-size: 16px;
       font-weight: 400;
-      text-align: center;
+      text-align: left;
       text-transform: uppercase;
       padding-bottom: 16px;
       margin: auto;
       @include tablet {
-        text-align: left;
         margin: unset;
         margin-bottom: 10px;
       }
