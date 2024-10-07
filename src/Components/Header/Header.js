@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import logo from "../../assets/image/logo2.PNG";
 
 // Components
 import AnimatedPageLinks from "./AnimatedPageLinks/AnimatedPageLinks";
@@ -62,7 +63,11 @@ const Header = (props) => {
       >
         {/* Brand name */}
         <Link to="/" className="navigation__brand-name">
-          TD
+          <img
+            src={logo}
+            alt="brand-logo"
+            className="navigation__brand-name--logo"
+          />
         </Link>
         {/* Pages links */}
         <section>

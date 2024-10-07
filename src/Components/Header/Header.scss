@@ -52,14 +52,21 @@
     padding: 0px $tablet-margin;
   }
   &__brand-name {
-    color: $ebony;
     text-decoration: none;
-    letter-spacing: 0.2em;
-    font-size: 20px;
-    font-weight: 700;
     width: auto;
+    display: flex;
+    align-items: center;
     @include tablet {
       font-size: 24px;
+    }
+
+    &--logo {
+      height: 40px;
+      width: 40px;
+      @include tablet {
+        height: 50px;
+        width: 50px;
+      }
     }
   }
   &__brand-name:hover {
