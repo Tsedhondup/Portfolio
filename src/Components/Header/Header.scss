@@ -8,9 +8,11 @@
   left: 0;
   z-index: 15;
   background-color: #ffffff;
+  border-bottom: 1px solid $pewter;
+  // box-shadow: 0px 5px 10px $gray; /* Bottom side shadow */
+
   @include tablet {
     padding: 0px $tablet-margin;
-    padding-top: 16px;
   }
 }
 // JS Dynamic class
@@ -39,25 +41,25 @@
 }
 
 .navigation {
-  height: 50px;
+  // height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding: 18px 0px;
   @include tablet {
     font-size: 24px;
     max-width: 1280px;
     margin: auto;
   }
   @include desktop {
-    padding: 0px $tablet-margin;
-    padding-top: 25px;
+    padding: 18 $tablet-margin;
   }
   &__brand-name {
     text-decoration: none;
     width: auto;
     display: flex;
     align-items: center;
+
     @include tablet {
       font-size: 24px;
     }
@@ -110,7 +112,7 @@
       font-weight: 200;
       color: $gray;
       color: $ebony;
-      padding: 16px 0px;
+      // padding: 16px 0px;
       font-size: 14px;
       text-align: right;
       text-transform: uppercase;
