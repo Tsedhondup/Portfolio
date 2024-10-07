@@ -23,9 +23,12 @@
   }
   &__container {
     display: block;
-
     width: auto;
   }
+  &__container:hover {
+    scale: 2.5;
+  }
+
   &__container:nth-child(1) {
     color: $linkedIn;
   }

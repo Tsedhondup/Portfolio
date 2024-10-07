@@ -49,7 +49,7 @@
   margin: auto;
   margin-top: 32px;
   &__phone-container {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     display: flex;
     align-items: center;
     @include tablet {
@@ -64,8 +64,9 @@
     }
 
     &--icon {
-      color: #a70000;
       text-decoration: none;
+      color: #ffffff;
+      height: 20px;
       @include tablet {
         display: none;
       }
@@ -73,8 +74,8 @@
     &--tablet-icon {
       display: none;
       @include tablet {
+        color: #ffffff;
         display: block;
-        color: #a70000;
         text-decoration: none;
       }
     }
@@ -91,8 +92,9 @@
       font-weight: 200;
     }
     &--icon {
-      color: #a70000;
+      color: #ffffff;
       text-decoration: none;
+      height: 20px;
       @include tablet {
         display: none;
       }
@@ -101,7 +103,7 @@
       display: none;
       @include tablet {
         display: block;
-        color: #a70000;
+        color: #ffffff;
         text-decoration: none;
       }
     }

@@ -1,8 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMobileScreenButton,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhoneFlip } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import "./Contacts.scss";
 const Contacts = (props) => {
@@ -63,7 +60,7 @@ const Contacts = (props) => {
             viewport={{ once: true, amount: 1 }}
           >
             <FontAwesomeIcon
-              icon={faMobileScreenButton}
+              icon={faPhoneFlip}
               transform="grow-10"
               className="phone-email__phone-container--icon"
             />
@@ -74,7 +71,7 @@ const Contacts = (props) => {
             className="phone-email__phone-container--tablet-icon"
           >
             <FontAwesomeIcon
-              icon={faMobileScreenButton}
+              icon={faPhoneFlip}
               transform="grow-15"
               className="phone-email__phone-container---tablet-icon"
             />
