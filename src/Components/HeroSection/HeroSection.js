@@ -66,7 +66,7 @@ const HeroSection = (props) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                duration: 2,
+                duration: 3,
                 delay: 2,
                 ease: "linear",
               }}
@@ -85,7 +85,7 @@ const HeroSection = (props) => {
             }}
             className="hero-content__title"
           >
-            A Full Stack Developer from
+            A Full-stack Web Developer from
             <motion.span
               initial={{ opacity: 0, x: screenWidth >= 950 ? -60 : 60 }}
               animate={{ opacity: 1, x: 0 }}

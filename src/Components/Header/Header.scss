@@ -63,7 +63,8 @@
     }
   }
   &__brand-name:hover {
-    color: $pewter;
+    color: $black;
+    scale: 1.5;
   }
 }
 
@@ -135,7 +136,8 @@
     }
     &--home:hover,
     &--about:hover {
-      color: $pewter;
+      color: $black;
+      scale: 1.5;
     }
     &--resume {
       font-size: 13px;

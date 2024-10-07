@@ -191,9 +191,9 @@ const AboutFirst = () => {
             }}
             viewport={{ once: true, amount: 1 }}
           >
-            As a botany graduate from the University of Delhi, my background in
-            scientific inquiry has inspired me to make a career transition into
-            tech, specializing in web development. I am excited to leverage my
+            As a botany graduate from the University of Delhi, I am working to
+            translate my background in scientific inquiry into the field of tech
+            by specializing in web development. I am excited to leverage my
             skills in web development, building meaningful, responsive, and
             user-centric web applications.
           </motion.p>
