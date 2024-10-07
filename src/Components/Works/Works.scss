@@ -125,9 +125,11 @@
     }
   }
   &__content:hover {
-    border: 1px solid $pewter;
-    scale: 1.13;
-    transition: 1s;
+    @include tablet {
+      border: 1px solid $pewter;
+      scale: 1.13;
+      transition: 1s;
+    }
   }
   &__content-brainflix {
     @include tablet {
