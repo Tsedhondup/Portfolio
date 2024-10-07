@@ -123,7 +123,7 @@ const AboutFirst = () => {
           className="about-first__mobile-header"
           initial={{
             opacity: 0,
-            x: 80,
+            x: 20,
           }}
           whileInView={{
             opacity: 1,
