@@ -37,7 +37,7 @@ const HeroSection = (props) => {
     //       : props.setIsScroll(false);
     //   });
     // };
-  }, []);
+  }, [props]);
 
   return (
     <motion className="hero-container" ref={refElement}>
