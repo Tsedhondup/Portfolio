@@ -19,6 +19,20 @@ const HeroSection = (props) => {
     };
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const elementPosition = refElement.current.getBoundingClientRect();
+      console.log(elementPosition.top);
+    });
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", () => {
+        const elementPosition = refElement.current.getBoundingClientRect();
+        console.log(elementPosition.top);
+      });
+    };
+  }, []);
+
   return (
     <motion className="hero-container" ref={refElement}>
       <section className="hero-content">
