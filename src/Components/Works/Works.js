@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import { motion } from "framer-motion";
 import portfolio from "../../assets/image/portfolio.jpg";
 import brainflix from "../../assets/image/brainflix.jpg";
@@ -12,7 +13,11 @@ const Works = () => {
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
       <section className="projects">
-        <div className="projects__content projects__content-email-reader">
+        <a
+          className="projects__content projects__content-email-reader"
+          href="https://github.com/Tsedhondup/job-application-tracker"
+          target="_blank"
+        >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
@@ -35,8 +40,12 @@ const Works = () => {
               them in MySQL database.
             </motion.p>
           </div>
-        </div>
-        <div className="projects__content projects__content-portfolio">
+        </a>
+        <a
+          className="projects__content projects__content-portfolio"
+          href="https://github.com/Tsedhondup/tsering-dhondup"
+          target="_blank"
+        >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
@@ -58,8 +67,12 @@ const Works = () => {
               ReactJs with real-time data provided by a Node server.
             </motion.p>
           </div>
-        </div>
-        <div className="projects__content projects__content-brainflix">
+        </a>
+        <a
+          className="projects__content projects__content-brainflix"
+          href="https://github.com/Tsedhondup/tsering-dhondup-BrainFlix"
+          target="_blank"
+        >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
@@ -82,7 +95,7 @@ const Works = () => {
               developed using Express.js in Node js.
             </motion.p>
           </div>
-        </div>
+        </a>
       </section>
     </section>
   );
