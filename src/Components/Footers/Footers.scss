@@ -74,6 +74,7 @@
   display: flex;
   justify-content: space-between;
   padding-top: 32px;
+  border: 1px solid #000;
   @include tablet {
     position: relative;
     z-index: 10;
@@ -87,10 +88,16 @@
     @include tablet {
       width: 69.55px;
     }
-    &--icon {
+    &--icon-copy {
       display: inline;
       color: $ebony;
       padding-right: 2px;
+      width: auto;
+    }
+    &--icon-globe {
+      display: inline;
+      color: $ebony;
+      padding-left: 2px;
       width: auto;
     }
   }
