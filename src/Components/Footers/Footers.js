@@ -201,12 +201,14 @@ const Footers = () => {
           }}
           viewport={{ once: true, amount: 1 }}
         >
-          <FontAwesomeIcon
-            icon={faCopyright}
-            transform="shrink-1"
-            className="location-copyright__copyright--icon"
-          />
-          <span> 2024</span>
+          <span>
+            <FontAwesomeIcon
+              icon={faCopyright}
+              transform="shrink-1"
+              className="location-copyright__copyright--icon-copy"
+            />
+            2024
+          </span>
         </motion.h3>
 
         <motion.h3
@@ -226,8 +228,13 @@ const Footers = () => {
           }}
           viewport={{ once: true, amount: 1 }}
         >
-          <span className="location-copyright__location--name"> Toronto</span>
-          <FontAwesomeIcon icon={faGlobeAmericas} />
+          <span className="location-copyright__location--name">
+            Toronto
+            <FontAwesomeIcon
+              icon={faGlobeAmericas}
+              className="location-copyright__copyright--icon-globe"
+            />
+          </span>
         </motion.h3>
       </div>
     </footer>
