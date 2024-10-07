@@ -62,11 +62,11 @@ const Footers = () => {
           className="socials__container"
           initial={{
             opacity: 0,
-            x: -20,
+            y: 20,
           }}
           whileInView={{
             opacity: 1,
-            x: 0,
+            y: 0,
             transition: {
               ease: "linear",
               duration: 1.5,
@@ -162,11 +162,11 @@ const Footers = () => {
           className="socials__container"
           initial={{
             opacity: 0,
-            x: 20,
+            y: 20,
           }}
           whileInView={{
             opacity: 1,
-            x: 0,
+            y: 0,
             transition: {
               ease: "linear",
               duration: 1.5,
