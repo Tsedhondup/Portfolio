@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import { motion } from "framer-motion";
 import portfolio from "../../assets/image/portfolio.jpg";
 import brainflix from "../../assets/image/brainflix.jpg";
@@ -12,7 +13,11 @@ const Works = () => {
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
       <section className="projects">
-        <div className="projects__content projects__content-email-reader">
+        <a
+          className="projects__content projects__content-email-reader"
+          href="https://github.com/Tsedhondup/job-application-tracker"
+          target="_blank"
+        >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
@@ -20,23 +25,45 @@ const Works = () => {
               opacity: 1,
               transition: { duration: 1, ease: "linear" },
             }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             src={jobTracker}
             alt="job-application-tracker-image"
             className="projects__content--img projects__content--email-image "
           />
           <div className="projects__content--text ">
-            <motion.h2 className="projects__content--project-name projects__content--text-email">
+            <motion.h2
+              className="projects__content--project-name projects__content--text-email"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               Personal Email Reader
             </motion.h2>
-            <motion.p className="projects__content--project-description">
+            <motion.p
+              className="projects__content--project-description"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               Full-stack web application built on ReactJS that reads, and
               fetches emails from the Gmail mail server using IMAP and stores
               them in MySQL database.
             </motion.p>
           </div>
-        </div>
-        <div className="projects__content projects__content-portfolio">
+        </a>
+        <a
+          className="projects__content projects__content-portfolio"
+          href="https://github.com/Tsedhondup/tsering-dhondup"
+          target="_blank"
+        >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
@@ -44,22 +71,44 @@ const Works = () => {
               opacity: 1,
               transition: { duration: 1, ease: "linear" },
             }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             src={portfolio}
             alt="portfolio-website-image"
             className="projects__content--img projects__content--portfolio-image "
           />
           <div className="projects__content--text projects__content--text-portfolio">
-            <motion.h2 className="projects__content--project-name">
+            <motion.h2
+              className="projects__content--project-name"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               portfolio
             </motion.h2>
-            <motion.p className="projects__content--project-description">
-              My Portfolio website deployed on Netlify, was primarily built on
-              ReactJs with real-time data provided by a Node server.
+            <motion.p
+              className="projects__content--project-description"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              My Portfolio website deployed on Netlify, primarily built on
+              React.js with real-time data provided by a Node server.
             </motion.p>
           </div>
-        </div>
-        <div className="projects__content projects__content-brainflix">
+        </a>
+        <a
+          className="projects__content projects__content-brainflix"
+          href="https://github.com/Tsedhondup/tsering-dhondup-BrainFlix"
+          target="_blank"
+        >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
@@ -73,16 +122,34 @@ const Works = () => {
             className="projects__content--img projects__content--brainflix-image"
           />
           <div className="projects__content--text projects__content--text-brainflix">
-            <motion.h2 className="projects__content--project-name">
+            <motion.h2
+              className="projects__content--project-name"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               BrainFlix
             </motion.h2>
-            <motion.p className="projects__content--project-description">
+            <motion.p
+              className="projects__content--project-description"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               Showcasing my web developing skills, a React video streaming web
-              application connected to the backend server via RESTful API
-              developed using Express.js in Node js.
+              application connected to the backend server via RESTful API built
+              using Express.js in Node js.
             </motion.p>
           </div>
-        </div>
+        </a>
       </section>
     </section>
   );

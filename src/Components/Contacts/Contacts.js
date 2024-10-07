@@ -66,16 +66,26 @@ const Contacts = (props) => {
             />
           </motion.a>
           {/* Icons for tablet */}
-          <a
+          <motion.a
             href="tel:+1437245778"
             className="phone-email__phone-container--tablet-icon"
+            initial={{
+              x: 60,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+              transition: { ease: "linear", duration: 1, delay: 2.5 },
+            }}
+            viewport={{ once: true, amount: 1 }}
           >
             <FontAwesomeIcon
               icon={faPhoneFlip}
               transform="grow-15"
               className="phone-email__phone-container---tablet-icon"
             />
-          </a>
+          </motion.a>
         </div>
         {/*------------------- email section ------------------------ */}
         <div className="phone-email__email-container">
@@ -112,16 +122,26 @@ const Contacts = (props) => {
               className="phone-email__email-container--icon"
             />
           </motion.a>
-          <a
+          <motion.a
             href="mailto:tyddhondup88@gmail.com"
             className="phone-email__email-container--tablet-icon"
+            initial={{
+              x: 60,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+              transition: { ease: "linear", duration: 1, delay: 3.5 },
+            }}
+            viewport={{ once: true, amount: 1 }}
           >
             <FontAwesomeIcon
               icon={faEnvelope}
               transform="grow-15"
               className="phone-email__email-container---tablet-icon"
             />
-          </a>
+          </motion.a>
         </div>
       </div>
 

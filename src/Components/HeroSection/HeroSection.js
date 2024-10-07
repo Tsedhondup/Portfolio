@@ -63,12 +63,12 @@ const HeroSection = (props) => {
               </motion.span>
             </span>
             <motion.span
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{
-                duration: 1.5,
+                duration: 3,
                 delay: 2,
-                ease: "easeOut",
+                ease: "linear",
               }}
               className="hero-content__name--last"
             >
@@ -85,7 +85,7 @@ const HeroSection = (props) => {
             }}
             className="hero-content__title"
           >
-            A Full Stack Developer from
+            A Full-stack Web Developer from
             <motion.span
               initial={{ opacity: 0, x: screenWidth >= 950 ? -60 : 60 }}
               animate={{ opacity: 1, x: 0 }}

@@ -52,7 +52,7 @@ const AnimatedPageLinks = (props) => {
           </Link>
         </motion.div>
 
-        <motion.a
+        {/* <motion.a
           initial={{ opacity: 0, borderBottomWidth: 0 }}
           whileInView={{
             opacity: 1,
@@ -64,7 +64,7 @@ const AnimatedPageLinks = (props) => {
           className="navigation-pages__link-container--resume"
         >
           Resume
-        </motion.a>
+        </motion.a> */}
       </div>
       <motion.div
         initial={{ opacity: 0, borderBottomWidth: 0 }}

@@ -43,6 +43,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
   @include tablet {
     font-size: 24px;
     max-width: 1280px;
@@ -50,20 +51,29 @@
   }
   @include desktop {
     padding: 0px $tablet-margin;
+    padding-top: 25px;
   }
   &__brand-name {
-    color: $ebony;
     text-decoration: none;
-    letter-spacing: 0.2em;
-    font-size: 20px;
-    font-weight: 700;
     width: auto;
+    display: flex;
+    align-items: center;
     @include tablet {
       font-size: 24px;
     }
+
+    &--logo {
+      height: 40px;
+      width: 40px;
+      @include tablet {
+        height: 50px;
+        width: 50px;
+      }
+    }
   }
   &__brand-name:hover {
-    color: $pewter;
+    color: $black;
+    scale: 1.3;
   }
 }
 
@@ -135,7 +145,8 @@
     }
     &--home:hover,
     &--about:hover {
-      color: $pewter;
+      color: $black;
+      scale: 1.5;
     }
     &--resume {
       font-size: 13px;
