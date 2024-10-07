@@ -123,11 +123,11 @@ const AboutFirst = () => {
           className="about-first__mobile-header"
           initial={{
             opacity: 0,
-            x: 20,
+            y: 20,
           }}
           whileInView={{
             opacity: 1,
-            x: 0,
+            y: 0,
             transition: { duration: 1, ease: "linear" },
           }}
           viewport={{ once: true, amount: 1 }}
@@ -526,15 +526,15 @@ const AboutFirst = () => {
             }
             viewport={{ once: true, amount: 1 }}
           >
-            I intend to master both front-end and
-            back-end technologies by polishing my reach in designing and
-            developing user-friendly and scalable web applications. I aim to
-            continuously improve my coding skills, ensure seamless user
-            experiences, and contribute to innovative projects that solve
-            real-world problems. Furthermore, I aspire to stay updated with
-            industry trends, adopt best practices, and collaborate effectively
-            with cross-functional teams to deliver high-quality, secure, and
-            efficient web solutions that meet both user and business needs.
+            I intend to master both front-end and back-end technologies by
+            polishing my reach in designing and developing user-friendly and
+            scalable web applications. I aim to continuously improve my coding
+            skills, ensure seamless user experiences, and contribute to
+            innovative projects that solve real-world problems. Furthermore, I
+            aspire to stay updated with industry trends, adopt best practices,
+            and collaborate effectively with cross-functional teams to deliver
+            high-quality, secure, and efficient web solutions that meet both
+            user and business needs.
           </motion.p>
 
           {/* Icons */}
