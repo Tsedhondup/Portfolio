@@ -27,8 +27,6 @@ const Header = (props) => {
     }
   };
 
-  console.log(props.isScroll);
-
   useEffect(() => {
     window.addEventListener("resize", () => {
       setIsMobile(window.innerWidth >= 767 ? false : true);
@@ -42,14 +40,14 @@ const Header = (props) => {
   }, []);
   return (
     <motion.section
-      className={`header ${props.isScroll ? props.headerClass : ""} ${
+      className={`header ${props.isScroll ? "js-header-box-shadow" : ""} ${
         props.windowWitdh
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{
         duration: 1.2,
-        delay: 4,
+        delay: 1,
         ease: "easeOut",
       }}
     >
@@ -58,7 +56,7 @@ const Header = (props) => {
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         transition={{
-          delay: 1.2,
+          delay: 1,
           duration: 1,
           ease: "easeOut",
         }}

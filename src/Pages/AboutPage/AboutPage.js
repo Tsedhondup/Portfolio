@@ -10,16 +10,23 @@ const AboutPage = () => {
   const [headerClass2, setHeaderClass2] = useState(
     "header-opaque-about-2-page"
   );
+  const [scrollPositionPoint, setScrollPositionPoint] = useState(0);
+
   // eslint-disable-next-line no-unused-vars
   const [windowWitdh, setWindowWitdh] = useState(window.innerWidth);
+
   return (
     <>
       <Header
+        scrollPositionPoint={scrollPositionPoint}
         isScroll={isScroll}
         headerClass={headerClass}
         windowWitdh={`${windowWitdh > 1280 ? headerClass2 : ""}`}
       />
-      <AboutFirst setIsScroll={setIsScroll} />
+      <AboutFirst
+        setIsScroll={setIsScroll}
+        setScrollPositionPoint={setScrollPositionPoint}
+      />
       <Contacts />
     </>
   );

@@ -9,11 +9,19 @@ const HomePage = () => {
   const [isScroll, setIsScroll] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [headerClass, setHeaderClass] = useState("header-opaque-home-page");
+  const [scrollPositionPoint, setScrollPositionPoint] = useState(0);
 
   return (
     <>
-      <Header isScroll={isScroll} headerClass={headerClass} />
-      <HeroSection setIsScroll={setIsScroll} />
+      <Header
+        isScroll={isScroll}
+        headerClass={headerClass}
+        scrollPositionPoint={scrollPositionPoint}
+      />
+      <HeroSection
+        setIsScroll={setIsScroll}
+        setScrollPositionPoint={setScrollPositionPoint}
+      />
       <AboutSecond />
       <TechStacks />
       <Works />

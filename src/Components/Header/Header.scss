@@ -8,14 +8,16 @@
   left: 0;
   z-index: 15;
   background-color: #ffffff;
-  border-bottom: 1px solid $pewter;
-  // box-shadow: 0px 5px 10px $gray; /* Bottom side shadow */
 
   @include tablet {
     padding: 0px $tablet-margin;
   }
 }
 // JS Dynamic class
+
+.js-header-box-shadow {
+  box-shadow: 0px 5px 40px $black; /* Bottom side shadow */
+}
 // Header is only shown when page is being scrolled
 .header-opaque-home-page {
   background-color: #ffffff;
