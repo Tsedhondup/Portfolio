@@ -19,28 +19,28 @@
   box-shadow: 0px 5px 40px $black; /* Bottom side shadow */
 }
 // Header is only shown when page is being scrolled
-.header-opaque-home-page {
-  background-color: #ffffff;
-  top: 0;
-  @include tablet {
-    padding: 10px $tablet-margin;
-  }
-}
-// Header is shown when page gets rendered for the firs time only in about page
-.header-opaque-about-2-page {
-  @include tablet {
-    padding: 10px $tablet-margin;
-    top: 0;
-  }
-}
+// .header-opaque-home-page {
+//   background-color: #ffffff;
+//   top: 0;
+//   @include tablet {
+//     padding: 10px $tablet-margin;
+//   }
+// }
+// // Header is shown when page gets rendered for the firs time only in about page
+// .header-opaque-about-2-page {
+//   @include tablet {
+//     padding: 10px $tablet-margin;
+//     top: 0;
+//   }
+// }
 
-// Heder gets white background when page is being scrolled
-.header-opaque-about-page {
-  background-color: #ffffff;
-  @include tablet {
-    padding: 10px $tablet-margin;
-  }
-}
+// // Heder gets white background when page is being scrolled
+// .header-opaque-about-page {
+//   background-color: #ffffff;
+//   @include tablet {
+//     padding: 10px $tablet-margin;
+//   }
+// }
 
 .navigation {
   // height: 50px;

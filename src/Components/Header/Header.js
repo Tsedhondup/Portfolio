@@ -40,9 +40,7 @@ const Header = (props) => {
   }, []);
   return (
     <motion.section
-      className={`header ${props.isScroll ? "js-header-box-shadow" : ""} ${
-        props.windowWitdh
-      }`}
+      className={`header ${props.isScroll ? "js-header-box-shadow" : ""}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{
