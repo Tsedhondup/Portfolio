@@ -27,8 +27,8 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 3,
-              border: { delay: 3.5, duration: 1.5 },
+              delay: 1,
+              border: { delay: 2, duration: 1.5 },
             },
           }}
           viewport={{ once: true, amount: 1 }}
@@ -46,8 +46,8 @@ const Footers = () => {
             scale: 1,
             transition: {
               ease: "linear",
-              duration: 1,
-              delay: 4,
+              duration: 1.5,
+              delay: 2,
             },
           }}
           viewport={{ once: true, amount: 1 }}
@@ -70,10 +70,10 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 4.5,
+              delay: 1,
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <FontAwesomeIcon
             icon={faLinkedin}
@@ -95,10 +95,10 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 4.5,
+              delay: 1,
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <FontAwesomeIcon
             icon={faGithub}
@@ -120,10 +120,10 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 4.5,
+              delay: 1,
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <FontAwesomeIcon
             icon={faXTwitter}
@@ -145,10 +145,10 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 4.5,
+              delay: 1,
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <FontAwesomeIcon
             icon={faFacebook}
@@ -170,10 +170,10 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 4.5,
+              delay: 1,
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <FontAwesomeIcon
             icon={faInstagram}
@@ -196,10 +196,10 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 5,
+              delay: 1,
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <span>
             <FontAwesomeIcon
@@ -223,10 +223,10 @@ const Footers = () => {
             transition: {
               ease: "linear",
               duration: 1.5,
-              delay: 5,
+              delay: 1,
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <span className="location-copyright__location--name">
             Toronto

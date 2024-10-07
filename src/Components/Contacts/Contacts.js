@@ -40,7 +40,7 @@ const Contacts = (props) => {
             }}
             whileInView={{
               opacity: 1,
-              transition: { ease: "linear", duration: 1.5, delay: 2 },
+              transition: { ease: "linear", duration: 1, delay: 1.5 },
             }}
             viewport={{ once: true, amount: 1 }}
           >
@@ -55,7 +55,7 @@ const Contacts = (props) => {
             whileInView={{
               x: 0,
               opacity: 1,
-              transition: { ease: "linear", duration: 1, delay: 2.5 },
+              transition: { ease: "linear", duration: 1.5, delay: 1.5 },
             }}
             viewport={{ once: true, amount: 1 }}
           >
@@ -76,7 +76,7 @@ const Contacts = (props) => {
             whileInView={{
               x: 0,
               opacity: 1,
-              transition: { ease: "linear", duration: 1, delay: 2.5 },
+              transition: { ease: "linear", duration: 1.5, delay: 1.5 },
             }}
             viewport={{ once: true, amount: 1 }}
           >
@@ -97,7 +97,7 @@ const Contacts = (props) => {
             }}
             whileInView={{
               opacity: 1,
-              transition: { ease: "linear", duration: 1.5, delay: 3 },
+              transition: { ease: "linear", duration: 2, delay: 1.5 },
             }}
             viewport={{ once: true, amount: 1 }}
           >
@@ -112,7 +112,7 @@ const Contacts = (props) => {
             whileInView={{
               x: 0,
               opacity: 1,
-              transition: { ease: "linear", duration: 1, delay: 3.5 },
+              transition: { ease: "linear", duration: 1.5, delay: 2 },
             }}
             viewport={{ once: true, amount: 1 }}
           >
@@ -132,7 +132,7 @@ const Contacts = (props) => {
             whileInView={{
               x: 0,
               opacity: 1,
-              transition: { ease: "linear", duration: 1, delay: 3.5 },
+              transition: { ease: "linear", duration: 1.5, delay: 2 },
             }}
             viewport={{ once: true, amount: 1 }}
           >
