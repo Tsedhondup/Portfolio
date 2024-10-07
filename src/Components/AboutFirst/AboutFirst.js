@@ -56,6 +56,7 @@ const AboutFirst = (props) => {
     //     }
     //   });
     // };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Event handler
