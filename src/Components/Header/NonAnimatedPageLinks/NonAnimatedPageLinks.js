@@ -23,12 +23,12 @@ const NonAnimatedPageLinks = (props) => {
           About
         </Link>
 
-        <a
+        {/* <a
           href="https://www.linkedin.com/in/tsering-dhondup-078084161/"
           className="navigation-pages__link-container--resume"
         >
           Resume
-        </a>
+        </a> */}
       </div>
       <div className="navigation-pages__hide-button-container">
         <FontAwesomeIcon
