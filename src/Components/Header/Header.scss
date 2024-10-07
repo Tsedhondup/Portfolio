@@ -43,6 +43,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
   @include tablet {
     font-size: 24px;
     max-width: 1280px;
@@ -50,6 +51,7 @@
   }
   @include desktop {
     padding: 0px $tablet-margin;
+    padding-top: 25px;
   }
   &__brand-name {
     text-decoration: none;
@@ -71,7 +73,7 @@
   }
   &__brand-name:hover {
     color: $black;
-    scale: 1.5;
+    scale: 1.3;
   }
 }
 
