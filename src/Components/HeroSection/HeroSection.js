@@ -22,13 +22,17 @@ const HeroSection = (props) => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const elementPosition = refElement.current.getBoundingClientRect();
-      console.log(elementPosition.top);
+      elementPosition.top <= -180
+        ? props.setIsScroll(true)
+        : props.setIsScroll(false);
     });
     // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", () => {
         const elementPosition = refElement.current.getBoundingClientRect();
-        console.log(elementPosition.top);
+        elementPosition.top <= -180
+          ? props.setIsScroll(true)
+          : props.setIsScroll(false);
       });
     };
   }, []);

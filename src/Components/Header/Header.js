@@ -27,6 +27,8 @@ const Header = (props) => {
     }
   };
 
+  console.log(props.isScroll);
+
   useEffect(() => {
     window.addEventListener("resize", () => {
       setIsMobile(window.innerWidth >= 767 ? false : true);

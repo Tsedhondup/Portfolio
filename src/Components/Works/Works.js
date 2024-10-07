@@ -8,7 +8,6 @@ import "./Works.scss";
 const Works = () => {
   // eslint-disable-next-line no-unused-vars
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  console.log(window.innerHeight);
   return (
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
