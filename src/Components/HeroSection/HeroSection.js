@@ -63,12 +63,12 @@ const HeroSection = (props) => {
               </motion.span>
             </span>
             <motion.span
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{
-                duration: 1.5,
+                duration: 2,
                 delay: 2,
-                ease: "easeOut",
+                ease: "linear",
               }}
               className="hero-content__name--last"
             >

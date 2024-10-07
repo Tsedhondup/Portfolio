@@ -14,7 +14,6 @@
 
 .hero-content {
   height: 100vh;
-
   padding: 0px $mobile-margin;
   padding-top: calc((100vh - 50px) / 3);
   text-align: center;
@@ -45,15 +44,10 @@
         font-size: 36px;
       }
     }
-    // &--first-a,
-    // &--first-b,
-    // &--first-c {
-    //   display: flex;
-    // }
+
     &--last {
       display: block;
       text-transform: uppercase;
-      // color: #a70000;
       font-weight: 700;
       font-size: 48px;
       @include tablet {
