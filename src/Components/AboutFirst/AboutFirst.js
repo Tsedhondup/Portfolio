@@ -299,9 +299,10 @@ const AboutFirst = () => {
             }
             viewport={{ once: true, amount: 1 }}
           >
-            I came across a video on YouTube about a young and successful
-            self-taught software developer. As influential and inspiring as the
-            video was, I was excited to learn coding as a hobby.
+            I found an inspiring video on YouTube about a young and successful
+            self-taught software developer. What started as a curiosity and
+            hobby has evolved into a full-fledged passion for coding to create
+            digital solutions!
           </motion.p>
 
           {/* Icons */}
@@ -525,7 +526,7 @@ const AboutFirst = () => {
             }
             viewport={{ once: true, amount: 1 }}
           >
-            As a full-stack web developer, I intend to master both front-end and
+            I intend to master both front-end and
             back-end technologies by polishing my reach in designing and
             developing user-friendly and scalable web applications. I aim to
             continuously improve my coding skills, ensure seamless user
