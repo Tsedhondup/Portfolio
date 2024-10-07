@@ -191,11 +191,10 @@ const AboutFirst = () => {
             }}
             viewport={{ once: true, amount: 1 }}
           >
-            As a botany graduate from the University of Delhi, I am working to
-            translate my background in scientific inquiry into the field of tech
-            by specializing in web development. I am excited to leverage my
-            skills in web development, building meaningful, responsive, and
-            user-centric web applications.
+            Growing up, I was always fascinated by natural sciences,
+            particularly plant biology, which led me to pursue botany at the
+            University of Delhi. Now, I hope to translate my scientific inquiry
+            in phytology into tech by specializing in web development.
           </motion.p>
           {/* Icons */}
           <motion.div
@@ -299,10 +298,11 @@ const AboutFirst = () => {
             }
             viewport={{ once: true, amount: 1 }}
           >
-            I found an inspiring video on YouTube about a young and successful
-            self-taught software developer. What started as a curiosity and
-            hobby has evolved into a full-fledged passion for coding to create
-            digital solutions!
+            The story of an inspiring self-taught software developer on YouTube
+            was enough to convince me to learn coding. However, what started as
+            a hobby during my university years has evolved into a full-fledged
+            passion, driving me to pursue a career transition in the tech
+            industry.
           </motion.p>
 
           {/* Icons */}
@@ -412,10 +412,10 @@ const AboutFirst = () => {
             }
             viewport={{ once: true, amount: 1 }}
           >
-            My greatest strength comes from my self-learning ability. However,
-            the need for a proper mentor to assist in honing my skills tailored
-            to professional requirements was vital. I have committed time and
-            resources to becoming a certified web developer by enrolling at
+            I begin to teach myself coding, only to be netted by Tutorial Hell.
+            The need for a proper mentor to assist in honing my skills tailored
+            to professional requirements was essential. I have committed time
+            and resources to becoming a certified web developer by enrolling at
             BrainStation's Software Engineering Boot Camp in Toronto.
           </motion.p>
 
@@ -526,15 +526,11 @@ const AboutFirst = () => {
             }
             viewport={{ once: true, amount: 1 }}
           >
-            I intend to master both front-end and back-end technologies by
-            polishing my reach in designing and developing user-friendly and
-            scalable web applications. I aim to continuously improve my coding
-            skills, ensure seamless user experiences, and contribute to
-            innovative projects that solve real-world problems. Furthermore, I
-            aspire to stay updated with industry trends, adopt best practices,
-            and collaborate effectively with cross-functional teams to deliver
-            high-quality, secure, and efficient web solutions that meet both
-            user and business needs.
+            I aim to master both front-end and back-end technologies. I aspire
+            to stay updated with industry trends, adopt best practices, and
+            collaborate and contribute effectively with cross-functional teams
+            to deliver high-quality, secure, and efficient web solutions that
+            meet both user and business needs.
           </motion.p>
 
           {/* Icons */}
