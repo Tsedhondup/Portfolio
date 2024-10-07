@@ -18,7 +18,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import profilePic2 from "../../assets/image/about-first.png";
 import "./AboutFirst.scss";
-const AboutFirst = () => {
+const AboutFirst = (props) => {
   // Element reference
   const refElement = useRef(null);
   const [isBorderOne, setIsBorderOne] = useState(false);
@@ -35,6 +35,27 @@ const AboutFirst = () => {
     setTimeout(() => {
       setIsBorderThree(true);
     }, 9500);
+  }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (refElement.current) {
+        const elementPosition = refElement.current.getBoundingClientRect();
+        elementPosition.top <= -180
+          ? props.setIsScroll(true)
+          : props.setIsScroll(false);
+      }
+    });
+    // Clean up the event listener when the component unmounts
+    // return () => {
+    //   window.removeEventListener("scroll", () => {
+    //     if (refElement.current) {
+    //       const elementPosition = refElement.current.getBoundingClientRect();
+    //       elementPosition.top <= -200
+    //         ? props.setIsScroll(true)
+    //         : props.setIsScroll(false);
+    //     }
+    //   });
+    // };
   }, []);
 
   // Event handler

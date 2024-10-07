@@ -19,6 +19,26 @@ const HeroSection = (props) => {
     };
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (refElement.current) {
+        const elementPosition = refElement.current.getBoundingClientRect();
+        elementPosition.top <= -180
+          ? props.setIsScroll(true)
+          : props.setIsScroll(false);
+      }
+    });
+    // Clean up the event listener when the component unmounts
+    // return () => {
+    //   window.removeEventListener("scroll", () => {
+    //     const elementPosition = refElement.current.getBoundingClientRect();
+    //     elementPosition.top <= -200
+    //       ? props.setIsScroll(true)
+    //       : props.setIsScroll(false);
+    //   });
+    // };
+  }, []);
+
   return (
     <motion className="hero-container" ref={refElement}>
       <section className="hero-content">

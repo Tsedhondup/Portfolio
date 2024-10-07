@@ -8,7 +8,6 @@ import "./Works.scss";
 const Works = () => {
   // eslint-disable-next-line no-unused-vars
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  console.log(window.innerHeight);
   return (
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
@@ -41,7 +40,7 @@ const Works = () => {
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              Personal Email Reader
+              Email Reader
             </motion.h2>
             <motion.p
               className="projects__content--project-description"
@@ -87,7 +86,7 @@ const Works = () => {
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              portfolio
+              portfolio website
             </motion.h2>
             <motion.p
               className="projects__content--project-description"
@@ -144,9 +143,9 @@ const Works = () => {
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              Showcasing my web developing skills, a React video streaming web
-              application connected to the backend server via RESTful API built
-              using Express.js in Node js.
+              Showcasing my web developing skills, a video streaming web
+              application built on React,  connected to the backend server via
+              RESTful API built using Express in Node js.
             </motion.p>
           </div>
         </a>
