@@ -10,7 +10,7 @@ const AnimatedPageLinks = (props) => {
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
-            transition: { delay: 1, duration: 1.5 },
+            transition: { delay: .5, duration: 1.5 },
           }}
           viewport={{ once: false, amount: 1 }}
           className="navigation-pages__link-container--author-name"
@@ -22,7 +22,7 @@ const AnimatedPageLinks = (props) => {
           whileInView={{
             opacity: 1,
             borderBottomWidth: 1,
-            transition: { delay: 0.8, duration: 0.5 },
+            transition: { delay: 0.2, duration: 0.5 },
           }}
           viewport={{ once: false, amount: 1 }}
         >
@@ -39,7 +39,7 @@ const AnimatedPageLinks = (props) => {
           whileInView={{
             opacity: 1,
             borderBottomWidth: 1,
-            transition: { delay: 0.6, duration: 0.5 },
+            transition: { delay: 0, duration: 0.5 },
           }}
           viewport={{ once: false, amount: 1 }}
         >
