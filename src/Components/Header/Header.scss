@@ -57,16 +57,12 @@
   }
   &__brand-name {
     text-decoration: none;
-    width: auto;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 
-    @include tablet {
-      font-size: 24px;
-    }
-
     &--logo {
-      height: 40px;
+      width: 40px;
       object-fit: contain;
       @include tablet {
         height: 55px;
@@ -215,7 +211,7 @@
   font-size: 30px;
   &__open {
     padding: 0;
-    color: $ebony;
+    color: $black;
     width: auto;
   }
 

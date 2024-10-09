@@ -77,6 +77,7 @@
 
     @include desktop {
       max-width: 600px;
+      height: 486px;
     }
     // Project images
     &--img {
@@ -96,7 +97,7 @@
 
     // Projects text section
     &--text {
-      height: 150px;
+      // height: 150px;
       text-align: left;
       padding: $mobile-margin;
       border-top: 1px solid $pewter;
