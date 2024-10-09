@@ -8,6 +8,10 @@ import "./Works.scss";
 const Works = () => {
   // eslint-disable-next-line no-unused-vars
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [hoveredOne, setHoveredOne] = useState(false);
+  const [hoveredTwo, setHoveredTwo] = useState(false);
+  const [hoveredThree, setHoveredThree] = useState(false);
+
   return (
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
@@ -16,6 +20,8 @@ const Works = () => {
           className="projects__content projects__content-email-reader"
           href="https://github.com/Tsedhondup/job-application-tracker"
           target="_blank"
+          onMouseEnter={() => setHoveredOne(true)}
+          onMouseLeave={() => setHoveredOne(false)}
         >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
@@ -31,7 +37,9 @@ const Works = () => {
           />
           <div className="projects__content--text ">
             <motion.h2
-              className="projects__content--project-name projects__content--text-email"
+              className={`projects__content--project-name projects__content--text-email ${
+                hoveredOne ? "js-color-pewter" : ""
+              }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
@@ -43,7 +51,9 @@ const Works = () => {
               Email Reader
             </motion.h2>
             <motion.p
-              className="projects__content--project-description"
+              className={`projects__content--project-description ${
+                hoveredOne ? "js-color-pewter" : ""
+              }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
@@ -62,6 +72,8 @@ const Works = () => {
           className="projects__content projects__content-portfolio"
           href="https://github.com/Tsedhondup/tsering-dhondup"
           target="_blank"
+          onMouseEnter={() => setHoveredTwo(true)}
+          onMouseLeave={() => setHoveredTwo(false)}
         >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
@@ -77,7 +89,9 @@ const Works = () => {
           />
           <div className="projects__content--text projects__content--text-portfolio">
             <motion.h2
-              className="projects__content--project-name"
+              className={`projects__content--project-name ${
+                hoveredTwo ? "js-color-pewter" : ""
+              }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
@@ -89,7 +103,9 @@ const Works = () => {
               portfolio website
             </motion.h2>
             <motion.p
-              className="projects__content--project-description"
+              className={`projects__content--project-description ${
+                hoveredTwo ? "js-color-pewter" : ""
+              }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
@@ -107,6 +123,8 @@ const Works = () => {
           className="projects__content projects__content-brainflix"
           href="https://github.com/Tsedhondup/tsering-dhondup-BrainFlix"
           target="_blank"
+          onMouseEnter={() => setHoveredThree(true)}
+          onMouseLeave={() => setHoveredThree(false)}
         >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
@@ -122,7 +140,9 @@ const Works = () => {
           />
           <div className="projects__content--text projects__content--text-brainflix">
             <motion.h2
-              className="projects__content--project-name"
+              className={`projects__content--project-name ${
+                hoveredThree ? "js-color-pewter" : ""
+              }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
@@ -134,7 +154,9 @@ const Works = () => {
               BrainFlix
             </motion.h2>
             <motion.p
-              className="projects__content--project-description"
+              className={`projects__content--project-description ${
+                hoveredThree ? "js-color-pewter" : ""
+              }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
