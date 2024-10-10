@@ -1,7 +1,7 @@
 import Header from "../../Components/Header/Header";
 import AboutFirst from "../../Components/AboutFirst/AboutFirst";
 import Contacts from "../../Components/Contacts/Contacts";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const AboutPage = () => {
   const [isScroll, setIsScroll] = useState(false);
   // eslint-disable-next-line no-unused-vars
@@ -12,16 +12,16 @@ const AboutPage = () => {
   );
   const [scrollPositionPoint, setScrollPositionPoint] = useState(0);
 
-  // eslint-disable-next-line no-unused-vars
-  const [windowWitdh, setWindowWitdh] = useState(window.innerWidth);
-
+  // page scrolls to the top when a component is mounted
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header
         scrollPositionPoint={scrollPositionPoint}
         isScroll={isScroll}
         headerClass={headerClass}
-        windowWitdh={`${windowWitdh > 1280 ? headerClass2 : ""}`}
       />
       <AboutFirst
         setIsScroll={setIsScroll}

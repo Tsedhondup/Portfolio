@@ -24,7 +24,8 @@ const AboutFirst = (props) => {
   const [isBorderOne, setIsBorderOne] = useState(false);
   const [isBorderTwo, setIsBorderTwo] = useState(false);
   const [isBorderThree, setIsBorderThree] = useState(false);
-  // const [popUpHideClass, setPopUpHideClass] = useState("");
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     setTimeout(() => {
       setIsBorderOne(true);
@@ -40,7 +41,7 @@ const AboutFirst = (props) => {
     window.addEventListener("scroll", () => {
       if (refElement.current) {
         const elementPosition = refElement.current.getBoundingClientRect();
-        elementPosition.top <= -180
+        elementPosition.top <= 80
           ? props.setIsScroll(true)
           : props.setIsScroll(false);
       }
@@ -56,57 +57,25 @@ const AboutFirst = (props) => {
     //     }
     //   });
     // };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Event handler
-  // const handlePopUpClass = () => {
-  //   setPopUpHideClass("about-first__pop-up-hide");
-  // };
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
+    });
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", () => {
+        setWindowWidth(window.innerWidth);
+      });
+    };
+  }, []);
+
+ 
   return (
     <section className="about-first">
-      {/* <div className={`about-first__pop-up ${popUpHideClass}`}>
-        <motion.p
-          className="about-first__pop-up--text"
-          initial={{
-            opacity: 0,
-            y: -60,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              ease: "linear",
-              duration: 1,
-              delay: 1,
-            },
-          }}
-          viewport={{ once: true, amount: 1 }}
-        >
-          page under maintanance !!
-        </motion.p>
-        <motion.button
-          className="about-first__pop-up--button"
-          onClick={handlePopUpClass}
-          initial={{
-            opacity: 0,
-            y: 60,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              ease: "linear",
-              duration: 1,
-              delay: 1,
-            },
-          }}
-          viewport={{ once: true, amount: 1 }}
-        >
-          close
-        </motion.button>
-      </div> */}
-      <div className="about-first__image-container" ref={refElement}>
+      <div className="about-first__image-container">
         {/* --------------------------- About Desktop header --------------------------- */}
         <motion.h2
           className="about-first__image-container--text"
@@ -143,6 +112,7 @@ const AboutFirst = (props) => {
         {/* --------------------------- About Mobile header --------------------------- */}
         <motion.h2
           className="about-first__mobile-header"
+          ref={windowWidth < 767 ? refElement : null}
           initial={{
             opacity: 0,
             y: 20,
@@ -160,6 +130,7 @@ const AboutFirst = (props) => {
 
         <motion.section
           className="about-text about-text-education"
+          ref={windowWidth >= 767 ? refElement : null}
           initial={{
             borderTop: "1px solid rgba(0,0,0,0)",
             borderLeft: "1px solid rgba(0,0,0,0)",

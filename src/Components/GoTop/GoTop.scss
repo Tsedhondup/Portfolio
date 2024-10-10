@@ -1,0 +1,20 @@
+@import "../../styles/partials/_mixins.scss";
+@import "../../styles/partials/_variables";
+
+.button-wrapper {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $pewter;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $pewter;
+  @include tablet {
+    display: none;
+  }
+}

@@ -75,9 +75,11 @@
       0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
       0 100px 80px rgba(0, 0, 0, 0.12);
 
+    @include tablet {
+      height: 486px;
+    }
     @include desktop {
       max-width: 600px;
-      height: 486px;
     }
     // Project images
     &--img {
@@ -87,6 +89,7 @@
       height: 300px;
       object-fit: cover;
       filter: grayscale(100%);
+      border-bottom: 1px solid $pewter;
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
 
@@ -94,13 +97,10 @@
         max-width: 500px;
       }
     }
-
     // Projects text section
     &--text {
-      // height: 150px;
       text-align: left;
       padding: $mobile-margin;
-      border-top: 1px solid $pewter;
       padding-bottom: 32px;
     }
 
@@ -138,9 +138,9 @@
   }
   &__content:hover {
     @include tablet {
-      background-color: $black;
       scale: 1.13;
-      transition: 1s;
+      transition: 0.5s;
+      background-color: $black;
     }
   }
   &__content-brainflix {

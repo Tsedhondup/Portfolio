@@ -16,19 +16,29 @@ const Works = () => {
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
       <section className="projects">
-        <a
+        <motion.a
           className="projects__content projects__content-email-reader"
           href="https://github.com/Tsedhondup/job-application-tracker"
           target="_blank"
           onMouseEnter={() => setHoveredOne(true)}
           onMouseLeave={() => setHoveredOne(false)}
+          initial={{
+            y: 60,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { delay: 0.5, duration: 1, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
               filter: "grayScale(0)",
               opacity: 1,
-              transition: { duration: 1, ease: "linear" },
+              transition: { delay: 0.5, duration: 1, ease: "linear" },
             }}
             viewport={{ once: true, amount: 0.5 }}
             src={jobTracker}
@@ -44,7 +54,7 @@ const Works = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1, duration: 1, ease: "linear" },
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
@@ -58,7 +68,7 @@ const Works = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1, duration: 1, ease: "linear" },
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
@@ -67,20 +77,30 @@ const Works = () => {
               them in MySQL database.
             </motion.p>
           </div>
-        </a>
-        <a
+        </motion.a>
+        <motion.a
           className="projects__content projects__content-portfolio"
           href="https://github.com/Tsedhondup/tsering-dhondup"
           target="_blank"
           onMouseEnter={() => setHoveredTwo(true)}
           onMouseLeave={() => setHoveredTwo(false)}
+          initial={{
+            y: 60,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { delay: 0.5, duration: 1, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
               filter: "grayScale(0)",
               opacity: 1,
-              transition: { duration: 1, ease: "linear" },
+              transition: { dealy: 0.5, duration: 1, ease: "linear" },
             }}
             viewport={{ once: true, amount: 0.5 }}
             src={portfolio}
@@ -96,7 +116,7 @@ const Works = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1, duration: 1, ease: "linear" },
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
@@ -110,7 +130,7 @@ const Works = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1, duration: 1, ease: "linear" },
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
@@ -118,20 +138,30 @@ const Works = () => {
               React.js with real-time data provided by a Node server.
             </motion.p>
           </div>
-        </a>
-        <a
+        </motion.a>
+        <motion.a
           className="projects__content projects__content-brainflix"
           href="https://github.com/Tsedhondup/tsering-dhondup-BrainFlix"
           target="_blank"
           onMouseEnter={() => setHoveredThree(true)}
           onMouseLeave={() => setHoveredThree(false)}
+          initial={{
+            y: 60,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { delay: 0.5, duration: 1, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <motion.img
             initial={{ filter: "grayScale(100)", opacity: 0 }}
             whileInView={{
               filter: "grayScale(0)",
               opacity: 1,
-              transition: { duration: 1, ease: "linear" },
+              transition: { delay: 0.5, duration: 1, ease: "linear" },
             }}
             viewport={{ once: true, amount: 0.5 }}
             src={brainflix}
@@ -147,7 +177,7 @@ const Works = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1, duration: 1, ease: "linear" },
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
@@ -161,7 +191,7 @@ const Works = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1, duration: 1, ease: "linear" },
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
@@ -170,7 +200,7 @@ const Works = () => {
               RESTful API built using Express in Node js.
             </motion.p>
           </div>
-        </a>
+        </motion.a>
       </section>
     </section>
   );
