@@ -2,6 +2,7 @@
 @import "../../styles/partials/_variables";
 
 .contacts {
+  background-image: url("../../assets/image/city.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -36,12 +37,12 @@
     border-bottom: 1px solid $pewter;
   }
 }
-.contact-home {
-  background-image: url("../../assets/image/contact-back-image-home.jpg");
-}
-.contact-about {
-  background-image: url("../../assets/image/contact-back-image-about.jpg");
-}
+// .contact-home {
+//   background-image: url("../../assets/image/contact-back-image-home.jpg");
+// }
+// .contact-about {
+//   background-image: url("../../assets/image/contact-back-image-about.jpg");
+// }
 .phone-email {
   position: relative;
   z-index: 15;
