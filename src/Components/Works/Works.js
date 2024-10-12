@@ -135,7 +135,7 @@ const Works = () => {
               viewport={{ once: true, amount: 0.5 }}
             >
               My Portfolio website deployed on Netlify, primarily built on
-              React.js with real-time data provided by a Node server.
+              React.js.
             </motion.p>
           </div>
         </motion.a>
