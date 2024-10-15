@@ -141,7 +141,7 @@ const Works = () => {
         </motion.a>
         <motion.a
           className="projects__content projects__content-brainflix"
-          href="https://github.com/Tsedhondup/tsering-dhondup-BrainFlix"
+          href="https://brain-flix-app.netlify.app/"
           target="_blank"
           onMouseEnter={() => setHoveredThree(true)}
           onMouseLeave={() => setHoveredThree(false)}
