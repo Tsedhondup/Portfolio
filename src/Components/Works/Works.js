@@ -13,6 +13,8 @@ const Works = () => {
   const [hoveredOne, setHoveredOne] = useState(false);
   const [hoveredTwo, setHoveredTwo] = useState(false);
   const [hoveredThree, setHoveredThree] = useState(false);
+  const [hoveredFour, setHoveredFour] = useState(false);
+  const [hoveredFive, setHoveredFive] = useState(false);
 
   return (
     <section className="project-container">
@@ -22,8 +24,8 @@ const Works = () => {
           className="projects__content projects__content-portfolio"
           href="https://github.com/Tsedhondup/tsering-dhondup"
           target="_blank"
-          onMouseEnter={() => setHoveredTwo(true)}
-          onMouseLeave={() => setHoveredTwo(false)}
+          onMouseEnter={() => setHoveredOne(true)}
+          onMouseLeave={() => setHoveredOne(false)}
           initial={{
             y: 60,
             opacity: 0,
@@ -45,12 +47,14 @@ const Works = () => {
             viewport={{ once: true, amount: 0.5 }}
             src={portfolio}
             alt="portfolio-website-image"
-            className="projects__content--img projects__content--portfolio-image "
+            className={`projects__content--img projects__content--portfolio-image ${
+              hoveredOne ? "js-box-shadow" : ""
+            }`}
           />
           <div className="projects__content--text projects__content--text-portfolio">
             <motion.h2
               className={`projects__content--project-name ${
-                hoveredTwo ? "js-color-pewter" : ""
+                hoveredOne ? "js-color-pewter" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
@@ -64,7 +68,7 @@ const Works = () => {
             </motion.h2>
             <motion.p
               className={`projects__content--project-description ${
-                hoveredTwo ? "js-color-pewter" : ""
+                hoveredOne ? "js-color-pewter" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
@@ -83,8 +87,8 @@ const Works = () => {
           className="projects__content projects__content-brainflix"
           href="https://brain-flix-app.netlify.app/"
           target="_blank"
-          onMouseEnter={() => setHoveredThree(true)}
-          onMouseLeave={() => setHoveredThree(false)}
+          onMouseEnter={() => setHoveredTwo(true)}
+          onMouseLeave={() => setHoveredTwo(false)}
           initial={{
             y: 60,
             opacity: 0,
@@ -106,12 +110,14 @@ const Works = () => {
             viewport={{ once: true, amount: 0.5 }}
             src={brainflix}
             alt="brainflix-app-image"
-            className="projects__content--img projects__content--brainflix-image"
+            className={`projects__content--img projects__content--brainflix-image ${
+              hoveredTwo ? "js-box-shadow" : ""
+            }`}
           />
           <div className="projects__content--text projects__content--text-brainflix">
             <motion.h2
               className={`projects__content--project-name ${
-                hoveredThree ? "js-color-pewter" : ""
+                hoveredTwo ? "js-color-pewter" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
@@ -125,7 +131,7 @@ const Works = () => {
             </motion.h2>
             <motion.p
               className={`projects__content--project-description ${
-                hoveredThree ? "js-color-pewter" : ""
+                hoveredTwo ? "js-color-pewter" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
@@ -142,7 +148,7 @@ const Works = () => {
           </div>
         </motion.a>
         <motion.a
-          className="projects__content projects__content-brainflix"
+          className="projects__content projects__content-quiz"
           href="https://brain-flix-app.netlify.app/"
           target="_blank"
           onMouseEnter={() => setHoveredThree(true)}
@@ -168,9 +174,11 @@ const Works = () => {
             viewport={{ once: true, amount: 0.5 }}
             src={quiz}
             alt="brainflix-app-image"
-            className="projects__content--img projects__content--brainflix-image"
+            className={`projects__content--img projects__content--quiz-image ${
+              hoveredThree ? "js-box-shadow" : ""
+            }`}
           />
-          <div className="projects__content--text projects__content--text-brainflix">
+          <div className="projects__content--text projects__content--text-quiz">
             <motion.h2
               className={`projects__content--project-name ${
                 hoveredThree ? "js-color-pewter" : ""
@@ -204,11 +212,11 @@ const Works = () => {
           </div>
         </motion.a>
         <motion.a
-          className="projects__content projects__content-brainflix"
+          className="projects__content projects__content-band-site"
           href="https://tseringdhondup-bandsite.netlify.app/"
           target="_blank"
-          onMouseEnter={() => setHoveredThree(true)}
-          onMouseLeave={() => setHoveredThree(false)}
+          onMouseEnter={() => setHoveredFour(true)}
+          onMouseLeave={() => setHoveredFour(false)}
           initial={{
             y: 60,
             opacity: 0,
@@ -230,12 +238,14 @@ const Works = () => {
             viewport={{ once: true, amount: 0.5 }}
             src={bandsite}
             alt="brainflix-app-image"
-            className="projects__content--img projects__content--brainflix-image"
+            className={`projects__content--img projects__content--band-site-image ${
+              hoveredFour ? "js-box-shadow" : ""
+            }`}
           />
-          <div className="projects__content--text projects__content--text-brainflix">
+          <div className="projects__content--text projects__content--text-band-site">
             <motion.h2
               className={`projects__content--project-name ${
-                hoveredThree ? "js-color-pewter" : ""
+                hoveredFour ? "js-color-pewter" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
@@ -249,7 +259,7 @@ const Works = () => {
             </motion.h2>
             <motion.p
               className={`projects__content--project-description ${
-                hoveredThree ? "js-color-pewter" : ""
+                hoveredFour ? "js-color-pewter" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
@@ -269,8 +279,8 @@ const Works = () => {
           className="projects__content projects__content-email-reader"
           href="https://github.com/Tsedhondup/job-application-tracker"
           target="_blank"
-          onMouseEnter={() => setHoveredOne(true)}
-          onMouseLeave={() => setHoveredOne(false)}
+          onMouseEnter={() => setHoveredFive(true)}
+          onMouseLeave={() => setHoveredFive(false)}
           initial={{
             y: 60,
             opacity: 0,
@@ -292,12 +302,14 @@ const Works = () => {
             viewport={{ once: true, amount: 0.5 }}
             src={jobTracker}
             alt="job-application-tracker-image"
-            className="projects__content--img projects__content--email-image "
+            className={`projects__content--img projects__content--email-image ${
+              hoveredFive ? "js-box-shadow" : ""
+            }`}
           />
           <div className="projects__content--text ">
             <motion.h2
               className={`projects__content--project-name projects__content--text-email ${
-                hoveredOne ? "js-color-pewter" : ""
+                hoveredFive ? "js-color-pewter" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
@@ -311,7 +323,7 @@ const Works = () => {
             </motion.h2>
             <motion.p
               className={`projects__content--project-description ${
-                hoveredOne ? "js-color-pewter" : ""
+                hoveredFive ? "js-color-pewter" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{

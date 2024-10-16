@@ -72,12 +72,12 @@
     //   0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     //   0 100px 80px rgba(0, 0, 0, 0.12);
 
-    @include tablet {
-      height: 486px;
-    }
-    @include desktop {
-      max-width: 600px;
-    }
+    // @include tablet {
+    //   height: 486px;
+    // }
+    // @include desktop {
+    //   max-width: 600px;
+    // }
     // Project images
     &--img {
       display: block;
@@ -96,6 +96,11 @@
       }
     }
     &--portfolio-image {
+      border: 1px solid $pewter;
+    }
+    // Dynamic JavaScript class
+    .js-box-shadow {
+      box-shadow: unset;
       border: 1px solid $pewter;
     }
     // Projects text section
@@ -130,7 +135,6 @@
       display: none;
       @include tablet {
         font-size: 13px;
-        display: block;
         padding-top: 0px;
       }
       @include desktop {
@@ -138,19 +142,25 @@
       }
     }
     .js-color-pewter {
-      color: $pewter;
+      display: block;
+      padding: 10px;
     }
   }
   &__content:hover {
     @include tablet {
       scale: 1.13;
       transition: 0.5s;
-      background-color: $black;
+      border: 1px solid $pewter;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
     }
   }
   &__content-brainflix {
     @include tablet {
       // grid-column: span 2;
+      // border: 1px solid $pewter;
     }
     @include desktop {
       grid-column: unset;
