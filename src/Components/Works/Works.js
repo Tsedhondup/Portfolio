@@ -70,9 +70,10 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredOne ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
+                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
@@ -132,9 +133,10 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredTwo ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
+                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
@@ -147,7 +149,7 @@ const Works = () => {
         </motion.a>
         <motion.a
           className="projects__content projects__content-quiz"
-          href="https://brain-flix-app.netlify.app/"
+          href="https://tseringdhondupgeographyquiz.netlify.app/"
           target="_blank"
           onMouseEnter={() => setHoveredThree(true)}
           onMouseLeave={() => setHoveredThree(false)}
@@ -195,16 +197,16 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredThree ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
+                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              Showcasing my web developing skills, a video streaming web
-              application built on React, connected to the backend server via
-              RESTful API built using Express in Node js.
+              A geography quiz is an interactive quiz game, that allows players
+              to guess the correct answer within time allocation.
             </motion.p>
           </div>
         </motion.a>
@@ -258,16 +260,16 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredFour ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
+                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              Showcasing my web developing skills, a video streaming web
-              application built on React,connected to the backend server via
-              RESTful API built using Express in Node js.
+              Bandsite is a static website built as a part of the School Project
+              at BrainStation's Software Engineering Bootcamp.
             </motion.p>
           </div>
         </motion.a>
@@ -321,9 +323,10 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredFive ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
+                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
