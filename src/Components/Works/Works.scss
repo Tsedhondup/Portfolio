@@ -6,6 +6,7 @@
   padding-left: $mobile-margin;
   padding-right: $mobile-margin;
   padding-bottom: 100px;
+  // background-color: $pewter;
   @include tablet {
     padding-top: $tablet-margin;
     padding-left: $tablet-margin;
@@ -47,7 +48,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
-  gap: $mobile-margin;
+  gap: 24px;
   @include tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -66,14 +67,14 @@
     text-decoration: none;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    max-width: 400px;
+    width: 100%;
     margin: auto;
-    border: 1px solid $pewter;
+    // border: 1px solid $pewter;
     border-radius: 4px;
-    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-      0 100px 80px rgba(0, 0, 0, 0.12);
+    // box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    //   0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    //   0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    //   0 100px 80px rgba(0, 0, 0, 0.12);
 
     @include tablet {
       height: 486px;
@@ -85,13 +86,14 @@
     &--img {
       display: block;
       margin: auto;
-      max-width: 100%;
-      height: 300px;
+      width: 100%;
+      height: 200px;
       object-fit: cover;
       filter: grayscale(100%);
-      border-bottom: 1px solid $pewter;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 
       @include tablet {
         max-width: 500px;
@@ -100,8 +102,6 @@
     // Projects text section
     &--text {
       text-align: left;
-      padding: $mobile-margin;
-      padding-bottom: 32px;
     }
 
     // project name
@@ -111,16 +111,14 @@
       font-weight: 400;
       text-align: left;
       text-transform: uppercase;
-      padding-bottom: 16px;
-      margin: auto;
+      text-shadow: 2px 1px 1px $pewter;
+      padding: 16px 0px;
       @include tablet {
         font-size: 14;
         margin: unset;
-        margin-bottom: 10px;
       }
       @include desktop {
         font-size: 16px;
-        padding-bottom: 10px;
       }
     }
 
@@ -129,6 +127,7 @@
       font-size: 12px;
       color: $ebony;
       line-height: 1.5em;
+      display: none;
       @include tablet {
         font-size: 13px;
         display: block;
