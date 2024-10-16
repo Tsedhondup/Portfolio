@@ -128,20 +128,30 @@
     color: $ebony;
     justify-content: flex-start;
     align-items: center;
-    font-size: 24px;
+    font-size: 13px;
     font-weight: normal;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding-bottom: 16px;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
   }
   // About text content paragraph
   &__para {
     color: $black;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 200;
     line-height: 1.6em;
     padding-bottom: 16px;
+
+    @include tablet {
+      font-size: 13px;
+    }
     @include desktop {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   // About text content icon container
