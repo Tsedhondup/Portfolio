@@ -70,10 +70,9 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredOne ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
@@ -133,10 +132,9 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredTwo ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
@@ -197,16 +195,15 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredThree ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
               Showcasing my web developing skills, a video streaming web
-              application built on React,  connected to the backend server via
+              application built on React, connected to the backend server via
               RESTful API built using Express in Node js.
             </motion.p>
           </div>
@@ -261,16 +258,15 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredFour ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
               Showcasing my web developing skills, a video streaming web
-              application built on React,  connected to the backend server via
+              application built on React,connected to the backend server via
               RESTful API built using Express in Node js.
             </motion.p>
           </div>
@@ -325,10 +321,9 @@ const Works = () => {
               className={`projects__content--project-description ${
                 hoveredFive ? "js-color-pewter" : ""
               }`}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                y: 0,
                 transition: { delay: 1.5, duration: 1, ease: "linear" },
               }}
               viewport={{ once: true, amount: 0.5 }}
