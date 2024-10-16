@@ -65,11 +65,7 @@
   // Project items
   &__content {
     text-decoration: none;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    margin: auto;
-    // border: 1px solid $pewter;
     border-radius: 4px;
     // box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     //   0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -99,6 +95,9 @@
         max-width: 500px;
       }
     }
+    &--portfolio-image {
+      border: 1px solid $pewter;
+    }
     // Projects text section
     &--text {
       text-align: left;
@@ -116,6 +115,7 @@
       @include tablet {
         font-size: 14;
         margin: unset;
+        text-shadow: unset;
       }
       @include desktop {
         font-size: 16px;
