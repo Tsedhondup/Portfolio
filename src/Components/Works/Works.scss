@@ -107,29 +107,35 @@
     // project name
     &--project-name {
       color: $black;
-      font-size: 16px;
+      font-size: 13px;
       font-weight: 400;
       text-align: left;
       text-transform: uppercase;
       padding-bottom: 16px;
       margin: auto;
       @include tablet {
+        font-size: 14;
         margin: unset;
         margin-bottom: 10px;
       }
       @include desktop {
+        font-size: 16px;
         padding-bottom: 10px;
       }
     }
 
     // Project description
     &--project-description {
-      font-size: 15px;
+      font-size: 12px;
       color: $ebony;
       line-height: 1.5em;
       @include tablet {
+        font-size: 13px;
         display: block;
         padding-top: 0px;
+      }
+      @include desktop {
+        font-size: 14px;
       }
     }
     .js-color-pewter {
@@ -145,7 +151,7 @@
   }
   &__content-brainflix {
     @include tablet {
-      grid-column: span 2;
+      // grid-column: span 2;
     }
     @include desktop {
       grid-column: unset;

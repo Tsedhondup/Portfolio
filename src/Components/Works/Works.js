@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import portfolio from "../../assets/image/portfolio.jpg";
 import brainflix from "../../assets/image/brainflix.jpg";
 import jobTracker from "../../assets/image/job-tracker.jpg";
+import quiz from "../../assets/image/quiz.jpg";
+import bandsite from "../../assets/image/band-site.jpg";
 import { useState } from "react";
 import "./Works.scss";
 const Works = () => {
@@ -182,6 +184,130 @@ const Works = () => {
               viewport={{ once: true, amount: 0.5 }}
             >
               BrainFlix
+            </motion.h2>
+            <motion.p
+              className={`projects__content--project-description ${
+                hoveredThree ? "js-color-pewter" : ""
+              }`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              Showcasing my web developing skills, a video streaming web
+              application built on React,  connected to the backend server via
+              RESTful API built using Express in Node js.
+            </motion.p>
+          </div>
+        </motion.a>
+        <motion.a
+          className="projects__content projects__content-brainflix"
+          href="https://brain-flix-app.netlify.app/"
+          target="_blank"
+          onMouseEnter={() => setHoveredThree(true)}
+          onMouseLeave={() => setHoveredThree(false)}
+          initial={{
+            y: 60,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { delay: 0.5, duration: 1, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <motion.img
+            initial={{ filter: "grayScale(100)", opacity: 0 }}
+            whileInView={{
+              filter: "grayScale(0)",
+              opacity: 1,
+              transition: { delay: 0.5, duration: 1, ease: "linear" },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            src={quiz}
+            alt="brainflix-app-image"
+            className="projects__content--img projects__content--brainflix-image"
+          />
+          <div className="projects__content--text projects__content--text-brainflix">
+            <motion.h2
+              className={`projects__content--project-name ${
+                hoveredThree ? "js-color-pewter" : ""
+              }`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              Geography quiz
+            </motion.h2>
+            <motion.p
+              className={`projects__content--project-description ${
+                hoveredThree ? "js-color-pewter" : ""
+              }`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              Showcasing my web developing skills, a video streaming web
+              application built on React,  connected to the backend server via
+              RESTful API built using Express in Node js.
+            </motion.p>
+          </div>
+        </motion.a>
+        <motion.a
+          className="projects__content projects__content-brainflix"
+          href="https://tseringdhondup-bandsite.netlify.app/"
+          target="_blank"
+          onMouseEnter={() => setHoveredThree(true)}
+          onMouseLeave={() => setHoveredThree(false)}
+          initial={{
+            y: 60,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { delay: 0.5, duration: 1, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <motion.img
+            initial={{ filter: "grayScale(100)", opacity: 0 }}
+            whileInView={{
+              filter: "grayScale(0)",
+              opacity: 1,
+              transition: { delay: 0.5, duration: 1, ease: "linear" },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            src={bandsite}
+            alt="brainflix-app-image"
+            className="projects__content--img projects__content--brainflix-image"
+          />
+          <div className="projects__content--text projects__content--text-brainflix">
+            <motion.h2
+              className={`projects__content--project-name ${
+                hoveredThree ? "js-color-pewter" : ""
+              }`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1.5, duration: 1, ease: "linear" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              Geography quiz
             </motion.h2>
             <motion.p
               className={`projects__content--project-description ${
