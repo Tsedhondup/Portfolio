@@ -1,108 +1,43 @@
 /* eslint-disable react/jsx-no-target-blank */
 import { motion } from "framer-motion";
-import portfolio from "../../assets/image/portfolio.jpg";
-import brainflix from "../../assets/image/brainflix.jpg";
-import jobTracker from "../../assets/image/job-tracker.jpg";
-import quiz from "../../assets/image/quiz.jpg";
-import bandsite from "../../assets/image/band-site.jpg";
+
 import { useState } from "react";
 import { projectData } from "../../utilities/data";
 import "./Works.scss";
 const Works = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [hoveredOne, setHoveredOne] = useState(false);
-  const [hoveredTwo, setHoveredTwo] = useState(false);
-  const [hoveredThree, setHoveredThree] = useState(false);
-  const [hoveredFour, setHoveredFour] = useState(false);
-  const [hoveredFive, setHoveredFive] = useState(false);
-  const onMouseEnterCallBack = (itemNumber) => {
-    if (itemNumber === 0) {
-      setHoveredOne(true);
-      return;
-    }
-    if (itemNumber === 1) {
-      setHoveredTwo(true);
-      return;
-    }
-    if (itemNumber === 2) {
-      setHoveredThree(true);
-      return;
-    }
-    if (itemNumber === 3) {
-      setHoveredFour(true);
-      return;
-    }
-    if (itemNumber === 4) {
-      setHoveredFive(true);
-      return;
-    }
+  const [projects, setProjects] = useState(projectData);
+
+  const onMouseEnterCallBack = (itemId) => {
+    const mappedData = projects.map((item) => {
+      if (item.id === itemId) {
+        item.hover = true;
+      }
+      return item;
+    });
+    console.log(mappedData);
+    setProjects(mappedData);
   };
-  const onMouseLeaveCallBack = (itemNumber) => {
-    if (itemNumber === 0) {
-      setHoveredOne(false);
-      return;
-    }
-    if (itemNumber === 1) {
-      setHoveredTwo(false);
-      return;
-    }
-    if (itemNumber === 2) {
-      setHoveredThree(false);
-      return;
-    }
-    if (itemNumber === 3) {
-      setHoveredFour(false);
-      return;
-    }
-    if (itemNumber === 4) {
-      setHoveredFive(false);
-      return;
-    }
+  const onMouseLeaveCallBack = (itemId) => {
+    const mappedData = projects.map((item) => {
+      if (item.id === itemId) {
+        item.hover = false;
+      }
+      return item;
+    });
+    console.log(mappedData);
+    setProjects(mappedData);
   };
 
-  // SET DYNAMIC CLASSES FOR PROJECT-IMAGE-CONTAINER
-  const setProjectImageClass = (projectNum) => {
-    if (projectNum === 0) {
-      if (hoveredOne) {
-        return "project-portfolio";
-      }
-    }
-    if (projectNum === 1) {
-      if (hoveredTwo) {
-      }
-      return "project-brainflix";
-    }
-    if (projectNum === 2) {
-      if (hoveredTwo) {
-        return "project-quiz";
-      }
-    }
-    if (projectNum === 3) {
-      if (hoveredTwo) {
-        return "project-bandsite";
-      }
-    }
-    if (projectNum === 4) {
-      if (hoveredTwo) {
-        return "project-email";
-      }
-    }
-  };
   // COUNTER
   let counterDuration = 0.5;
-  let counterProjectNumber = 0;
-  const projectListElement = projectData.map((item) => {
+  const projectListElement = projects.map((item) => {
     // INITIAL VALUE OF ANIMATION DURATION TIME
     let durationTime = counterDuration;
-    // INITIAL INDEX NUMBER OF PROJECT ITEM
-    let projectNumber = counterProjectNumber;
 
     counterDuration++; // increment after each loop/map
-    counterProjectNumber++; // increment after each loop/map
     return (
       <motion.div
-        key={projectNumber}
+        key={item.id}
         className="project-content__project"
         initial={{
           opacity: 0,
@@ -118,13 +53,14 @@ const Works = () => {
         <a
           href={item.url}
           target="_blank"
-          className={`project-image-container 
-          ${setProjectImageClass(projectNumber)}`}
-          onMouseEnter={() => onMouseEnterCallBack(projectNumber)}
-          onMouseLeave={() => onMouseLeaveCallBack(projectNumber)}
+          className={`project-image-container`}
+          onMouseEnter={() => onMouseEnterCallBack(item.id)}
+          onMouseLeave={() => onMouseLeaveCallBack(item.id)}
         >
           <span
-            className={`project-image-container__overlay`}
+            className={`project-image-container__overlay ${
+              item.hover ? "js-show-over-lay" : ""
+            }`}
           >{`Open ${item.name}`}</span>
           <img
             src={item.img}

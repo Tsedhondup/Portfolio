@@ -5,6 +5,7 @@ import quiz from "../assets/image/quiz.jpg";
 import bandsite from "../assets/image/band-site.jpg";
 export const projectData = [
   {
+    id: "01",
     name: "portfolio",
     img: portfolio,
     url: "https://tseringdhondup.netlify.app/",
@@ -13,6 +14,7 @@ export const projectData = [
       " My Portfolio website deployed on Netlify, primarily built on React.js.",
   },
   {
+    id: "02",
     name: "brainflix",
     img: brainflix,
     url: "https://brain-flix-app.netlify.app/",
@@ -21,6 +23,7 @@ export const projectData = [
       "Showcasing my web developing skills, a video streaming web application built on React, connected to the backend server viaRESTful API built using Express in Node js.",
   },
   {
+    id: "03",
     name: "quiz",
     img: quiz,
     url: "https://tseringdhondupgeographyquiz.netlify.app/",
@@ -29,6 +32,7 @@ export const projectData = [
       "A geography quiz is an interactive quiz game, that allows players to guess the correct answer within time allocation.",
   },
   {
+    id: "04",
     name: "band-site",
     img: bandsite,
     url: "https://tseringdhondup-bandsite.netlify.app/",
@@ -37,6 +41,7 @@ export const projectData = [
       "Bandsite is a static website built as a part of the School Project at BrainStation's Software Engineering Bootcamp.",
   },
   {
+    id: "05",
     name: "email",
     img: jobTracker,
     url: "https://github.com/Tsedhondup/EmailReader.git",
