@@ -82,7 +82,9 @@ const Works = () => {
             </a>
           </div>
 
-          <p>{item.description}</p>
+          <p className="project-text-container__description">
+            {item.description}
+          </p>
         </div>
       </motion.div>
     );

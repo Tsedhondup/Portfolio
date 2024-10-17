@@ -58,8 +58,12 @@
 }
 
 .project-image-container {
+  display: block;
   position: relative;
   z-index: 5;
+  border: 1px solid $pewter;
+  transition: 0.5s;
+  margin-bottom: 24px;
   &__image {
     display: block;
     width: 100%;
@@ -94,28 +98,43 @@
     transition: 1s;
   }
 }
-// DYNAMIC JS CLASS
-// .project-image-container:hover{
-//   scale: 1.5;
-//   transition: 0.5;
-//   background-color: red;
-//   height: 300px;
-// }
+
 .js-scale-up {
-  scale: 1.5;
-  transition: 0.5;
-  background-color: red;
+  scale: 1.1;
+  transition: 1;
   height: 300px;
 }
 
 .project-text-container {
+  position: relative;
+  z-index: 5;
   &__text {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    &--name {
+      font-size: 13px;
+      text-transform: uppercase;
+      @include tablet {
+        font-size: 14px;
+      }
+      @include desktop {
+        font-size: 16px;
+      }
+    }
     &--repo {
       text-align: right;
       text-decoration: none;
+    }
+  }
+  &__description {
+    font-size: 12px;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 16px;
     }
   }
 }
