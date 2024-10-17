@@ -16,7 +16,6 @@ const Works = () => {
   const [hoveredThree, setHoveredThree] = useState(false);
   const [hoveredFour, setHoveredFour] = useState(false);
   const [hoveredFive, setHoveredFive] = useState(false);
-
   const onMouseEnterCallBack = (itemNumber) => {
     if (itemNumber === 0) {
       setHoveredOne(true);
@@ -65,19 +64,29 @@ const Works = () => {
   // SET DYNAMIC CLASSES FOR PROJECT-IMAGE-CONTAINER
   const setProjectImageClass = (projectNum) => {
     if (projectNum === 0) {
-      return "project-portfolio";
+      if (hoveredOne) {
+        return "project-portfolio";
+      }
     }
     if (projectNum === 1) {
+      if (hoveredTwo) {
+      }
       return "project-brainflix";
     }
     if (projectNum === 2) {
-      return "project-quiz";
+      if (hoveredTwo) {
+        return "project-quiz";
+      }
     }
     if (projectNum === 3) {
-      return "project-bandsite";
+      if (hoveredTwo) {
+        return "project-bandsite";
+      }
     }
     if (projectNum === 4) {
-      return "project-email";
+      if (hoveredTwo) {
+        return "project-email";
+      }
     }
   };
   // COUNTER
@@ -93,6 +102,7 @@ const Works = () => {
     counterProjectNumber++; // increment after each loop/map
     return (
       <motion.div
+        key={projectNumber}
         className="project-content__project"
         initial={{
           opacity: 0,
@@ -113,8 +123,14 @@ const Works = () => {
           onMouseEnter={() => onMouseEnterCallBack(projectNumber)}
           onMouseLeave={() => onMouseLeaveCallBack(projectNumber)}
         >
-          <span className="project-image-container__overlay">{`Open ${item.name}`}</span>
-          <img src={item.img} alt={`${item.name}-image`} className="p-img" />
+          <span
+            className={`project-image-container__overlay`}
+          >{`Open ${item.name}`}</span>
+          <img
+            src={item.img}
+            alt={`${item.name}-image`}
+            className="project-image-container__image"
+          />
         </a>
 
         <div>
