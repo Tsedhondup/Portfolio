@@ -62,15 +62,34 @@ const Works = () => {
     }
   };
 
-  // Set dynami classes for project images
-  const setProjectImageClass = () => {};
+  // SET DYNAMIC CLASSES FOR PROJECT-IMAGE-CONTAINER
+  const setProjectImageClass = (projectNum) => {
+    if (projectNum === 0) {
+      return "project-portfolio";
+    }
+    if (projectNum === 1) {
+      return "project-brainflix";
+    }
+    if (projectNum === 2) {
+      return "project-quiz";
+    }
+    if (projectNum === 3) {
+      return "project-bandsite";
+    }
+    if (projectNum === 4) {
+      return "project-email";
+    }
+  };
   // COUNTER
-  let counter = 0.5;
+  let counterDuration = 0.5;
   let counterProjectNumber = 0;
   const projectListElement = projectData.map((item) => {
-    let durationTime = counter; // initial value of duration time
-    let itemNumber = counterProjectNumber; // initial value of item number
-    counter++; // increment after each loop/map
+    // INITIAL VALUE OF ANIMATION DURATION TIME
+    let durationTime = counterDuration;
+    // INITIAL INDEX NUMBER OF PROJECT ITEM
+    let projectNumber = counterProjectNumber;
+
+    counterDuration++; // increment after each loop/map
     counterProjectNumber++; // increment after each loop/map
     return (
       <motion.div
@@ -90,9 +109,9 @@ const Works = () => {
           href={item.url}
           target="_blank"
           className={`project-image-container 
-          ${setProjectImageClass(0)}`}
-          onMouseEnter={() => onMouseEnterCallBack(itemNumber)}
-          onMouseLeave={() => onMouseLeaveCallBack(itemNumber)}
+          ${setProjectImageClass(projectNumber)}`}
+          onMouseEnter={() => onMouseEnterCallBack(projectNumber)}
+          onMouseLeave={() => onMouseLeaveCallBack(projectNumber)}
         >
           <span className="project-image-container__overlay">{`Open ${item.name}`}</span>
           <img src={item.img} alt={`${item.name}-image`} className="p-img" />
