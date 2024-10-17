@@ -45,7 +45,7 @@ export const projectData = [
   },
   {
     id: "05",
-    name: "email",
+    name: "email reader",
     img: jobTracker,
     url: "https://github.com/Tsedhondup/EmailReader.git",
     repo: "https://github.com/Tsedhondup/EmailReader.git",
@@ -59,7 +59,7 @@ export const projectData = [
     img: jobTracker,
     url: "https://github.com/Tsedhondup",
     repo: "https://github.com/Tsedhondup",
-    description: "Work in progress......",
+    description: "Project currently in making ......",
     tech: "React, SASS, Node, Express, MySQL, Knex ",
   },
 ];
