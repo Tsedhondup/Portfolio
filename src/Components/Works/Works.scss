@@ -80,7 +80,7 @@
   }
 
   &__overlay {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     display: none;
     font-size: 12px;
@@ -92,10 +92,29 @@
     @include desktop {
       font-size: 16px;
     }
+
+    &--description {
+      display: block;
+      margin-bottom: 30px;
+    }
+    &--tech {
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      @include tablet {
+        font-size: 16px;
+      }
+      @include desktop {
+        font-size: 18px;
+      }
+    }
   }
   // DYNAMIC JS CLASS
   .js-show-over-lay {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 10px;
     position: absolute;
     width: 100%;
@@ -148,139 +167,4 @@
       }
     }
   }
-  &__description {
-    font-size: 12px;
-    display: none;
-    @include tablet {
-      font-size: 14px;
-      // display: block;
-    }
-    @include desktop {
-      font-size: 16px;
-    }
-  }
 }
-// Projects
-// .projects {
-//   padding: 16px 0px;
-//   border-radius: 5px;
-//   display: grid;
-//   grid-template-columns: repeat(1, 1fr);
-//   grid-template-rows: auto;
-//   gap: 24px;
-
-//   @include tablet {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-template-rows: auto;
-//     gap: 36px;
-//     max-width: 800px;
-//     margin: auto;
-//   }
-//   @include desktop {
-//     grid-template-columns: repeat(3, 1fr);
-//     max-width: 100%;
-//   }
-
-//   // Project items
-//   &__content {
-//     text-decoration: none;
-//     width: 100%;
-//     border-radius: 4px;
-//     @include tablet {
-//       margin-bottom: 16px;
-//     }
-//     // Project images
-//     &--img {
-//       display: block;
-//       margin: auto;
-//       width: 100%;
-//       height: 220px;
-//       object-fit: cover;
-//       filter: grayscale(100%);
-//       box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-//         0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-//         0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-//         0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-
-//       @include tablet {
-//         margin-bottom: 10px;
-//       }
-//       @include desktop {
-//         height: 250px;
-//       }
-//     }
-//     &--portfolio-image {
-//       border: 1px solid $pewter;
-//     }
-//     // Dynamic JavaScript class
-//     .js-box-shadow {
-//       box-shadow: unset;
-//       border: 1px solid $pewter;
-//     }
-//     // Projects text section
-//     &--text {
-//       text-align: left;
-//     }
-
-//     // project name
-//     &--project-name {
-//       color: $black;
-//       font-size: 13px;
-//       font-weight: 400;
-//       text-align: left;
-//       text-transform: uppercase;
-//       text-shadow: 2px 1px 1px $pewter;
-//       padding: 16px 0px;
-//       @include tablet {
-//         font-size: 14;
-//         margin: unset;
-//         text-shadow: unset;
-//       }
-//       @include desktop {
-//         font-size: 16px;
-//       }
-//     }
-
-//     // Project description
-//     &--project-description {
-//       font-size: 12px;
-//       color: $ebony;
-//       line-height: 1.5em;
-//       display: none;
-//       @include tablet {
-//         display: block;
-//         font-size: 13px;
-//         padding-top: 0px;
-//       }
-//       @include desktop {
-//         font-size: 14px;
-//       }
-//     }
-//     .js-color-pewter {
-//       display: block;
-//       padding: 10px;
-//     }
-//   }
-//   &__content:hover {
-//     @include tablet {
-//       position: relative;
-//       scale: 1.13;
-//       transition: 0.5s;
-//       border: 1px solid $pewter;
-//       box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-//         0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-//         0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-//         0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-//     }
-//   }
-//   &__content-brainflix {
-//     @include tablet {
-//       // grid-column: span 2;
-//       // border: 1px solid $pewter;
-//     }
-//     @include desktop {
-//       grid-column: unset;
-//     }
-//   }
-// }

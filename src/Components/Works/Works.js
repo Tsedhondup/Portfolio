@@ -65,8 +65,8 @@ const Works = () => {
             onMouseEnter={() => onMouseEnterCallBack(item.id)}
             onMouseLeave={() => onMouseLeaveCallBack(item.id)}
           >
-            <span>{`${item.description}`}</span>
-            <span>{`${item.tech}`}</span>
+            <span className="project-image-container__overlay--description">{`${item.description}`}</span>
+            <span className="project-image-container__overlay--tech">{`${item.tech}`}</span>
           </span>
           <img
             src={item.img}
@@ -85,10 +85,6 @@ const Works = () => {
               Open Repo
             </a>
           </div>
-
-          <p className="project-text-container__description">
-            {item.description}
-          </p>
         </div>
       </motion.div>
     );
