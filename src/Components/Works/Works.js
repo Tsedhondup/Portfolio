@@ -62,6 +62,8 @@ const Works = () => {
     }
   };
 
+  // Set dynami classes for project images
+  const setProjectImageClass = () => {};
   // COUNTER
   let counter = 0.5;
   let counterProjectNumber = 0;
@@ -87,7 +89,8 @@ const Works = () => {
         <a
           href={item.url}
           target="_blank"
-          className="project-image-container"
+          className={`project-image-container 
+          ${setProjectImageClass(0)}`}
           onMouseEnter={() => onMouseEnterCallBack(itemNumber)}
           onMouseLeave={() => onMouseLeaveCallBack(itemNumber)}
         >
