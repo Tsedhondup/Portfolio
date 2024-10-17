@@ -6,6 +6,7 @@ import jobTracker from "../../assets/image/job-tracker.jpg";
 import quiz from "../../assets/image/quiz.jpg";
 import bandsite from "../../assets/image/band-site.jpg";
 import { useState } from "react";
+import { linkObj } from "../../utilities/data";
 import "./Works.scss";
 const Works = () => {
   // eslint-disable-next-line no-unused-vars
@@ -16,22 +17,22 @@ const Works = () => {
   const [hoveredFour, setHoveredFour] = useState(false);
   const [hoveredFive, setHoveredFive] = useState(false);
 
-  const links = [
-    { name: "portfolio", url: "https://tseringdhondup.netlify.app/" },
-    { name: "brainflix", url: "https://brain-flix-app.netlify.app/" },
-    { name: "quiz", url: "https://tseringdhondupgeographyquiz.netlify.app/" },
-    { name: "band-site", url: "https://tseringdhondup-bandsite.netlify.app/" },
-    {
-      name: "email",
-      url: "https://github.com/Tsedhondup/EmailReader.git",
-    },
-  ];
+  // COUNTER
+  let counter = 1;
+  const projectListElement = linkObj.map((item) => {
+    return (
+      <div>
+        <img src={item.img} alt={`${item.name}-image`} />
+        <div>
+          <h2>{item.name}</h2>
+        </div>
+      </div>
+    );
+  });
   return (
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
-      <section>
-        <div></div>
-      </section>
+      <section>{projectListElement}</section>
       <section className="projects">
         <motion.a
           className="projects__content projects__content-portfolio"
