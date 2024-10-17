@@ -6,7 +6,7 @@ import jobTracker from "../../assets/image/job-tracker.jpg";
 import quiz from "../../assets/image/quiz.jpg";
 import bandsite from "../../assets/image/band-site.jpg";
 import { useState } from "react";
-import { linkObj } from "../../utilities/data";
+import { projectData } from "../../utilities/data";
 import "./Works.scss";
 const Works = () => {
   // eslint-disable-next-line no-unused-vars
@@ -19,7 +19,7 @@ const Works = () => {
 
   // COUNTER
   let counter = 1;
-  const projectListElement = linkObj.map((item) => {
+  const projectListElement = projectData.map((item) => {
     return (
       <div>
         <img src={item.img} alt={`${item.name}-image`} />
