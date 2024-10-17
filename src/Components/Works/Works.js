@@ -30,7 +30,15 @@ const Works = () => {
   const handleProjectImage = (projectName, imgUrl) => {
     if (projectName === "unavailable") {
       return (
-        <FontAwesomeIcon icon={faSpinner} project-image-container__image />
+        <div className="project-image-container__icon-container">
+          <FontAwesomeIcon
+            icon={faSpinner}
+            className="project-image-container__icon-container--icon"
+          />
+          <p className="project-image-container__icon-container--text">
+            Work in progress...
+          </p>
+        </div>
       );
     } else {
       return (

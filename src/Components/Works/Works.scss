@@ -54,6 +54,7 @@
 }
 
 .project-image-container {
+  text-decoration: none;
   display: block;
   position: relative;
   z-index: 5;
@@ -76,6 +77,28 @@
     }
     @include desktop {
       height: 250px;
+    }
+  }
+  &__icon-container {
+    height: 220px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include tablet {
+      margin-bottom: 10px;
+    }
+    @include desktop {
+      height: 250px;
+    }
+    &--icon {
+      color: $ebony;
+      font-size: 50px;
+      margin-bottom: 25px;
+    }
+    &--text {
+      color: $black;
     }
   }
 
