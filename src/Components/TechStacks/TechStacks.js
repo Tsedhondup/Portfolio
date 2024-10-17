@@ -197,6 +197,21 @@ const TechStacks = () => {
             className="tech-stacks__tools--img tech-stacks__tools--knex"
           />
         </motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 2.8, ease: "linear" },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          className="tech-stacks__tools--tech"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+            alt="knex-logo"
+            className="tech-stacks__tools--img tech-stacks__tools--knex"
+          />
+        </motion.span>
       </motion.div>
     </section>
   );
