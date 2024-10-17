@@ -21,6 +21,7 @@ const Works = () => {
       if (item.id === itemId) {
         item.hover = false;
       }
+      console.log(item.tech);
       return item;
     });
     setProjects(mappedData);
@@ -63,7 +64,10 @@ const Works = () => {
             }`}
             onMouseEnter={() => onMouseEnterCallBack(item.id)}
             onMouseLeave={() => onMouseLeaveCallBack(item.id)}
-          >{`${item.description}`}</span>
+          >
+            <span>{`${item.description}`}</span>
+            <span>{`${item.tech}`}</span>
+          </span>
           <img
             src={item.img}
             alt={`${item.name}-image`}
