@@ -17,29 +17,101 @@ const Works = () => {
   const [hoveredFour, setHoveredFour] = useState(false);
   const [hoveredFive, setHoveredFive] = useState(false);
 
+  const onMouseEnterCallBack = (itemNumber) => {
+    if (itemNumber === 0) {
+      setHoveredOne(true);
+      return;
+    }
+    if (itemNumber === 1) {
+      setHoveredTwo(true);
+      return;
+    }
+    if (itemNumber === 2) {
+      setHoveredThree(true);
+      return;
+    }
+    if (itemNumber === 3) {
+      setHoveredFour(true);
+      return;
+    }
+    if (itemNumber === 4) {
+      setHoveredFive(true);
+      return;
+    }
+  };
+  const onMouseLeaveCallBack = (itemNumber) => {
+    if (itemNumber === 0) {
+      setHoveredOne(false);
+      return;
+    }
+    if (itemNumber === 1) {
+      setHoveredTwo(false);
+      return;
+    }
+    if (itemNumber === 2) {
+      setHoveredThree(false);
+      return;
+    }
+    if (itemNumber === 3) {
+      setHoveredFour(false);
+      return;
+    }
+    if (itemNumber === 4) {
+      setHoveredFive(false);
+      return;
+    }
+  };
+
   // COUNTER
-  let counter = 1;
+  let counter = 0.5;
+  let counterProjectNumber = 0;
   const projectListElement = projectData.map((item) => {
+    let durationTime = counter; // initial value of duration time
+    let itemNumber = counterProjectNumber; // initial value of item number
+    counter++; // increment after each loop/map
+    counterProjectNumber++; // increment after each loop/map
     return (
-      <div>
-        <img src={item.img} alt={`${item.name}-image`} />
+      <motion.div
+        className="project-content__project"
+        initial={{
+          opacity: 0,
+          y: 60,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: { delay: 0.5, duration: durationTime, ease: "linear" },
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
+        <a
+          href={item.url}
+          target="_blank"
+          className="project-image-container"
+          onMouseEnter={() => onMouseEnterCallBack(itemNumber)}
+          onMouseLeave={() => onMouseLeaveCallBack(itemNumber)}
+        >
+          <span className="project-image-container__overlay">{`Open ${item.name}`}</span>
+          <img src={item.img} alt={`${item.name}-image`} className="p-img" />
+        </a>
+
         <div>
           <div>
             <h2>{item.name}</h2>
-            <a href={item.url} target="_blank">
+            <a href={item.repo} target="_blank">
               Open Repo
             </a>
           </div>
 
           <p>{item.description}</p>
         </div>
-      </div>
+      </motion.div>
     );
   });
   return (
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
-      <section>{projectListElement}</section>
+      <section className="project-content">{projectListElement}</section>
       {/* <section className="projects">
         <motion.a
           className="projects__content projects__content-portfolio"
