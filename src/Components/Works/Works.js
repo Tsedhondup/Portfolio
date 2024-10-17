@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 import { motion } from "framer-motion";
-
 import { useState } from "react";
 import { projectData } from "../../utilities/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import "./Works.scss";
 const Works = () => {
   const [projects, setProjects] = useState(projectData);
@@ -21,12 +22,26 @@ const Works = () => {
       if (item.id === itemId) {
         item.hover = false;
       }
-      console.log(item.tech);
       return item;
     });
     setProjects(mappedData);
   };
-
+  // RENDER PROJECT IMAGE BASED ON PROJECT AVAILABILITY
+  const handleProjectImage = (projectName, imgUrl) => {
+    if (projectName === "unavailable") {
+      return (
+        <FontAwesomeIcon icon={faSpinner} project-image-container__image />
+      );
+    } else {
+      return (
+        <img
+          src={imgUrl}
+          alt={`${projectName}-image`}
+          className="project-image-container__image"
+        />
+      );
+    }
+  };
   // COUNTER
   let counterDuration = 0.5;
   const projectListElement = projects.map((item) => {
@@ -68,11 +83,7 @@ const Works = () => {
             <span className="project-image-container__overlay--description">{`${item.description}`}</span>
             <span className="project-image-container__overlay--tech">{`${item.tech}`}</span>
           </span>
-          <img
-            src={item.img}
-            alt={`${item.name}-image`}
-            className="project-image-container__image"
-          />
+          {handleProjectImage(item.name, item.img)}
         </a>
         <div className="project-text-container">
           <div className="project-text-container__links">

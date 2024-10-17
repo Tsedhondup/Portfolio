@@ -10,8 +10,7 @@ export const projectData = [
     img: portfolio,
     url: "https://tseringdhondup.netlify.app/",
     repo: "https://github.com/Tsedhondup/Portfolio.git",
-    description:
-      " My Portfolio website deployed on Netlify, primarily built on React.js.",
+    description: " My Portfolio website deployed on Netlify.",
     tech: "React, SASS",
   },
   {
@@ -21,7 +20,7 @@ export const projectData = [
     url: "https://brain-flix-app.netlify.app/",
     repo: "https://github.com/Tsedhondup/tsering-dhondup-BrainFlix.git",
     description:
-      "Showcasing my web developing skills, a video streaming web application built on React, connected to the backend server viaRESTful API built using Express in Node js.",
+      "Showcasing my web developing skills, a video streaming web application built as a part of the School Project at BrainStation's Software Engineering Bootcamp.",
     tech: "React, SASS, Express, Node",
   },
   {
@@ -51,7 +50,16 @@ export const projectData = [
     url: "https://github.com/Tsedhondup/EmailReader.git",
     repo: "https://github.com/Tsedhondup/EmailReader.git",
     description:
-      " Full-stack web application built on ReactJS that reads, and fetches emails from the Gmail mail server using IMAP and stores them in MySQL database.",
-    tech: "HTML, CSS, JavaScript",
+      " Full-stack web application that reads, and fetches emails from the Gmail mail server using IMAP and stores them in MySQL database.",
+    tech: "React, SASS, Node, Express, MySQL, Knex ",
+  },
+  {
+    id: "06",
+    name: "unavailable",
+    img: jobTracker,
+    url: "https://github.com/Tsedhondup",
+    repo: "https://github.com/Tsedhondup",
+    description: "Work in progress......",
+    tech: "React, SASS, Node, Express, MySQL, Knex ",
   },
 ];

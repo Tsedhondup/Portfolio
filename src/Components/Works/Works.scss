@@ -89,23 +89,20 @@
     @include tablet {
       font-size: 14px;
     }
-    @include desktop {
-      font-size: 16px;
-    }
 
     &--description {
       display: block;
-      margin-bottom: 30px;
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 15px;
     }
     &--tech {
       display: block;
       font-weight: 500;
       font-size: 14px;
+      padding-top: 15px;
+
       @include tablet {
         font-size: 16px;
-      }
-      @include desktop {
-        font-size: 18px;
       }
     }
   }
