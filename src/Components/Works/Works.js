@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { projectData } from "../../utilities/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import "./Works.scss";
 const Works = () => {
   const [projects, setProjects] = useState(projectData);
@@ -32,7 +32,7 @@ const Works = () => {
       return (
         <div className="project-image-container__icon-container">
           <FontAwesomeIcon
-            icon={faSpinner}
+            icon={faCircleNotch}
             className="project-image-container__icon-container--icon"
           />
           <p className="project-image-container__icon-container--text">

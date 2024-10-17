@@ -25,6 +25,7 @@
     text-transform: capitalize;
     font-weight: 600;
     padding-top: 16px;
+    margin-bottom: 16px;
     @include tablet {
       text-align: left;
       padding-top: 32px;
@@ -92,10 +93,20 @@
     @include desktop {
       height: 250px;
     }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
     &--icon {
-      color: $ebony;
+      color: $gray;
       font-size: 50px;
       margin-bottom: 25px;
+      animation: rotate 3s linear infinite;
     }
     &--text {
       color: $black;
