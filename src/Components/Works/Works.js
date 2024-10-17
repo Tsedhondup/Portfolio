@@ -8,6 +8,14 @@ import "./Works.scss";
 const Works = () => {
   const [projects, setProjects] = useState(projectData);
 
+  /*
+  * Update project-data when cursor enters/leaves  project-image container
+  * new key "hover" is being added that particular parent/project-item of project image
+  * "hover" is assinged "true" when mouse enter project-image-container
+  * "hover" is assinged "false" when mouse leaves project-image-container
+  * projects state variable is set with new project data
+
+   */
   const onMouseEnterCallBack = (itemId) => {
     const mappedData = projects.map((item) => {
       if (item.id === itemId) {
