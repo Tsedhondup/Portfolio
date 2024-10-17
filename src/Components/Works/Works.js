@@ -14,7 +14,6 @@ const Works = () => {
       }
       return item;
     });
-    console.log(mappedData);
     setProjects(mappedData);
   };
   const onMouseLeaveCallBack = (itemId) => {
@@ -24,7 +23,6 @@ const Works = () => {
       }
       return item;
     });
-    console.log(mappedData);
     setProjects(mappedData);
   };
 
@@ -53,7 +51,9 @@ const Works = () => {
         <a
           href={item.url}
           target="_blank"
-          className={`project-image-container`}
+          className={`project-image-container ${
+            item.hover ? "js-scale-up" : ""
+          }`}
           onMouseEnter={() => onMouseEnterCallBack(item.id)}
           onMouseLeave={() => onMouseLeaveCallBack(item.id)}
         >
@@ -61,6 +61,8 @@ const Works = () => {
             className={`project-image-container__overlay ${
               item.hover ? "js-show-over-lay" : ""
             }`}
+            onMouseEnter={() => onMouseEnterCallBack(item.id)}
+            onMouseLeave={() => onMouseLeaveCallBack(item.id)}
           >{`Open ${item.name}`}</span>
           <img
             src={item.img}
@@ -68,11 +70,14 @@ const Works = () => {
             className="project-image-container__image"
           />
         </a>
-
-        <div>
-          <div>
-            <h2>{item.name}</h2>
-            <a href={item.repo} target="_blank">
+        <div className="project-text-container">
+          <div className="project-text-container__text">
+            <h2 className="project-text-container__text--name">{item.name}</h2>
+            <a
+              href={item.repo}
+              target="_blank"
+              className="project-text-container__text--repo"
+            >
               Open Repo
             </a>
           </div>

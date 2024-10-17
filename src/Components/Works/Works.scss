@@ -48,13 +48,20 @@
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   grid-gap: 16px;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $tablet-gutter;
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .project-image-container {
   position: relative;
+  z-index: 5;
   &__image {
     display: block;
-    margin: auto;
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -67,10 +74,17 @@
       height: 250px;
     }
   }
+
   &__overlay {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     display: none;
+  }
+  // DYNAMIC JS CLASS
+  .js-show-over-lay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -79,27 +93,31 @@
     z-index: 10;
     transition: 1s;
   }
-  // DYNAMIC JS CLASS
-  .js-show-over-lay {
+}
+// DYNAMIC JS CLASS
+// .project-image-container:hover{
+//   scale: 1.5;
+//   transition: 0.5;
+//   background-color: red;
+//   height: 300px;
+// }
+.js-scale-up {
+  scale: 1.5;
+  transition: 0.5;
+  background-color: red;
+  height: 300px;
+}
+
+.project-text-container {
+  &__text {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    &--repo {
+      text-align: right;
+      text-decoration: none;
+    }
   }
-}
-.project-portfolio {
-  background-color: red;
-}
-.project-brainflix {
-  background-color: red;
-}
-.project-quiz {
-  background-color: red;
-}
-.project-bandsite {
-  background-color: red;
-}
-.project-email {
-  background-color: red;
 }
 // Projects
 // .projects {
