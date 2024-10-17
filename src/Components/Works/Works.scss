@@ -145,7 +145,7 @@
   }
   &__content:hover {
     @include tablet {
-      position: relative;
+      position: relative ;
       scale: 1.13;
       transition: 0.5s;
       border: 1px solid $pewter;

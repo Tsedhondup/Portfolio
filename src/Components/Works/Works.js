@@ -24,7 +24,14 @@ const Works = () => {
       <div>
         <img src={item.img} alt={`${item.name}-image`} />
         <div>
-          <h2>{item.name}</h2>
+          <div>
+            <h2>{item.name}</h2>
+            <a href={item.url} target="_blank">
+              Open Repo
+            </a>
+          </div>
+
+          <p>{item.description}</p>
         </div>
       </div>
     );
@@ -33,7 +40,7 @@ const Works = () => {
     <section className="project-container">
       <motion.h2 className="project-container__title">Projects</motion.h2>
       <section>{projectListElement}</section>
-      <section className="projects">
+      {/* <section className="projects">
         <motion.a
           className="projects__content projects__content-portfolio"
           href="https://github.com/Tsedhondup/tsering-dhondup"
@@ -351,7 +358,7 @@ const Works = () => {
             </motion.p>
           </div>
         </motion.a>
-      </section>
+      </section> */}
     </section>
   );
 };
