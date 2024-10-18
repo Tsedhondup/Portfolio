@@ -12,6 +12,7 @@ import netlifyImage from "../assets/icons/netlify.png";
 import typescriptImage from "../assets/icons/typescript.png";
 import vscodeImage from "../assets/icons/vscode.png";
 import postmanImage from "../assets/icons/postman.png";
+import figmaImage from "../assets/icons/figma.png";
 export const skillsIcons = [
   {
     id: "01",
@@ -83,5 +84,10 @@ export const skillsIcons = [
     id: "14",
     name: "Post Man",
     src: postmanImage,
+  },
+  {
+    id: "15",
+    name: "Figma",
+    src: figmaImage,
   },
 ];

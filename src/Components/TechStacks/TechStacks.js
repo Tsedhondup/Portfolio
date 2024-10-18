@@ -1,4 +1,4 @@
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import "./TechStacks.scss";
 import { skillsIcons } from "../../utilities/skill-icons";
 const TechStacks = () => {
@@ -10,6 +10,7 @@ const TechStacks = () => {
     counterDuration = durationTime + 0.1; // increment after each loop/map
     return (
       <motion.img
+        key={item.id}
         initial={{
           opacity: 0,
           y: 60,

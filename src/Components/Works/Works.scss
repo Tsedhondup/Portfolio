@@ -84,6 +84,8 @@
       height: 250px;
     }
   }
+
+  // ICONS CONTAINER FOR PROJECT IN DEVELOPMENT STAGES
   &__icon-container {
     height: 220px;
     justify-content: center;
@@ -101,29 +103,47 @@
       0% {
         transform: rotate(0deg);
       }
+
       100% {
-        transform: rotate(360deg);
+        transform: rotate(30deg);
       }
     }
 
-    &--icon {
-      color: $gray;
-      font-size: 50px;
-      margin-bottom: 25px;
-      animation: rotate 3s linear infinite;
+    .icon-image-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      margin-bottom: 16px;
+      &__image {
+        display: block;
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        color: $gray;
+        font-size: 50px;
+        margin: auto;
+      }
+      &__image:nth-child(1) {
+        width: 70px;
+        height: 40px;
+        padding-right: 10px;
+        animation: rotate 2s linear infinite;
+      }
     }
+
     &--text {
       color: $black;
     }
   }
 
+  // OVER-LAY
   &__overlay {
-    background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     display: none;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.3em;
+    background-color: rgba(0, 0, 0, 0.8);
     @include tablet {
       font-size: 14px;
     }
@@ -132,6 +152,7 @@
       display: block;
       border-bottom: 1px solid #ffffff;
       padding-bottom: 15px;
+      text-transform: uppercase;
     }
     &--tech {
       display: block;
@@ -142,6 +163,12 @@
       @include tablet {
         font-size: 16px;
       }
+    }
+    // DYNAMIC JS CLASS
+    .js-back-color {
+      color: #ffffff;
+      text-shadow: 2px 3px 2px $black;
+      padding: 10px;
     }
   }
   // DYNAMIC JS CLASS
@@ -158,6 +185,13 @@
     left: 0;
     z-index: 10;
     transition: 1s;
+  }
+  .js-background-image {
+    background: url("../../assets/icons/chef.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 
