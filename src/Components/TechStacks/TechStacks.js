@@ -22,7 +22,7 @@ const TechStacks = () => {
         viewport={{ once: true, amount: 0.5 }}
         src={item.src}
         alt={item.name}
-        className="tools__tools-content--image"
+        className="icons-container__image"
       />
     );
   });
@@ -48,9 +48,7 @@ const TechStacks = () => {
         Skills and Tools
       </motion.h2>
       <div className="tools__tools-content">
-        <div className="tools__tools-content__icons-container">
-          {skillsElements}
-        </div>
+        <div className="icons-container">{skillsElements}</div>
       </div>
     </section>
   );

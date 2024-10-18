@@ -34,36 +34,47 @@
   }
 
   &__tools-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    padding: 16px 0px;
-    border-radius: 5px;
     border-top: 1px solid $pewter;
     border-bottom: 1px solid $pewter;
     max-width: 100%;
+    padding: 16px 0px;
     margin: auto;
+    @include tablet {
+      padding: 36px 0px;
+    }
+    @include tablet {
+      padding: 40px 0px;
+    }
+  }
 
+  .icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 24px;
+    border-radius: 5px;
     @include tablet {
       grid-template-columns: repeat(4, 1fr);
+      grid-gap: 36px;
     }
     @include tablet {
       grid-template-columns: repeat(5, 1fr);
+      grid-gap: 40px;
+      width: 650px;
+      margin: auto;
     }
-    &--image {
+    &__image {
       display: block;
       object-fit: contain;
       width: 32px;
       height: 32px;
       margin: auto;
-      margin-bottom: 24px;
       transition: 0.5s;
 
       @include tablet {
         width: 40px;
         height: 40px;
         display: block;
-        margin-bottom: 36px;
       }
     }
   }
