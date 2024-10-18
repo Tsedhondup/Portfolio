@@ -3,12 +3,15 @@
 
 .about-second {
   padding: 0 $mobile-margin;
-  padding-top: $mobile-margin;
+  margin-bottom: $mobileDivider;
   @include tablet {
     max-width: 800px;
     padding: 0 $tablet-margin;
-    padding-top: $tablet-margin;
     margin: auto;
+    margin-bottom: $tabletDivider;
+  }
+  @include desktop {
+    margin-bottom: $desktopDivder;
   }
 }
 .about-second-content {

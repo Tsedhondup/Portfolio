@@ -3,18 +3,17 @@
 
 .tools {
   padding: 0px $mobile-margin;
-  margin-top: $mobile-margin;
-
+  margin-bottom: $mobileDivider;
   @include tablet {
     max-width: 800px;
     padding: 0px $tablet-margin;
     margin: auto;
-    margin-top: 64px;
+    margin-bottom: $tabletDivider;
   }
   @include desktop {
     max-width: 1280px;
     padding: 0px $tablet-margin;
-    margin: 100px auto;
+    margin-bottom: $desktopDivder;
   }
   &__header {
     text-transform: capitalize;
@@ -22,11 +21,11 @@
     font-weight: 600;
     font-size: 18px;
     color: $black;
-    padding-top: $mobile-margin;
     margin-bottom: $mobile-margin;
     @include tablet {
       font-size: 20px;
       text-align: left;
+      margin-bottom: $tablet-margin;
     }
     @include desktop {
       font-size: 24px;

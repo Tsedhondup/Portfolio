@@ -5,31 +5,35 @@
   margin-top: 32px;
   padding-left: $mobile-margin;
   padding-right: $mobile-margin;
-  padding-bottom: 100px;
-  // background-color: $pewter;
+  margin-bottom: $mobileDivider;
   @include tablet {
     padding-top: $tablet-margin;
     padding-left: $tablet-margin;
     padding-right: $tablet-margin;
     max-width: 800px;
     margin: auto;
+    margin-bottom: $tabletDivider;
   }
   @include desktop {
     max-width: 1280px;
     margin: auto;
+    margin-bottom: $desktopDivder;
   }
 
   &__title {
     color: $black;
     text-align: center;
     text-transform: capitalize;
+    font-size: 18px;
     font-weight: 600;
-    padding-top: 16px;
-    margin-bottom: $tablet-margin;
+    margin-bottom: 16px;
     @include tablet {
       text-align: left;
-      padding-top: 32px;
+      font-size: 20px;
       margin-bottom: $tablet-margin;
+    }
+    @include desktop {
+      font-size: 24px;
     }
   }
 }

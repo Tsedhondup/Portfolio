@@ -28,7 +28,6 @@ const TechStacks = () => {
   });
   return (
     <section className="tools">
-      {/* Mobile header */}
       <motion.h2
         initial={{
           opacity: 0,
