@@ -3,6 +3,7 @@ import brainflix from "../assets/image/brainflix.jpg";
 import jobTracker from "../assets/image/job-tracker.jpg";
 import quiz from "../assets/image/quiz.jpg";
 import bandsite from "../assets/image/band-site.jpg";
+import chef from "../assets/icons/chef.png";
 export const projectData = [
   {
     id: "01",
@@ -59,7 +60,8 @@ export const projectData = [
     img: jobTracker,
     url: "https://github.com/Tsedhondup",
     repo: "https://github.com/Tsedhondup",
-    description: "Project currently in making ......",
+    description: "Project currently in making",
+    descriptionImage: chef,
     tech: "React, SASS, Node, Express, MySQL, Knex ",
   },
 ];
