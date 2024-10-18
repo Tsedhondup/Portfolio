@@ -47,7 +47,11 @@ const TechStacks = () => {
       >
         Skills and Tools
       </motion.h2>
-      <div className="tools__tools-content">{skillsElements}</div>
+      <div className="tools__tools-content">
+        <div className="tools__tools-content__icons-container">
+          {skillsElements}
+        </div>
+      </div>
     </section>
   );
 };
