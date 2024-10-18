@@ -34,8 +34,12 @@ const Works = () => {
     });
     setProjects(mappedData);
   };
-  // RENDER PROJECT IMAGE BASED ON PROJECT AVAILABILITY
+  /*
+   * RENDER PROJECT IMAGE BASED ON PROJECT AVAILABILITY
+   * e.g: If project is still in development stage, render icon and text showing "Work in progress"
+   */
   const handleProjectImage = (projectName, imgUrl) => {
+    // If project in development statte
     if (projectName === "unavailable") {
       return (
         <div className="project-image-container__icon-container">
@@ -49,6 +53,7 @@ const Works = () => {
         </div>
       );
     } else {
+      // if project in production stage
       return (
         <img
           src={imgUrl}
@@ -58,7 +63,7 @@ const Works = () => {
       );
     }
   };
-  // COUNTER
+  // ANIMATION COUNTER DURATION
   let counterDuration = 0.5;
   const projectListElement = projects.map((item) => {
     // INITIAL VALUE OF ANIMATION DURATION TIME

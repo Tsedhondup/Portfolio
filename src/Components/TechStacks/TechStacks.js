@@ -1,22 +1,32 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  faCss3,
-  faJs,
-  faReact,
-  faNodeJs,
-  faSass,
-} from "@fortawesome/free-brands-svg-icons";
-import expressLogo from "../../assets/image/express.png";
-import mysqlLogo from "../../assets/image/mysql.png";
-import knexLogo from "../../assets/image/knex.png";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import "./TechStacks.scss";
+import { skillsIcons } from "../../utilities/skill-icons";
 const TechStacks = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // ANIMATION DURATION COUNTER
+  let counterDuration = 0.5;
+  const skillsElements = skillsIcons.map((item) => {
+    let durationTime = counterDuration;
 
+    counterDuration = durationTime + 0.1; // increment after each loop/map
+    return (
+      <motion.img
+        initial={{
+          opacity: 0,
+          y: 60,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: { delay: 0.5, duration: durationTime, ease: "linear" },
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+        src={item.src}
+        alt={item.name}
+        className="tech-stack__tools--image"
+      />
+    );
+  });
   return (
     <section className="tech-stacks">
       {/* Mobile header */}
@@ -38,26 +48,9 @@ const TechStacks = () => {
       >
         Primary skill sets
       </motion.h2>
-      {/* Screen Width greater than mobile witdh = 320px */}
-      {/* <motion.h2
-        initial={{
-          opacity: 0,
-          x: -70,
-        }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: 1,
-            ease: "linear",
-          },
-        }}
-        viewport={{ once: true, amount: 1 }}
-        className="tech-stacks__header-tablet"
-      >
-        Primary skill sets
-      </motion.h2> */}
-      <motion.div
+      <div className="tech-stacks__tools">{skillsElements}</div>
+
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -66,7 +59,6 @@ const TechStacks = () => {
         viewport={{ once: true, amount: 1 }}
         className="tech-stacks__tools"
       >
-        {/* Icons  */}
         <motion.span
           initial={{ scale: 0 }}
           whileInView={{
@@ -212,7 +204,7 @@ const TechStacks = () => {
             className="tech-stacks__tools--img tech-stacks__tools--knex"
           />
         </motion.span>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
