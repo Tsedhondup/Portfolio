@@ -152,7 +152,7 @@
       display: block;
       border-bottom: 1px solid #ffffff;
       padding-bottom: 15px;
-      text-transform: uppercase;
+      // text-transform: uppercase;
     }
     &--tech {
       display: block;
@@ -165,10 +165,13 @@
       }
     }
     // DYNAMIC JS CLASS
-    .js-back-color {
+    .js-back-color-descript {
       color: #ffffff;
-      text-shadow: 2px 3px 2px $black;
-      padding: 10px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 2px $black;
+    }
+    .js-back-color-tech {
+      color: $black;
     }
   }
   // DYNAMIC JS CLASS

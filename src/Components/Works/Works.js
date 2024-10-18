@@ -123,14 +123,14 @@ const Works = () => {
              */}
             <span
               className={`project-image-container__overlay--description ${
-                item.name === "unavailable" ? "js-back-color" : ""
+                item.name === "unavailable" ? "js-back-color-descript" : ""
               }`}
             >
               {`${item.description}`}
             </span>
             <span
               className={`project-image-container__overlay--tech ${
-                item.name === "unavailable" ? "js-back-color" : ""
+                item.name === "unavailable" ? "js-back-color-tech" : ""
               }`}
             >{`${item.tech}`}</span>
           </span>

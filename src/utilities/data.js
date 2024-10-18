@@ -60,7 +60,7 @@ export const projectData = [
     img: jobTracker,
     url: "https://github.com/Tsedhondup",
     repo: "https://github.com/Tsedhondup",
-    description: "Project currently in making",
+    description: "Project currently in making....",
     descriptionImage: chef,
     tech: "React, SASS, Node, Express, MySQL, Knex ",
   },
