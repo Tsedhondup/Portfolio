@@ -2,23 +2,24 @@ import "./HeroSection.scss";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import profileImage from "../../assets/image/tsering.png";
+import { contactData } from "../../utilities/contactData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const HeroSection = (props) => {
-  // Element reference
+  // ELEMENT REFERENCE
   const refElement = useRef(null);
-
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   useEffect(() => {
     window.addEventListener("resize", () => {
       setScreenWidth(window.innerWidth);
     });
-    // Clean up the event listener when the component unmounts
+    // CLEAN UP THE EVENT LISTENER AFTER COMPONET IS MOUNT
     return () => {
       window.removeEventListener("resize", () => {
         setScreenWidth(window.innerWidth);
       });
     };
   }, []);
-
+  // ADD SCROLL EVEN LISTENER TO WINDOW OBJECT
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (refElement.current) {
@@ -29,9 +30,20 @@ const HeroSection = (props) => {
       }
     });
   }, [props]);
-
+  // CREATE CONTACT ELEMENTS
+  const contactElements = contactData.map((item) => {
+    return (
+      <a
+        className="hero-container__contacts--links"
+        href={item.url}
+        key={item.id}
+      >
+        <FontAwesomeIcon icon={item.icon} />
+      </a>
+    );
+  });
   return (
-    <motion className="hero-container" ref={refElement}>
+    <section className="hero-container" ref={refElement}>
       <section className="hero-content">
         <div>
           <h1 className="hero-content__name">
@@ -133,7 +145,8 @@ const HeroSection = (props) => {
           <div className="image-container__shadow-element"></div>
         </div>
       </section>
-    </motion>
+      <section className="hero-container__contacts">{contactElements}</section>
+    </section>
   );
 };
 export default HeroSection;

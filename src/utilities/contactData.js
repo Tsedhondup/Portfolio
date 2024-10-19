@@ -45,7 +45,7 @@ export const contactData = [
     url: "https://www.facebook.com/share/wyRkNHrAqNbMECCS/?mibextid=LQQJ4d",
   },
   {
-    id: "01",
+    id: "07",
     name: "linkedIn",
     icon: faInstagram,
     url: "https://www.instagram.com/dhonduptyd/profilecard/?igsh=cG01NzY3dGVzdTlk",
