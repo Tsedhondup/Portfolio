@@ -10,7 +10,7 @@
   background-attachment: fixed;
   position: relative;
 
-  // SOCIALS
+  // SOCIALS - TOP PARENT CONTAINER WITH POSITION ABSOLUTE
   &__socials {
     width: 100%;
     position: absolute;
@@ -21,12 +21,32 @@
       bottom: 36px;
     }
   }
+  // SOCIAL CONTENT - SECOND PAREENT CONTAINER WITH MAX-WIDTH 1280PX
+  &__social-content {
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    padding: 0px 16px;
+    margin: auto;
+    @include tablet {
+      padding: 0px $tablet-margin;
+    }
+    @include tablet2 {
+      max-width: 1280px;
+      margin: auto;
+    }
+    @include horizontalViewHeight {
+      justify-content: flex-start;
+    }
+  }
   .social-container {
     max-width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px $mobile-margin;
+    @include horizontalViewHeight {
+      max-width: 470px;
+    }
     &__link {
       display: block;
       width: fit-content;
@@ -156,7 +176,7 @@
       justify-content: flex-start;
       align-items: center;
       width: fit-content;
-      @include tablet2{
+      @include tablet2 {
         font-size: 14px;
       }
     }

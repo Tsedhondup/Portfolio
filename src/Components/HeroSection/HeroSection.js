@@ -235,7 +235,9 @@ const HeroSection = (props) => {
       </section>
 
       <section className="hero-container__socials">
-        <div className="social-container"> {socialElements}</div>
+        <div className="hero-container__social-content">
+          <div className="social-container"> {socialElements}</div>
+        </div>
       </section>
     </section>
   );

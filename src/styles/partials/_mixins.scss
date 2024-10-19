@@ -49,3 +49,9 @@
     @content;
   }
 }
+
+@mixin horizontalViewHeight {
+  @media (max-height: $heroSocialHeight) {
+    @content;
+  }
+}
