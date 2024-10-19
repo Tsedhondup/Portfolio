@@ -32,7 +32,7 @@ const HeroSection = (props) => {
   }, [props]);
 
   // CREATE CONTACT URL
-  const createContactUrl = (contactName, contactUrl) => {
+  const createUrl = (contactName, contactUrl) => {
     if (contactName === "email") {
       return `mailto:${contactUrl}`;
     }
@@ -43,7 +43,7 @@ const HeroSection = (props) => {
       return contactUrl;
     }
   };
-  // CREATE CONTACT ELEMENTS
+  // CREATE SOCIAL ELEMENTS
   let counterDuration = 0.5;
   const socialElements = contactData.map((item) => {
     const durationTime = counterDuration;
@@ -68,7 +68,43 @@ const HeroSection = (props) => {
           viewport={{ once: true, amount: 1 }}
           key={item.id}
           className={`hero-container__contacts--link ${item.name}`}
-          href={createContactUrl(item.name, item.url)}
+          href={createUrl(item.name, item.url)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={item.icon} />
+        </motion.a>
+      );
+    } else {
+      // TO FIX ESlint ERROR
+      return <></>;
+    }
+  });
+  // CREATE CONTACT ELEMENTS
+  const contactElements = contactData.map((item) => {
+    const durationTime = counterDuration;
+    counterDuration = durationTime + 0.3;
+
+    if (item.name === "email" || item.name === "phone") {
+      return (
+        <motion.a
+          initial={{
+            y: -60,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              ease: "easeIn",
+              duration: durationTime,
+              delay: 0.2,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          key={item.id}
+          className={`hero-container__contacts--link ${item.name}`}
+          href={createUrl(item.name, item.url)}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -167,6 +203,7 @@ const HeroSection = (props) => {
               Toronto
             </motion.span>
           </motion.h3>
+          <section>{contactElements}</section>
         </div>
 
         <div className="image-container">
