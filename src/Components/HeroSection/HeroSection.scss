@@ -127,28 +127,34 @@
     max-width: 200px;
     margin: auto;
     margin-top: 40px;
+    @include tablet {
+      max-width: 300px;
+    }
+    @include tablet2 {
+      max-width: 500px;
+      margin: unset;
+    }
 
     &--link {
       display: flex;
-      text-decoration: none;
-      text-transform: uppercase;
+      justify-content: space-between;
       border-bottom: 1px solid $pewter;
       padding: 16px 0px;
     }
+    // TEXT
     &--link-text {
       color: $ebony;
       font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: none;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-    }
-    &--link-icon-container {
-      display: flex;
-      justify-content: flex-end;
-    }
-    &--link-icon {
-      display: block;
       width: fit-content;
+    }
+    &--link-text:hover {
+      color: $black;
+      scale: 1.2;
     }
     .email {
       color: #f0db4f;
@@ -169,6 +175,22 @@
       @include desktop {
         font-size: 30px;
       }
+    }
+    .email:hover,
+    .phone:hover {
+      scale: 1.5;
+    }
+
+    // ICONSS
+    &--link-icon-container {
+      text-decoration: none;
+      display: flex;
+      justify-content: flex-end;
+      width: fit-content;
+    }
+    &--link-icon {
+      display: block;
+      width: fit-content;
     }
   }
 }

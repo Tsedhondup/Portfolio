@@ -87,37 +87,44 @@ const HeroSection = (props) => {
 
     if (item.name === "email" || item.name === "phone") {
       return (
-        <motion.a
-          initial={{
-            y: -60,
-            opacity: 0,
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-            transition: {
-              ease: "easeIn",
-              duration: durationTime,
-              delay: 0.2,
-            },
-          }}
-          viewport={{ once: true, amount: 1 }}
+        <motion.div
+          // initial={{
+          //   y: -60,
+          //   opacity: 0,
+          // }}
+          // whileInView={{
+          //   y: 0,
+          //   opacity: 1,
+          //   transition: {
+          //     ease: "easeIn",
+          //     duration: durationTime,
+          //     delay: 0.2,
+          //   },
+          // }}
+          // viewport={{ once: true, amount: 1 }}
           key={item.id}
-          className={`hero-content__contacts--link ${item.name}`}
-          href={createUrl(item.name, item.url)}
-          target="_blank"
-          rel="noopener noreferrer"
+          className={`hero-content__contacts--link `}
         >
-          <span className="hero-content__contacts--link-text">
+          <a
+            href={createUrl(item.name, item.url)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`hero-content__contacts--link-text`}
+          >
             {item.name === "email" ? "email" : "call"}
-          </span>
-          <span className="hero-content__contacts--link-icon-container">
+          </a>
+          <a
+            href={createUrl(item.name, item.url)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-content__contacts--link-icon-container"
+          >
             <FontAwesomeIcon
               icon={item.icon}
-              className="hero-content__contacts--link-icon"
+              className={`hero-content__contacts--link-icon ${item.name}`}
             />
-          </span>
-        </motion.a>
+          </a>
+        </motion.div>
       );
     } else {
       // TO FIX ESlint ERROR
@@ -197,7 +204,7 @@ const HeroSection = (props) => {
             }}
             className="hero-content__title"
           >
-            A Full-stack Web Developer from
+            A Front-End Web Developer
             <motion.span
               initial={{ opacity: 0, x: screenWidth >= 950 ? -60 : 60 }}
               animate={{ opacity: 1, x: 0 }}
@@ -208,7 +215,7 @@ const HeroSection = (props) => {
               }}
               className="hero-content__title--city"
             >
-              Toronto
+              from Toronto
             </motion.span>
           </motion.h3>
           <div className="hero-content__contacts"> {contactElements}</div>
