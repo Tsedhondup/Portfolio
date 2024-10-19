@@ -60,7 +60,8 @@ const TechStacks = () => {
             borderTop: "1px solid #d6d6d6",
             borderBottom: "1px solid #d6d6d6",
             transition: {
-              duration: 1,
+              delay: 0,
+              duration: 0.5,
               ease: "linear",
               borderBottom: { delay: 2.2, duration: 1, ease: "linear" },
             },

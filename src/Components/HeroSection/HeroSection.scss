@@ -33,7 +33,7 @@
   // Name
   &__name {
     margin: 0;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     width: 100%;
     font-weight: normal;
     &--first {
@@ -44,12 +44,15 @@
         font-size: 36px;
       }
     }
+    &--first-b {
+      padding-right: 0.2em;
+    }
 
     &--last {
       display: block;
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: 48px;
+      font-weight: 600;
+      font-size: 36px;
       @include tablet {
         font-size: 60px;
       }
@@ -57,10 +60,14 @@
   }
   // Title
   &__title {
+    font-size: 16px;
+    font-weight: 200;
+    width: 100%;
     margin: 0;
     margin-top: 16px;
-    width: 100%;
-    font-weight: 200;
+    @include tablet {
+      font-size: 20px;
+    }
     @include desktop {
       font-size: 30px;
     }
