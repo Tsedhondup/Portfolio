@@ -44,19 +44,43 @@ const HeroSection = (props) => {
     }
   };
   // CREATE CONTACT ELEMENTS
-  const contactElements = contactData.map((item) => {
-    return (
-      <a
-        key={item.id}
-        className={`hero-container__contacts--link ${item.name}`}
-        href={createContactUrl(item.name, item.url)}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FontAwesomeIcon icon={item.icon} />
-      </a>
-    );
+  let counterDuration = 0.5;
+  const socialElements = contactData.map((item) => {
+    const durationTime = counterDuration;
+    counterDuration = durationTime + 0.3;
+
+    if (item.name !== "email" && item.name !== "phone") {
+      return (
+        <motion.a
+          initial={{
+            y: -60,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              ease: "easeIn",
+              duration: durationTime,
+              delay: 0.2,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          key={item.id}
+          className={`hero-container__contacts--link ${item.name}`}
+          href={createContactUrl(item.name, item.url)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={item.icon} />
+        </motion.a>
+      );
+    } else {
+      // TO FIX ESlint ERROR
+      return <></>;
+    }
   });
+
   return (
     <section className="hero-container" ref={refElement}>
       <section className="hero-content">
@@ -160,7 +184,7 @@ const HeroSection = (props) => {
           <div className="image-container__shadow-element"></div>
         </div>
       </section>
-      <section className="hero-container__contacts">{contactElements}</section>
+      <section className="hero-container__contacts">{socialElements}</section>
     </section>
   );
 };
