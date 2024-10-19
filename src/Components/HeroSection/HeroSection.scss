@@ -36,10 +36,15 @@
     align-items: center;
     padding: 0px $mobile-margin;
     &__link {
+      display: block;
+      width: fit-content;
       font-size: 18px;
       @include tablet {
         font-size: 20px;
       }
+    }
+    &__link:hover {
+      scale: 2.5;
     }
     .linkedIn {
       color: $linkedIn;
