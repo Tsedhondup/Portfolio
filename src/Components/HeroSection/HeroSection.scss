@@ -9,18 +9,37 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  // z-index: 15;
   // CONTACTS
   &__contacts {
     position: absolute;
-    bottom: 0px;
+    bottom: 10%;
+    display: none;
+  }
+  .contact-container {
     display: flex;
-    padding: 16px;
-    .email {
-      color: #f0db4f;
+  }
+  // SOCIALS
+  &__socials {
+    width: 100%;
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    justify-content: center;
+    @include tablet {
+      bottom: 36px;
     }
-    .phone {
-      color: #44444c;
+  }
+  .social-container {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px $mobile-margin;
+    &__link {
+      font-size: 18px;
+      @include tablet {
+        font-size: 20px;
+      }
     }
     .linkedIn {
       color: $linkedIn;
@@ -28,7 +47,7 @@
     .github {
       color: $gitHub;
     }
-    .x {
+    .xTwitter {
       color: $xTwitter;
     }
     .facebook {

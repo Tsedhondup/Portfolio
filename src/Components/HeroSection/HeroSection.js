@@ -67,7 +67,7 @@ const HeroSection = (props) => {
           }}
           viewport={{ once: true, amount: 1 }}
           key={item.id}
-          className={`hero-container__contacts--link ${item.name}`}
+          className={`social-container__link ${item.name}`}
           href={createUrl(item.name, item.url)}
           target="_blank"
           rel="noopener noreferrer"
@@ -203,7 +203,6 @@ const HeroSection = (props) => {
               Toronto
             </motion.span>
           </motion.h3>
-          <section>{contactElements}</section>
         </div>
 
         <div className="image-container">
@@ -221,7 +220,13 @@ const HeroSection = (props) => {
           <div className="image-container__shadow-element"></div>
         </div>
       </section>
-      <section className="hero-container__contacts">{socialElements}</section>
+      <section className="hero-container__contacts">
+        <div className="contact-container"> {contactElements}</div>
+      </section>
+
+      <section className="hero-container__socials">
+        <div className="social-container"> {socialElements}</div>
+      </section>
     </section>
   );
 };

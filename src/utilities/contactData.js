@@ -34,7 +34,7 @@ export const contactData = [
   },
   {
     id: "05",
-    name: "x",
+    name: "xTwitter",
     icon: faXTwitter,
     url: "https://x.com/TYDdhondup",
   },
