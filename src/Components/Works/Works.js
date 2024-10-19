@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { projectData } from "../../utilities/data";
+import { projectData } from "../../utilities/projectData";
 import gasStove from "../../assets/icons/gas-stove.png";
 import pot from "../../assets/icons/pot.png";
 import "./Works.scss";
