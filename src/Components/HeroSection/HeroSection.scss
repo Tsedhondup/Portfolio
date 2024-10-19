@@ -72,6 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: $tablet-gutter;
     padding: 0px $tablet-margin;
     padding-top: unset;
     max-width: 1280px;
@@ -85,7 +86,10 @@
     font-weight: normal;
     &--first {
       display: block;
-      font-size: 30px;
+      font-size: 25px;
+      @include tablet {
+        font-size: 30px;
+      }
       @include desktop {
         font-weight: 200;
         font-size: 36px;
@@ -99,24 +103,26 @@
       display: block;
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 36px;
+      font-size: 27px;
       @include tablet {
-        font-size: 60px;
+        font-size: 40px;
       }
     }
   }
   // Title
   &__title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 200;
     width: 100%;
     margin: 0;
     margin-top: 16px;
+    margin-bottom: 40px;
     @include tablet {
-      font-size: 20px;
+      font-size: 18px;
+      margin-bottom: 50px;
     }
     @include desktop {
-      font-size: 30px;
+      font-size: 24px;
     }
     &--city {
       display: block;
@@ -124,9 +130,8 @@
   }
   // CONTACTS
   &__contacts {
-    max-width: 200px;
+    max-width: 250px;
     margin: auto;
-    margin-top: 40px;
     @include tablet {
       max-width: 300px;
     }
@@ -151,6 +156,9 @@
       justify-content: flex-start;
       align-items: center;
       width: fit-content;
+      @include tablet2{
+        font-size: 14px;
+      }
     }
     &--link-text:hover {
       color: $black;

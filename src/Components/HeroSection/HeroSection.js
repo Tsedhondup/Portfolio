@@ -83,27 +83,24 @@ const HeroSection = (props) => {
   // CREATE CONTACT ELEMENTS
   const contactElements = contactData.map((item) => {
     const durationTime = counterDuration;
-    counterDuration = durationTime + 0.3;
+    counterDuration = durationTime + 0.5;
 
     if (item.name === "email" || item.name === "phone") {
       return (
         <motion.div
-          // initial={{
-          //   y: -60,
-          //   opacity: 0,
-          // }}
-          // whileInView={{
-          //   y: 0,
-          //   opacity: 1,
-          //   transition: {
-          //     ease: "easeIn",
-          //     duration: durationTime,
-          //     delay: 0.2,
-          //   },
-          // }}
-          // viewport={{ once: true, amount: 1 }}
           key={item.id}
-          className={`hero-content__contacts--link `}
+          className="hero-content__contacts--link"
+          initial={{
+            opacity: 0,
+            x: item.name === "email" || screenWidth >= 950 ? -60 : 60,
+            borderBottom: "0px solid #d6d6d6 ",
+          }}
+          whileInView={{ opacity: 1, x: 0, borderBottom: "1px solid #d6d6d6 " }}
+          transition={{
+            delay: screenWidth >= 950 ? 0.5 : 0,
+            duration: durationTime,
+            ease: "linear",
+          }}
         >
           <a
             href={createUrl(item.name, item.url)}
@@ -195,8 +192,8 @@ const HeroSection = (props) => {
             </motion.span>
           </h1>
           <motion.h3
-            initial={{ opacity: 0, x: -60 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 2.5,
               delay: 3,
@@ -206,8 +203,8 @@ const HeroSection = (props) => {
           >
             A Front-End Web Developer
             <motion.span
-              initial={{ opacity: 0, x: screenWidth >= 950 ? -60 : 60 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 1.5,
                 delay: 3,
