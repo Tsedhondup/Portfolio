@@ -28,15 +28,6 @@ const HeroSection = (props) => {
           : props.setIsScroll(false);
       }
     });
-    // Clean up the event listener when the component unmounts
-    // return () => {
-    //   window.removeEventListener("scroll", () => {
-    //     const elementPosition = refElement.current.getBoundingClientRect();
-    //     elementPosition.top <= -200
-    //       ? props.setIsScroll(true)
-    //       : props.setIsScroll(false);
-    //   });
-    // };
   }, [props]);
 
   return (
@@ -83,12 +74,18 @@ const HeroSection = (props) => {
               </motion.span>
             </span>
             <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, color: "#8c8c8c" }}
+              animate={{ opacity: 1, color: "#000000" }}
               transition={{
                 duration: 3,
                 delay: 2,
                 ease: "linear",
+                color: {
+                  duration: 3,
+                  ease: "linear",
+                  repeat: Infinity,
+                  repeatType: "loop",
+                },
               }}
               className="hero-content__name--last"
             >
