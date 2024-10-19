@@ -46,7 +46,7 @@ export const contactData = [
   },
   {
     id: "07",
-    name: "linkedIn",
+    name: "instagram",
     icon: faInstagram,
     url: "https://www.instagram.com/dhonduptyd/profilecard/?igsh=cG01NzY3dGVzdTlk",
   },

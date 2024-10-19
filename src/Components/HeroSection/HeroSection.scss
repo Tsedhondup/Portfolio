@@ -16,6 +16,27 @@
     bottom: 0px;
     display: flex;
     padding: 16px;
+    .email {
+      color: #f0db4f;
+    }
+    .phone {
+      color: #44444c;
+    }
+    .linkedIn {
+      color: $linkedIn;
+    }
+    .github {
+      color: $gitHub;
+    }
+    .x {
+      color: $xTwitter;
+    }
+    .facebook {
+      color: $faceBook;
+    }
+    .instagram {
+      color: $instagram;
+    }
   }
 }
 

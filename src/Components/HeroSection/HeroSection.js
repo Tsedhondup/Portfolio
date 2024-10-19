@@ -48,15 +48,12 @@ const HeroSection = (props) => {
     return (
       <a
         key={item.id}
-        className="hero-container__contacts--links"
+        className={`hero-container__contacts--link ${item.name}`}
         href={createContactUrl(item.name, item.url)}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon
-          icon={item.icon}
-          className="hero-container__contacts--links"
-        />
+        <FontAwesomeIcon icon={item.icon} />
       </a>
     );
   });
