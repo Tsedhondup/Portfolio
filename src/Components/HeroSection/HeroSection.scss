@@ -10,6 +10,13 @@
   background-attachment: fixed;
   position: relative;
   // z-index: 15;
+  // CONTACTS
+  &__contacts {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    padding: 16px;
+  }
 }
 
 .hero-content {

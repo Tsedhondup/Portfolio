@@ -30,15 +30,33 @@ const HeroSection = (props) => {
       }
     });
   }, [props]);
+
+  // CREATE CONTACT URL
+  const createContactUrl = (contactName, contactUrl) => {
+    if (contactName === "email") {
+      return `mailto:${contactUrl}`;
+    }
+    if (contactName === "phone") {
+      return `tel:+${contactUrl}`;
+    }
+    if (contactName !== "email" && contactName !== "phone") {
+      return contactUrl;
+    }
+  };
   // CREATE CONTACT ELEMENTS
   const contactElements = contactData.map((item) => {
     return (
       <a
-        className="hero-container__contacts--links"
-        href={item.url}
         key={item.id}
+        className="hero-container__contacts--links"
+        href={createContactUrl(item.name, item.url)}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={item.icon} />
+        <FontAwesomeIcon
+          icon={item.icon}
+          className="hero-container__contacts--links"
+        />
       </a>
     );
   });
