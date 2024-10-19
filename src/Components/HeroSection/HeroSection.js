@@ -1,17 +1,20 @@
+/* eslint-disable no-unused-vars */
 import "./HeroSection.scss";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import profileImage from "../../assets/image/tsering.png";
+import { contactData } from "../../utilities/contactData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const HeroSection = (props) => {
-  // Element reference
-  const refElement = useRef(null);
-
+  // ELEMENT REFERENCE
+  const refElement = useRef(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [socialPosition, setSocialPosition] = useState(null);
   useEffect(() => {
     window.addEventListener("resize", () => {
       setScreenWidth(window.innerWidth);
     });
-    // Clean up the event listener when the component unmounts
+    // CLEAN UP THE EVENT LISTENER AFTER COMPONET IS MOUNT
     return () => {
       window.removeEventListener("resize", () => {
         setScreenWidth(window.innerWidth);
@@ -19,6 +22,26 @@ const HeroSection = (props) => {
     };
   }, []);
 
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     const refEl = refElement.current;
+  //     const rect = refEl.getBoundingClientRect();
+  //     setSocialPosition(rect.top);
+  //     console.log(rect.top);
+  //     socialPosition <= 190 ? console.log("yes") : console.log("no");
+  //   });
+  //   // CLEAN UP THE EVENT LISTENER AFTER COMPONET IS MOUNT
+  //   // return () => {
+  //   //   window.removeEventListener("scroll", () => {
+  //   //     const refEl = refElement.current;
+  //   //     const rect = refEl.getBoundingClientRect();
+  //   //     setSocialPosition(rect.top);
+  //   //     console.log(rect);
+  //   //     console.log(socialPosition);
+  //   //   });
+  //   // };
+  // }, []);
+  // ADD SCROLL EVEN LISTENER TO WINDOW OBJECT
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (refElement.current) {
@@ -28,22 +51,111 @@ const HeroSection = (props) => {
           : props.setIsScroll(false);
       }
     });
-    // Clean up the event listener when the component unmounts
-    // return () => {
-    //   window.removeEventListener("scroll", () => {
-    //     const elementPosition = refElement.current.getBoundingClientRect();
-    //     elementPosition.top <= -200
-    //       ? props.setIsScroll(true)
-    //       : props.setIsScroll(false);
-    //   });
-    // };
   }, [props]);
 
+  // CREATE CONTACT URL
+  const createUrl = (contactName, contactUrl) => {
+    if (contactName === "email") {
+      return `mailto:${contactUrl}`;
+    }
+    if (contactName === "phone") {
+      return `tel:+${contactUrl}`;
+    }
+    if (contactName !== "email" && contactName !== "phone") {
+      return contactUrl;
+    }
+  };
+  // CREATE SOCIAL ELEMENTS
+  let counterDuration = 0.5;
+  const socialElements = contactData.map((item) => {
+    const durationTime = counterDuration;
+    counterDuration = durationTime + 0.3;
+
+    if (item.name !== "email" && item.name !== "phone") {
+      return (
+        <motion.a
+          initial={{
+            y: -60,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              ease: "easeIn",
+              duration: durationTime,
+              delay: 0.2,
+            },
+          }}
+          viewport={{ once: true, amount: 1 }}
+          key={item.id}
+          className={`social-container__link ${item.name}`}
+          href={createUrl(item.name, item.url)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={item.icon} />
+        </motion.a>
+      );
+    } else {
+      // TO FIX ESlint ERROR
+      return <></>;
+    }
+  });
+  // CREATE CONTACT ELEMENTS
+  const contactElements = contactData.map((item) => {
+    const durationTime = counterDuration;
+    counterDuration = durationTime + 0.5;
+
+    if (item.name === "email" || item.name === "phone") {
+      return (
+        <motion.div
+          key={item.id}
+          className="hero-content__contacts--link"
+          initial={{
+            opacity: 0,
+            x: item.name === "email" || screenWidth >= 950 ? -60 : 60,
+            borderBottom: "0px solid #d6d6d6 ",
+          }}
+          whileInView={{ opacity: 1, x: 0, borderBottom: "1px solid #d6d6d6 " }}
+          transition={{
+            delay: screenWidth >= 950 ? 0.5 : 0,
+            duration: durationTime,
+            ease: "linear",
+          }}
+        >
+          <a
+            href={createUrl(item.name, item.url)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`hero-content__contacts--link-text`}
+          >
+            {item.name === "email" ? "email" : "call"}
+          </a>
+          <a
+            href={createUrl(item.name, item.url)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-content__contacts--link-icon-container"
+          >
+            <FontAwesomeIcon
+              icon={item.icon}
+              className={`hero-content__contacts--link-icon ${item.name}`}
+            />
+          </a>
+        </motion.div>
+      );
+    } else {
+      // TO FIX ESlint ERROR
+      return <></>;
+    }
+  });
+
   return (
-    <motion className="hero-container" ref={refElement}>
+    <section className="hero-container">
       <section className="hero-content">
         <div>
-          <h1 className="hero-content__name">
+          <h1 className="hero-content__name" ref={refElement}>
             <span className="hero-content__name--first">
               <motion.span
                 initial={{ opacity: 0, y: 50 }}
@@ -83,12 +195,18 @@ const HeroSection = (props) => {
               </motion.span>
             </span>
             <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, color: "#8c8c8c" }}
+              animate={{ opacity: 1, color: "#000000" }}
               transition={{
                 duration: 3,
                 delay: 2,
                 ease: "linear",
+                color: {
+                  duration: 3,
+                  ease: "linear",
+                  repeat: Infinity,
+                  repeatType: "loop",
+                },
               }}
               className="hero-content__name--last"
             >
@@ -96,8 +214,8 @@ const HeroSection = (props) => {
             </motion.span>
           </h1>
           <motion.h3
-            initial={{ opacity: 0, x: -60 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 2.5,
               delay: 3,
@@ -105,10 +223,10 @@ const HeroSection = (props) => {
             }}
             className="hero-content__title"
           >
-            A Full-stack Web Developer from
+            A Front-End Web Developer
             <motion.span
-              initial={{ opacity: 0, x: screenWidth >= 950 ? -60 : 60 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 1.5,
                 delay: 3,
@@ -116,9 +234,10 @@ const HeroSection = (props) => {
               }}
               className="hero-content__title--city"
             >
-              Toronto
+              from Toronto
             </motion.span>
           </motion.h3>
+          <div className="hero-content__contacts">{contactElements}</div>
         </div>
 
         <div className="image-container">
@@ -136,7 +255,17 @@ const HeroSection = (props) => {
           <div className="image-container__shadow-element"></div>
         </div>
       </section>
-    </motion>
+
+      <section
+        className={`hero-container__socials ${
+          socialPosition <= 190 ? "js-show" : "js-hidden"
+        }`}
+      >
+        <div className="hero-container__social-content">
+          <div className="social-container">{socialElements}</div>
+        </div>
+      </section>
+    </section>
   );
 };
 export default HeroSection;

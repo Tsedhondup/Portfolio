@@ -11,22 +11,24 @@ const HomePage = () => {
   const [headerClass, setHeaderClass] = useState("header-opaque-home-page");
   const [scrollPositionPoint, setScrollPositionPoint] = useState(0);
 
-  return (
-    <>
-      <Header
-        isScroll={isScroll}
-        headerClass={headerClass}
-        scrollPositionPoint={scrollPositionPoint}
-      />
-      <HeroSection
-        setIsScroll={setIsScroll}
-        setScrollPositionPoint={setScrollPositionPoint}
-      />
-      <AboutSecond />
-      <TechStacks />
-      <Works />
-      <Contacts isHomePage={true} />
-    </>
-  );
+  if (Header && AboutSecond && TechStacks && Works && Contacts) {
+    return (
+      <>
+        <Header
+          isScroll={isScroll}
+          headerClass={headerClass}
+          scrollPositionPoint={scrollPositionPoint}
+        />
+        <HeroSection
+          setIsScroll={setIsScroll}
+          setScrollPositionPoint={setScrollPositionPoint}
+        />
+        <AboutSecond />
+        <TechStacks />
+        <Works />
+        <Contacts isHomePage={true} />
+      </>
+    );
+  }
 };
 export default HomePage;
