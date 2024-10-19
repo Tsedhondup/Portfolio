@@ -65,8 +65,8 @@ const Header = (props) => {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
-              duration: 2,
-              delay: 1.5,
+              duration: 1.5,
+              delay: 4,
               ease: "linear",
             }}
             src={logo}

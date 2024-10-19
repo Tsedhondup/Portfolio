@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./HeroSection.scss";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -6,8 +7,9 @@ import { contactData } from "../../utilities/contactData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const HeroSection = (props) => {
   // ELEMENT REFERENCE
-  const refElement = useRef(null);
+  const refElement = useRef(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [socialPosition, setSocialPosition] = useState(null);
   useEffect(() => {
     window.addEventListener("resize", () => {
       setScreenWidth(window.innerWidth);
@@ -19,6 +21,26 @@ const HeroSection = (props) => {
       });
     };
   }, []);
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     const refEl = refElement.current;
+  //     const rect = refEl.getBoundingClientRect();
+  //     setSocialPosition(rect.top);
+  //     console.log(rect.top);
+  //     socialPosition <= 190 ? console.log("yes") : console.log("no");
+  //   });
+  //   // CLEAN UP THE EVENT LISTENER AFTER COMPONET IS MOUNT
+  //   // return () => {
+  //   //   window.removeEventListener("scroll", () => {
+  //   //     const refEl = refElement.current;
+  //   //     const rect = refEl.getBoundingClientRect();
+  //   //     setSocialPosition(rect.top);
+  //   //     console.log(rect);
+  //   //     console.log(socialPosition);
+  //   //   });
+  //   // };
+  // }, []);
   // ADD SCROLL EVEN LISTENER TO WINDOW OBJECT
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -130,10 +152,10 @@ const HeroSection = (props) => {
   });
 
   return (
-    <section className="hero-container" ref={refElement}>
+    <section className="hero-container">
       <section className="hero-content">
         <div>
-          <h1 className="hero-content__name">
+          <h1 className="hero-content__name" ref={refElement}>
             <span className="hero-content__name--first">
               <motion.span
                 initial={{ opacity: 0, y: 50 }}
@@ -215,7 +237,7 @@ const HeroSection = (props) => {
               from Toronto
             </motion.span>
           </motion.h3>
-          <div className="hero-content__contacts"> {contactElements}</div>
+          <div className="hero-content__contacts">{contactElements}</div>
         </div>
 
         <div className="image-container">
@@ -234,9 +256,13 @@ const HeroSection = (props) => {
         </div>
       </section>
 
-      <section className="hero-container__socials">
+      <section
+        className={`hero-container__socials ${
+          socialPosition <= 190 ? "js-show" : "js-hidden"
+        }`}
+      >
         <div className="hero-container__social-content">
-          <div className="social-container"> {socialElements}</div>
+          <div className="social-container">{socialElements}</div>
         </div>
       </section>
     </section>

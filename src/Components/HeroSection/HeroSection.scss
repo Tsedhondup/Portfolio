@@ -17,9 +17,18 @@
     bottom: 16px;
     display: flex;
     justify-content: center;
+    transition: 2s;
+    visibility: visible;
     @include tablet {
       bottom: 36px;
     }
+  }
+  // DYNAMIC JS CLASS
+  .js-hidden {
+    visibility: hidden;
+  }
+  .js-show {
+    visibility: visible;
   }
   // SOCIAL CONTENT - SECOND PAREENT CONTAINER WITH MAX-WIDTH 1280PX
   &__social-content {
