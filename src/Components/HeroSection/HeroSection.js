@@ -103,12 +103,20 @@ const HeroSection = (props) => {
           }}
           viewport={{ once: true, amount: 1 }}
           key={item.id}
-          className={`hero-container__contacts--link ${item.name}`}
+          className={`hero-content__contacts--link ${item.name}`}
           href={createUrl(item.name, item.url)}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={item.icon} />
+          <span className="hero-content__contacts--link-text">
+            {item.name === "email" ? "email" : "call"}
+          </span>
+          <span className="hero-content__contacts--link-icon-container">
+            <FontAwesomeIcon
+              icon={item.icon}
+              className="hero-content__contacts--link-icon"
+            />
+          </span>
         </motion.a>
       );
     } else {
@@ -203,6 +211,7 @@ const HeroSection = (props) => {
               Toronto
             </motion.span>
           </motion.h3>
+          <div className="hero-content__contacts"> {contactElements}</div>
         </div>
 
         <div className="image-container">
@@ -219,9 +228,6 @@ const HeroSection = (props) => {
           />
           <div className="image-container__shadow-element"></div>
         </div>
-      </section>
-      <section className="hero-container__contacts">
-        <div className="contact-container"> {contactElements}</div>
       </section>
 
       <section className="hero-container__socials">
