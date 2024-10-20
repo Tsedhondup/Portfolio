@@ -66,17 +66,69 @@ const AboutFirst = (props) => {
   }, []);
 
   // CREATE ABOUT TEXT ELEMENTS
+
+  let counterDuration = 0.5;
   const aboutTextElements = aboutData.map((item) => {
+    const headerDuration = counterDuration;
+    const bodyDuration = counterDuration + 0.3;
+    const iconDuration = bodyDuration + 0.3;
+    counterDuration = iconDuration + 0.3;
     return (
-      <div>
-        <h2>{item.header}</h2>
-        <p>{item.body}</p>
-        <div>
+      <motion.div className="about-testing">
+        <motion.h2
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: headerDuration,
+              ease: "linear",
+            },
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {item.header}
+        </motion.h2>
+        <motion.p
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: bodyDuration,
+              ease: "linear",
+            },
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {item.body}
+        </motion.p>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: iconDuration,
+              ease: "linear",
+            },
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {item.icons.map((item) => {
             return <FontAwesomeIcon icon={item} />;
           })}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     );
   });
   return (
