@@ -18,6 +18,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import profilePic2 from "../../assets/image/about-first.png";
 import "./AboutFirst.scss";
+import { aboutData } from "../../utilities/aboutData";
 const AboutFirst = (props) => {
   // Element reference
   const refElement = useRef(null);
@@ -37,6 +38,8 @@ const AboutFirst = (props) => {
       setIsBorderThree(true);
     }, 9500);
   }, []);
+
+  // FOR TOGGLING DYNAMIC CLASS OF HEADER COMPONENT
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (refElement.current) {
@@ -62,6 +65,20 @@ const AboutFirst = (props) => {
     };
   }, []);
 
+  // CREATE ABOUT TEXT ELEMENTS
+  const aboutTextElements = aboutData.map((item) => {
+    return (
+      <div>
+        <h2>{item.header}</h2>
+        <p>{item.body}</p>
+        <div>
+          {item.icons.map((item) => {
+            return <FontAwesomeIcon icon={item} />;
+          })}
+        </div>
+      </div>
+    );
+  });
   return (
     <section className="about-first">
       <div className="about-first__image-container">
@@ -96,7 +113,7 @@ const AboutFirst = (props) => {
           />
         </div>
       </div>
-
+      <div>{aboutTextElements}</div>
       <section className="about-text-container">
         {/* --------------------------- About Mobile header --------------------------- */}
         <motion.h2

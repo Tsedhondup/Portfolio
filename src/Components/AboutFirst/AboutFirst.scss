@@ -106,6 +106,7 @@
 // About text container
 .about-text-container {
   padding: $mobile-margin;
+  display: none;
   @include tablet {
     padding: 0px;
     padding-right: $tablet-margin;
