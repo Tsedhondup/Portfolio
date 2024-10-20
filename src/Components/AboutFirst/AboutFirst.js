@@ -69,12 +69,46 @@ const AboutFirst = (props) => {
 
   let counterDuration = 0.5;
   const aboutTextElements = aboutData.map((item) => {
+    // DURATIONS FOR TEXT ELEMENTS
     const headerDuration = counterDuration;
     const bodyDuration = counterDuration + 0.3;
     const iconDuration = bodyDuration + 0.3;
     counterDuration = iconDuration + 0.3;
+    /*
+     * RENDERING BORDER FOR EACH TEXT SECTION
+     *
+     * BORDERS ARE BEING RENDERED BASED ON ID OF AN ITEM
+     */
     return (
-      <motion.div className="about-testing">
+      <motion.div
+        className="about-testing__item"
+        initial={{
+          borderTop: "0px solid #d6d6d6",
+          borderRight: "0px solid #d6d6d6",
+          borderBottom: "0px solid #d6d6d6",
+          borderLeft: "0px solid #d6d6d6",
+        }}
+        whileInView={{
+          borderTop:
+            item.id === "02" || item.id === "03" || item.id === "04"
+              ? "0px solid #d6d6d6"
+              : "1px solid #d6d6d6",
+          borderRight:
+            item.id === "01" || item.id === "03"
+              ? "0px solid #d6d6d6"
+              : "1px solid #d6d6d6",
+          borderBottom: "1px solid #d6d6d6",
+          borderLeft:
+            item.id === "02" || item.id === "04"
+              ? "0px solid #d6d6d6"
+              : "1px solid #d6d6d6",
+          transition: {
+            duration: headerDuration,
+            ease: "linear",
+          },
+        }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <motion.h2
           initial={{
             opacity: 0,
@@ -165,7 +199,7 @@ const AboutFirst = (props) => {
           />
         </div>
       </div>
-      <div>{aboutTextElements}</div>
+      <div className="about-testing">{aboutTextElements}</div>
       <section className="about-text-container">
         {/* --------------------------- About Mobile header --------------------------- */}
         <motion.h2
