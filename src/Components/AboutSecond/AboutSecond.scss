@@ -19,6 +19,7 @@
   @include tablet {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: $tablet-gutter;
     width: 100%;
     margin: auto;
@@ -30,6 +31,11 @@
   }
   &__image-container {
     position: relative;
+    margin-top: $mobileDivider;
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+    }
     @include tablet2 {
       display: none;
     }
@@ -64,19 +70,19 @@
       border-radius: 5px;
       @include tablet {
         border: unset;
+        margin: unset;
       }
     }
   }
 
   &__texts {
-    padding-top: 32px;
-    text-align: center;
-    padding-bottom: 16px;
     font-size: 13px;
     line-height: 1.5em;
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 16px;
     border: unset;
 
-    // Media queries[][]
     @include tablet {
       text-align: left;
       font-size: 16px;

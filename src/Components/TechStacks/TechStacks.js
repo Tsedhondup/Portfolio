@@ -44,7 +44,7 @@ const TechStacks = () => {
               ease: "linear",
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           Skills and Tools
         </motion.h2>
@@ -66,7 +66,7 @@ const TechStacks = () => {
               borderBottom: { delay: 2.2, duration: 1, ease: "linear" },
             },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <div className="icons-container">{skillsElements}</div>
         </motion.div>

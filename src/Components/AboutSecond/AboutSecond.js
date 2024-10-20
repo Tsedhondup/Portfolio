@@ -13,12 +13,13 @@ const AboutSecond = () => {
       <section className="about-second-content">
         <div className="about-second-content__image-container">
           <motion.img
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{
               opacity: 1,
+              y: 0,
               transition: { duration: 1.5, ease: "linear" },
             }}
-            viewport={{ once: true, amount: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
             src={profileImage}
             alt="profile-image"
             className="about-second-content__image-container--img"
@@ -29,8 +30,6 @@ const AboutSecond = () => {
           initial={{
             opacity: 0,
             y: 60,
-            // y: screenWidth < 767 || screenWidth >= 950 ? 100 : 0,
-            // x: screenWidth >= 767 && screenWidth < 950 ? 100 : 0,
           }}
           whileInView={{
             opacity: 1,
@@ -38,7 +37,7 @@ const AboutSecond = () => {
             // x: 0,
             transition: { duration: 1 },
           }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="about-second-content__texts"
         >
           " Botany graduate with a background in plant science, now
