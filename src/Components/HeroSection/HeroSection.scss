@@ -23,13 +23,7 @@
       bottom: 36px;
     }
   }
-  // DYNAMIC JS CLASS
-  .js-hidden {
-    visibility: hidden;
-  }
-  .js-show {
-    visibility: visible;
-  }
+
   // SOCIAL CONTENT - SECOND PAREENT CONTAINER WITH MAX-WIDTH 1280PX
   &__social-content {
     display: flex;
@@ -85,6 +79,13 @@
     .instagram {
       color: $instagram;
     }
+  }
+  // DYNAMIC JS CLASS
+  .js-hidden {
+    opacity: 0;
+  }
+  .js-visible {
+    opacity: 1;
   }
 }
 
