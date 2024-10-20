@@ -221,7 +221,7 @@ const HeroSection = (props) => {
             }}
             className="hero-content__title"
           >
-            A Front-End Web Developer
+            A Full-Stack Web Developer
             <motion.span
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
