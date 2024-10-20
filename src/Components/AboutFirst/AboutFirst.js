@@ -46,17 +46,7 @@ const AboutFirst = (props) => {
           : props.setIsScroll(false);
       }
     });
-    // Clean up the event listener when the component unmounts
-    // return () => {
-    //   window.removeEventListener("scroll", () => {
-    //     if (refElement.current) {
-    //       const elementPosition = refElement.current.getBoundingClientRect();
-    //       elementPosition.top <= -200
-    //         ? props.setIsScroll(true)
-    //         : props.setIsScroll(false);
-    //     }
-    //   });
-    // };
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -72,7 +62,6 @@ const AboutFirst = (props) => {
     };
   }, []);
 
- 
   return (
     <section className="about-first">
       <div className="about-first__image-container">
