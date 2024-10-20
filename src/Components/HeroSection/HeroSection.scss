@@ -223,14 +223,15 @@
 
     // ICONS
     &--link-icon-container {
+      text-align: right;
       text-decoration: none;
       display: flex;
       justify-content: flex-end;
-      width: fit-content;
+      width: auto;
     }
     &--link-icon {
       display: block;
-      width: fit-content;
+      width: auto;
     }
   }
 }
