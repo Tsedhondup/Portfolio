@@ -9,7 +9,7 @@ const HeroSection = (props) => {
   // ELEMENT REFERENCE
   const refElement = useRef(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [socialPosition, setSocialPosition] = useState(null);
+  const [socialClass, setSocialClass] = useState("js-visible");
   useEffect(() => {
     window.addEventListener("resize", () => {
       setScreenWidth(window.innerWidth);
@@ -22,33 +22,31 @@ const HeroSection = (props) => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", () => {
-  //     const refEl = refElement.current;
-  //     const rect = refEl.getBoundingClientRect();
-  //     setSocialPosition(rect.top);
-  //     console.log(rect.top);
-  //     socialPosition <= 190 ? console.log("yes") : console.log("no");
-  //   });
-  //   // CLEAN UP THE EVENT LISTENER AFTER COMPONET IS MOUNT
-  //   // return () => {
-  //   //   window.removeEventListener("scroll", () => {
-  //   //     const refEl = refElement.current;
-  //   //     const rect = refEl.getBoundingClientRect();
-  //   //     setSocialPosition(rect.top);
-  //   //     console.log(rect);
-  //   //     console.log(socialPosition);
-  //   //   });
-  //   // };
-  // }, []);
   // ADD SCROLL EVEN LISTENER TO WINDOW OBJECT
   useEffect(() => {
+    /*
+     * INSTRUCTIONS FOR TOGGLING THE VISISBILITY OF HERO SOCIAL ELEMENTS
+     * GOAL IS TO ACHIEVE CONSISTENT ELEMENT POSITION REGARDLESS OF VIEWPORT SIZES
+     *
+     * GET THE INITIAL POSITION OF REF ELEMENT DURING INITIAL MOUNTING
+     * GET THE POSITION OF REF ELEMENT WHEN PAGE SCROLLS
+     * COMPARE TWO POSITIONS OF REF ELEMENT
+     * IF POSITION OF ELEMENT DURING SCROLL IS LESS THAN INITIAL POSITION VALUE
+     * UPDATE THE VALUE OF STATE-VARIABLE THAT HOLDS THE DYNAMIC CLASS VALUE OF SOCIAL-ELEMENT
+     * CHANGE IN STATE-VARIABLE WITH DYNAMIC CLASS WILL RE-RENDER THE ELEMENTS
+     */
+    // INITIAL POSITION OF REF ELEMENT
+    const initialPositionValue = refElement.current.getBoundingClientRect().top;
     window.addEventListener("scroll", () => {
       if (refElement.current) {
         const elementPosition = refElement.current.getBoundingClientRect();
-        elementPosition.top <= -180
+        elementPosition.top <= 20
           ? props.setIsScroll(true)
           : props.setIsScroll(false);
+
+        elementPosition.top <= initialPositionValue
+          ? setSocialClass("js-hidden")
+          : setSocialClass("js-visible");
       }
     });
   }, [props]);
@@ -256,11 +254,7 @@ const HeroSection = (props) => {
         </div>
       </section>
 
-      <section
-        className={`hero-container__socials ${
-          socialPosition <= 190 ? "js-show" : "js-hidden"
-        }`}
-      >
+      <section className={`hero-container__socials ${socialClass}`}>
         <div className="hero-container__social-content">
           <div className="social-container">{socialElements}</div>
         </div>

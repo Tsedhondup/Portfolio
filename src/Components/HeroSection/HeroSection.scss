@@ -23,13 +23,7 @@
       bottom: 36px;
     }
   }
-  // DYNAMIC JS CLASS
-  .js-hidden {
-    visibility: hidden;
-  }
-  .js-show {
-    visibility: visible;
-  }
+
   // SOCIAL CONTENT - SECOND PAREENT CONTAINER WITH MAX-WIDTH 1280PX
   &__social-content {
     display: flex;
@@ -86,10 +80,17 @@
       color: $instagram;
     }
   }
+  // DYNAMIC JS CLASS
+  .js-hidden {
+    opacity: 0;
+  }
+  .js-visible {
+    opacity: 1;
+  }
 }
 
 .hero-content {
-  height: 100vh;
+  height: 100dvh;
   padding: 0px $mobile-margin;
   padding-top: calc((100vh - 50px) / 3);
   text-align: center;
@@ -159,21 +160,21 @@
   }
   // CONTACTS
   &__contacts {
-    max-width: 250px;
-    margin: auto;
-    @include tablet {
-      max-width: 300px;
-    }
-    @include tablet2 {
-      max-width: 500px;
-      margin: unset;
-    }
-
+    // ONE LINK ELEMENT SUCH AS EMAIL/PHONE
     &--link {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $pewter;
       padding: 16px 0px;
+      max-width: 250px;
+      margin: auto;
+      @include tablet {
+        max-width: 300px;
+      }
+      @include tablet2 {
+        max-width: 500px;
+        margin: unset;
+      }
     }
     // TEXT
     &--link-text {
@@ -193,6 +194,8 @@
       color: $black;
       scale: 1.2;
     }
+
+    // INDIVIDUAL LINK NAMES
     .email {
       color: #f0db4f;
       font-size: 25px;
@@ -218,7 +221,7 @@
       scale: 1.5;
     }
 
-    // ICONSS
+    // ICONS
     &--link-icon-container {
       text-decoration: none;
       display: flex;
@@ -253,7 +256,7 @@
       0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
       0 100px 80px rgba(0, 0, 0, 0.12);
     @include tablet2 {
-      width: 400px;
+      width: 330px;
     }
     @include desktop2 {
       width: 500px;
