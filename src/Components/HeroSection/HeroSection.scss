@@ -89,7 +89,7 @@
 }
 
 .hero-content {
-  height: 100vh;
+  height: 100dvh;
   padding: 0px $mobile-margin;
   padding-top: calc((100vh - 50px) / 3);
   text-align: center;
@@ -159,21 +159,21 @@
   }
   // CONTACTS
   &__contacts {
-    max-width: 250px;
-    margin: auto;
-    @include tablet {
-      max-width: 300px;
-    }
-    @include tablet2 {
-      max-width: 500px;
-      margin: unset;
-    }
-
+    // ONE LINK ELEMENT SUCH AS EMAIL/PHONE
     &--link {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $pewter;
       padding: 16px 0px;
+      max-width: 250px;
+      margin: auto;
+      @include tablet {
+        max-width: 300px;
+      }
+      @include tablet2 {
+        max-width: 500px;
+        margin: unset;
+      }
     }
     // TEXT
     &--link-text {
@@ -193,6 +193,8 @@
       color: $black;
       scale: 1.2;
     }
+
+    // INDIVIDUAL LINK NAMES
     .email {
       color: #f0db4f;
       font-size: 25px;
@@ -218,7 +220,7 @@
       scale: 1.5;
     }
 
-    // ICONSS
+    // ICONS
     &--link-icon-container {
       text-decoration: none;
       display: flex;

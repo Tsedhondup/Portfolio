@@ -13,6 +13,8 @@ import typescriptImage from "../assets/icons/typescript.png";
 import vscodeImage from "../assets/icons/vscode.png";
 import postmanImage from "../assets/icons/postman.png";
 import figmaImage from "../assets/icons/figma.png";
+import jiraImage from "../assets/icons/jira.png";
+import devToolImage from "../assets/icons/devtool.png";
 export const skillsIcons = [
   {
     id: "01",
@@ -89,5 +91,15 @@ export const skillsIcons = [
     id: "15",
     name: "Figma",
     src: figmaImage,
+  },
+  {
+    id: "16",
+    name: "jira",
+    src: jiraImage,
+  },
+  {
+    id: "17",
+    name: "Chrome DevTool",
+    src: devToolImage,
   },
 ];
