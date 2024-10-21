@@ -73,7 +73,9 @@ const Header = (props) => {
             }}
             src={logo}
             alt="brand-logo"
-            className="navigation__brand-name--logo"
+            className={`navigation__brand-name--logo ${
+              props.isAboutPage ? "js-border" : ""
+            }`}
           />
         </Link>
         {/* Pages links */}
