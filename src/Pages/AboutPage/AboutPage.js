@@ -22,6 +22,7 @@ const AboutPage = () => {
         scrollPositionPoint={scrollPositionPoint}
         isScroll={isScroll}
         headerClass={headerClass}
+        isAboutPage={true}
       />
       <AboutFirst
         setIsScroll={setIsScroll}

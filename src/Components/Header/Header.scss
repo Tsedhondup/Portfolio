@@ -15,6 +15,10 @@
 }
 // JS Dynamic class
 
+// BACKGROUND COLOR BLACK AND TEXT COLOR PEWTER FOR ABOUT PAGE
+.js-background-black {
+  background-color: $black;
+}
 .js-header-box-shadow {
   box-shadow: 0px 5px 40px $black; /* Bottom side shadow */
 }
@@ -147,6 +151,10 @@
       color: $black;
       scale: 1.5;
     }
+    // DYNAMIC CLASS - COLOR WHITE WHEN IN ABOUT PAGE
+    .js-color-white {
+      color: $pewter;
+    }
     &--resume {
       font-size: 13px;
       color: $ebony;
@@ -215,6 +223,10 @@
     padding: 0;
     color: $black;
     width: auto;
+  }
+  // DYNAMIC CLASS - COLOR WHITE WHEN IN ABOUT PAGE
+  .js-color-white {
+    color: $pewter;
   }
 
   // Media queries [][]

@@ -3,12 +3,9 @@
 .about-first {
   padding-top: 100px;
   box-sizing: border-box;
-  // background-image: url("../../assets/image/about-first.png");
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // background-position: bottom;
+
   background-color: #ffffff;
-  // background-color: #000;
+  background-color: #000;
 
   @include tablet {
     display: flex;
@@ -109,6 +106,7 @@
   padding: 20px;
   margin-bottom: 20px;
   font-size: 12px;
+  color: $pewter;
   &__item {
     padding: 16px;
   }
