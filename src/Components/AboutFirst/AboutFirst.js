@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import "./AboutFirst.scss";
 import { aboutData } from "../../utilities/aboutData";
 const AboutFirst = (props) => {
   // Element reference
   const refElement = useRef(null);
+  // eslint-disable-next-line no-unused-vars
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // FOR TOGGLING DYNAMIC CLASS OF HEADER COMPONENT
@@ -142,7 +142,7 @@ const AboutFirst = (props) => {
                 ease: "linear",
               },
             }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
           />
         </div>
       </motion.div>
@@ -150,7 +150,7 @@ const AboutFirst = (props) => {
   });
   return (
     <section className="about">
-      <h2 className="about__header">About</h2>
+      <h2 className="about__title">about</h2>
       <div className="about__content" ref={refElement}>
         {aboutTextElements}
       </div>
