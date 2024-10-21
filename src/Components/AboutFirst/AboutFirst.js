@@ -52,7 +52,7 @@ const AboutFirst = (props) => {
      * BORDERS ARE BEING RENDERED BASED ON ID OF AN ITEM
      */
     return (
-      <motion.div key={item.id} className="about__content-item">
+      <motion.div key={item.id} className="about__item">
         {/* TEXTC-CONTAINER */}
         <div className="about__text">
           <motion.h2
@@ -73,24 +73,6 @@ const AboutFirst = (props) => {
           >
             {item.header}
           </motion.h2>
-          <motion.p
-            className="about-text__body"
-            initial={{
-              opacity: 0,
-              y: 60,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: bodyDuration,
-                ease: "linear",
-              },
-            }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {item.body}
-          </motion.p>
           <motion.div
             className="about__icons-container"
             initial={{
@@ -109,12 +91,30 @@ const AboutFirst = (props) => {
           >
             {item.icons.map((item, index) => {
               return (
-                <span key={index} className="about__icons-container--icon">
-                  <FontAwesomeIcon icon={item} />
+                <span key={index} className="about__icons-container--icon-wrapper">
+                  <FontAwesomeIcon icon={item} className="about__icons-container--icon"/>
                 </span>
               );
             })}
           </motion.div>
+          <motion.p
+            className="about__text--body"
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: bodyDuration,
+                ease: "linear",
+              },
+            }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {item.body}
+          </motion.p>
         </div>
         {/* IMAGE CONTAINER */}
         <div className="about__image-container">
@@ -129,6 +129,7 @@ const AboutFirst = (props) => {
   });
   return (
     <section className="about">
+      <h2 className="about__header">About</h2>
       <div className="about_content" ref={refElement}>
         {aboutTextElements}
       </div>

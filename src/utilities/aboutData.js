@@ -27,8 +27,7 @@ export const aboutData = [
   {
     id: "02",
     header: "earliest coding journey",
-    boday:
-      "The story of an inspiring self-taught software developer on YouTube was enough to convince me to learn coding. However, what started as a hobby during my university years has evolved into a full-fledged passion, driving me to pursue a career transition in the tech industry.",
+    body: "The story of an inspiring self-taught software developer on YouTube was enough to convince me to learn coding. However, what started as a hobby during my university years has evolved into a full-fledged passion, driving me to pursue a career transition in the tech industry.",
     icons: [faLaptop, faCode, faCoffee],
     image: journeyImage,
   },
