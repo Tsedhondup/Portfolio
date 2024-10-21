@@ -46,7 +46,7 @@ const AboutFirst = (props) => {
     const bodyDuration = counterDuration + 0.3;
     const iconDuration = bodyDuration + 0.3;
     const imageDuration = iconDuration + 0.3;
-    const boderBottomDuration = imageDuration + 0.2;
+    // const boderBottomDuration = imageDuration + 0.2;
     counterDuration = imageDuration + 0.3;
 
     /*
