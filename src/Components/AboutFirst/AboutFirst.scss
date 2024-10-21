@@ -3,11 +3,12 @@
 .about-first {
   padding-top: 100px;
   box-sizing: border-box;
-  background-image: url("../../assets/image/about-first.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
+  // background-image: url("../../assets/image/about-first.png");
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: bottom;
   background-color: #ffffff;
+  // background-color: #000;
 
   @include tablet {
     display: flex;
@@ -105,11 +106,14 @@
 
 .about-testing {
   margin-top: 150px;
-  padding-right: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
   &__item {
     padding: 16px;
   }
 }
+
 // About text container
 .about-text-container {
   padding: $mobile-margin;
