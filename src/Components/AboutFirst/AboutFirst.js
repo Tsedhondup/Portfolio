@@ -46,7 +46,9 @@ const AboutFirst = (props) => {
     const bodyDuration = counterDuration + 0.3;
     const iconDuration = bodyDuration + 0.3;
     const imageDuration = iconDuration + 0.3;
+    const boderBottomDuration = imageDuration + 0.2;
     counterDuration = imageDuration + 0.3;
+
     /*
      * RENDERING BORDER FOR EACH TEXT SECTION
      *
@@ -59,6 +61,15 @@ const AboutFirst = (props) => {
         className={`about__item ${
           item.id === "02" || item.id === "04" ? "about__item-flex-reverse" : ""
         }`}
+        initial={{
+          borderBottom: "0px solid #44444c",
+        }}
+        whileInView={{
+          borderBottom:
+            windowWidth <= 768 ? "1px solid #44444c" : "0px solid #44444c",
+          transition: { duration: boderBottomDuration, ease: "linear" },
+        }}
+        viewport={{ once: true, amount: 1 }}
       >
         {/* TEXTC-CONTAINER */}
         <div className="about__text">
