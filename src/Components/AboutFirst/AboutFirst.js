@@ -45,7 +45,8 @@ const AboutFirst = (props) => {
     const headerDuration = counterDuration;
     const bodyDuration = counterDuration + 0.3;
     const iconDuration = bodyDuration + 0.3;
-    counterDuration = iconDuration + 0.3;
+    const imageDuration = iconDuration + 0.3;
+    counterDuration = imageDuration + 0.3;
     /*
      * RENDERING BORDER FOR EACH TEXT SECTION
      *
@@ -91,8 +92,14 @@ const AboutFirst = (props) => {
           >
             {item.icons.map((item, index) => {
               return (
-                <span key={index} className="about__icons-container--icon-wrapper">
-                  <FontAwesomeIcon icon={item} className="about__icons-container--icon"/>
+                <span
+                  key={index}
+                  className="about__icons-container--icon-wrapper"
+                >
+                  <FontAwesomeIcon
+                    icon={item}
+                    className="about__icons-container--icon"
+                  />
                 </span>
               );
             })}
@@ -118,10 +125,24 @@ const AboutFirst = (props) => {
         </div>
         {/* IMAGE CONTAINER */}
         <div className="about__image-container">
-          <img
+          <motion.img
+            className="about__image-container--image"
             src={item.image}
             alt={`${item.name}-image`}
-            className="about__image-container--image"
+            initial={{
+              opacity: 0,
+              x: item.id === "01" || item.id === "03" ? 100 : -100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                delay: 1,
+                duration: imageDuration,
+                ease: "linear",
+              },
+            }}
+            viewport={{ once: true, amount: 0.2 }}
           />
         </div>
       </motion.div>
