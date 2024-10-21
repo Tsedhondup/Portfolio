@@ -62,13 +62,11 @@
   &__item {
     color: $pewter;
     margin-bottom: $mobileDivider;
-    border-bottom: 1px solid $ebony;
 
     @include tablet {
       display: flex;
       justify-content: space-between;
       gap: $tablet-gutter;
-      border-bottom: 0px solid $ebony;
     }
     @include tablet2 {
       gap: 40px;

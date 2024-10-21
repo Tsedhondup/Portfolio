@@ -61,15 +61,15 @@ const AboutFirst = (props) => {
         className={`about__item ${
           item.id === "02" || item.id === "04" ? "about__item-flex-reverse" : ""
         }`}
-        initial={{
-          borderBottom: "0px solid #44444c",
-        }}
-        whileInView={{
-          borderBottom:
-            windowWidth <= 768 ? "1px solid #44444c" : "0px solid #44444c",
-          transition: { duration: boderBottomDuration, ease: "linear" },
-        }}
-        viewport={{ once: true, amount: 1 }}
+        // initial={{
+        //   borderBottom: "0px solid #44444c",
+        // }}
+        // whileInView={{
+        //   borderBottom:
+        //     windowWidth <= 768 ? "1px solid #44444c" : "0px solid #44444c",
+        //   transition: { duration: boderBottomDuration, ease: "linear" },
+        // }}
+        // viewport={{ once: true, amount: 1 }}
       >
         {/* TEXTC-CONTAINER */}
         <div className="about__text">
