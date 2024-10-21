@@ -44,6 +44,17 @@
       max-width: 1280px;
     }
   }
+
+  // TITLE ICON CONTAINER
+  &__title-icon-container {
+    display: flex;
+    justify-content: space-between;
+    color: $ebony;
+    &--icon {
+      width: 13px;
+      padding: 0px;
+    }
+  }
   // ABOUT DATA WRAPPER
   &__content {
     padding-bottom: $mobileDivider;

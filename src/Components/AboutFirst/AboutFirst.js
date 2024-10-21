@@ -36,7 +36,7 @@ const AboutFirst = (props) => {
   }, []);
 
   // COUNTER DURATION FOR RENDERING ABOUT TEXTS
-  let counterDuration = 0.5;
+  let counterDuration = 0.8;
   // CREATE ABOUT TEXT ELEMENTS
   const aboutTextElements = aboutData.map((item) => {
     /*
@@ -46,7 +46,7 @@ const AboutFirst = (props) => {
     const bodyDuration = counterDuration + 0.3;
     const iconDuration = bodyDuration + 0.3;
     const imageDuration = iconDuration + 0.3;
-    // const boderBottomDuration = imageDuration + 0.2;
+    const boderBottomDuration = imageDuration + 0.2;
     counterDuration = imageDuration + 0.3;
 
     /*
@@ -61,15 +61,15 @@ const AboutFirst = (props) => {
         className={`about__item ${
           item.id === "02" || item.id === "04" ? "about__item-flex-reverse" : ""
         }`}
-        // initial={{
-        //   borderBottom: "0px solid #44444c",
-        // }}
-        // whileInView={{
-        //   borderBottom:
-        //     windowWidth <= 768 ? "1px solid #44444c" : "0px solid #44444c",
-        //   transition: { duration: boderBottomDuration, ease: "linear" },
-        // }}
-        // viewport={{ once: true, amount: 1 }}
+        initial={{
+          borderBottom: "0px solid #44444c",
+        }}
+        whileInView={{
+          borderBottom:
+            windowWidth <= 768 ? "1px solid #44444c" : "0px solid #44444c",
+          transition: { duration: boderBottomDuration, ease: "linear" },
+        }}
+        viewport={{ once: true, amount: 1 }}
       >
         {/* TEXTC-CONTAINER */}
         <div className="about__text">
@@ -167,7 +167,34 @@ const AboutFirst = (props) => {
   });
   return (
     <section className="about">
-      <h2 className="about__title">My story</h2>
+      <div>
+        <motion.h2
+          className="about__title"
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.8,
+              ease: "linear",
+            },
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          My story
+        </motion.h2>
+        {/* <div className="about__title-icon-container">
+          {{
+            aboutData.map(item=>{
+              return 
+            })
+          }}
+        </div> */}
+      </div>
+
       <div className="about__content" ref={refElement}>
         {aboutTextElements}
       </div>
