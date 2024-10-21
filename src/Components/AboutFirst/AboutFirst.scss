@@ -1,6 +1,7 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
 .about {
+  padding: 0px 16px;
   padding-top: 100px;
   box-sizing: border-box;
   background-color: $black;
@@ -26,31 +27,29 @@
     color: $pewter;
     font-size: 13px;
     font-weight: 500;
-    padding: 16px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
     margin-bottom: 16px;
     width: 100%;
-    text-transform: uppercase;
+    border-bottom: 1px solid $ebony;
     @include tablet {
       font-size: 24px;
-      padding: 32px;
       padding-top: 120px;
+      padding-bottom: 16px;
+      margin: auto;
       margin-bottom: 32px;
     }
     @include desktop {
       font-size: 16;
       max-width: 1280px;
-      margin: auto;
-      padding-bottom: $desktopDivder;
     }
   }
   // ABOUT DATA WRAPPER
   &__content {
-    padding: 0px 16px;
     padding-bottom: $mobileDivider;
     width: 100%;
     background-color: $black;
     @include tablet {
-      padding: 0px 32px;
       padding-bottom: $tabletDivider;
     }
     @include desktop {
@@ -67,19 +66,31 @@
 
     @include tablet {
       display: flex;
+      justify-content: space-between;
+      gap: $tablet-gutter;
       border-bottom: 0px solid $ebony;
+    }
+    @include tablet2 {
+      gap: 40px;
+    }
+  }
+  // DYNAMIC CLASS
+  &__item-flex-reverse {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
     }
   }
   // ABOUT TEXT CONTAINER
   &__text {
     &--header {
-      font-size: 13px;
+      font-size: 11px;
       text-transform: uppercase;
       font-weight: 400;
       margin-bottom: 16px;
       @include tablet {
         font-size: 14px;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
       }
       @include desktop {
         font-size: 16px;
@@ -91,6 +102,7 @@
       @include tablet {
         font-size: 13px;
         margin-bottom: 32px;
+        line-height: 1.5em;
       }
       @include desktop {
         font-size: 14px;
@@ -137,6 +149,9 @@
       display: block;
       object-fit: contain;
       height: 130px;
+      @include tablet {
+        height: 220px;
+      }
     }
     .background {
       animation: scaling 4s linear infinite;

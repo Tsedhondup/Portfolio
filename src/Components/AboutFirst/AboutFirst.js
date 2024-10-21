@@ -156,7 +156,7 @@ const AboutFirst = (props) => {
   });
   return (
     <section className="about">
-      <h2 className="about__title">about</h2>
+      <h2 className="about__title">My story</h2>
       <div className="about__content" ref={refElement}>
         {aboutTextElements}
       </div>
