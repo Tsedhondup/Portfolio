@@ -53,7 +53,13 @@ const AboutFirst = (props) => {
      * BORDERS ARE BEING RENDERED BASED ON ID OF AN ITEM
      */
     return (
-      <motion.div key={item.id} className="about__item">
+      <motion.div
+        key={item.id}
+        // FLEX DIRECTION ARE BEING REVERSED FOR SECOND AND FOURTH ITEM FOR TABLET AND DESKTOP VIEW
+        className={`about__item ${
+          item.id === "02" || item.id === "04" ? "about__item-flex-reverse" : ""
+        }`}
+      >
         {/* TEXTC-CONTAINER */}
         <div className="about__text">
           <motion.h2
