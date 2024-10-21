@@ -40,7 +40,9 @@ const Header = (props) => {
   }, []);
   return (
     <motion.section
-      className={`header ${props.isScroll ? "js-header-box-shadow" : ""}`}
+      className={`header ${props.isScroll ? "js-header-box-shadow" : ""} ${
+        props.isAboutPage ? "js-background-black" : ""
+      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{
@@ -71,7 +73,9 @@ const Header = (props) => {
             }}
             src={logo}
             alt="brand-logo"
-            className="navigation__brand-name--logo"
+            className={`navigation__brand-name--logo ${
+              props.isAboutPage ? "js-border" : ""
+            }`}
           />
         </Link>
         {/* Pages links */}
@@ -80,11 +84,13 @@ const Header = (props) => {
             <AnimatedPageLinks
               handleNavButton={handleNavButton}
               navPageClass={navPageClass}
+              isAboutPage={props.isAboutPage}
             />
           ) : (
             <NonAnimatedPageLinks
               handleNavButton={handleNavButton}
               navPageClass={navPageClass}
+              isAboutPage={props.isAboutPage}
             />
           )}
         </section>
@@ -93,7 +99,9 @@ const Header = (props) => {
           <FontAwesomeIcon
             icon={faBars}
             transform="grow-5"
-            className="nav-button-container__open"
+            className={`nav-button-container__open ${
+              props.isAboutPage ? "js-color-white" : ""
+            }`}
             onClick={handleNavButton}
           />
         </div>

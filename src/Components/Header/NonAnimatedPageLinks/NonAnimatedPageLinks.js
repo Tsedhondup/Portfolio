@@ -10,14 +10,18 @@ const NonAnimatedPageLinks = (props) => {
         </h2>
         <Link
           to="/"
-          className="navigation-pages__link-container--home"
+          className={`navigation-pages__link-container--home ${
+            props.isAboutPage ? "js-color-white" : ""
+          }`}
           onClick={props.handleNavButton}
         >
           Home
         </Link>
         <Link
           to="/About"
-          className="navigation-pages__link-container--about"
+          className={`navigation-pages__link-container--about ${
+            props.isAboutPage ? "js-color-white" : ""
+          }`}
           onClick={props.handleNavButton}
         >
           About

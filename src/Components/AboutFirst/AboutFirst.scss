@@ -1,17 +1,13 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/_variables";
-.about-first {
+.about {
+  padding: 0px 16px;
   padding-top: 100px;
   box-sizing: border-box;
-  background-image: url("../../assets/image/about-first.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
-  background-color: #ffffff;
+  background-color: $black;
+  width: 100%;
 
   @include tablet {
-    display: flex;
-    flex-direction: row-reverse;
     padding-top: 150px;
     padding-top: 0px;
     padding-left: $tablet-margin;
@@ -24,230 +20,150 @@
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
-    max-width: 1280px;
-    margin: auto;
   }
 
-  // About header for mobile view
-  &__mobile-header {
-    color: $ebony;
-    font-size: 18px;
-    text-align: left;
-    text-transform: uppercase;
-    padding: 16px 0px;
-    padding-bottom: 16px;
-    position: relative;
-    z-index: 5;
-    @include tablet {
-      display: none;
-    }
-  }
-  // Image container - also contains header for tablet and desktop
-  &__image-container {
-    display: none;
-    @include tablet {
-      background-color: $black;
-      display: flex;
-      flex-direction: column;
-      margin-top: 150px;
-    }
-
-    // Profile image wrapper
-    &--img-wrapper {
-      height: 100%;
-      display: flex;
-      align-items: end;
-      @include tablet {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        padding: 0px $tablet-margin;
-      }
-    }
-    // Profile image
-    &--img {
-      object-fit: contain;
-      display: block;
-      width: 300px;
-      border-radius: 5px;
-      margin: auto;
-      position: relative;
-      filter: drop-shadow(2px 2px 20px $ebony);
-
-      @include tablet {
-        max-width: 400px;
-        margin: unset;
-      }
-      @include desktop {
-        width: 500px;
-      }
-    }
-    // About header for tablet and desktop
-    &--text {
-      display: none;
-      @include tablet {
-        display: block;
-        align-content: center;
-        height: 100%;
-        color: $pewter;
-        font-size: 20px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 0.3em;
-      }
-      @include desktop {
-        font-size: 30px;
-      }
-    }
-  }
-}
-
-// About text container
-.about-text-container {
-  padding: $mobile-margin;
-  @include tablet {
-    padding: 0px;
-    padding-right: $tablet-margin;
-    padding-top: 150px;
-  }
-  @include desktop {
-    padding-top: 200px;
-  }
-}
-// About text content
-.about-text {
-  padding: 32px 16px;
-  background-color: rgba(255, 255, 255, 0.8);
-
-  @include tablet {
-    padding: 32px;
-    background-color: unset;
-  }
-  // About text content title
+  // ABOUT TITLE
   &__title {
-    display: flex;
-    color: $ebony;
-    justify-content: flex-start;
-    align-items: center;
+    color: $pewter;
     font-size: 13px;
-    font-weight: normal;
+    font-weight: 500;
     text-transform: uppercase;
-    padding-bottom: 16px;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    width: 100%;
+    border-bottom: 1px solid $ebony;
     @include tablet {
-      font-size: 14px;
+      font-size: 24px;
+      padding-top: 120px;
+      padding-bottom: 16px;
+      margin: auto;
+      margin-bottom: 32px;
     }
     @include desktop {
-      font-size: 16px;
+      font-size: 16;
+      max-width: 1280px;
     }
   }
-  // About text content paragraph
-  &__para {
-    color: $black;
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 1.6em;
-    padding-bottom: 16px;
+  // ABOUT DATA WRAPPER
+  &__content {
+    padding-bottom: $mobileDivider;
+    width: 100%;
+    background-color: $black;
+    @include tablet {
+      padding-bottom: $tabletDivider;
+    }
+    @include desktop {
+      max-width: 1280px;
+      margin: auto;
+      padding-bottom: $desktopDivder;
+    }
+  }
+  // SINGLE ABOUT DATA
+  &__item {
+    color: $pewter;
+    margin-bottom: $mobileDivider;
+    border-bottom: 1px solid $ebony;
 
     @include tablet {
-      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: $tablet-gutter;
+      border-bottom: 0px solid $ebony;
     }
-    @include desktop {
-      font-size: 14px;
+    @include tablet2 {
+      gap: 40px;
     }
   }
-  // About text content icon container
-  &__icon-container {
+  // DYNAMIC CLASS
+  &__item-flex-reverse {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  // ABOUT TEXT CONTAINER
+  &__text {
+    &--header {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 16px;
+      @include tablet {
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+    &--body {
+      font-size: 12px;
+      margin-bottom: 16px;
+      @include tablet {
+        font-size: 13px;
+        margin-bottom: 32px;
+        line-height: 1.5em;
+      }
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__icons-container {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    // All icons
-    &--icons {
-      width: auto;
-      padding-right: 10px;
-      color: #a70000;
-      transition: 0.5;
-    }
-    &--icons:hover {
-      scale: 1.5;
-    }
+    max-width: 100px;
 
-    // Specific icon color-scheme:
-    &--icon-dna {
-      color: $dna;
-    }
-    &--icon-leaf {
-      color: $leaf;
-    }
-    &--icon-vial {
-      color: $vial;
-    }
-    &--icon-laptop {
-      color: $laptop;
-    }
-    &--icon-code {
-      color: $code;
-    }
-    &--icon-coffee {
-      color: $coffee;
-    }
-    &--icon-book {
-      color: $book;
-    }
-    &--icon-head-set {
-      color: $headSet;
-    }
-    &--icon-check-square {
-      color: $checkSquare;
-    }
-    &--icon-point-right {
-      color: $pointRight;
-    }
-    &--icon-house {
-      color: $house;
-    }
-    &--icon-globe {
-      color: $globe;
-    }
-  }
-  &__icon-container-2,
-  &__icon-container-4 {
-    display: flex;
-    justify-content: flex-end;
-    @include tablet {
+    &--icon-wrapper {
+      font-size: 12px;
+      display: flex;
       justify-content: flex-start;
     }
+    &--icon {
+      width: 16px;
+    }
   }
-}
 
-.about-text-education {
-  border-top: 1px solid $pewter;
-  border-left: 1px solid $pewter;
-  border-bottom: 1px solid $pewter;
-  @include tablet {
-    border: unset;
-    // padding-top: 0px;
+  // INFINITE ANIMATION FOR CSS
+  @keyframes scaling {
+    0% {
+      scale: 0.9;
+      // transform: rotate(0deg);
+    }
+    50% {
+      scale: 1;
+      // transform: rotate(3deg);
+    }
+    100% {
+      scale: 0.9;
+      // transform: rotate(0deg);
+    }
   }
-}
-.about-text-journey {
-  border-right: 1px solid $pewter;
-  border-bottom: 1px solid $pewter;
-  @include tablet {
-    border: unset;
-  }
-}
-.about-text-certification {
-  border-bottom: 1px solid $pewter;
-  border-left: 1px solid $pewter;
-  @include tablet {
-    border: unset;
-  }
-}
-.about-text-goals {
-  border-right: 1px solid $pewter;
-  border-bottom: 1px solid $pewter;
-  @include tablet {
-    border: unset;
-    margin-bottom: $tablet-margin;
+  &__image-container {
+    padding-bottom: 16px;
+    @include tablet {
+      padding-bottom: 0px;
+    }
+    &--image {
+      display: block;
+      object-fit: contain;
+      height: 130px;
+      @include tablet {
+        height: 220px;
+      }
+    }
+    .background {
+      animation: scaling 4s linear infinite;
+    }
+    .journey {
+      animation: scaling 5s linear infinite;
+    }
+    .certification {
+      animation: scaling 3s linear infinite;
+    }
+    .goal {
+      animation: scaling 5s linear infinite;
+    }
   }
 }
