@@ -5,6 +5,7 @@
   box-sizing: border-box;
   background-color: #ffffff;
   background-color: #000;
+  width: 100%;
 
   @include tablet {
     display: flex;
@@ -24,12 +25,17 @@
     max-width: 1280px;
     margin: auto;
   }
-
+  // ABOUT DATA WRAPPER
+  &__content {
+    padding: 0px 16px;
+    @include tablet {
+      padding: 0px 32px;
+    }
+  }
   // SINGLE ABOUT DATA
   &__item {
-    padding: 20px;
-    margin-bottom: 20px;
     color: $pewter;
+    margin-bottom: $mobileDivider;
   }
   // ABOUT TEXT CONTAINER
   &__text {
@@ -37,8 +43,10 @@
       font: 13px;
       text-transform: uppercase;
       font-weight: 400;
+      margin-bottom: 16px;
       @include tablet {
         font-size: 14px;
+        margin-bottom: 32px;
       }
       @include desktop {
         font-size: 16px;
@@ -46,8 +54,10 @@
     }
     &--body {
       font-size: 12px;
+      margin-bottom: 16px;
       @include tablet {
         font-size: 13px;
+        margin-bottom: 32px;
       }
       @include desktop {
         font-size: 14px;
@@ -59,6 +69,10 @@
     display: flex;
     justify-content: flex-start;
     max-width: 100px;
+    margin-bottom: 16px;
+    @include tablet {
+      margin-bottom: 32px;
+    }
     &--icon-wrapper {
       font-size: 12px;
       display: flex;
@@ -69,11 +83,40 @@
     }
   }
 
+  // INFINITE ANIMATION FOR CSS
+  @keyframes scaling {
+    0% {
+      scale: 0.9;
+      // transform: rotate(0deg);
+    }
+    50% {
+      scale: 1;
+      // transform: rotate(3deg);
+    }
+    100% {
+      scale: 0.9;
+      // transform: rotate(0deg);
+    }
+  }
   &__image-container {
+    @include tablet {
+    }
     &--image {
       display: block;
       object-fit: contain;
-      height: 100px;
+      height: 130px;
+    }
+    .background {
+      animation: scaling 4s linear infinite;
+    }
+    .journey {
+      animation: scaling 5s linear infinite;
+    }
+    .certification {
+      animation: scaling 3s linear infinite;
+    }
+    .goal {
+      animation: scaling 5s linear infinite;
     }
   }
 }

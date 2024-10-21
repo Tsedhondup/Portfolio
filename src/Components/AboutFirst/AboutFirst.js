@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 import "./AboutFirst.scss";
 import { aboutData } from "../../utilities/aboutData";
@@ -74,7 +74,7 @@ const AboutFirst = (props) => {
           >
             {item.header}
           </motion.h2>
-          <motion.div
+          {/* <motion.div
             className="about__icons-container"
             initial={{
               opacity: 0,
@@ -103,7 +103,7 @@ const AboutFirst = (props) => {
                 </span>
               );
             })}
-          </motion.div>
+          </motion.div> */}
           <motion.p
             className="about__text--body"
             initial={{
@@ -126,7 +126,7 @@ const AboutFirst = (props) => {
         {/* IMAGE CONTAINER */}
         <div className="about__image-container">
           <motion.img
-            className="about__image-container--image"
+            className={`about__image-container--image ${item.header}`}
             src={item.image}
             alt={`${item.name}-image`}
             initial={{
@@ -151,7 +151,7 @@ const AboutFirst = (props) => {
   return (
     <section className="about">
       <h2 className="about__header">About</h2>
-      <div className="about_content" ref={refElement}>
+      <div className="about__content" ref={refElement}>
         {aboutTextElements}
       </div>
     </section>
