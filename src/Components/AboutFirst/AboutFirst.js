@@ -52,10 +52,11 @@ const AboutFirst = (props) => {
      * BORDERS ARE BEING RENDERED BASED ON ID OF AN ITEM
      */
     return (
-      <motion.div key={item.id} className="about-testing__item">
+      <motion.div key={item.id} className="about__content-item">
         {/* TEXTC-CONTAINER */}
-        <div>
+        <div className="about__text">
           <motion.h2
+            className="about__text--header"
             initial={{
               opacity: 0,
               y: 60,
@@ -73,6 +74,7 @@ const AboutFirst = (props) => {
             {item.header}
           </motion.h2>
           <motion.p
+            className="about-text__body"
             initial={{
               opacity: 0,
               y: 60,
@@ -90,6 +92,7 @@ const AboutFirst = (props) => {
             {item.body}
           </motion.p>
           <motion.div
+            className="about__icons-container"
             initial={{
               opacity: 0,
               y: 60,
@@ -106,7 +109,7 @@ const AboutFirst = (props) => {
           >
             {item.icons.map((item, index) => {
               return (
-                <span key={index}>
+                <span key={index} className="about__icons-container--icon">
                   <FontAwesomeIcon icon={item} />
                 </span>
               );
@@ -114,15 +117,19 @@ const AboutFirst = (props) => {
           </motion.div>
         </div>
         {/* IMAGE CONTAINER */}
-        <div>
-          <img src={item.image} alt={`${item.name}-image`} />
+        <div className="about__image-container">
+          <img
+            src={item.image}
+            alt={`${item.name}-image`}
+            className="about__image-container--image"
+          />
         </div>
       </motion.div>
     );
   });
   return (
-    <section className="about-first">
-      <div className="about-testing" ref={refElement}>
+    <section className="about">
+      <div className="about_content" ref={refElement}>
         {aboutTextElements}
       </div>
     </section>
