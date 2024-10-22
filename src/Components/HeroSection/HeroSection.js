@@ -2,9 +2,12 @@
 import "./HeroSection.scss";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import profileImage from "../../assets/image/tsering.png";
 import { contactData } from "../../utilities/contactData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { v4 as uuidv4 } from "uuid";
+
+import profileImage from "../../assets/image/tsering.png";
+
 const HeroSection = (props) => {
   // ELEMENT REFERENCE
   const refElement = useRef(0);
@@ -153,7 +156,11 @@ const HeroSection = (props) => {
     <section className="hero-container">
       <section className="hero-content">
         <div>
-          <h1 key="name" className="hero-content__name" ref={refElement}>
+          <h1
+            key={`${uuidv4()}`}
+            className="hero-content__name"
+            ref={refElement}
+          >
             <span className="hero-content__name--first">
               <motion.span
                 key="01"
@@ -215,7 +222,7 @@ const HeroSection = (props) => {
             </motion.span>
           </h1>
           <motion.h3
-            key="$^%$^&$%^%$^%"
+            key={`${uuidv4()}`}
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -239,7 +246,9 @@ const HeroSection = (props) => {
               from Toronto
             </motion.span>
           </motion.h3>
-          <div className="hero-content__contacts">{contactElements}</div>
+          <div key={`${uuidv4()}`} className="hero-content__contacts">
+            {contactElements}
+          </div>
         </div>
 
         <div className="image-container">
