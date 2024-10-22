@@ -78,9 +78,11 @@
       display: flex;
       justify-content: space-between;
       gap: $tablet-gutter;
+      margin-bottom: $tabletDivider;
     }
     @include tablet2 {
       gap: 40px;
+      margin-bottom: $desktopDivder;
     }
   }
   // DYNAMIC CLASS

@@ -62,7 +62,7 @@ export const skillsIcons = [
     src: mysqlImage,
   },
   {
-    id: "010",
+    id: "10",
     name: "Knex",
     src: knexImage,
   },

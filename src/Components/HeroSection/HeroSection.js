@@ -72,6 +72,7 @@ const HeroSection = (props) => {
     if (item.name !== "email" && item.name !== "phone") {
       return (
         <motion.a
+          key={item.name}
           initial={{
             y: -60,
             opacity: 0,
@@ -86,7 +87,6 @@ const HeroSection = (props) => {
             },
           }}
           viewport={{ once: true, amount: 1 }}
-          key={item.id}
           className={`social-container__link ${item.name}`}
           href={createUrl(item.name, item.url)}
           target="_blank"
@@ -108,7 +108,7 @@ const HeroSection = (props) => {
     if (item.name === "email" || item.name === "phone") {
       return (
         <motion.div
-          key={item.id}
+          key={item.name}
           className="hero-content__contacts--link"
           initial={{
             opacity: 0,
@@ -153,9 +153,10 @@ const HeroSection = (props) => {
     <section className="hero-container">
       <section className="hero-content">
         <div>
-          <h1 className="hero-content__name" ref={refElement}>
+          <h1 key="name" className="hero-content__name" ref={refElement}>
             <span className="hero-content__name--first">
               <motion.span
+                key="01"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -168,6 +169,7 @@ const HeroSection = (props) => {
                 Hi,
               </motion.span>
               <motion.span
+                key="02"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
@@ -180,6 +182,7 @@ const HeroSection = (props) => {
                 I'm
               </motion.span>
               <motion.span
+                key="03"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
@@ -212,6 +215,7 @@ const HeroSection = (props) => {
             </motion.span>
           </h1>
           <motion.h3
+            key="$^%$^&$%^%$^%"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
