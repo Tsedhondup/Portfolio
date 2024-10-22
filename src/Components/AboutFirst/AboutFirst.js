@@ -14,9 +14,9 @@ const AboutFirst = (props) => {
     window.addEventListener("scroll", () => {
       if (refElement.current) {
         const elementPosition = refElement.current.getBoundingClientRect();
-        elementPosition.top <= 80
-          ? props.setIsScroll(true)
-          : props.setIsScroll(false);
+        elementPosition.top <= -100
+          ? props.setIsAboutPageScroll(true)
+          : props.setIsAboutPageScroll(false);
       }
     });
 
@@ -81,36 +81,7 @@ const AboutFirst = (props) => {
           >
             {item.header}
           </motion.h2>
-          {/* <motion.div
-            className="about__icons-container"
-            initial={{
-              opacity: 0,
-              y: 60,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: iconDuration,
-                ease: "linear",
-              },
-            }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {item.icons.map((item, index) => {
-              return (
-                <span
-                  key={index}
-                  className="about__icons-container--icon-wrapper"
-                >
-                  <FontAwesomeIcon
-                    icon={item}
-                    className="about__icons-container--icon"
-                  />
-                </span>
-              );
-            })}
-          </motion.div> */}
+
           <motion.p
             className="about__text--body"
             initial={{
@@ -156,7 +127,7 @@ const AboutFirst = (props) => {
     );
   });
   return (
-    <section className="about">
+    <section className="about" ref={refElement}>
       <div>
         <motion.h2
           className="about__title"
@@ -176,16 +147,9 @@ const AboutFirst = (props) => {
         >
           My story
         </motion.h2>
-        {/* <div className="about__title-icon-container">
-          {{
-            aboutData.map(item=>{
-              return 
-            })
-          }}
-        </div> */}
       </div>
 
-      <div className="about__content" ref={refElement}>
+      <div className="about__content" r>
         {aboutTextElements}
       </div>
     </section>

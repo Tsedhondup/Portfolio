@@ -28,13 +28,67 @@
   }
   &__header {
     color: $pewter;
-    text-transform: capitalize;
-    text-align: center;
     font-weight: normal;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
     padding: $mobile-margin;
     position: relative;
     z-index: 15;
-    border-bottom: 1px solid $pewter;
+    border-bottom: 1px solid $ebony;
+    @include tablet {
+      font-size: 15px;
+    }
+  }
+
+  // CONTACTS
+
+  // ONE LINK ELEMENT SUCH AS EMAIL/PHONE
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0px;
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+    z-index: 15;
+
+    &--text {
+      color: $pewter;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: fit-content;
+      position: relative;
+      z-index: 15;
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+    &--text:hover {
+      scale: 1.2;
+    }
+  }
+  // ICONS
+  &__link-icon-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 20px;
+    &--icon {
+      color: $pewter;
+      width: 20px;
+      height: 20px;
+      @include tablet {
+        height: 30px;
+        width: 30px;
+      }
+    }
+    &--icon:hover {
+      scale: 1.5;
+    }
   }
 }
 // .contact-home {
@@ -43,86 +97,3 @@
 // .contact-about {
 //   background-image: url("../../assets/image/contact-back-image-about.jpg");
 // }
-.phone-email {
-  position: relative;
-  z-index: 15;
-  max-width: 200px;
-  margin: auto;
-  margin-top: 32px;
-  &__phone-container {
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    @include tablet {
-      margin-bottom: 32px;
-    }
-    &--text {
-      color: $pewter;
-      text-decoration: none;
-      text-transform: capitalize;
-      font-size: 18px;
-      font-weight: 200;
-    }
-    &--text:hover {
-      font-weight: 700;
-    }
-
-    &--icon {
-      text-decoration: none;
-      color: #ffffff;
-      height: 20px;
-      @include tablet {
-        display: none;
-      }
-    }
-
-    &--tablet-icon {
-      display: none;
-      @include tablet {
-        color: #ffffff;
-        display: block;
-        text-decoration: none;
-      }
-    }
-    &--icon:hover,
-    &--tablet-icon:hover {
-      scale: 1.5;
-    }
-  }
-  &__email-container {
-    display: flex;
-    align-items: center;
-    align-items: center;
-    &--text {
-      color: $pewter;
-      text-decoration: none;
-      text-transform: capitalize;
-      font-size: 18px;
-      font-weight: 200;
-    }
-    &--text:hover {
-      font-weight: 700;
-    }
-    &--icon {
-      color: #ffffff;
-      text-decoration: none;
-      height: 20px;
-      @include tablet {
-        display: none;
-      }
-    }
-
-    &--tablet-icon {
-      display: none;
-      @include tablet {
-        display: block;
-        color: #ffffff;
-        text-decoration: none;
-      }
-    }
-    &--icon:hover,
-    &--tablet-icon:hover {
-      scale: 1.5;
-    }
-  }
-}

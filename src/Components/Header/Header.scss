@@ -15,12 +15,18 @@
 }
 // JS Dynamic class
 
-.js-header-box-shadow {
-  box-shadow: 0px 5px 40px $black; /* Bottom side shadow */
+.js-box-shadow-pewter {
+  // FOR HOME PAGE
+  box-shadow: 0px 5px 40px $pewter; /* Bottom side shadow */
+}
+.js-box-shadow-ebony {
+  // FOR ABOUT PAGE
+  box-shadow: 0px 5px 40px $ebony; /* Bottom side shadow */
 }
 // BACKGROUND COLOR BLACK AND TEXT COLOR PEWTER FOR ABOUT PAGE
 .js-background-black {
   background-color: $black;
+  padding-top: 5px;
 }
 // Header is only shown when page is being scrolled
 .header-opaque-home-page {
@@ -50,14 +56,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0px;
+  padding: 5px 0px;
   @include tablet {
     font-size: 24px;
     max-width: 1280px;
     margin: auto;
   }
   @include desktop {
-    padding: 18 $tablet-margin;
+    // padding: 18 $tablet-margin;
   }
   &__brand-name {
     text-decoration: none;
@@ -79,7 +85,9 @@
     }
     // DYNAMIC CLASS : SET BORDER WHEN IN ABOUT PAGE
     .js-border {
-      border: 1px solid $gray;
+      border: 1px solid $ebony;
+      height: 45px;
+      width: 45px;
       border-radius: 100%;
     }
   }
