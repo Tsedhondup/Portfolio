@@ -1,5 +1,4 @@
 import { faEnvelope, faPhoneFlip } from "@fortawesome/free-solid-svg-icons";
-
 import {
   faGithub,
   faLinkedin,

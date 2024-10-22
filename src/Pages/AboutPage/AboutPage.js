@@ -4,6 +4,7 @@ import Contacts from "../../Components/Contacts/Contacts";
 import { useState, useEffect } from "react";
 const AboutPage = () => {
   const [isScroll, setIsScroll] = useState(false);
+  const [isAboutPageScroll, setIsAboutPageScroll] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [headerClass, setHeaderClass] = useState("header-opaque-about-page");
   // eslint-disable-next-line no-unused-vars
@@ -21,11 +22,13 @@ const AboutPage = () => {
       <Header
         scrollPositionPoint={scrollPositionPoint}
         isScroll={isScroll}
+        isAboutPageScroll={isAboutPageScroll}
         headerClass={headerClass}
         isAboutPage={true}
       />
       <AboutFirst
         setIsScroll={setIsScroll}
+        setIsAboutPageScroll={setIsAboutPageScroll}
         setScrollPositionPoint={setScrollPositionPoint}
       />
       <Contacts />

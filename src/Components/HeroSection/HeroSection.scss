@@ -128,17 +128,47 @@
     &--first-b {
       padding-right: 0.2em;
     }
-
+    // CUSTOM ANIMATION
+    @keyframes animateLastName {
+      0% {
+        letter-spacing: 0em;
+        color: $pewter;
+        opacity: 1;
+      }
+      25% {
+        letter-spacing: 1em;
+        color: $ebony;
+        opacity: 0;
+      }
+      50% {
+        letter-spacing: 1.5em;
+        color: $pewter;
+        opacity: 1;
+      }
+      75% {
+        letter-spacing: 1em;
+        color: $ebony;
+        opacity: 0;
+      }
+      100% {
+        letter-spacing: 0em;
+        color: $pewter;
+        opacity: 1;
+      }
+    }
     &--last {
       display: block;
       text-transform: uppercase;
       font-weight: 600;
       font-size: 27px;
+      animation: animateLastName 30s linear infinite;
+
       @include tablet {
         font-size: 40px;
       }
     }
   }
+
   // Title
   &__title {
     font-size: 14px;
@@ -147,6 +177,7 @@
     margin: 0;
     margin-top: 16px;
     margin-bottom: 40px;
+
     @include tablet {
       font-size: 18px;
       margin-bottom: 50px;
@@ -155,7 +186,7 @@
       font-size: 24px;
     }
     &--city {
-      display: block;
+      display: inline;
     }
   }
   // CONTACTS
@@ -234,6 +265,62 @@
       width: auto;
     }
   }
+
+  // CUSTOM ANIMATION
+  @keyframes animateIcon {
+    0% {
+      position: absolute;
+      bottom: 32px;
+      opacity: 1;
+      @include tablet {
+        bottom: 64px;
+      }
+    }
+
+    50% {
+      position: absolute;
+      bottom: 64px;
+      opacity: 0;
+      @include tablet {
+        bottom: 128px;
+      }
+    }
+
+    100% {
+      position: absolute;
+      bottom: 32px;
+      opacity: 1;
+      @include tablet {
+        bottom: 64px;
+      }
+    }
+  }
+  // SCROLL UP CHEVRON
+  &__scroll-up {
+    position: absolute;
+    left: 0px;
+    bottom: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      bottom: 128px;
+    }
+    &--icon {
+      color: $gray;
+      padding: 10px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $gray;
+      border-radius: 100%;
+      animation: animateIcon 3s linear infinite;
+
+      @include tablet {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
 }
 
 // Image Container
@@ -260,7 +347,7 @@
       width: 330px;
     }
     @include desktop2 {
-      width: 500px;
+      width: 400px;
     }
     border-radius: 5px;
   }

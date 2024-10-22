@@ -2,9 +2,12 @@
 import "./HeroSection.scss";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import profileImage from "../../assets/image/tsering.png";
 import { contactData } from "../../utilities/contactData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { v4 as uuidv4 } from "uuid";
+import profileImage from "../../assets/image/tsering.png";
+
 const HeroSection = (props) => {
   // ELEMENT REFERENCE
   const refElement = useRef(0);
@@ -72,6 +75,7 @@ const HeroSection = (props) => {
     if (item.name !== "email" && item.name !== "phone") {
       return (
         <motion.a
+          key={item.name}
           initial={{
             y: -60,
             opacity: 0,
@@ -86,7 +90,6 @@ const HeroSection = (props) => {
             },
           }}
           viewport={{ once: true, amount: 1 }}
-          key={item.id}
           className={`social-container__link ${item.name}`}
           href={createUrl(item.name, item.url)}
           target="_blank"
@@ -108,7 +111,7 @@ const HeroSection = (props) => {
     if (item.name === "email" || item.name === "phone") {
       return (
         <motion.div
-          key={item.id}
+          key={item.name}
           className="hero-content__contacts--link"
           initial={{
             opacity: 0,
@@ -153,9 +156,14 @@ const HeroSection = (props) => {
     <section className="hero-container">
       <section className="hero-content">
         <div>
-          <h1 className="hero-content__name" ref={refElement}>
+          <h1
+            key={`${uuidv4()}`}
+            className="hero-content__name"
+            ref={refElement}
+          >
             <span className="hero-content__name--first">
               <motion.span
+                key="01"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -168,6 +176,7 @@ const HeroSection = (props) => {
                 Hi,
               </motion.span>
               <motion.span
+                key="02"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
@@ -180,6 +189,7 @@ const HeroSection = (props) => {
                 I'm
               </motion.span>
               <motion.span
+                key="03"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
@@ -202,8 +212,6 @@ const HeroSection = (props) => {
                 color: {
                   duration: 3,
                   ease: "linear",
-                  repeat: Infinity,
-                  repeatType: "loop",
                 },
               }}
               className="hero-content__name--last"
@@ -212,6 +220,7 @@ const HeroSection = (props) => {
             </motion.span>
           </h1>
           <motion.h3
+            key={`${uuidv4()}`}
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -235,7 +244,15 @@ const HeroSection = (props) => {
               from Toronto
             </motion.span>
           </motion.h3>
-          <div className="hero-content__contacts">{contactElements}</div>
+          <div key={`${uuidv4()}`} className="hero-content__contacts">
+            {contactElements}
+          </div>
+          <div className={`hero-content__scroll-up ${socialClass}`}>
+            <FontAwesomeIcon
+              icon={faChevronUp}
+              className="hero-content__scroll-up--icon"
+            />
+          </div>
         </div>
 
         <div className="image-container">

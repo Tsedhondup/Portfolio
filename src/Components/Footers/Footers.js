@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
-import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
   faInstagram,
   faFacebook,
   faXTwitter,
+  faCanadianMapleLeaf,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 import "./Footers.scss";
@@ -231,7 +231,7 @@ const Footers = () => {
           <span className="location-copyright__location--name">
             Toronto
             <FontAwesomeIcon
-              icon={faGlobeAmericas}
+              icon={faCanadianMapleLeaf}
               className="location-copyright__copyright--icon-globe"
             />
           </span>

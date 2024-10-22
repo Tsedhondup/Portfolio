@@ -17,30 +17,63 @@
   }
   @include desktop {
     padding-top: 200px;
-    padding-left: 0px;
-    padding-right: 0px;
     padding-top: 0px;
   }
-
+  // INFINITE ANIMATION FOR CSS
+  @keyframes letterSpacing {
+    0% {
+      letter-spacing: 0em;
+      text-align: right;
+      color: $pewter;
+      opacity: 1;
+    }
+    25% {
+      letter-spacing: 1em;
+      text-align: center;
+      color: $ebony;
+      opacity: 0;
+    }
+    50% {
+      letter-spacing: 1.5em;
+      text-align: left;
+      color: $pewter;
+      opacity: 1;
+    }
+    75% {
+      letter-spacing: 1em;
+      text-align: center;
+      color: $ebony;
+      opacity: 0;
+    }
+    100% {
+      letter-spacing: 0em;
+      text-align: right;
+      color: $pewter;
+      opacity: 1;
+    }
+  }
   // ABOUT TITLE
   &__title {
     color: $pewter;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
+    text-align: right;
     text-transform: uppercase;
-    padding-bottom: 10px;
+    padding-bottom: 32px;
     margin-bottom: 16px;
     width: 100%;
-    border-bottom: 1px solid $ebony;
+    animation: letterSpacing 60s linear infinite;
+
     @include tablet {
       font-size: 24px;
+      text-align: left;
       padding-top: 120px;
-      padding-bottom: 16px;
       margin: auto;
-      margin-bottom: 32px;
+      padding-bottom: 10px;
+      margin-bottom: 96px;
+      border-bottom: 1px solid $ebony;
     }
     @include desktop {
-      font-size: 16;
       max-width: 1280px;
     }
   }
@@ -78,9 +111,11 @@
       display: flex;
       justify-content: space-between;
       gap: $tablet-gutter;
+      margin-bottom: $tabletDivider;
     }
     @include tablet2 {
       gap: 40px;
+      margin-bottom: $desktopDivder;
     }
   }
   // DYNAMIC CLASS
@@ -92,29 +127,37 @@
   }
   // ABOUT TEXT CONTAINER
   &__text {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
     &--header {
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
       font-weight: 400;
+      padding-bottom: 10px;
       margin-bottom: 16px;
+      border-bottom: 1px solid $ebony;
       @include tablet {
-        font-size: 14px;
+        font-size: 15px;
         margin-bottom: 24px;
       }
       @include desktop {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
     &--body {
-      font-size: 12px;
+      font-size: 13px;
       margin-bottom: 16px;
       @include tablet {
-        font-size: 13px;
+        font-size: 15px;
         margin-bottom: 32px;
         line-height: 1.5em;
       }
       @include desktop {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }
@@ -138,15 +181,12 @@
   @keyframes scaling {
     0% {
       scale: 0.9;
-      // transform: rotate(0deg);
     }
     50% {
       scale: 1;
-      // transform: rotate(3deg);
     }
     100% {
       scale: 0.9;
-      // transform: rotate(0deg);
     }
   }
   &__image-container {
@@ -157,9 +197,9 @@
     &--image {
       display: block;
       object-fit: contain;
-      height: 130px;
+      height: 140px;
       @include tablet {
-        height: 220px;
+        height: 300px;
       }
     }
     .background {
@@ -170,6 +210,11 @@
     }
     .certification {
       animation: scaling 3s linear infinite;
+      @include tablet {
+        display: block;
+        height: 370px;
+        margin: auto;
+      }
     }
     .goal {
       animation: scaling 5s linear infinite;

@@ -1,8 +1,78 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhoneFlip } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { contactData } from "../../utilities/contactData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Contacts.scss";
 const Contacts = (props) => {
+  // CREATE CONTACT URL
+  const createUrl = (contactName, contactUrl) => {
+    if (contactName === "email") {
+      return `mailto:${contactUrl}`;
+    }
+    if (contactName === "phone") {
+      return `tel:+${contactUrl}`;
+    }
+    if (contactName !== "email" && contactName !== "phone") {
+      return contactUrl;
+    }
+  };
+  let counterDuration = 2;
+
+  // CREATE CONTACT ELEMENTS
+  const contactElements = contactData.map((item) => {
+    const durationTime = counterDuration;
+    counterDuration = durationTime + 0.5;
+
+    if (item.name === "email" || item.name === "phone") {
+      return (
+        <motion.div key={item.name} className="contacts__links">
+          <motion.a
+            key="01"
+            href={createUrl(item.name, item.url)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`contacts__links--text`}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: durationTime,
+                ease: "linear",
+              },
+            }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            {item.name === "email" ? "email" : "call"}
+          </motion.a>
+          <motion.a
+            key="02"
+            href={createUrl(item.name, item.url)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contacts__link-icon-container"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: durationTime,
+                ease: "linear",
+              },
+            }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <FontAwesomeIcon
+              icon={item.icon}
+              className={`contacts__link-icon-container--icon ${item.name}`}
+            />
+          </motion.a>
+        </motion.div>
+      );
+    } else {
+      // TO FIX ESlint ERROR
+      return <></>;
+    }
+  });
   return (
     <section
       className={`${
@@ -10,6 +80,7 @@ const Contacts = (props) => {
       } contacts`}
     >
       <motion.h2
+        key="02"
         className="contacts__header"
         initial={{
           opacity: 0,
@@ -17,7 +88,7 @@ const Contacts = (props) => {
         }}
         whileInView={{
           opacity: 1,
-          borderBottom: "1px solid #d6d6d6",
+          borderBottom: "1px solid #8c8c8c",
 
           transition: {
             ease: "linear",
@@ -30,120 +101,8 @@ const Contacts = (props) => {
       >
         Contact me
       </motion.h2>
-      <div className="phone-email">
-        <div className="phone-email__phone-container">
-          <motion.a
-            href="tel:+1437245778"
-            className="phone-email__phone-container--text"
-            initial={{
-              opacity: 0,
-            }}
-            whileInView={{
-              opacity: 1,
-              transition: { ease: "linear", duration: 1, delay: 1.5 },
-            }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            call
-          </motion.a>
-          <motion.a
-            href="tel:+1437245778"
-            initial={{
-              x: 60,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-              transition: { ease: "linear", duration: 1.5, delay: 1.5 },
-            }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            <FontAwesomeIcon
-              icon={faPhoneFlip}
-              transform="grow-10"
-              className="phone-email__phone-container--icon"
-            />
-          </motion.a>
-          {/* Icons for tablet */}
-          <motion.a
-            href="tel:+1437245778"
-            className="phone-email__phone-container--tablet-icon"
-            initial={{
-              x: 60,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-              transition: { ease: "linear", duration: 1.5, delay: 1.5 },
-            }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            <FontAwesomeIcon
-              icon={faPhoneFlip}
-              transform="grow-15"
-              className="phone-email__phone-container---tablet-icon"
-            />
-          </motion.a>
-        </div>
-        {/*------------------- email section ------------------------ */}
-        <div className="phone-email__email-container">
-          <motion.a
-            href="mailto:tyddhondup88@gmail.com"
-            className="phone-email__email-container--text"
-            initial={{
-              opacity: 0,
-            }}
-            whileInView={{
-              opacity: 1,
-              transition: { ease: "linear", duration: 2, delay: 1.5 },
-            }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            email
-          </motion.a>
-          <motion.a
-            href="mailto:tyddhondup88@gmail.com"
-            initial={{
-              x: 60,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-              transition: { ease: "linear", duration: 1.5, delay: 2 },
-            }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              transform="grow-10"
-              className="phone-email__email-container--icon"
-            />
-          </motion.a>
-          <motion.a
-            href="mailto:tyddhondup88@gmail.com"
-            className="phone-email__email-container--tablet-icon"
-            initial={{
-              x: 60,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-              transition: { ease: "linear", duration: 1.5, delay: 2 },
-            }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              transform="grow-15"
-              className="phone-email__email-container---tablet-icon"
-            />
-          </motion.a>
-        </div>
-      </div>
+      <div className="contacts__content">{contactElements}</div>
+      {/*------------------- email section ------------------------ */}
 
       <div className="contacts__translucent-background"></div>
     </section>
