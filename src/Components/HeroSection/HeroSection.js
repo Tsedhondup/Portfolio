@@ -4,8 +4,8 @@ import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { contactData } from "../../utilities/contactData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { v4 as uuidv4 } from "uuid";
-import { faCanadianMapleLeaf } from "@fortawesome/free-brands-svg-icons";
 import profileImage from "../../assets/image/tsering.png";
 
 const HeroSection = (props) => {
@@ -212,8 +212,6 @@ const HeroSection = (props) => {
                 color: {
                   duration: 3,
                   ease: "linear",
-                  repeat: Infinity,
-                  repeatType: "loop",
                 },
               }}
               className="hero-content__name--last"
@@ -243,15 +241,17 @@ const HeroSection = (props) => {
               }}
               className="hero-content__title--city"
             >
-              from Toronto{" "}
-              <FontAwesomeIcon
-                icon={faCanadianMapleLeaf}
-                className="hero-content__title-icon"
-              />
+              from Toronto
             </motion.span>
           </motion.h3>
           <div key={`${uuidv4()}`} className="hero-content__contacts">
             {contactElements}
+          </div>
+          <div className={`hero-content__scroll-up ${socialClass}`}>
+            <FontAwesomeIcon
+              icon={faChevronUp}
+              className="hero-content__scroll-up--icon"
+            />
           </div>
         </div>
 
