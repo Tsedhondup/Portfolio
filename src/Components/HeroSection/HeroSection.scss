@@ -60,6 +60,9 @@
       @include desktop {
         font-size: 30px;
       }
+      @include horizontalViewHeight {
+        font-size: 20px;
+      }
     }
     &__link:hover {
       scale: 2.5;
@@ -187,6 +190,7 @@
     }
     &--city {
       display: inline;
+      padding-left: 0.3em;
     }
   }
   // CONTACTS
@@ -306,6 +310,9 @@
     @include tablet {
       bottom: 128px;
     }
+    @include horizontalViewHeight {
+      bottom: 0px;
+    }
     &--icon {
       color: $gray;
       padding: 10px;
@@ -318,6 +325,10 @@
       @include tablet {
         width: 40px;
         height: 40px;
+      }
+      @include horizontalViewHeight {
+        width: 30px;
+        height: 30px;
       }
     }
   }
@@ -334,6 +345,24 @@
     display: block;
     text-align: right;
   }
+  @keyframes animateFilter {
+    0% {
+      filter: drop-shadow(0 0 0.75rem $pewter);
+    }
+    25% {
+      filter: drop-shadow(0 0 0.75rem $black);
+    }
+    50% {
+      filter: drop-shadow(0 0 0.75rem $black);
+    }
+    75% {
+      filter: drop-shadow(0 0 0.75rem $black);
+    }
+
+    100% {
+      filter: drop-shadow(0 0 0.75rem $pewter);
+    }
+  }
   &__image {
     height: auto;
     width: 320px;
@@ -343,6 +372,8 @@
       0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
       0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
       0 100px 80px rgba(0, 0, 0, 0.12);
+    animation: animateFilter 10s linear infinite;
+
     @include tablet2 {
       width: 330px;
     }

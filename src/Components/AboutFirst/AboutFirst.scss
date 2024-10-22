@@ -198,14 +198,19 @@
       display: block;
       object-fit: contain;
       height: 140px;
+      transition: 1s;
+
       @include tablet {
         height: 300px;
       }
     }
-    .background {
+    &--image:hover {
+      scale: 1.3;
+    }
+    .education {
       animation: scaling 4s linear infinite;
     }
-    .journey {
+    .coding {
       animation: scaling 5s linear infinite;
     }
     .certification {

@@ -103,9 +103,33 @@
       0% {
         transform: rotate(0deg);
       }
-
-      100% {
+      50% {
         transform: rotate(30deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes scaling {
+      0% {
+        scale: 1.5;
+      }
+      50% {
+        scale: 1;
+      }
+      100% {
+        scale: 1.5;
+      }
+    }
+    @keyframes textColor {
+      0% {
+        color: $ebony;
+      }
+      50% {
+        color: $pewter;
+      }
+      100% {
+        color: $ebony;
       }
     }
 
@@ -124,15 +148,22 @@
         margin: auto;
       }
       &__image:nth-child(1) {
+        width: 80px;
+        height: 40px;
+        padding-right: 20px;
+        animation: rotate 5s linear infinite;
+      }
+      &__image:nth-child(2) {
         width: 70px;
         height: 40px;
         padding-right: 10px;
-        animation: rotate 2s linear infinite;
+        animation: scaling 5s linear infinite;
       }
     }
 
     &--text {
       color: $black;
+      animation: textColor 5s linear infinite;
     }
   }
 

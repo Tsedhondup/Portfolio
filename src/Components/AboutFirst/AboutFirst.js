@@ -104,7 +104,7 @@ const AboutFirst = (props) => {
         {/* IMAGE CONTAINER */}
         <div className="about__image-container">
           <motion.img
-            className={`about__image-container--image ${item.header}`}
+            className={`about__image-container--image ${item.name}`}
             src={item.image}
             alt={`${item.name}-image`}
             initial={{

@@ -56,6 +56,24 @@
       opacity: 0.6;
       border-radius: 5px;
     }
+    @keyframes animateFilter {
+      0% {
+        filter: drop-shadow(0 0 0.75rem $pewter);
+      }
+      25% {
+        filter: drop-shadow(0 0 0.75rem $express);
+      }
+      50% {
+        filter: drop-shadow(0 0 0.75rem $express);
+      }
+      75% {
+        filter: drop-shadow(0 0 0.75rem $express);
+      }
+
+      100% {
+        filter: drop-shadow(0 0 0.75rem $pewter);
+      }
+    }
     &--img {
       object-fit: contain;
       display: block;
@@ -68,6 +86,8 @@
       z-index: 5;
       margin: auto;
       border-radius: 5px;
+      animation: animateFilter 10s linear infinite;
+
       @include tablet {
         border: unset;
         margin: unset;
@@ -92,11 +112,23 @@
       text-align: center;
     }
   }
+  @keyframes colorChange {
+    0% {
+      color: $leaf;
+    }
+    50% {
+      color: $dna;
+    }
+    100% {
+      color: $leaf;
+    }
+  }
   &__link {
     padding-left: 8px;
     font-style: italic;
     text-decoration: none;
     color: $mysql;
+    animation: colorChange 3s linear infinite;
   }
   &__link:hover {
     color: #264de4;
