@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { contactData } from "../../utilities/contactData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { v4 as uuidv4 } from "uuid";
-
+import { faCanadianMapleLeaf } from "@fortawesome/free-brands-svg-icons";
 import profileImage from "../../assets/image/tsering.png";
 
 const HeroSection = (props) => {
@@ -243,7 +243,11 @@ const HeroSection = (props) => {
               }}
               className="hero-content__title--city"
             >
-              from Toronto
+              from Toronto{" "}
+              <FontAwesomeIcon
+                icon={faCanadianMapleLeaf}
+                className="hero-content__title-icon"
+              />
             </motion.span>
           </motion.h3>
           <div key={`${uuidv4()}`} className="hero-content__contacts">

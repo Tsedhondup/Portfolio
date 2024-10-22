@@ -62,19 +62,33 @@
   }
 
   &__statement {
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
     border-bottom: 1px solid $pewter;
     padding-bottom: $mobile-margin;
     &--word {
       padding-right: 4px;
     }
+    @include tablet {
+      font-size: 15px;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   &__name {
-    padding: $mobile-margin;
-    letter-spacing: 0.1em;
+    font-size: 14px;
     font-weight: normal;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    padding: $mobile-margin;
+    @include tablet {
+      font-size: 15px;
+    }
+    @include desktop {
+      font-size: 18px;
+    }
   }
 }
 
@@ -91,19 +105,20 @@
     width: auto;
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 13px;
     @include tablet {
+      font-size: 15px;
       width: 69.55px;
     }
     &--icon-copy {
       display: inline;
-      color: $ebony;
+      color: $code;
       padding-right: 2px;
       width: auto;
     }
     &--icon-globe {
       display: inline;
-      color: $ebony;
+      color: $caColor;
       padding-left: 2px;
       width: auto;
     }
@@ -112,10 +127,13 @@
     display: flex;
     align-items: center;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 13px;
     width: auto;
     &--name {
       padding-right: 3px;
+    }
+    @include tablet {
+      font-size: 15px;
     }
   }
 }
