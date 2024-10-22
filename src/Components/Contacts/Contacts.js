@@ -26,6 +26,7 @@ const Contacts = (props) => {
       return (
         <motion.div key={item.name} className="contacts__links">
           <motion.a
+            key="01"
             href={createUrl(item.name, item.url)}
             target="_blank"
             rel="noopener noreferrer"
@@ -44,6 +45,7 @@ const Contacts = (props) => {
             {item.name === "email" ? "email" : "call"}
           </motion.a>
           <motion.a
+            key="02"
             href={createUrl(item.name, item.url)}
             target="_blank"
             rel="noopener noreferrer"
@@ -78,6 +80,7 @@ const Contacts = (props) => {
       } contacts`}
     >
       <motion.h2
+        key="02"
         className="contacts__header"
         initial={{
           opacity: 0,
@@ -85,7 +88,7 @@ const Contacts = (props) => {
         }}
         whileInView={{
           opacity: 1,
-          borderBottom: "1px solid #44444c",
+          borderBottom: "1px solid #8c8c8c",
 
           transition: {
             ease: "linear",

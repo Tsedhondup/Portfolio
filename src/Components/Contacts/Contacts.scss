@@ -11,6 +11,10 @@
   z-index: 5;
   padding: $mobile-margin;
   min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include tablet {
     padding: $tablet-margin;
     height: 400px;
@@ -35,9 +39,11 @@
     padding: $mobile-margin;
     position: relative;
     z-index: 15;
-    border-bottom: 1px solid $ebony;
+    border-bottom: 1px solid $pewter;
     @include tablet {
       font-size: 15px;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
     }
   }
 
