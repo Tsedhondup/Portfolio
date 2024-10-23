@@ -35,9 +35,9 @@ const AboutSecond = () => {
             opacity: 1,
             y: 0,
             // x: 0,
-            transition: { duration: 1 },
+            transition: { duration: 1.5 },
           }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="about-second-content__texts"
         >
           " Botany graduate with a background in plant science, now

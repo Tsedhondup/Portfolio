@@ -36,7 +36,7 @@ export const aboutData = [
   {
     id: "03",
     name: "certification",
-    header: "Professiona Development",
+    header: "Professional Development",
     body: "I begin to teach myself coding, only to be netted by Tutorial Hell. The need for a proper mentor to assist in honing my skills tailored to professional requirements was essential. I have committed time and resources to becoming a certified web developer by enrolling at BrainStation's Software Engineering Boot Camp in Toronto.",
     icons: [faBook, faHeadset, faCheckSquare],
     image: certificateImage,
