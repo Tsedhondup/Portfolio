@@ -4,7 +4,8 @@ import AboutSecond from "../../Components/AboutSecond/AboutSecond";
 import TechStacks from "../../Components/TechStacks/TechStacks";
 import Works from "../../Components/Works/Works";
 import Contacts from "../../Components/Contacts/Contacts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import FontFaceObserver from "fontfaceobserver";
 const HomePage = () => {
   const [isScroll, setIsScroll] = useState(false);
   // eslint-disable-next-line no-unused-vars
@@ -16,7 +17,29 @@ const HomePage = () => {
 
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [isFontLoaded, setIsFontLoaded] = useState(false);
-  if (Header && AboutSecond && TechStacks && Works && Contacts) {
+  const [hasLoaded, setHasLoaded] = useState(false);
+  // CREATE FontFaceObserver INSTANCE
+  const font = new FontFaceObserver("Libre Franklin");
+  useEffect(() => {
+    font
+      .load()
+      .then(() => {
+        setIsFontLoaded(true);
+        return true;
+      })
+      .then((result) => {
+        if (result) {
+          setIsImageLoaded(true);
+        }
+        return true;
+      })
+      .then((result) => {
+        if (result) {
+          setHasLoaded(true);
+        }
+      });
+  }, []);
+  if (hasLoaded) {
     return (
       <>
         <Header

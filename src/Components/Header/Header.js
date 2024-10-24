@@ -38,6 +38,15 @@ const Header = (props) => {
       });
     };
   }, []);
+  useEffect(() => {
+    // CHECK IMAGE LOADING
+    if (logo) {
+      props.setIsImageLoaded(true);
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+  }, []);
   return (
     <motion.section
       className={`header ${props.isScroll ? "js-box-shadow-pewter" : ""} ${
