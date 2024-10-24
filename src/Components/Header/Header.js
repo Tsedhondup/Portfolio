@@ -65,11 +65,10 @@ const Header = (props) => {
         {/* Brand name */}
         <Link to="/" className="navigation__brand-name">
           <motion.img
-            initial={{ scale: 0, opacity: 0 }}
+            initial={{ scale: 1.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
-              duration: 1.5,
-              delay: 4,
+              duration: 5,
               ease: "linear",
             }}
             src={logo}

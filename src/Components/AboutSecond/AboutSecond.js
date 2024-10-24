@@ -30,14 +30,17 @@ const AboutSecond = () => {
           initial={{
             opacity: 0,
             y: 60,
+            lineHeight: "3em",
           }}
           whileInView={{
-            opacity: 1,
+            opacity: 2,
             y: 0,
-            // x: 0,
-            transition: { duration: 1.5 },
+            lineHeight: "1.3em",
+            transition: {
+              duration: 1.5,
+            },
           }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.5 }}
           className="about-second-content__texts"
         >
           " Botany graduate with a background in plant science, now

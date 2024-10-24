@@ -56,13 +56,9 @@ const HomePage = () => {
           setIsImageLoaded={setIsImageLoaded}
           setScrollPositionPoint={setScrollPositionPoint}
         />
-        setIsImageLoaded={setIsImageLoaded}
         <AboutSecond />
-        setIsImageLoaded={setIsImageLoaded}
         <TechStacks />
-        setIsImageLoaded={setIsImageLoaded}
         <Works />
-        setIsImageLoaded={setIsImageLoaded}
         <Contacts isHomePage={true} />
       </>
     );

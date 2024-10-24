@@ -9,7 +9,23 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-
+  @keyframes animateSocial {
+    0% {
+      right: 100%;
+    }
+    25% {
+      right: -100%;
+    }
+    50% {
+      right: 100%;
+    }
+    75% {
+      right: -100%;
+    }
+    100% {
+      right: 100%;
+    }
+  }
   // SOCIALS - TOP PARENT CONTAINER WITH POSITION ABSOLUTE
   &__socials {
     width: 100%;
@@ -19,8 +35,11 @@
     justify-content: center;
     transition: 2s;
     visibility: visible;
+    animation: animateSocial 60s linear infinite;
+
     @include tablet {
       bottom: 36px;
+      animation: unset;
     }
   }
 
@@ -141,7 +160,7 @@
       25% {
         letter-spacing: 1em;
         color: $ebony;
-        opacity: 0;
+        opacity: 0.7;
       }
       50% {
         letter-spacing: 1.5em;
@@ -151,7 +170,7 @@
       75% {
         letter-spacing: 1em;
         color: $ebony;
-        opacity: 0;
+        opacity: 0.7;
       }
       100% {
         letter-spacing: 0em;
@@ -164,7 +183,7 @@
       text-transform: uppercase;
       font-weight: 600;
       font-size: 27px;
-      animation: animateLastName 30s linear infinite;
+      animation: animateLastName 60s linear infinite;
 
       @include tablet {
         font-size: 40px;
@@ -321,7 +340,6 @@
       border: 1px solid $gray;
       border-radius: 100%;
       animation: animateIcon 3s linear infinite;
-
       @include tablet {
         width: 40px;
         height: 40px;
