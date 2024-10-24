@@ -2,6 +2,8 @@ import Header from "../../Components/Header/Header";
 import AboutFirst from "../../Components/AboutFirst/AboutFirst";
 import Contacts from "../../Components/Contacts/Contacts";
 import { useState, useEffect } from "react";
+import FontFaceObserver from "fontfaceobserver";
+
 const AboutPage = () => {
   const [isScroll, setIsScroll] = useState(false);
   const [isAboutPageScroll, setIsAboutPageScroll] = useState(false);
@@ -17,22 +19,53 @@ const AboutPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return (
-    <>
-      <Header
-        scrollPositionPoint={scrollPositionPoint}
-        isScroll={isScroll}
-        isAboutPageScroll={isAboutPageScroll}
-        headerClass={headerClass}
-        isAboutPage={true}
-      />
-      <AboutFirst
-        setIsScroll={setIsScroll}
-        setIsAboutPageScroll={setIsAboutPageScroll}
-        setScrollPositionPoint={setScrollPositionPoint}
-      />
-      <Contacts />
-    </>
-  );
+
+  // eslint-disable-next-line no-unused-vars
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [isFontLoaded, setIsFontLoaded] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(false);
+  // CREATE FontFaceObserver INSTANCE
+  const font = new FontFaceObserver("Libre Franklin");
+  useEffect(() => {
+    font
+      .load()
+      .then(() => {
+        setIsFontLoaded(true);
+        return true;
+      })
+      .then((result) => {
+        if (result) {
+          setIsImageLoaded(true);
+        }
+        return true;
+      })
+      .then((result) => {
+        if (result) {
+          setHasLoaded(true);
+        }
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (hasLoaded) {
+    return (
+      <>
+        <Header
+          scrollPositionPoint={scrollPositionPoint}
+          isScroll={isScroll}
+          isAboutPageScroll={isAboutPageScroll}
+          headerClass={headerClass}
+          isAboutPage={true}
+        />
+        <AboutFirst
+          setIsScroll={setIsScroll}
+          setIsAboutPageScroll={setIsAboutPageScroll}
+          setScrollPositionPoint={setScrollPositionPoint}
+        />
+        <Contacts />
+      </>
+    );
+  }
 };
 export default AboutPage;

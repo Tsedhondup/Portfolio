@@ -103,10 +103,13 @@ const HeroSection = (props) => {
       return <></>;
     }
   });
+
+  // CONTACT COUNTER DURATION
+  let counterContactDuration = 1;
   // CREATE CONTACT ELEMENTS
   const contactElements = contactData.map((item) => {
-    const durationTime = counterDuration;
-    counterDuration = durationTime + 0.5;
+    const durationTime = counterContactDuration;
+    counterContactDuration = durationTime + 0.5;
 
     if (item.name === "email" || item.name === "phone") {
       return (
@@ -120,7 +123,7 @@ const HeroSection = (props) => {
           }}
           whileInView={{ opacity: 1, x: 0, borderBottom: "1px solid #d6d6d6 " }}
           transition={{
-            delay: screenWidth >= 950 ? 0.5 : 0,
+            delay: 3,
             duration: durationTime,
             ease: "linear",
           }}
@@ -247,12 +250,21 @@ const HeroSection = (props) => {
           <div key={`${uuidv4()}`} className="hero-content__contacts">
             {contactElements}
           </div>
-          <div className={`hero-content__scroll-up ${socialClass}`}>
+          <motion.div
+            className={`hero-content__scroll-up ${socialClass}`}
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 3,
+              ease: "easeOut",
+            }}
+          >
             <FontAwesomeIcon
               icon={faChevronUp}
               className="hero-content__scroll-up--icon"
             />
-          </div>
+          </motion.div>
         </div>
 
         <div className="image-container">
