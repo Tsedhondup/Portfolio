@@ -15,7 +15,9 @@ const HomePage = () => {
    * THESE STATE VARIABLE ARE DESIGNED TO HANDLE DATA AVAILABILTY AND IMPROVE USER EXPERIENCE BY SEAMLESS PAGE LOADING
    */
 
+  // eslint-disable-next-line no-unused-vars
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [isFontLoaded, setIsFontLoaded] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   // CREATE FontFaceObserver INSTANCE
@@ -38,6 +40,7 @@ const HomePage = () => {
           setHasLoaded(true);
         }
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (hasLoaded) {
     return (
