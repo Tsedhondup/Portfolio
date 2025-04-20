@@ -105,7 +105,7 @@ const HeroSection = (props) => {
   });
 
   // CONTACT COUNTER DURATION
-  let counterContactDuration = 1;
+  let counterContactDuration = .5;
   // CREATE CONTACT ELEMENTS
   const contactElements = contactData.map((item) => {
     const durationTime = counterContactDuration;
@@ -123,7 +123,7 @@ const HeroSection = (props) => {
           }}
           whileInView={{ opacity: 1, x: 0, borderBottom: "1px solid #d6d6d6 " }}
           transition={{
-            delay: 3,
+            delay: .3,
             duration: durationTime,
             ease: "linear",
           }}
@@ -171,7 +171,7 @@ const HeroSection = (props) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.1,
-                  delay: 0.5,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 className="hero-content__name--first-a"
@@ -184,7 +184,7 @@ const HeroSection = (props) => {
                 animate={{ opacity: 1 }}
                 transition={{
                   duration: 0.2,
-                  delay: 1,
+                  delay: .3,
                   ease: "easeOut",
                 }}
                 className="hero-content__name--first-b"
@@ -197,7 +197,7 @@ const HeroSection = (props) => {
                 animate={{ opacity: 1 }}
                 transition={{
                   duration: 0.3,
-                  delay: 1.5,
+                  delay: .6,
                   ease: "easeOut",
                 }}
                 className="hero-content__name--first-c"
@@ -210,10 +210,10 @@ const HeroSection = (props) => {
               animate={{ opacity: 1, color: "#000000" }}
               transition={{
                 duration: 3,
-                delay: 2,
+                delay: .9,
                 ease: "linear",
                 color: {
-                  duration: 3,
+                  duration: 1,
                   ease: "linear",
                 },
               }}
@@ -227,8 +227,8 @@ const HeroSection = (props) => {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 2.5,
-              delay: 3,
+              duration: 1,
+              delay: 1.2,
               ease: "easeOut",
             }}
             className="hero-content__title"
@@ -238,8 +238,8 @@ const HeroSection = (props) => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 1.5,
-                delay: 3,
+                duration: 1,
+                delay: 1.5,
                 ease: "easeOut",
               }}
               className="hero-content__title--city"

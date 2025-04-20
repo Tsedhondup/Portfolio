@@ -57,8 +57,8 @@ const Header = (props) => {
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         transition={{
-          delay: 1,
-          duration: 1,
+          delay: .5,
+          duration: .5,
           ease: "easeOut",
         }}
       >
@@ -68,7 +68,7 @@ const Header = (props) => {
             initial={{ scale: 1.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
-              duration: 5,
+              duration: .5,
               ease: "linear",
             }}
             src={logo}

@@ -1,5 +1,6 @@
 import portfolio from "../assets/image/portfolio.jpg";
 import brainflix from "../assets/image/brainflix.jpg";
+import nanosalon from "../assets/image/nano.jpg";
 import jobTracker from "../assets/image/job-tracker.jpg";
 import quiz from "../assets/image/quiz.jpg";
 import bandsite from "../assets/image/band-site.jpg";
@@ -7,6 +8,15 @@ import chef from "../assets/icons/chef.png";
 export const projectData = [
   {
     id: "01",
+    name: "nanos beauty salon",
+    img: nanosalon,
+    url: "https://nanosbeautysalon.com/",
+    repo: "https://github.com/Tsedhondup/salon-website-client",
+    description: "Custom built website for Nanos Beauty Salon",
+    tech: "React, SASS,",
+  },
+  {
+    id: "02",
     name: "portfolio",
     img: portfolio,
     url: "https://tseringdhondup.netlify.app/",
@@ -14,16 +24,7 @@ export const projectData = [
     description: " My Portfolio website deployed on Netlify.",
     tech: "React, SASS",
   },
-  {
-    id: "02",
-    name: "brainflix",
-    img: brainflix,
-    url: "https://brain-flix-app.netlify.app/",
-    repo: "https://github.com/Tsedhondup/tsering-dhondup-BrainFlix.git",
-    description:
-      "Showcasing my web developing skills, a video streaming web application built as a part of the School Project at BrainStation's Software Engineering Bootcamp.",
-    tech: "React, SASS, Express, Node",
-  },
+
   {
     id: "03",
     name: "quiz",
