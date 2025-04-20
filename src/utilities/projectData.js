@@ -1,5 +1,4 @@
 import portfolio from "../assets/image/portfolio.jpg";
-import brainflix from "../assets/image/brainflix.jpg";
 import nanosalon from "../assets/image/nano.jpg";
 import jobTracker from "../assets/image/job-tracker.jpg";
 import quiz from "../assets/image/quiz.jpg";
